@@ -17,21 +17,14 @@
 package org.apache.commons.functor;
 
 /**
- * A functor that takes no arguments and returns a value.
+ * Marker interface for nullary (zero-argument) functors.
  * <p>
  * Implementors are encouraged but not required to make their functors
  * {@link java.io.Serializable Serializable}.
  * </p>
  *
- * @param <T> the returned value type.
  * @since 1.0
- * @version $Revision: 1156737 $ $Date: 2011-08-11 15:59:53 -0300 (Thu, 11 Aug 2011) $
- * @author Rodney Waldhoff
+ * @version $Revision: 647297 $ $Date: 2008-04-11 17:14:50 -0300 (Fri, 11 Apr 2008) $
  */
-public interface Function<T> extends NullaryFunctor {
-    /**
-     * Evaluate this function.
-     * @return the T result of this evaluation
-     */
-    T evaluate();
+public interface NullaryFunctor extends Functor {
 }

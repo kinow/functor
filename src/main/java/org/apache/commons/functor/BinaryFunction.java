@@ -17,21 +17,25 @@
 package org.apache.commons.functor;
 
 /**
- * A functor that takes no arguments and returns a value.
+ * A functor that takes two arguments and returns a value.
  * <p>
  * Implementors are encouraged but not required to make their functors
  * {@link java.io.Serializable Serializable}.
  * </p>
- *
+ * @param <L> the left argument type.
+ * @param <R> the right argument type.
  * @param <T> the returned value type.
  * @since 1.0
- * @version $Revision: 1156737 $ $Date: 2011-08-11 15:59:53 -0300 (Thu, 11 Aug 2011) $
+ * @version $Revision: 1156732 $ $Date: 2011-08-11 15:55:42 -0300 (Thu, 11 Aug 2011) $
  * @author Rodney Waldhoff
  */
-public interface Function<T> extends NullaryFunctor {
+public interface BinaryFunction<L, R, T> extends BinaryFunctor<L, R> {
     /**
      * Evaluate this function.
-     * @return the T result of this evaluation
+     *
+     * @param left the L element of the ordered pair of arguments
+     * @param right the R element of the ordered pair of arguments
+     * @return the T result of this function for the given arguments
      */
-    T evaluate();
+    T evaluate(L left, R right);
 }

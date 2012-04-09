@@ -18,8 +18,12 @@ package org.apache.commons.functor.core;
 
 import java.io.Serializable;
 
+import org.apache.commons.functor.BinaryFunction;
+import org.apache.commons.functor.BinaryPredicate;
 import org.apache.commons.functor.Function;
 import org.apache.commons.functor.Predicate;
+import org.apache.commons.functor.UnaryFunction;
+import org.apache.commons.functor.UnaryPredicate;
 
 /**
  * {@link #evaluate Evaluates} to constant value.
@@ -38,19 +42,20 @@ import org.apache.commons.functor.Predicate;
  * @version $Revision: 1187620 $ $Date: 2011-10-21 23:18:52 -0200 (Fri, 21 Oct 2011) $
  * @author Rodney Waldhoff
  */
-public final class Constant<T, R> implements Function<T, R>, Predicate<R>, Serializable {
+public final class Constant<T> implements Function<T>, UnaryFunction<Object, T>, BinaryFunction<Object, Object, T>,
+        Predicate, UnaryPredicate<Object>, BinaryPredicate<Object, Object>, Serializable {
 
     // static attributes
     // ------------------------------------------------------------------------
     /**
      * Constant for <code>true</code>.
      */
-    public static final Constant<Boolean, ?> TRUE = of(Boolean.TRUE);
+    public static final Constant<Boolean> TRUE = of(Boolean.TRUE);
 
     /**
      * Constant for <code>false</code>.
      */
-    public static final Constant<Boolean, ?> FALSE = of(Boolean.FALSE);
+    public static final Constant<Boolean> FALSE = of(Boolean.FALSE);
 
     /**
      * serialVersionUID declaration.
@@ -77,21 +82,54 @@ public final class Constant<T, R> implements Function<T, R>, Predicate<R>, Seria
 
     // function interface
     // ------------------------------------------------------------------------
-   
-    public boolean test(R... args) {
-    	return true;
+    /**
+     * {@inheritDoc}
+     */
+    public T evaluate() {
+        return value;
     }
-    
-    public T evaluate(R... args) {
-    	return null;
+
+    /**
+     * {@inheritDoc}
+     */
+    public T evaluate(Object obj) {
+        return evaluate();
     }
-    
+
+    /**
+     * {@inheritDoc}
+     */
+    public T evaluate(Object left, Object right) {
+        return evaluate();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public boolean test() {
+        return ((Boolean) evaluate()).booleanValue();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public boolean test(Object obj) {
+        return test();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public boolean test(Object left, Object right) {
+        return test();
+    }
+
     /**
      * {@inheritDoc}
      */
     @Override
     public boolean equals(Object that) {
-        return that == this || (that instanceof Constant<?, ?> && equals((Constant<?, ?>) that));
+        return that == this || (that instanceof Constant<?> && equals((Constant<?>) that));
     }
 
     /**
@@ -99,7 +137,7 @@ public final class Constant<T, R> implements Function<T, R>, Predicate<R>, Seria
      * @param that Constant to test
      * @return boolean
      */
-    public boolean equals(Constant<?, ?> that) {
+    public boolean equals(Constant<?> that) {
         return (null != that && (null == this.value ? null == that.value : this.value.equals(that.value)));
     }
 
@@ -128,12 +166,32 @@ public final class Constant<T, R> implements Function<T, R>, Predicate<R>, Seria
 
     /**
      * Get a <code>Constant</code> that always
+     * returns <code>true</code>.
+     * @return a <code>Constant</code> that always
+     *         returns <code>true</code>
+     */
+    public static Constant<Boolean> truePredicate() {
+        return TRUE;
+    }
+
+    /**
+     * Get a <code>Constant</code> that always
+     * returns <code>false</code>.
+     * @return a <code>Constant</code> that always
+     *         returns <code>false</code>
+     */
+    public static Constant<Boolean> falsePredicate() {
+        return FALSE;
+    }
+
+    /**
+     * Get a <code>Constant</code> that always
      * returns <i>value</i>.
      * @param value the constant value
      * @return a <code>Constant</code> that always
      *         returns <i>value</i>
      */
-    public static Constant<Boolean, ?> predicate(boolean value) {
+    public static Constant<Boolean> predicate(boolean value) {
         return value ? TRUE : FALSE;
     }
 
@@ -143,8 +201,8 @@ public final class Constant<T, R> implements Function<T, R>, Predicate<R>, Seria
      * @param value T
      * @return Constant<T>
      */
-    public static <T, R> Constant<T, R> of(T value) {
-        return new Constant<T, R>(value);
+    public static <T> Constant<T> of(T value) {
+        return new Constant<T>(value);
     }
 
 }

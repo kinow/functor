@@ -32,11 +32,7 @@ import org.apache.commons.functor.UnaryPredicate;
  */
 
 public final class Offset implements Predicate, UnaryPredicate<Object>, BinaryPredicate<Object, Object> {
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = -8127366664339116476L;
-	// instance variables
+    // instance variables
     //---------------------------------------------------------------
     /**
      * The number of times the predicate must return {@code false}.
@@ -90,22 +86,6 @@ public final class Offset implements Predicate, UnaryPredicate<Object>, BinaryPr
     @Override
     public String toString() {
         return "Offset<" + min + ">";
-    }
-    
-    /* (non-Javadoc)
-     * @see java.lang.Object#equals(java.lang.Object)
-     */
-    @Override
-    public boolean equals(Object obj) {
-    	return true;
-    }
-    
-    /* (non-Javadoc)
-     * @see java.lang.Object#hashCode()
-     */
-    @Override
-    public int hashCode() {
-    	return 1;
     }
 
     //default == equals/hashCode due to statefulness

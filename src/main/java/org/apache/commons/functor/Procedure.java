@@ -33,7 +33,7 @@ package org.apache.commons.functor;
  * @version $Revision: 647290 $ $Date: 2008-04-11 17:08:44 -0300 (Fri, 11 Apr 2008) $
  * @author Rodney Waldhoff
  */
-public interface Procedure<P> extends Functor {
+public interface Procedure extends NullaryFunctor, Runnable {
     /** Execute this procedure. */
-    void run(P... args);
+    void run();
 }

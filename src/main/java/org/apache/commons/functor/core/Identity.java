@@ -18,8 +18,8 @@ package org.apache.commons.functor.core;
 
 import java.io.Serializable;
 
-import org.apache.commons.functor.Function;
-import org.apache.commons.functor.Predicate;
+import org.apache.commons.functor.UnaryFunction;
+import org.apache.commons.functor.UnaryPredicate;
 
 /**
  * {@link #evaluate Evaluates} to its input argument.
@@ -34,9 +34,13 @@ import org.apache.commons.functor.Predicate;
  * @version $Revision: 1187618 $ $Date: 2011-10-21 23:16:16 -0200 (Fri, 21 Oct 2011) $
  * @author Rodney Waldhoff
  */
-public final class Identity implements Function<Boolean, Boolean>, Predicate<Boolean>, Serializable {
+public final class Identity<T> implements UnaryFunction<T, T>, UnaryPredicate<T>, Serializable {
     // static attributes
     // ------------------------------------------------------------------------
+    /**
+     * A generic {@code Identity<Object>} instance.
+     */
+    public static final Identity<Object> INSTANCE = new Identity<Object>();
 
     /**
      * serialVersionUID declaration.
@@ -54,13 +58,36 @@ public final class Identity implements Function<Boolean, Boolean>, Predicate<Boo
 
     // function interface
     // ------------------------------------------------------------------------
-    
+
+    /**
+     * {@inheritDoc}
+     */
+    public T evaluate(T obj) {
+        return obj;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public boolean test(Object obj) {
+        return test((Boolean) obj);
+    }
+
+    /**
+     * Test a Boolean object by returning its <code>booleanValue</code>.
+     * @param bool Boolean
+     * @return boolean
+     */
+    public boolean test(Boolean bool) {
+        return bool.booleanValue();
+    }
+
     /**
      * {@inheritDoc}
      */
     @Override
     public boolean equals(Object that) {
-        return (that instanceof Identity);
+        return (that instanceof Identity<?>);
     }
 
     /**
@@ -79,18 +106,16 @@ public final class Identity implements Function<Boolean, Boolean>, Predicate<Boo
         return "Identity";
     }
 
-	/* (non-Javadoc)
-	 * @see org.apache.commons.functor.Predicate#test(P[])
-	 */
-	public boolean test(Boolean... obj) {
-		return obj == null ? false : obj.length <= 0 ? false : obj[0];
-	}
+    // static methods
+    // ------------------------------------------------------------------------
 
-	/* (non-Javadoc)
-	 * @see org.apache.commons.functor.Function#evaluate(P[])
-	 */
-	public Boolean evaluate(Boolean... obj) {
-		return obj == null ? false : obj.length <= 0 ? false : obj[0];
-	}
+    /**
+     * Get an Identity instance.
+     * @param <T> the identity returned value type.
+     * @return Identity
+     */
+    public static <T> Identity<T> instance() {
+        return new Identity<T>();
+    }
 
 }

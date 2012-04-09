@@ -26,40 +26,6 @@ mbenson
 
 13f79535-47bb-0310-9956-ffa450edef68
 
-FoldLeft.java
-file
-
-
-
-
-2012-03-21T04:59:11.000000Z
-5682de2dff2a6ad088a15b80ee47d5c7
-2011-10-22T01:16:16.863350Z
-1187618
-sebb
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4838
-
 RecursiveEvaluation.java
 file
 
@@ -93,6 +59,40 @@ has-props
 
 
 3970
+
+FoldLeft.java
+file
+
+
+
+
+2012-03-21T04:59:11.000000Z
+5682de2dff2a6ad088a15b80ee47d5c7
+2011-10-22T01:16:16.863350Z
+1187618
+sebb
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4838
 
 InPlaceTransform.java
 file
@@ -196,40 +196,6 @@ has-props
 
 5023
 
-DoUntil.java
-file
-
-
-
-
-2012-03-21T04:59:11.000000Z
-87883a788d89c866039a61bd8b5f55b8
-2011-09-13T19:36:50.249576Z
-1170317
-simonetripodi
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1609
-
 UntilDo.java
 file
 
@@ -263,6 +229,40 @@ has-props
 
 
 1606
+
+DoUntil.java
+file
+
+
+
+
+2012-04-09T16:43:05.000000Z
+87883a788d89c866039a61bd8b5f55b8
+2011-09-13T19:36:50.249576Z
+1170317
+simonetripodi
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1609
 
 FoldRight.java
 file
@@ -400,40 +400,6 @@ has-props
 
 3992
 
-DoWhile.java
-file
-
-
-
-
-2012-03-21T04:59:11.000000Z
-49cf32b4fc5aed83b2260f21f81a4d39
-2011-09-13T19:39:33.543125Z
-1170319
-simonetripodi
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1609
-
 WhileDo.java
 file
 
@@ -467,6 +433,40 @@ has-props
 
 
 1605
+
+DoWhile.java
+file
+
+
+
+
+2012-03-21T04:59:11.000000Z
+49cf32b4fc5aed83b2260f21f81a4d39
+2011-09-13T19:39:33.543125Z
+1170319
+simonetripodi
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1609
 
 RetainMatching.java
 file
@@ -508,7 +508,7 @@ file
 
 
 
-2012-03-21T04:59:11.000000Z
+2012-04-09T15:10:57.000000Z
 708ce7b97a30f0b502db0d264489c304
 2011-10-22T01:16:16.863350Z
 1187618

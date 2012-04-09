@@ -27,10 +27,10 @@ package org.apache.commons.functor;
  * @version $Revision: 647290 $ $Date: 2008-04-11 17:08:44 -0300 (Fri, 11 Apr 2008) $
  * @author Rodney Waldhoff
  */
-public interface Predicate<P> extends Functor {
+public interface Predicate extends NullaryFunctor {
     /**
      * Evaluate this predicate.
      * @return the result of this test
      */
-    boolean test(P... args);
+    boolean test();
 }

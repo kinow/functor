@@ -18,11 +18,11 @@ package org.apache.commons.functor.core.collection;
 
 import java.io.Serializable;
 import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.Collection;
-import java.util.List;
 
-import org.apache.commons.functor.Predicate;
+import org.apache.commons.functor.BinaryPredicate;
+import org.apache.commons.functor.UnaryPredicate;
+import org.apache.commons.functor.adapter.RightBoundPredicate;
 import org.apache.commons.lang3.Validate;
 
 /**
@@ -37,7 +37,7 @@ import org.apache.commons.lang3.Validate;
  * @author  Jason Horman (jason@jhorman.org)
  * @author  Rodney Waldhoff
  */
-public final class IsElementOf implements Predicate<Object>, Serializable {
+public final class IsElementOf<L, R> implements BinaryPredicate<L, R>, Serializable {
     // static members
     //---------------------------------------------------------------
 
@@ -45,6 +45,10 @@ public final class IsElementOf implements Predicate<Object>, Serializable {
      * serialVersionUID declaration.
      */
     private static final long serialVersionUID = -7639051806015321070L;
+    /**
+     * A static {@link IsElementOf} instance reference.
+     */
+    private static final IsElementOf<Object, Object> INSTANCE = new IsElementOf<Object, Object>();
 
     // constructors
     //---------------------------------------------------------------
@@ -59,11 +63,8 @@ public final class IsElementOf implements Predicate<Object>, Serializable {
     /**
      * {@inheritDoc}
      */
-    public boolean test(Object... args) {
-    	Validate.notNull(args, "Arguments must not be null.");
-    	Validate.isTrue(args.length >= 2, "Arguments number must be at least 2");
-    	Object col = args[0];
-    	Object obj = args[1];
+    public boolean test(L obj, R col) {
+        Validate.notNull(col, "Right side argument must not be null.");
         if (col instanceof Collection<?>) {
             return testCollection(obj, (Collection<?>) col);
         }
@@ -78,7 +79,7 @@ public final class IsElementOf implements Predicate<Object>, Serializable {
      */
     @Override
     public boolean equals(Object obj) {
-        return (obj instanceof IsElementOf);
+        return (obj instanceof IsElementOf<?, ?>);
     }
 
     /**
@@ -125,11 +126,34 @@ public final class IsElementOf implements Predicate<Object>, Serializable {
         }
         return false;
     }
-    
-    public static void main(String[] args) {
-		IsElementOf isElementOf = new IsElementOf();
-		List<String> tokens = Arrays.asList("a", "b");
-		System.out.println(isElementOf.test(tokens, "a"));
-	}
+
+    // static methods
+    //---------------------------------------------------------------
+    /**
+     * Get an IsElementOf instance.
+     * @return IsElementOf
+     */
+    public static IsElementOf<Object, Object> instance() {
+        return INSTANCE;
+    }
+
+    /**
+     * Get an IsElementOf(collection|array) UnaryPredicate.
+     *
+     * @param <A> the UnaryPredicate argument generic type
+     * @param obj collection/array to search
+     * @return UnaryPredicate
+     */
+    public static <A> UnaryPredicate<A> instance(Object obj) {
+        if (null == obj) {
+            throw new NullPointerException("Argument must not be null");
+        } else if (obj instanceof Collection<?>) {
+            return new RightBoundPredicate<A>(new IsElementOf<A, Object>(), obj);
+        } else if (obj.getClass().isArray()) {
+            return new RightBoundPredicate<A>(new IsElementOf<A, Object>(), obj);
+        } else {
+            throw new IllegalArgumentException("Expected Collection or Array, found " + obj.getClass());
+        }
+    }
 
 }
