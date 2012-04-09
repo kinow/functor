@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/comparator
+END
+IsGreaterThan.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/comparator/IsGreaterThan.java
+END
+Min.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/comparator/Min.java
+END
+package-info.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/comparator/package-info.java
+END
+Max.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/comparator/Max.java
+END
+IsLessThanOrEqual.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/comparator/IsLessThanOrEqual.java
+END
+IsEquivalent.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/comparator/IsEquivalent.java
+END
+IsGreaterThanOrEqual.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/comparator/IsGreaterThanOrEqual.java
+END
+IsNotEquivalent.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/comparator/IsNotEquivalent.java
+END
+IsWithinRange.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/comparator/IsWithinRange.java
+END
+ComparableComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/comparator/ComparableComparator.java
+END
+ComparatorFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/comparator/ComparatorFunction.java
+END
+IsLessThan.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/comparator/IsLessThan.java
+END

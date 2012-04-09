@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/lines
+END
+Sum.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/lines/Sum.java
+END
+WordCount.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/lines/WordCount.java
+END
+Count.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/lines/Count.java
+END
+TestAll.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/lines/TestAll.java
+END
+Lines.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/lines/Lines.java
+END
+TestLines.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/lines/TestLines.java
+END
+StartsWith.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/lines/StartsWith.java
+END
+Contains.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/lines/Contains.java
+END

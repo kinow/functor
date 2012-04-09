@@ -1,0 +1,23 @@
+K 10
+svn:ignore
+V 170
+.classpath
+.project
+.settings
+build.properties
+dist
+target
+tmp
+*.log
+*.gz
+eclipse_classes
+eclipse
+.fbprefs
+
+commons-functor.iws
+
+commons-functor.ipr
+
+commons-functor.iml
+
+END

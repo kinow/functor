@@ -1,0 +1,227 @@
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter
+END
+PredicateUnaryPredicate.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/PredicateUnaryPredicate.java
+END
+IgnoreRightPredicate.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/IgnoreRightPredicate.java
+END
+UnaryFunctionUnaryPredicate.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/UnaryFunctionUnaryPredicate.java
+END
+UnaryPredicateUnaryFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/UnaryPredicateUnaryFunction.java
+END
+PredicateFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/PredicateFunction.java
+END
+FunctionPredicate.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/FunctionPredicate.java
+END
+IgnoreLeftProcedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/IgnoreLeftProcedure.java
+END
+BinaryProcedureBinaryFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/BinaryProcedureBinaryFunction.java
+END
+FunctionUnaryFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/FunctionUnaryFunction.java
+END
+BoundFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/BoundFunction.java
+END
+BinaryFunctionBinaryPredicate.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/BinaryFunctionBinaryPredicate.java
+END
+BoundProcedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/BoundProcedure.java
+END
+package-info.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/package-info.java
+END
+BinaryProcedureUnaryProcedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/BinaryProcedureUnaryProcedure.java
+END
+RightBoundPredicate.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/RightBoundPredicate.java
+END
+IgnoreRightFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/IgnoreRightFunction.java
+END
+LeftBoundFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/LeftBoundFunction.java
+END
+IgnoreRightProcedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/IgnoreRightProcedure.java
+END
+UnaryFunctionUnaryProcedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/UnaryFunctionUnaryProcedure.java
+END
+UnaryProcedureUnaryFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/UnaryProcedureUnaryFunction.java
+END
+ProcedureFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/ProcedureFunction.java
+END
+FunctionProcedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/FunctionProcedure.java
+END
+LeftBoundPredicate.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/LeftBoundPredicate.java
+END
+IgnoreLeftFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/IgnoreLeftFunction.java
+END
+FullyBoundPredicate.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/FullyBoundPredicate.java
+END
+BinaryPredicateUnaryPredicate.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/BinaryPredicateUnaryPredicate.java
+END
+BinaryFunctionBinaryProcedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/BinaryFunctionBinaryProcedure.java
+END
+RightBoundFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/RightBoundFunction.java
+END
+RightBoundProcedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/RightBoundProcedure.java
+END
+IgnoreLeftPredicate.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/IgnoreLeftPredicate.java
+END
+BinaryFunctionUnaryFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/BinaryFunctionUnaryFunction.java
+END
+ProcedureUnaryProcedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/ProcedureUnaryProcedure.java
+END
+BinaryPredicateBinaryFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/BinaryPredicateBinaryFunction.java
+END
+BoundPredicate.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/BoundPredicate.java
+END
+FullyBoundFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/FullyBoundFunction.java
+END
+LeftBoundProcedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/LeftBoundProcedure.java
+END
+FullyBoundProcedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter/FullyBoundProcedure.java
+END

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/generator
+END
+TestBaseGenerator.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/generator/TestBaseGenerator.java
+END
+TestIteratorToGeneratorAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/generator/TestIteratorToGeneratorAdapter.java
+END

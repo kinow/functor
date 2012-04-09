@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor
+END
+UnaryFunctor.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/UnaryFunctor.java
+END
+UnaryPredicate.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/UnaryPredicate.java
+END
+Predicate.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/Predicate.java
+END
+Functor.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/Functor.java
+END
+UnaryFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/UnaryFunction.java
+END
+package-info.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/package-info.java
+END
+BinaryPredicate.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/BinaryPredicate.java
+END
+BinaryFunctor.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/BinaryFunctor.java
+END
+Function.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/Function.java
+END
+UnaryProcedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/UnaryProcedure.java
+END
+NullaryFunctor.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/NullaryFunctor.java
+END
+Procedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/Procedure.java
+END
+BinaryFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/BinaryFunction.java
+END
+BinaryProcedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/BinaryProcedure.java
+END

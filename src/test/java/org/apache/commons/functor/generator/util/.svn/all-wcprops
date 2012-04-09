@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1188373/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/generator/util
+END
+TestEachElement.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repos/asf/!svn/ver/1187629/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/generator/util/TestEachElement.java
+END
+TestIntegerRange.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1188373/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/generator/util/TestIntegerRange.java
+END
+TestLongRange.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repos/asf/!svn/ver/1188373/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/generator/util/TestLongRange.java
+END

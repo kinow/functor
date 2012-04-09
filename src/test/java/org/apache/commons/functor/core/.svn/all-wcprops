@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core
+END
+TestIsInstance.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/TestIsInstance.java
+END
+TestIsSame.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/TestIsSame.java
+END
+TestIsNotSame.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/TestIsNotSame.java
+END
+TestIsEqual.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/TestIsEqual.java
+END
+TestLeftIdentity.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repos/asf/!svn/ver/1188380/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/TestLeftIdentity.java
+END
+TestIsNotEqual.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/TestIsNotEqual.java
+END
+TestIsNull.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/TestIsNull.java
+END
+TestOffset.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/TestOffset.java
+END
+TestIsNotNull.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/TestIsNotNull.java
+END
+TestRightIdentity.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/TestRightIdentity.java
+END
+TestIdentity.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/TestIdentity.java
+END
+TestConstant.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1188380/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/TestConstant.java
+END
+TestNoOp.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/TestNoOp.java
+END
+TestLimit.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/TestLimit.java
+END

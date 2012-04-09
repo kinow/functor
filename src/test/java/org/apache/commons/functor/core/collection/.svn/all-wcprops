@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/collection
+END
+TestFilteredIterable.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/collection/TestFilteredIterable.java
+END
+TestFilteredIterator.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/collection/TestFilteredIterator.java
+END
+TestIsElementOf.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/collection/TestIsElementOf.java
+END
+TestIsEmpty.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/collection/TestIsEmpty.java
+END
+TestSize.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/collection/TestSize.java
+END
+TestTransformedIterator.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/collection/TestTransformedIterator.java
+END

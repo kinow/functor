@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/algorithm
+END
+RecursiveEvaluation.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/algorithm/RecursiveEvaluation.java
+END
+FoldLeft.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/algorithm/FoldLeft.java
+END
+InPlaceTransform.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/algorithm/InPlaceTransform.java
+END
+RemoveMatching.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/algorithm/RemoveMatching.java
+END
+FindWithinGenerator.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/algorithm/FindWithinGenerator.java
+END
+UntilDo.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/algorithm/UntilDo.java
+END
+DoUntil.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/algorithm/DoUntil.java
+END
+FoldRight.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/algorithm/FoldRight.java
+END
+package-info.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/algorithm/package-info.java
+END
+GeneratorContains.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/algorithm/GeneratorContains.java
+END
+IndexOfInGenerator.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/repos/asf/!svn/ver/1187616/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/algorithm/IndexOfInGenerator.java
+END
+WhileDo.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/algorithm/WhileDo.java
+END
+DoWhile.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/algorithm/DoWhile.java
+END
+RetainMatching.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/algorithm/RetainMatching.java
+END
+PredicatedLoop.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/algorithm/PredicatedLoop.java
+END

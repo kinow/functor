@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1234401/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/generator/util
+END
+package-info.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/generator/util/package-info.java
+END
+EachElement.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1234401/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/generator/util/EachElement.java
+END
+IntegerRange.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1187620/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/generator/util/IntegerRange.java
+END
+LongRange.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1187616/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/generator/util/LongRange.java
+END
+CollectionTransformer.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/generator/util/CollectionTransformer.java
+END

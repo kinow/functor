@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/comparator
+END
+TestIsGreaterThan.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/comparator/TestIsGreaterThan.java
+END
+TestMin.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/comparator/TestMin.java
+END
+TestMax.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/comparator/TestMax.java
+END
+BaseComparisonPredicateTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/comparator/BaseComparisonPredicateTest.java
+END
+TestIsLessThanOrEqual.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/comparator/TestIsLessThanOrEqual.java
+END
+TestIsEquivalent.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/comparator/TestIsEquivalent.java
+END
+TestIsGreaterThanOrEqual.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/comparator/TestIsGreaterThanOrEqual.java
+END
+TestIsNotEquivalent.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/comparator/TestIsNotEquivalent.java
+END
+TestIsWithinRange.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/comparator/TestIsWithinRange.java
+END
+TestComparableComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/comparator/TestComparableComparator.java
+END
+TestComparatorFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/repos/asf/!svn/ver/1187624/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/comparator/TestComparatorFunction.java
+END
+TestIsLessThan.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/comparator/TestIsLessThan.java
+END
