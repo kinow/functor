@@ -64,7 +64,7 @@
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestSize" name="testEvaluate"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestSize" name="testEquals"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestSize" name="testEvaluateNull"/>
-  <testcase time="0" classname="org.apache.commons.functor.core.collection.TestSize" name="testEvaluateNonCollection"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.core.collection.TestSize" name="testEvaluateNonCollection"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestSize" name="testEvaluateArray"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestSize" name="testEvaluateString"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestSize" name="testObjectEquals"/>

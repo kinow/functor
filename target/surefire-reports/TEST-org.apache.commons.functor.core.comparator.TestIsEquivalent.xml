@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.006" errors="0" skipped="0" tests="8" name="org.apache.commons.functor.core.comparator.TestIsEquivalent">
+<testsuite failures="0" time="0.005" errors="0" skipped="0" tests="8" name="org.apache.commons.functor.core.comparator.TestIsEquivalent">
   <properties>
     <property name="jna.platform.library.path" value="/lib64"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -67,6 +67,6 @@
   <testcase time="0" classname="org.apache.commons.functor.core.comparator.TestIsEquivalent" name="testTestNull"/>
   <testcase time="0" classname="org.apache.commons.functor.core.comparator.TestIsEquivalent" name="testTestNonComparable"/>
   <testcase time="0" classname="org.apache.commons.functor.core.comparator.TestIsEquivalent" name="testObjectEquals"/>
-  <testcase time="0.001" classname="org.apache.commons.functor.core.comparator.TestIsEquivalent" name="testSerializeDeserializeThenCompare"/>
+  <testcase time="0" classname="org.apache.commons.functor.core.comparator.TestIsEquivalent" name="testSerializeDeserializeThenCompare"/>
   <testcase time="0" classname="org.apache.commons.functor.core.comparator.TestIsEquivalent" name="testToStringIsOverridden"/>
 </testsuite>

@@ -12,7 +12,7 @@
 <div class="separator">&nbsp;</div>
 <table class="report">
 <thead><tr>  <td class="heading">Classes in this File</td>  <td class="heading"><a class="dfn" href="help.html" onclick="popupwindow('help.html'); return false;">Line Coverage</a></td>  <td class="heading"><a class="dfn" href="help.html" onclick="popupwindow('help.html'); return false;">Branch Coverage</a></td>  <td class="heading"><a class="dfn" href="help.html" onclick="popupwindow('help.html'); return false;">Complexity</a></td></tr></thead>
-  <tr><td><a href="org.apache.commons.functor.core.composite.ConditionalFunction.html">ConditionalFunction</a></td><td><table cellpadding="0px" cellspacing="0px" class="percentgraph"><tr class="percentgraph"><td align="right" class="percentgraph" width="40">100%</td><td class="percentgraph"><div class="percentgraph"><div class="greenbar" style="width:100px"><span class="text">25/25</span></div></div></td></tr></table></td><td><table cellpadding="0px" cellspacing="0px" class="percentgraph"><tr class="percentgraph"><td align="right" class="percentgraph" width="40">58%</td><td class="percentgraph"><div class="percentgraph"><div class="greenbar" style="width:58px"><span class="text">20/34</span></div></div></td></tr></table></td><td class="value"><span class="hidden">3.1666666666666665;</span>3.167</td></tr>
+  <tr><td><a href="org.apache.commons.functor.core.composite.ConditionalFunction.html">ConditionalFunction</a></td><td><table cellpadding="0px" cellspacing="0px" class="percentgraph"><tr class="percentgraph"><td align="right" class="percentgraph" width="40">100%</td><td class="percentgraph"><div class="percentgraph"><div class="greenbar" style="width:100px"><span class="text">22/22</span></div></div></td></tr></table></td><td><table cellpadding="0px" cellspacing="0px" class="percentgraph"><tr class="percentgraph"><td align="right" class="percentgraph" width="40">58%</td><td class="percentgraph"><div class="percentgraph"><div class="greenbar" style="width:58px"><span class="text">20/34</span></div></div></td></tr></table></td><td class="value"><span class="hidden">3.1666666666666665;</span>3.167</td></tr>
 
 </table>
 <div class="separator">&nbsp;</div>
@@ -226,10 +226,13 @@
   <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;109</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">boolean</span> equals(ConditionalFunction&lt;?&gt; that) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;110</td>  <td class="nbHitsUncovered"><a title="Line 110: Conditional coverage 50% (1/2).">&nbsp;13</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 110: Conditional coverage 50% (1/2).">        <span class="keyword">return</span> <span class="keyword">null</span> != that</a></span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;111</td>  <td class="nbHitsUncovered"><a title="Line 111: Conditional coverage 33% (2/6) [each condition: 50%, 0%, 50%].">&nbsp;9</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 111: Conditional coverage 33% (2/6) [each condition: 50%, 0%, 50%].">                &amp;&amp; (<span class="keyword">null</span> == ifPred ? <span class="keyword">null</span> == that.ifPred : ifPred.equals(that.ifPred))</a></span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;112</td>  <td class="nbHitsUncovered"><a title="Line 112: Conditional coverage 50% (3/6) [each condition: 50%, 0%, 100%].">&nbsp;9</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 112: Conditional coverage 50% (3/6) [each condition: 50%, 0%, 100%].">                &amp;&amp; (<span class="keyword">null</span> == thenFunc ? <span class="keyword">null</span> == that.thenFunc : thenFunc.equals(that.thenFunc))</a></span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;113</td>  <td class="nbHitsUncovered"><a title="Line 113: Conditional coverage 50% (3/6) [each condition: 50%, 0%, 100%].">&nbsp;7</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 113: Conditional coverage 50% (3/6) [each condition: 50%, 0%, 100%].">                &amp;&amp; (<span class="keyword">null</span> == elseFunc ? <span class="keyword">null</span> == that.elseFunc : elseFunc.equals(that.elseFunc));</a></span></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;110</td>  <td class="nbHitsUncovered"><a title="Line 110: Conditional coverage 45% (9/20) [each condition: 50%, 50%, 0%, 50%, 50%, 0%, 100%, 50%, 0%, 100%].">&nbsp;9</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 110: Conditional coverage 45% (9/20) [each condition: 50%, 50%, 0%, 50%, 50%, 0%, 100%, 50%, 0%, 100%].">        <span class="keyword">return</span> <span class="keyword">null</span> != that</a></span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;111</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;                &amp;&amp; (<span class="keyword">null</span> == ifPred ? <span class="keyword">null</span> == that.ifPred : ifPred.equals(that.ifPred))</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;112</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;                &amp;&amp; (<span class="keyword">null</span> == thenFunc ? <span class="keyword">null</span> == that.thenFunc : thenFunc.equals(that.thenFunc))</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;113</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;                &amp;&amp; (<span class="keyword">null</span> == elseFunc ? <span class="keyword">null</span> == that.elseFunc : elseFunc.equals(that.elseFunc));</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;114</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;115</td>  <td class="nbHits">&nbsp;</td>
@@ -284,6 +287,6 @@
   <td class="src"><pre class="src">&nbsp;}</pre></td></tr>
 </table>
 
-<div class="footer">Report generated by <a href="http://cobertura.sourceforge.net/" target="_top">Cobertura</a> 1.9.4.1 on 3/22/12 12:50 AM.</div>
+<div class="footer">Report generated by <a href="http://cobertura.sourceforge.net/" target="_top">Cobertura</a> 1.9.4.1 on 4/10/12 2:14 AM.</div>
 </body>
 </html>

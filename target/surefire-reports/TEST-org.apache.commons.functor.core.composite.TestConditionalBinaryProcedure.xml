@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.003" errors="0" skipped="0" tests="5" name="org.apache.commons.functor.core.composite.TestConditionalBinaryProcedure">
+<testsuite failures="0" time="0.002" errors="0" skipped="0" tests="5" name="org.apache.commons.functor.core.composite.TestConditionalBinaryProcedure">
   <properties>
     <property name="jna.platform.library.path" value="/lib64"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -64,6 +64,6 @@
   <testcase time="0" classname="org.apache.commons.functor.core.composite.TestConditionalBinaryProcedure" name="testEquals"/>
   <testcase time="0" classname="org.apache.commons.functor.core.composite.TestConditionalBinaryProcedure" name="testRun"/>
   <testcase time="0" classname="org.apache.commons.functor.core.composite.TestConditionalBinaryProcedure" name="testObjectEquals"/>
-  <testcase time="0" classname="org.apache.commons.functor.core.composite.TestConditionalBinaryProcedure" name="testSerializeDeserializeThenCompare"/>
-  <testcase time="0.001" classname="org.apache.commons.functor.core.composite.TestConditionalBinaryProcedure" name="testToStringIsOverridden"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.core.composite.TestConditionalBinaryProcedure" name="testSerializeDeserializeThenCompare"/>
+  <testcase time="0" classname="org.apache.commons.functor.core.composite.TestConditionalBinaryProcedure" name="testToStringIsOverridden"/>
 </testsuite>

@@ -62,10 +62,10 @@
     <property name="sun.cpu.isalist" value=""/>
   </properties>
   <testcase time="0" classname="org.apache.commons.functor.core.TestRightIdentity" name="testEvaluate"/>
-  <testcase time="0" classname="org.apache.commons.functor.core.TestRightIdentity" name="testEquals"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.core.TestRightIdentity" name="testEquals"/>
   <testcase time="0" classname="org.apache.commons.functor.core.TestRightIdentity" name="testTest"/>
   <testcase time="0" classname="org.apache.commons.functor.core.TestRightIdentity" name="testConstant"/>
-  <testcase time="0.001" classname="org.apache.commons.functor.core.TestRightIdentity" name="testObjectEquals"/>
+  <testcase time="0" classname="org.apache.commons.functor.core.TestRightIdentity" name="testObjectEquals"/>
   <testcase time="0" classname="org.apache.commons.functor.core.TestRightIdentity" name="testSerializeDeserializeThenCompare"/>
   <testcase time="0" classname="org.apache.commons.functor.core.TestRightIdentity" name="testToStringIsOverridden"/>
 </testsuite>

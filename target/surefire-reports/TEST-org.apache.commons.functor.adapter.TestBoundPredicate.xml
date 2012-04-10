@@ -65,7 +65,7 @@
   <testcase time="0" classname="org.apache.commons.functor.adapter.TestBoundPredicate" name="testAdaptNull"/>
   <testcase time="0" classname="org.apache.commons.functor.adapter.TestBoundPredicate" name="testAdapt"/>
   <testcase time="0" classname="org.apache.commons.functor.adapter.TestBoundPredicate" name="testTest"/>
-  <testcase time="0" classname="org.apache.commons.functor.adapter.TestBoundPredicate" name="testObjectEquals"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.adapter.TestBoundPredicate" name="testObjectEquals"/>
   <testcase time="0.001" classname="org.apache.commons.functor.adapter.TestBoundPredicate" name="testSerializeDeserializeThenCompare"/>
   <testcase time="0" classname="org.apache.commons.functor.adapter.TestBoundPredicate" name="testToStringIsOverridden"/>
 </testsuite>

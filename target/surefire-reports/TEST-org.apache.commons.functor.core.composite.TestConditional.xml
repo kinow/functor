@@ -62,6 +62,6 @@
     <property name="sun.cpu.isalist" value=""/>
   </properties>
   <testcase time="0" classname="org.apache.commons.functor.core.composite.TestConditional" name="testHasNoArgConstructor"/>
-  <testcase time="0.002" classname="org.apache.commons.functor.core.composite.TestConditional" name="testUnaryMethods"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.core.composite.TestConditional" name="testUnaryMethods"/>
   <testcase time="0.001" classname="org.apache.commons.functor.core.composite.TestConditional" name="testBinaryMethods"/>
 </testsuite>

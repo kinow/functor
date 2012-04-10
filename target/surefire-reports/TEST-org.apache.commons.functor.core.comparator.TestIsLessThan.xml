@@ -62,9 +62,9 @@
     <property name="sun.cpu.isalist" value=""/>
   </properties>
   <testcase time="0" classname="org.apache.commons.functor.core.comparator.TestIsLessThan" name="testEquals"/>
-  <testcase time="0.001" classname="org.apache.commons.functor.core.comparator.TestIsLessThan" name="testTest"/>
+  <testcase time="0" classname="org.apache.commons.functor.core.comparator.TestIsLessThan" name="testTest"/>
   <testcase time="0" classname="org.apache.commons.functor.core.comparator.TestIsLessThan" name="testInstance"/>
-  <testcase time="0" classname="org.apache.commons.functor.core.comparator.TestIsLessThan" name="testTestNull"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.core.comparator.TestIsLessThan" name="testTestNull"/>
   <testcase time="0" classname="org.apache.commons.functor.core.comparator.TestIsLessThan" name="testTestNonComparable"/>
   <testcase time="0" classname="org.apache.commons.functor.core.comparator.TestIsLessThan" name="testObjectEquals"/>
   <testcase time="0.001" classname="org.apache.commons.functor.core.comparator.TestIsLessThan" name="testSerializeDeserializeThenCompare"/>

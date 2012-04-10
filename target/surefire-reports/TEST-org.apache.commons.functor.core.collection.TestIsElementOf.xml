@@ -63,13 +63,13 @@
   </properties>
   <testcase time="0.001" classname="org.apache.commons.functor.core.collection.TestIsElementOf" name="testEquals"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestIsElementOf" name="testTestNull"/>
-  <testcase time="0.001" classname="org.apache.commons.functor.core.collection.TestIsElementOf" name="testTestNonCollection"/>
+  <testcase time="0" classname="org.apache.commons.functor.core.collection.TestIsElementOf" name="testTestNonCollection"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestIsElementOf" name="testTestArray"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestIsElementOf" name="testTestCollection"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestIsElementOf" name="testTestArrayWithNull"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestIsElementOf" name="testWrapNull"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestIsElementOf" name="testWrapNonCollection"/>
-  <testcase time="0.001" classname="org.apache.commons.functor.core.collection.TestIsElementOf" name="testObjectEquals"/>
+  <testcase time="0" classname="org.apache.commons.functor.core.collection.TestIsElementOf" name="testObjectEquals"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestIsElementOf" name="testSerializeDeserializeThenCompare"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestIsElementOf" name="testToStringIsOverridden"/>
 </testsuite>

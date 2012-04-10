@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.003" errors="0" skipped="0" tests="7" name="org.apache.commons.functor.adapter.TestBinaryFunctionBinaryProcedure">
+<testsuite failures="0" time="0.006" errors="0" skipped="0" tests="7" name="org.apache.commons.functor.adapter.TestBinaryFunctionBinaryProcedure">
   <properties>
     <property name="jna.platform.library.path" value="/lib64"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -61,11 +61,11 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="0.001" classname="org.apache.commons.functor.adapter.TestBinaryFunctionBinaryProcedure" name="testEquals"/>
+  <testcase time="0" classname="org.apache.commons.functor.adapter.TestBinaryFunctionBinaryProcedure" name="testEquals"/>
   <testcase time="0" classname="org.apache.commons.functor.adapter.TestBinaryFunctionBinaryProcedure" name="testAdaptNull"/>
-  <testcase time="0" classname="org.apache.commons.functor.adapter.TestBinaryFunctionBinaryProcedure" name="testAdapt"/>
-  <testcase time="0.001" classname="org.apache.commons.functor.adapter.TestBinaryFunctionBinaryProcedure" name="testRun"/>
-  <testcase time="0" classname="org.apache.commons.functor.adapter.TestBinaryFunctionBinaryProcedure" name="testObjectEquals"/>
-  <testcase time="0.001" classname="org.apache.commons.functor.adapter.TestBinaryFunctionBinaryProcedure" name="testSerializeDeserializeThenCompare"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.adapter.TestBinaryFunctionBinaryProcedure" name="testAdapt"/>
+  <testcase time="0" classname="org.apache.commons.functor.adapter.TestBinaryFunctionBinaryProcedure" name="testRun"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.adapter.TestBinaryFunctionBinaryProcedure" name="testObjectEquals"/>
+  <testcase time="0.002" classname="org.apache.commons.functor.adapter.TestBinaryFunctionBinaryProcedure" name="testSerializeDeserializeThenCompare"/>
   <testcase time="0" classname="org.apache.commons.functor.adapter.TestBinaryFunctionBinaryProcedure" name="testToStringIsOverridden"/>
 </testsuite>

@@ -64,8 +64,8 @@
   <testcase time="0" classname="org.apache.commons.functor.core.TestOffset" name="testZero"/>
   <testcase time="0" classname="org.apache.commons.functor.core.TestOffset" name="testBadArgs"/>
   <testcase time="0" classname="org.apache.commons.functor.core.TestOffset" name="testTestNullary"/>
-  <testcase time="0.001" classname="org.apache.commons.functor.core.TestOffset" name="testTestUnary"/>
-  <testcase time="0" classname="org.apache.commons.functor.core.TestOffset" name="testTestBinary"/>
+  <testcase time="0" classname="org.apache.commons.functor.core.TestOffset" name="testTestUnary"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.core.TestOffset" name="testTestBinary"/>
   <testcase time="0" classname="org.apache.commons.functor.core.TestOffset" name="testObjectEquals"/>
   <testcase time="0" classname="org.apache.commons.functor.core.TestOffset" name="testSerializeDeserializeThenCompare"/>
   <testcase time="0" classname="org.apache.commons.functor.core.TestOffset" name="testToStringIsOverridden"/>

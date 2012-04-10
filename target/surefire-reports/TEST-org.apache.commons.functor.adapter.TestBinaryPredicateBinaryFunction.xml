@@ -65,8 +65,8 @@
   <testcase time="0" classname="org.apache.commons.functor.adapter.TestBinaryPredicateBinaryFunction" name="testAdaptNull"/>
   <testcase time="0" classname="org.apache.commons.functor.adapter.TestBinaryPredicateBinaryFunction" name="testAdapt"/>
   <testcase time="0" classname="org.apache.commons.functor.adapter.TestBinaryPredicateBinaryFunction" name="testTestWhenTrue"/>
-  <testcase time="0" classname="org.apache.commons.functor.adapter.TestBinaryPredicateBinaryFunction" name="testTestWhenFalse"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.adapter.TestBinaryPredicateBinaryFunction" name="testTestWhenFalse"/>
   <testcase time="0" classname="org.apache.commons.functor.adapter.TestBinaryPredicateBinaryFunction" name="testObjectEquals"/>
-  <testcase time="0.002" classname="org.apache.commons.functor.adapter.TestBinaryPredicateBinaryFunction" name="testSerializeDeserializeThenCompare"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.adapter.TestBinaryPredicateBinaryFunction" name="testSerializeDeserializeThenCompare"/>
   <testcase time="0" classname="org.apache.commons.functor.adapter.TestBinaryPredicateBinaryFunction" name="testToStringIsOverridden"/>
 </testsuite>

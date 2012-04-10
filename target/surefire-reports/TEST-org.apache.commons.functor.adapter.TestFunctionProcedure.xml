@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.004" errors="0" skipped="0" tests="7" name="org.apache.commons.functor.adapter.TestFunctionProcedure">
+<testsuite failures="0" time="0.006" errors="0" skipped="0" tests="7" name="org.apache.commons.functor.adapter.TestFunctionProcedure">
   <properties>
     <property name="jna.platform.library.path" value="/lib64"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -65,7 +65,7 @@
   <testcase time="0" classname="org.apache.commons.functor.adapter.TestFunctionProcedure" name="testAdaptNull"/>
   <testcase time="0" classname="org.apache.commons.functor.adapter.TestFunctionProcedure" name="testAdapt"/>
   <testcase time="0" classname="org.apache.commons.functor.adapter.TestFunctionProcedure" name="testRun"/>
-  <testcase time="0" classname="org.apache.commons.functor.adapter.TestFunctionProcedure" name="testObjectEquals"/>
-  <testcase time="0" classname="org.apache.commons.functor.adapter.TestFunctionProcedure" name="testSerializeDeserializeThenCompare"/>
-  <testcase time="0" classname="org.apache.commons.functor.adapter.TestFunctionProcedure" name="testToStringIsOverridden"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.adapter.TestFunctionProcedure" name="testObjectEquals"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.adapter.TestFunctionProcedure" name="testSerializeDeserializeThenCompare"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.adapter.TestFunctionProcedure" name="testToStringIsOverridden"/>
 </testsuite>

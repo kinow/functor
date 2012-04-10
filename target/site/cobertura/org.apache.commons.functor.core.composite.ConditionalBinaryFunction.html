@@ -12,7 +12,7 @@
 <div class="separator">&nbsp;</div>
 <table class="report">
 <thead><tr>  <td class="heading">Classes in this File</td>  <td class="heading"><a class="dfn" href="help.html" onclick="popupwindow('help.html'); return false;">Line Coverage</a></td>  <td class="heading"><a class="dfn" href="help.html" onclick="popupwindow('help.html'); return false;">Branch Coverage</a></td>  <td class="heading"><a class="dfn" href="help.html" onclick="popupwindow('help.html'); return false;">Complexity</a></td></tr></thead>
-  <tr><td><a href="org.apache.commons.functor.core.composite.ConditionalBinaryFunction.html">ConditionalBinaryFunction</a></td><td><table cellpadding="0px" cellspacing="0px" class="percentgraph"><tr class="percentgraph"><td align="right" class="percentgraph" width="40">100%</td><td class="percentgraph"><div class="percentgraph"><div class="greenbar" style="width:100px"><span class="text">26/26</span></div></div></td></tr></table></td><td><table cellpadding="0px" cellspacing="0px" class="percentgraph"><tr class="percentgraph"><td align="right" class="percentgraph" width="40">58%</td><td class="percentgraph"><div class="percentgraph"><div class="greenbar" style="width:58px"><span class="text">20/34</span></div></div></td></tr></table></td><td class="value"><span class="hidden">3.1666666666666665;</span>3.167</td></tr>
+  <tr><td><a href="org.apache.commons.functor.core.composite.ConditionalBinaryFunction.html">ConditionalBinaryFunction</a></td><td><table cellpadding="0px" cellspacing="0px" class="percentgraph"><tr class="percentgraph"><td align="right" class="percentgraph" width="40">100%</td><td class="percentgraph"><div class="percentgraph"><div class="greenbar" style="width:100px"><span class="text">22/22</span></div></div></td></tr></table></td><td><table cellpadding="0px" cellspacing="0px" class="percentgraph"><tr class="percentgraph"><td align="right" class="percentgraph" width="40">58%</td><td class="percentgraph"><div class="percentgraph"><div class="greenbar" style="width:58px"><span class="text">20/34</span></div></div></td></tr></table></td><td class="value"><span class="hidden">3.1666666666666665;</span>3.167</td></tr>
 
 </table>
 <div class="separator">&nbsp;</div>
@@ -173,11 +173,11 @@
   <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param elseFunc else</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;78</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;79</td>  <td class="nbHitsCovered">&nbsp;22</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> ConditionalBinaryFunction(BinaryPredicate&lt;? <span class="keyword">super</span> L, ? <span class="keyword">super</span> R&gt; ifPred,</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;79</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> ConditionalBinaryFunction(BinaryPredicate&lt;? <span class="keyword">super</span> L, ? <span class="keyword">super</span> R&gt; ifPred,</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;80</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;            BinaryFunction&lt;? <span class="keyword">super</span> L, ? <span class="keyword">super</span> R, ? <span class="keyword">extends</span> T&gt; thenFunc,</pre></td></tr>
-<tr>  <td class="numLine">&nbsp;81</td>  <td class="nbHits">&nbsp;</td>
-  <td class="src"><pre class="src">&nbsp;            BinaryFunction&lt;? <span class="keyword">super</span> L, ? <span class="keyword">super</span> R, ? <span class="keyword">extends</span> T&gt; elseFunc) {</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;81</td>  <td class="nbHitsCovered">&nbsp;22</td>  <td class="src"><pre class="src">&nbsp;            BinaryFunction&lt;? <span class="keyword">super</span> L, ? <span class="keyword">super</span> R, ? <span class="keyword">extends</span> T&gt; elseFunc) {</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;82</td>  <td class="nbHitsCovered">&nbsp;22</td>  <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.ifPred = Validate.notNull(ifPred, <span class="string">"BinaryPredicate argument was null"</span>);</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;83</td>  <td class="nbHitsCovered">&nbsp;22</td>  <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.thenFunc = Validate.notNull(thenFunc, <span class="string">"'then' BinaryFunction argument was null"</span>);</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;84</td>  <td class="nbHitsCovered">&nbsp;22</td>  <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.elseFunc = Validate.notNull(elseFunc, <span class="string">"'else' BinaryFunction argument was null"</span>);</pre></td></tr>
@@ -217,8 +217,9 @@
   <td class="src"><pre class="src">&nbsp;    @Override</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;104</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">boolean</span> equals(Object that) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;105</td>  <td class="nbHitsCovered"><a title="Line 105: Conditional coverage 100% (4/4) [each condition: 100%, 100%].">&nbsp;19</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 105: Conditional coverage 100% (4/4) [each condition: 100%, 100%].">        <span class="keyword">return</span> that == <span class="keyword">this</span> || (that <span class="keyword">instanceof</span> ConditionalBinaryFunction&lt;?, ?, ?&gt;</a></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;106</td>  <td class="nbHitsCovered"><a title="Line 106: Conditional coverage 100% (2/2).">&nbsp;9</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 106: Conditional coverage 100% (2/2).">                                    &amp;&amp; equals((ConditionalBinaryFunction&lt;?, ?, ?&gt;) that));</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;105</td>  <td class="nbHitsCovered"><a title="Line 105: Conditional coverage 100% (6/6) [each condition: 100%, 100%, 100%].">&nbsp;12</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 105: Conditional coverage 100% (6/6) [each condition: 100%, 100%, 100%].">        <span class="keyword">return</span> that == <span class="keyword">this</span> || (that <span class="keyword">instanceof</span> ConditionalBinaryFunction&lt;?, ?, ?&gt;</a></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;106</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;                                    &amp;&amp; equals((ConditionalBinaryFunction&lt;?, ?, ?&gt;) that));</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;107</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;108</td>  <td class="nbHits">&nbsp;</td>
@@ -235,10 +236,13 @@
   <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;114</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">boolean</span> equals(ConditionalBinaryFunction&lt;?, ?, ?&gt; that) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;115</td>  <td class="nbHitsUncovered"><a title="Line 115: Conditional coverage 50% (1/2).">&nbsp;13</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 115: Conditional coverage 50% (1/2).">        <span class="keyword">return</span> <span class="keyword">null</span> != that</a></span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;116</td>  <td class="nbHitsUncovered"><a title="Line 116: Conditional coverage 50% (3/6) [each condition: 50%, 0%, 100%].">&nbsp;9</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 116: Conditional coverage 50% (3/6) [each condition: 50%, 0%, 100%].">                &amp;&amp; (<span class="keyword">null</span> == ifPred ? <span class="keyword">null</span> == that.ifPred : ifPred.equals(that.ifPred))</a></span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;117</td>  <td class="nbHitsUncovered"><a title="Line 117: Conditional coverage 50% (3/6) [each condition: 50%, 0%, 100%].">&nbsp;7</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 117: Conditional coverage 50% (3/6) [each condition: 50%, 0%, 100%].">                &amp;&amp; (<span class="keyword">null</span> == thenFunc ? <span class="keyword">null</span> == that.thenFunc : thenFunc.equals(that.thenFunc))</a></span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;118</td>  <td class="nbHitsUncovered"><a title="Line 118: Conditional coverage 33% (2/6) [each condition: 50%, 0%, 50%].">&nbsp;5</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 118: Conditional coverage 33% (2/6) [each condition: 50%, 0%, 50%].">                &amp;&amp; (<span class="keyword">null</span> == elseFunc ? <span class="keyword">null</span> == that.elseFunc : elseFunc.equals(that.elseFunc));</a></span></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;115</td>  <td class="nbHitsUncovered"><a title="Line 115: Conditional coverage 45% (9/20) [each condition: 50%, 50%, 0%, 100%, 50%, 0%, 100%, 50%, 0%, 50%].">&nbsp;9</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 115: Conditional coverage 45% (9/20) [each condition: 50%, 50%, 0%, 100%, 50%, 0%, 100%, 50%, 0%, 50%].">        <span class="keyword">return</span> <span class="keyword">null</span> != that</a></span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;116</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;                &amp;&amp; (<span class="keyword">null</span> == ifPred ? <span class="keyword">null</span> == that.ifPred : ifPred.equals(that.ifPred))</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;117</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;                &amp;&amp; (<span class="keyword">null</span> == thenFunc ? <span class="keyword">null</span> == that.thenFunc : thenFunc.equals(that.thenFunc))</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;118</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;                &amp;&amp; (<span class="keyword">null</span> == elseFunc ? <span class="keyword">null</span> == that.elseFunc : elseFunc.equals(that.elseFunc));</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;119</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;120</td>  <td class="nbHits">&nbsp;</td>
@@ -293,6 +297,6 @@
   <td class="src"><pre class="src">&nbsp;}</pre></td></tr>
 </table>
 
-<div class="footer">Report generated by <a href="http://cobertura.sourceforge.net/" target="_top">Cobertura</a> 1.9.4.1 on 3/22/12 12:50 AM.</div>
+<div class="footer">Report generated by <a href="http://cobertura.sourceforge.net/" target="_top">Cobertura</a> 1.9.4.1 on 4/10/12 2:14 AM.</div>
 </body>
 </html>

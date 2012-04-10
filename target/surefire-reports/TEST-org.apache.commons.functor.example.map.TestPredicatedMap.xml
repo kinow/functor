@@ -62,7 +62,7 @@
     <property name="sun.cpu.isalist" value=""/>
   </properties>
   <testcase time="0" classname="org.apache.commons.functor.example.map.TestPredicatedMap" name="testCanPutMatchingPair"/>
-  <testcase time="0" classname="org.apache.commons.functor.example.map.TestPredicatedMap" name="testCantPutInvalidValue"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.example.map.TestPredicatedMap" name="testCantPutInvalidValue"/>
   <testcase time="0" classname="org.apache.commons.functor.example.map.TestPredicatedMap" name="testCantPutInvalidKey"/>
   <testcase time="0" classname="org.apache.commons.functor.example.map.TestPredicatedMap" name="testOnlyValidPairsAreAddedInPutAll"/>
 </testsuite>

@@ -62,7 +62,7 @@
     <property name="sun.cpu.isalist" value=""/>
   </properties>
   <testcase time="0" classname="org.apache.commons.functor.core.composite.TestUnaryCompositeBinaryFunction" name="testEvaluate"/>
-  <testcase time="0.001" classname="org.apache.commons.functor.core.composite.TestUnaryCompositeBinaryFunction" name="testEquals"/>
+  <testcase time="0" classname="org.apache.commons.functor.core.composite.TestUnaryCompositeBinaryFunction" name="testEquals"/>
   <testcase time="0" classname="org.apache.commons.functor.core.composite.TestUnaryCompositeBinaryFunction" name="testObjectEquals"/>
   <testcase time="0.001" classname="org.apache.commons.functor.core.composite.TestUnaryCompositeBinaryFunction" name="testSerializeDeserializeThenCompare"/>
   <testcase time="0" classname="org.apache.commons.functor.core.composite.TestUnaryCompositeBinaryFunction" name="testToStringIsOverridden"/>

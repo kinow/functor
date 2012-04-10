@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.003" errors="0" skipped="0" tests="6" name="org.apache.commons.functor.core.TestIsEqual">
+<testsuite failures="0" time="0.002" errors="0" skipped="0" tests="6" name="org.apache.commons.functor.core.TestIsEqual">
   <properties>
     <property name="jna.platform.library.path" value="/lib64"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>

@@ -107,9 +107,9 @@
   <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param iter Iterator to adapt</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;45</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;46</td>  <td class="nbHitsCovered">&nbsp;43</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> IteratorToGeneratorAdapter(Iterator&lt;? <span class="keyword">extends</span> E&gt; iter) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;47</td>  <td class="nbHitsCovered">&nbsp;43</td>  <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.iter = Validate.notNull(iter, <span class="string">"Iterator argument was null"</span>);</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;48</td>  <td class="nbHitsCovered">&nbsp;42</td>  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;46</td>  <td class="nbHitsCovered">&nbsp;44</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> IteratorToGeneratorAdapter(Iterator&lt;? <span class="keyword">extends</span> E&gt; iter) {</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;47</td>  <td class="nbHitsCovered">&nbsp;44</td>  <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.iter = Validate.notNull(iter, <span class="string">"Iterator argument was null"</span>);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;48</td>  <td class="nbHitsCovered">&nbsp;43</td>  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;49</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;50</td>  <td class="nbHits">&nbsp;</td>
@@ -124,15 +124,15 @@
   <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;55</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> run(UnaryProcedure&lt;? <span class="keyword">super</span> E&gt; proc) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;56</td>  <td class="nbHitsCovered"><a title="Line 56: Conditional coverage 100% (2/2).">&nbsp;297</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 56: Conditional coverage 100% (2/2).">        <span class="keyword">while</span> (iter.hasNext()) {</a></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;57</td>  <td class="nbHitsCovered">&nbsp;239</td>  <td class="src"><pre class="src">&nbsp;            proc.run(iter.next());</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;58</td>  <td class="nbHitsCovered"><a title="Line 58: Conditional coverage 100% (2/2).">&nbsp;239</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 58: Conditional coverage 100% (2/2).">            <span class="keyword">if</span> (isStopped()) {</a></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;59</td>  <td class="nbHitsCovered">&nbsp;4</td>  <td class="src"><pre class="src">&nbsp;                <span class="keyword">break</span>;</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;56</td>  <td class="nbHitsCovered"><a title="Line 56: Conditional coverage 100% (2/2).">&nbsp;248</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 56: Conditional coverage 100% (2/2).">        <span class="keyword">while</span> (iter.hasNext()) {</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;57</td>  <td class="nbHitsCovered">&nbsp;221</td>  <td class="src"><pre class="src">&nbsp;            proc.run(iter.next());</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;58</td>  <td class="nbHitsCovered"><a title="Line 58: Conditional coverage 100% (2/2).">&nbsp;221</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 58: Conditional coverage 100% (2/2).">            <span class="keyword">if</span> (isStopped()) {</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;59</td>  <td class="nbHitsCovered">&nbsp;5</td>  <td class="src"><pre class="src">&nbsp;                <span class="keyword">break</span>;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;60</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;            }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;61</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;        }</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;62</td>  <td class="nbHitsCovered">&nbsp;31</td>  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;62</td>  <td class="nbHitsCovered">&nbsp;32</td>  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;63</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;64</td>  <td class="nbHits">&nbsp;</td>
@@ -212,7 +212,7 @@
   <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;107</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">static</span> &lt;E&gt; IteratorToGeneratorAdapter&lt;E&gt; adapt(Iterator&lt;? <span class="keyword">extends</span> E&gt; iter) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;108</td>  <td class="nbHitsCovered"><a title="Line 108: Conditional coverage 100% (2/2).">&nbsp;24</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 108: Conditional coverage 100% (2/2).">        <span class="keyword">return</span> <span class="keyword">null</span> == iter ? <span class="keyword">null</span> : <span class="keyword">new</span> IteratorToGeneratorAdapter&lt;E&gt;(iter);</a></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;108</td>  <td class="nbHitsCovered"><a title="Line 108: Conditional coverage 100% (2/2).">&nbsp;25</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 108: Conditional coverage 100% (2/2).">        <span class="keyword">return</span> <span class="keyword">null</span> == iter ? <span class="keyword">null</span> : <span class="keyword">new</span> IteratorToGeneratorAdapter&lt;E&gt;(iter);</a></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;109</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;110</td>  <td class="nbHits">&nbsp;</td>
@@ -221,6 +221,6 @@
   <td class="src"><pre class="src">&nbsp;}</pre></td></tr>
 </table>
 
-<div class="footer">Report generated by <a href="http://cobertura.sourceforge.net/" target="_top">Cobertura</a> 1.9.4.1 on 3/22/12 12:50 AM.</div>
+<div class="footer">Report generated by <a href="http://cobertura.sourceforge.net/" target="_top">Cobertura</a> 1.9.4.1 on 4/10/12 2:14 AM.</div>
 </body>
 </html>

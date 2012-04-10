@@ -279,52 +279,6 @@
 </file>
 <file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/BinaryProcedure.java">
 </file>
-<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregate/Aggregator.java">
-</file>
-<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregate/package-info.java">
-</file>
-<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregate/TimedAggregatorListener.java">
-</file>
-<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregate/AbstractNoStoreAggregator.java">
-</file>
-<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregate/functions/DoubleMaxAggregatorBinaryFunction.java">
-</file>
-<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregate/functions/package-info.java">
-</file>
-<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregate/functions/IntPercentileAggregatorFunction.java">
-</file>
-<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregate/functions/IntMeanValueAggregatorFunction.java">
-</file>
-<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregate/functions/IntCountAggregatorBinaryFunction.java">
-</file>
-<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregate/functions/IntMaxAggregatorFunction.java">
-</file>
-<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregate/functions/IntSumAggregatorBinaryFunction.java">
-</file>
-<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregate/functions/IntMedianValueAggregatorFunction.java">
-</file>
-<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregate/functions/IntSumAggregatorFunction.java">
-</file>
-<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregate/functions/IntMaxAggregatorBinaryFunction.java">
-</file>
-<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregate/functions/DoubleMeanValueAggregatorFunction.java">
-</file>
-<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregate/functions/DoubleSumAggregatorFunction.java">
-</file>
-<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregate/functions/DoubleSumAggregatorBinaryFunction.java">
-</file>
-<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregate/functions/DoublePercentileAggregatorFunction.java">
-</file>
-<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregate/functions/DoubleMedianValueAggregatorFunction.java">
-</file>
-<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregate/functions/DoubleMaxAggregatorFunction.java">
-</file>
-<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregate/AbstractListBackedAggregator.java">
-</file>
-<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregate/AbstractTimedAggregator.java">
-</file>
-<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregate/ArrayListBackedAggregator.java">
-</file>
 <file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/BinaryPredicate.java">
 </file>
 <file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/UnaryFunctor.java">

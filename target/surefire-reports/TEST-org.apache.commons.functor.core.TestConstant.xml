@@ -65,9 +65,9 @@
   <testcase time="0" classname="org.apache.commons.functor.core.TestConstant" name="testEquals"/>
   <testcase time="0" classname="org.apache.commons.functor.core.TestConstant" name="testEvaluateConstantNull"/>
   <testcase time="0" classname="org.apache.commons.functor.core.TestConstant" name="testConstantTrue"/>
-  <testcase time="0.001" classname="org.apache.commons.functor.core.TestConstant" name="testConstantFalse"/>
+  <testcase time="0" classname="org.apache.commons.functor.core.TestConstant" name="testConstantFalse"/>
   <testcase time="0" classname="org.apache.commons.functor.core.TestConstant" name="testConstants"/>
   <testcase time="0" classname="org.apache.commons.functor.core.TestConstant" name="testObjectEquals"/>
-  <testcase time="0" classname="org.apache.commons.functor.core.TestConstant" name="testSerializeDeserializeThenCompare"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.core.TestConstant" name="testSerializeDeserializeThenCompare"/>
   <testcase time="0" classname="org.apache.commons.functor.core.TestConstant" name="testToStringIsOverridden"/>
 </testsuite>

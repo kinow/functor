@@ -12,7 +12,7 @@
 <div class="separator">&nbsp;</div>
 <table class="report">
 <thead><tr>  <td class="heading">Classes in this File</td>  <td class="heading"><a class="dfn" href="help.html" onclick="popupwindow('help.html'); return false;">Line Coverage</a></td>  <td class="heading"><a class="dfn" href="help.html" onclick="popupwindow('help.html'); return false;">Branch Coverage</a></td>  <td class="heading"><a class="dfn" href="help.html" onclick="popupwindow('help.html'); return false;">Complexity</a></td></tr></thead>
-  <tr><td><a href="org.apache.commons.functor.adapter.RightBoundFunction.html">RightBoundFunction</a></td><td><table cellpadding="0px" cellspacing="0px" class="percentgraph"><tr class="percentgraph"><td align="right" class="percentgraph" width="40">100%</td><td class="percentgraph"><div class="percentgraph"><div class="greenbar" style="width:100px"><span class="text">21/21</span></div></div></td></tr></table></td><td><table cellpadding="0px" cellspacing="0px" class="percentgraph"><tr class="percentgraph"><td align="right" class="percentgraph" width="40">65%</td><td class="percentgraph"><div class="percentgraph"><div class="greenbar" style="width:65px"><span class="text">17/26</span></div></div></td></tr></table></td><td class="value"><span class="hidden">2.2857142857142856;</span>2.286</td></tr>
+  <tr><td><a href="org.apache.commons.functor.adapter.RightBoundFunction.html">RightBoundFunction</a></td><td><table cellpadding="0px" cellspacing="0px" class="percentgraph"><tr class="percentgraph"><td align="right" class="percentgraph" width="40">100%</td><td class="percentgraph"><div class="percentgraph"><div class="greenbar" style="width:100px"><span class="text">17/17</span></div></div></td></tr></table></td><td><table cellpadding="0px" cellspacing="0px" class="percentgraph"><tr class="percentgraph"><td align="right" class="percentgraph" width="40">65%</td><td class="percentgraph"><div class="percentgraph"><div class="greenbar" style="width:65px"><span class="text">17/26</span></div></div></td></tr></table></td><td class="value"><span class="hidden">2.2857142857142856;</span>2.286</td></tr>
 
 </table>
 <div class="separator">&nbsp;</div>
@@ -136,9 +136,11 @@
 <tr>  <td class="numLine">&nbsp;59</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    @SuppressWarnings(<span class="string">"unchecked"</span>)</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;60</td>  <td class="nbHitsCovered">&nbsp;11</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> &lt;R&gt; RightBoundFunction(BinaryFunction&lt;? <span class="keyword">super</span> A, ? <span class="keyword">super</span> R, ? <span class="keyword">extends</span> T&gt; function, R arg) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;61</td>  <td class="nbHitsCovered">&nbsp;22</td>  <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.function =</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;62</td>  <td class="nbHitsCovered">&nbsp;11</td>  <td class="src"><pre class="src">&nbsp;            (BinaryFunction&lt;? <span class="keyword">super</span> A, Object, ? <span class="keyword">extends</span> T&gt;) Validate.notNull(</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;63</td>  <td class="nbHitsCovered">&nbsp;11</td>  <td class="src"><pre class="src">&nbsp;                function, <span class="string">"left-hand BinaryFunction argument was null"</span>);</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;61</td>  <td class="nbHitsCovered">&nbsp;11</td>  <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.function =</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;62</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;            (BinaryFunction&lt;? <span class="keyword">super</span> A, Object, ? <span class="keyword">extends</span> T&gt;) Validate.notNull(</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;63</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;                function, <span class="string">"left-hand BinaryFunction argument was null"</span>);</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;64</td>  <td class="nbHitsCovered">&nbsp;11</td>  <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.param = arg;</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;65</td>  <td class="nbHitsCovered">&nbsp;11</td>  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;66</td>  <td class="nbHits">&nbsp;</td>
@@ -183,9 +185,11 @@
   <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td></tr>
 <tr>  <td class="numLine">&nbsp;87</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">boolean</span> equals(RightBoundFunction&lt;?, ?&gt; that) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;88</td>  <td class="nbHitsUncovered"><a title="Line 88: Conditional coverage 50% (1/2).">&nbsp;13</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 88: Conditional coverage 50% (1/2).">        <span class="keyword">return</span> <span class="keyword">null</span> != that</a></span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;89</td>  <td class="nbHitsUncovered"><a title="Line 89: Conditional coverage 50% (3/6) [each condition: 50%, 0%, 100%].">&nbsp;9</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 89: Conditional coverage 50% (3/6) [each condition: 50%, 0%, 100%].">                &amp;&amp; (<span class="keyword">null</span> == function ? <span class="keyword">null</span> == that.function : function.equals(that.function))</a></span></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;90</td>  <td class="nbHitsUncovered"><a title="Line 90: Conditional coverage 50% (3/6) [each condition: 50%, 0%, 100%].">&nbsp;7</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 90: Conditional coverage 50% (3/6) [each condition: 50%, 0%, 100%].">                &amp;&amp; (<span class="keyword">null</span> == param ? <span class="keyword">null</span> == that.param : param.equals(that.param));</a></span></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;88</td>  <td class="nbHitsUncovered"><a title="Line 88: Conditional coverage 50% (7/14) [each condition: 50%, 50%, 0%, 100%, 50%, 0%, 100%].">&nbsp;9</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 88: Conditional coverage 50% (7/14) [each condition: 50%, 50%, 0%, 100%, 50%, 0%, 100%].">        <span class="keyword">return</span> <span class="keyword">null</span> != that</a></span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;89</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;                &amp;&amp; (<span class="keyword">null</span> == function ? <span class="keyword">null</span> == that.function : function.equals(that.function))</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;90</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;                &amp;&amp; (<span class="keyword">null</span> == param ? <span class="keyword">null</span> == that.param : param.equals(that.param));</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;91</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;92</td>  <td class="nbHits">&nbsp;</td>
@@ -262,6 +266,6 @@
   <td class="src"><pre class="src">&nbsp;}</pre></td></tr>
 </table>
 
-<div class="footer">Report generated by <a href="http://cobertura.sourceforge.net/" target="_top">Cobertura</a> 1.9.4.1 on 3/22/12 12:50 AM.</div>
+<div class="footer">Report generated by <a href="http://cobertura.sourceforge.net/" target="_top">Cobertura</a> 1.9.4.1 on 4/10/12 2:14 AM.</div>
 </body>
 </html>

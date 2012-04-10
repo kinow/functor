@@ -62,10 +62,10 @@
     <property name="sun.cpu.isalist" value=""/>
   </properties>
   <testcase time="0" classname="org.apache.commons.functor.example.lines.TestLines" name="testCountCharacters"/>
-  <testcase time="0" classname="org.apache.commons.functor.example.lines.TestLines" name="testCountWords"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.example.lines.TestLines" name="testCountWords"/>
   <testcase time="0" classname="org.apache.commons.functor.example.lines.TestLines" name="testCountLines"/>
-  <testcase time="0" classname="org.apache.commons.functor.example.lines.TestLines" name="testCountWordsExcludingComments"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.example.lines.TestLines" name="testCountWordsExcludingComments"/>
   <testcase time="0.001" classname="org.apache.commons.functor.example.lines.TestLines" name="testCountCommentLines"/>
   <testcase time="0" classname="org.apache.commons.functor.example.lines.TestLines" name="testFindMatchingLines"/>
-  <testcase time="0" classname="org.apache.commons.functor.example.lines.TestLines" name="testFindMatchingFromTail"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.example.lines.TestLines" name="testFindMatchingFromTail"/>
 </testsuite>

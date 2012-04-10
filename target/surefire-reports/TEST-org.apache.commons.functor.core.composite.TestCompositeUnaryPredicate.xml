@@ -62,11 +62,11 @@
     <property name="sun.cpu.isalist" value=""/>
   </properties>
   <testcase time="0.001" classname="org.apache.commons.functor.core.composite.TestCompositeUnaryPredicate" name="testEquals"/>
-  <testcase time="0" classname="org.apache.commons.functor.core.composite.TestCompositeUnaryPredicate" name="testTest"/>
-  <testcase time="0.003" classname="org.apache.commons.functor.core.composite.TestCompositeUnaryPredicate" name="testNullNotAllowed"/>
-  <testcase time="0.001" classname="org.apache.commons.functor.core.composite.TestCompositeUnaryPredicate" name="testOf"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.core.composite.TestCompositeUnaryPredicate" name="testTest"/>
+  <testcase time="0" classname="org.apache.commons.functor.core.composite.TestCompositeUnaryPredicate" name="testNullNotAllowed"/>
+  <testcase time="0" classname="org.apache.commons.functor.core.composite.TestCompositeUnaryPredicate" name="testOf"/>
   <testcase time="0" classname="org.apache.commons.functor.core.composite.TestCompositeUnaryPredicate" name="testNullNotAllowed2"/>
   <testcase time="0" classname="org.apache.commons.functor.core.composite.TestCompositeUnaryPredicate" name="testObjectEquals"/>
-  <testcase time="0" classname="org.apache.commons.functor.core.composite.TestCompositeUnaryPredicate" name="testSerializeDeserializeThenCompare"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.core.composite.TestCompositeUnaryPredicate" name="testSerializeDeserializeThenCompare"/>
   <testcase time="0" classname="org.apache.commons.functor.core.composite.TestCompositeUnaryPredicate" name="testToStringIsOverridden"/>
 </testsuite>

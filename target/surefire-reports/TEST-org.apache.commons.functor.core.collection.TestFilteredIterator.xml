@@ -64,22 +64,22 @@
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestFilteredIterator" name="testSomePass"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestFilteredIterator" name="testAllPass"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestFilteredIterator" name="testAllPass2"/>
-  <testcase time="0.001" classname="org.apache.commons.functor.core.collection.TestFilteredIterator" name="testEmptyList"/>
+  <testcase time="0" classname="org.apache.commons.functor.core.collection.TestFilteredIterator" name="testEmptyList"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestFilteredIterator" name="testNonePass"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestFilteredIterator" name="testNextWithoutHasNext"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestFilteredIterator" name="testNextAfterEndOfList"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestFilteredIterator" name="testNextOnEmptyList"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestFilteredIterator" name="testRemoveBeforeNext"/>
-  <testcase time="0.001" classname="org.apache.commons.functor.core.collection.TestFilteredIterator" name="testRemoveAfterNext"/>
+  <testcase time="0" classname="org.apache.commons.functor.core.collection.TestFilteredIterator" name="testRemoveAfterNext"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestFilteredIterator" name="testRemoveSome"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestFilteredIterator" name="testRemoveAll"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestFilteredIterator" name="testRemoveWithoutHasNext"/>
-  <testcase time="0" classname="org.apache.commons.functor.core.collection.TestFilteredIterator" name="testFilterWithNullIteratorReturnsNull"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.core.collection.TestFilteredIterator" name="testFilterWithNullIteratorReturnsNull"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestFilteredIterator" name="testFilterWithNullPredicateReturnsIdentity"/>
-  <testcase time="0" classname="org.apache.commons.functor.core.collection.TestFilteredIterator" name="testConstructorProhibitsNull"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.core.collection.TestFilteredIterator" name="testConstructorProhibitsNull"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestFilteredIterator" name="testConstructorProhibitsNull2"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestFilteredIterator" name="testConstructorProhibitsNull3"/>
-  <testcase time="0" classname="org.apache.commons.functor.core.collection.TestFilteredIterator" name="testObjectEquals"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.core.collection.TestFilteredIterator" name="testObjectEquals"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestFilteredIterator" name="testSerializeDeserializeThenCompare"/>
-  <testcase time="0.001" classname="org.apache.commons.functor.core.collection.TestFilteredIterator" name="testToStringIsOverridden"/>
+  <testcase time="0" classname="org.apache.commons.functor.core.collection.TestFilteredIterator" name="testToStringIsOverridden"/>
 </testsuite>

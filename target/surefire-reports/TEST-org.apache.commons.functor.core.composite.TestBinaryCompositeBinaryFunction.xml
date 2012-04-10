@@ -62,7 +62,7 @@
     <property name="sun.cpu.isalist" value=""/>
   </properties>
   <testcase time="0" classname="org.apache.commons.functor.core.composite.TestBinaryCompositeBinaryFunction" name="testEvaluate"/>
-  <testcase time="0" classname="org.apache.commons.functor.core.composite.TestBinaryCompositeBinaryFunction" name="testEquals"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.core.composite.TestBinaryCompositeBinaryFunction" name="testEquals"/>
   <testcase time="0" classname="org.apache.commons.functor.core.composite.TestBinaryCompositeBinaryFunction" name="testEvaluateRaw"/>
   <testcase time="0" classname="org.apache.commons.functor.core.composite.TestBinaryCompositeBinaryFunction" name="testEvaluateObject"/>
   <testcase time="0" classname="org.apache.commons.functor.core.composite.TestBinaryCompositeBinaryFunction" name="testObjectEquals"/>

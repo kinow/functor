@@ -6,10 +6,8 @@ Export-Package: org.apache.commons.functor.generator.util;version="1.0
  .commons.functor;version="1.0.0.SNAPSHOT",org.apache.commons.functor.
  core.comparator;version="1.0.0.SNAPSHOT",org.apache.commons.functor.g
  enerator;version="1.0.0.SNAPSHOT",org.apache.commons.functor.core.col
- lection;version="1.0.0.SNAPSHOT",org.apache.commons.functor.aggregate
- .functions;version="1.0.0.SNAPSHOT",org.apache.commons.functor.aggreg
- ate;version="1.0.0.SNAPSHOT",org.apache.commons.functor.core.algorith
- m;version="1.0.0.SNAPSHOT"
+ lection;version="1.0.0.SNAPSHOT",org.apache.commons.functor.core.algo
+ rithm;version="1.0.0.SNAPSHOT"
 Built-By: kinow
 Tool: Bnd-1.43.0
 Bundle-Name: Commons Functor
@@ -17,7 +15,7 @@ Created-By: Apache Maven Bundle Plugin
 Bundle-Vendor: The Apache Software Foundation
 Build-Jdk: 1.6.0_31
 Bundle-Version: 1.0.0.SNAPSHOT
-Bnd-LastModified: 1332388136190
+Bnd-LastModified: 1334034785754
 Bundle-ManifestVersion: 2
 Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
 Bundle-Description: A "functor" is an entity that serves the role of a

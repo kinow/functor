@@ -67,5 +67,5 @@
   <testcase time="0" classname="org.apache.commons.functor.core.composite.TestUnaryNot" name="testNotNotNull"/>
   <testcase time="0" classname="org.apache.commons.functor.core.composite.TestUnaryNot" name="testObjectEquals"/>
   <testcase time="0.001" classname="org.apache.commons.functor.core.composite.TestUnaryNot" name="testSerializeDeserializeThenCompare"/>
-  <testcase time="0.001" classname="org.apache.commons.functor.core.composite.TestUnaryNot" name="testToStringIsOverridden"/>
+  <testcase time="0" classname="org.apache.commons.functor.core.composite.TestUnaryNot" name="testToStringIsOverridden"/>
 </testsuite>

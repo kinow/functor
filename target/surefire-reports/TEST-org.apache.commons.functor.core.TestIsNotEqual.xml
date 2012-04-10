@@ -64,7 +64,7 @@
   <testcase time="0.001" classname="org.apache.commons.functor.core.TestIsNotEqual" name="testEquals"/>
   <testcase time="0" classname="org.apache.commons.functor.core.TestIsNotEqual" name="testTest"/>
   <testcase time="0" classname="org.apache.commons.functor.core.TestIsNotEqual" name="testConstant"/>
-  <testcase time="0" classname="org.apache.commons.functor.core.TestIsNotEqual" name="testObjectEquals"/>
-  <testcase time="0.001" classname="org.apache.commons.functor.core.TestIsNotEqual" name="testSerializeDeserializeThenCompare"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.core.TestIsNotEqual" name="testObjectEquals"/>
+  <testcase time="0" classname="org.apache.commons.functor.core.TestIsNotEqual" name="testSerializeDeserializeThenCompare"/>
   <testcase time="0" classname="org.apache.commons.functor.core.TestIsNotEqual" name="testToStringIsOverridden"/>
 </testsuite>

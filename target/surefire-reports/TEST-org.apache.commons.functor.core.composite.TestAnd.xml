@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.005" errors="0" skipped="0" tests="7" name="org.apache.commons.functor.core.composite.TestAnd">
+<testsuite failures="0" time="0.006" errors="0" skipped="0" tests="7" name="org.apache.commons.functor.core.composite.TestAnd">
   <properties>
     <property name="jna.platform.library.path" value="/lib64"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -62,10 +62,10 @@
     <property name="sun.cpu.isalist" value=""/>
   </properties>
   <testcase time="0.002" classname="org.apache.commons.functor.core.composite.TestAnd" name="testEquals"/>
-  <testcase time="0.001" classname="org.apache.commons.functor.core.composite.TestAnd" name="testTrue"/>
+  <testcase time="0" classname="org.apache.commons.functor.core.composite.TestAnd" name="testTrue"/>
   <testcase time="0" classname="org.apache.commons.functor.core.composite.TestAnd" name="testFalse"/>
   <testcase time="0" classname="org.apache.commons.functor.core.composite.TestAnd" name="testDuplicateAdd"/>
   <testcase time="0" classname="org.apache.commons.functor.core.composite.TestAnd" name="testObjectEquals"/>
-  <testcase time="0.002" classname="org.apache.commons.functor.core.composite.TestAnd" name="testSerializeDeserializeThenCompare"/>
-  <testcase time="0" classname="org.apache.commons.functor.core.composite.TestAnd" name="testToStringIsOverridden"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.core.composite.TestAnd" name="testSerializeDeserializeThenCompare"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.core.composite.TestAnd" name="testToStringIsOverridden"/>
 </testsuite>

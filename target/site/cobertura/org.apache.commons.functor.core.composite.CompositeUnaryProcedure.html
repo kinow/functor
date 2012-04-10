@@ -12,7 +12,7 @@
 <div class="separator">&nbsp;</div>
 <table class="report">
 <thead><tr>  <td class="heading">Classes in this File</td>  <td class="heading"><a class="dfn" href="help.html" onclick="popupwindow('help.html'); return false;">Line Coverage</a></td>  <td class="heading"><a class="dfn" href="help.html" onclick="popupwindow('help.html'); return false;">Branch Coverage</a></td>  <td class="heading"><a class="dfn" href="help.html" onclick="popupwindow('help.html'); return false;">Complexity</a></td></tr></thead>
-  <tr><td><a href="org.apache.commons.functor.core.composite.CompositeUnaryProcedure.html">CompositeUnaryProcedure</a></td><td><table cellpadding="0px" cellspacing="0px" class="percentgraph"><tr class="percentgraph"><td align="right" class="percentgraph" width="40">90%</td><td class="percentgraph"><div class="percentgraph"><div class="greenbar" style="width:90px"><span class="text">18/20</span></div></div></td></tr></table></td><td><table cellpadding="0px" cellspacing="0px" class="percentgraph"><tr class="percentgraph"><td align="right" class="percentgraph" width="40">70%</td><td class="percentgraph"><div class="percentgraph"><div class="greenbar" style="width:70px"><span class="text">7/10</span></div></div></td></tr></table></td><td class="value"><span class="hidden">1.375;</span>1.375</td></tr>
+  <tr><td><a href="org.apache.commons.functor.core.composite.CompositeUnaryProcedure.html">CompositeUnaryProcedure</a></td><td><table cellpadding="0px" cellspacing="0px" class="percentgraph"><tr class="percentgraph"><td align="right" class="percentgraph" width="40">87%</td><td class="percentgraph"><div class="percentgraph"><div class="greenbar" style="width:87px"><span class="text">14/16</span></div></div></td></tr></table></td><td><table cellpadding="0px" cellspacing="0px" class="percentgraph"><tr class="percentgraph"><td align="right" class="percentgraph" width="40">70%</td><td class="percentgraph"><div class="percentgraph"><div class="greenbar" style="width:70px"><span class="text">7/10</span></div></div></td></tr></table></td><td class="value"><span class="hidden">1.375;</span>1.375</td></tr>
 
 </table>
 <div class="separator">&nbsp;</div>
@@ -152,10 +152,13 @@
 <tr>  <td class="numLine">&nbsp;67</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;68</td>  <td class="nbHitsCovered">&nbsp;5</td>  <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> CompositeUnaryProcedure(UnaryProcedure&lt;? <span class="keyword">super</span> A&gt; procedure) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;69</td>  <td class="nbHitsCovered">&nbsp;10</td>  <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.function =</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;70</td>  <td class="nbHitsCovered">&nbsp;10</td>  <td class="src"><pre class="src">&nbsp;            <span class="keyword">new</span> CompositeUnaryFunction&lt;A, Object&gt;(</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;71</td>  <td class="nbHitsCovered">&nbsp;10</td>  <td class="src"><pre class="src">&nbsp;                <span class="keyword">new</span> UnaryProcedureUnaryFunction&lt;A, Object&gt;(Validate.notNull(</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;72</td>  <td class="nbHitsCovered">&nbsp;5</td>  <td class="src"><pre class="src">&nbsp;                    procedure, <span class="string">"procedure must not be null"</span>)));</pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;69</td>  <td class="nbHitsCovered">&nbsp;5</td>  <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.function =</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;70</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;            <span class="keyword">new</span> CompositeUnaryFunction&lt;A, Object&gt;(</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;71</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;                <span class="keyword">new</span> UnaryProcedureUnaryFunction&lt;A, Object&gt;(Validate.notNull(</pre></td></tr>
+<tr>  <td class="numLine">&nbsp;72</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;                    procedure, <span class="string">"procedure must not be null"</span>)));</pre></td></tr>
 <tr>  <td class="numLineCover">&nbsp;73</td>  <td class="nbHitsCovered">&nbsp;5</td>  <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;74</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;</pre></td></tr>
@@ -221,8 +224,9 @@
   <td class="src"><pre class="src">&nbsp;    @Override</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;108</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">boolean</span> equals(Object that) {</pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;109</td>  <td class="nbHitsCovered"><a title="Line 109: Conditional coverage 100% (4/4) [each condition: 100%, 100%].">&nbsp;9</a></td>  <td class="src"><pre class="src">&nbsp;<a title="Line 109: Conditional coverage 100% (4/4) [each condition: 100%, 100%].">        <span class="keyword">return</span> that == <span class="keyword">this</span> || (that <span class="keyword">instanceof</span> CompositeUnaryProcedure&lt;?&gt;</a></pre></td></tr>
-<tr>  <td class="numLineCover">&nbsp;110</td>  <td class="nbHitsUncovered"><a title="Line 110: Conditional coverage 50% (1/2).">&nbsp;3</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 110: Conditional coverage 50% (1/2).">                                    &amp;&amp; equals((CompositeUnaryProcedure&lt;?&gt;) that));</a></span></pre></td></tr>
+<tr>  <td class="numLineCover">&nbsp;109</td>  <td class="nbHitsUncovered"><a title="Line 109: Conditional coverage 83% (5/6) [each condition: 100%, 100%, 50%].">&nbsp;5</a></td>  <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;<a title="Line 109: Conditional coverage 83% (5/6) [each condition: 100%, 100%, 50%].">        <span class="keyword">return</span> that == <span class="keyword">this</span> || (that <span class="keyword">instanceof</span> CompositeUnaryProcedure&lt;?&gt;</a></span></pre></td></tr>
+<tr>  <td class="numLine">&nbsp;110</td>  <td class="nbHits">&nbsp;</td>
+  <td class="src"><pre class="src">&nbsp;                                    &amp;&amp; equals((CompositeUnaryProcedure&lt;?&gt;) that));</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;111</td>  <td class="nbHits">&nbsp;</td>
   <td class="src"><pre class="src">&nbsp;    }</pre></td></tr>
 <tr>  <td class="numLine">&nbsp;112</td>  <td class="nbHits">&nbsp;</td>
@@ -281,6 +285,6 @@
   <td class="src"><pre class="src">&nbsp;}</pre></td></tr>
 </table>
 
-<div class="footer">Report generated by <a href="http://cobertura.sourceforge.net/" target="_top">Cobertura</a> 1.9.4.1 on 3/22/12 12:50 AM.</div>
+<div class="footer">Report generated by <a href="http://cobertura.sourceforge.net/" target="_top">Cobertura</a> 1.9.4.1 on 4/10/12 2:14 AM.</div>
 </body>
 </html>

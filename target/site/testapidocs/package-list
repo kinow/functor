@@ -1,15 +1,11 @@
 org.apache.commons.functor
 org.apache.commons.functor.adapter
-org.apache.commons.functor.aggregate
-org.apache.commons.functor.aggregate.functions
 org.apache.commons.functor.core
+org.apache.commons.functor.core.algorithm
 org.apache.commons.functor.core.collection
 org.apache.commons.functor.core.comparator
 org.apache.commons.functor.core.composite
 org.apache.commons.functor.example
-org.apache.commons.functor.example.aggregate
-org.apache.commons.functor.example.aggregate.list
-org.apache.commons.functor.example.aggregate.nostore
 org.apache.commons.functor.example.kata.four
 org.apache.commons.functor.example.kata.one
 org.apache.commons.functor.example.kata.two

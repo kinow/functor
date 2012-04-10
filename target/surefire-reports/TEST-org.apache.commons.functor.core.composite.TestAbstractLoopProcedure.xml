@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.013" errors="0" skipped="0" tests="4" name="org.apache.commons.functor.core.composite.TestAbstractLoopProcedure">
+<testsuite failures="0" time="0.009" errors="0" skipped="0" tests="4" name="org.apache.commons.functor.core.composite.TestAbstractLoopProcedure">
   <properties>
     <property name="jna.platform.library.path" value="/lib64"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -63,6 +63,6 @@
   </properties>
   <testcase time="0" classname="org.apache.commons.functor.core.composite.TestAbstractLoopProcedure" name="testEqualsAndHashCodeWithNullArgs"/>
   <testcase time="0" classname="org.apache.commons.functor.core.composite.TestAbstractLoopProcedure" name="testObjectEquals"/>
-  <testcase time="0.012" classname="org.apache.commons.functor.core.composite.TestAbstractLoopProcedure" name="testSerializeDeserializeThenCompare"/>
+  <testcase time="0.009" classname="org.apache.commons.functor.core.composite.TestAbstractLoopProcedure" name="testSerializeDeserializeThenCompare"/>
   <testcase time="0" classname="org.apache.commons.functor.core.composite.TestAbstractLoopProcedure" name="testToStringIsOverridden"/>
 </testsuite>

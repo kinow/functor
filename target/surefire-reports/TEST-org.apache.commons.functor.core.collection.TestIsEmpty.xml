@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.004" errors="0" skipped="0" tests="10" name="org.apache.commons.functor.core.collection.TestIsEmpty">
+<testsuite failures="0" time="0.003" errors="0" skipped="0" tests="10" name="org.apache.commons.functor.core.collection.TestIsEmpty">
   <properties>
     <property name="jna.platform.library.path" value="/lib64"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -66,7 +66,7 @@
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestIsEmpty" name="testTestNull"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestIsEmpty" name="testTestNonCollection"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestIsEmpty" name="testTestArray"/>
-  <testcase time="0.001" classname="org.apache.commons.functor.core.collection.TestIsEmpty" name="testTestString"/>
+  <testcase time="0" classname="org.apache.commons.functor.core.collection.TestIsEmpty" name="testTestString"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestIsEmpty" name="testTestMap"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestIsEmpty" name="testObjectEquals"/>
   <testcase time="0.001" classname="org.apache.commons.functor.core.collection.TestIsEmpty" name="testSerializeDeserializeThenCompare"/>

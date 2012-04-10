@@ -1,7 +1,5 @@
 org.apache.commons.functor
 org.apache.commons.functor.adapter
-org.apache.commons.functor.aggregate
-org.apache.commons.functor.aggregate.functions
 org.apache.commons.functor.core
 org.apache.commons.functor.core.algorithm
 org.apache.commons.functor.core.collection
