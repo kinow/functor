@@ -1,17 +1,53 @@
 K 25
 svn:wc:ra_dav:version-url
 V 107
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/generator
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/generator
 END
 TestBaseGenerator.java
 K 25
 svn:wc:ra_dav:version-url
 V 130
-/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/generator/TestBaseGenerator.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/generator/TestBaseGenerator.java
+END
+TestGenerateWhile.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/generator/TestGenerateWhile.java
+END
+TestFilteredGenerator.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/generator/TestFilteredGenerator.java
+END
+TestTransformedGenerator.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/repos/asf/!svn/ver/1344781/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/generator/TestTransformedGenerator.java
 END
 TestIteratorToGeneratorAdapter.java
 K 25
 svn:wc:ra_dav:version-url
 V 143
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/generator/TestIteratorToGeneratorAdapter.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/generator/TestIteratorToGeneratorAdapter.java
+END
+TestGenerateUntil.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/generator/TestGenerateUntil.java
+END
+TestWhileGenerate.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/generator/TestWhileGenerate.java
+END
+TestUntilGenerate.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/generator/TestUntilGenerate.java
 END

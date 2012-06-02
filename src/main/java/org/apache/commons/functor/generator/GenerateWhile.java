@@ -39,7 +39,7 @@ public class GenerateWhile<E> extends BaseGenerator<E> {
      * @param wrapped {@link Generator}
      * @param test {@link UnaryPredicate}
      */
-    public GenerateWhile(Generator<? extends E> wrapped, UnaryPredicate<? super E> test) {
+    public GenerateWhile(StoppableGenerator<? extends E> wrapped, UnaryPredicate<? super E> test) {
         super(Validate.notNull(wrapped, "Generator argument was null"));
         this.test = Validate.notNull(test, "UnaryPredicate argument was null");
     }
@@ -63,8 +63,8 @@ public class GenerateWhile<E> extends BaseGenerator<E> {
      */
     @SuppressWarnings("unchecked")
     @Override
-    protected Generator<? extends E> getWrappedGenerator() {
-        return (Generator<? extends E>) super.getWrappedGenerator();
+    protected StoppableGenerator<? extends E> getWrappedGenerator() {
+        return (StoppableGenerator<? extends E>) super.getWrappedGenerator();
     }
 
     /**
@@ -89,7 +89,7 @@ public class GenerateWhile<E> extends BaseGenerator<E> {
     public int hashCode() {
         int result = "GenerateWhile".hashCode();
         result <<= 2;
-        Generator<?> gen = getWrappedGenerator();
+        StoppableGenerator<?> gen = getWrappedGenerator();
         result ^= gen == null ? 0 : gen.hashCode();
         result <<= 2;
         result ^= test == null ? 0 : test.hashCode();

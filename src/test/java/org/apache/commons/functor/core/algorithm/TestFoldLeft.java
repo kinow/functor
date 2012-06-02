@@ -31,8 +31,8 @@ import org.junit.Test;
  * Tests {@link FoldLeft} algorithm.
  */
 public class TestFoldLeft {
-	
-	@Test
+
+    @Test
     public final void testObjectEquals() throws Exception {
         Object obj = new FoldLeft<Integer>(new BinaryFunction<Integer, Integer, Integer>() {
             public Integer evaluate(Integer a, Integer b) {
@@ -55,8 +55,8 @@ public class TestFoldLeft {
             assertTrue("equals must be symmetric",! obj2.equals(obj));
         }
     }
-	
-	@Test
+
+    @Test
     public void testFoldLeft() {
         FoldLeft<Integer> foldLeft = new FoldLeft<Integer>(new BinaryFunction<Integer, Integer, Integer>() {
             public Integer evaluate(Integer a, Integer b) {
@@ -66,8 +66,8 @@ public class TestFoldLeft {
         assertEquals(new Integer(sum), foldLeft.evaluate(IteratorToGeneratorAdapter.adapt(list.iterator())));
         assertEquals(new Integer(sum), foldLeft.evaluate(IteratorToGeneratorAdapter.adapt(list.iterator()), new Integer(0)));
     }
-	
-	// Attributes
+
+    // Attributes
     // ------------------------------------------------------------------------
     private List<Integer> list = Arrays.asList(0,1,2);
     private int sum = 3;

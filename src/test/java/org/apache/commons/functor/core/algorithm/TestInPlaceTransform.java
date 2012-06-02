@@ -33,11 +33,11 @@ import org.junit.Test;
  * Tests {@link InPlaceTransform} algorithm.
  */
 public class TestInPlaceTransform extends BaseFunctorTest {
-	
-	// Lifecycle
+
+    // Lifecycle
     // ------------------------------------------------------------------------
 
-	@Before
+    @Before
     public void setUp() throws Exception {
         list = new ArrayList<Integer>();
         doubled = new ArrayList<Integer>();
@@ -46,22 +46,22 @@ public class TestInPlaceTransform extends BaseFunctorTest {
             doubled.add(new Integer(i*2));
         }
     }
-	
-	@After
+
+    @After
     public void tearDown() throws Exception {
         list = null;
         doubled = null;
     }
-	
-	// Tests
+
+    // Tests
     // ------------------------------------------------------------------------
-	
-	@Override
-	protected Object makeFunctor() throws Exception {
-		return new InPlaceTransform<Integer>();
-	}
-	
-	@Test
+
+    @Override
+    protected Object makeFunctor() throws Exception {
+        return new InPlaceTransform<Integer>();
+    }
+
+    @Test
     public void testTransform() {
         new InPlaceTransform<Integer>().run(
             list.listIterator(),
@@ -73,20 +73,20 @@ public class TestInPlaceTransform extends BaseFunctorTest {
         );
         assertEquals(doubled,list);
     }
-	
-	public void testInstance() {
-		assertNotNull("InPlaceTransform must not be null", InPlaceTransform.instance());
-	}
-	
-	// Attributes
+
+    public void testInstance() {
+        assertNotNull("InPlaceTransform must not be null", InPlaceTransform.instance());
+    }
+
+    // Attributes
     // ------------------------------------------------------------------------
     private List<Integer> list = null;
     private List<Integer> doubled = null;
-    
-	// Classes
+
+    // Classes
     // ------------------------------------------------------------------------
 
-	static class Doubler implements UnaryFunction<Integer, Integer> {
+    static class Doubler implements UnaryFunction<Integer, Integer> {
         public Integer evaluate(Integer obj) {
             return new Integer(2*obj);
         }

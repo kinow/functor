@@ -24,8 +24,7 @@ import junit.framework.TestSuite;
  * See http://pragprog.com/pragdave/Practices/Kata/KataFour.rdoc,v
  * for more information on this Kata.
  *
- * @version $Revision: 1171267 $ $Date: 2011-09-15 17:46:08 -0300 (Thu, 15 Sep 2011) $
- * @author Rodney Waldhoff
+ * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
 public class TestWeather extends TestCase {
     public TestWeather(String testName) {

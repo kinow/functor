@@ -34,19 +34,19 @@ import org.junit.Test;
  */
 public class TestIndexOfInGenerator extends BaseFunctorTest {
 
-	@Override
-	protected Object makeFunctor() throws Exception {
-		return new IndexOfInGenerator<Integer>();
-	}
-	
-	@Test
-	public void testIndexOfInGenerator() {
-		assertEquals(3L, new IndexOfInGenerator<Integer>().evaluate(IteratorToGeneratorAdapter.adapt(list.iterator()),equalsThree));
-	}
-	
-	// Attributes
+    @Override
+    protected Object makeFunctor() throws Exception {
+        return new IndexOfInGenerator<Integer>();
+    }
+
+    @Test
+    public void testIndexOfInGenerator() {
+        assertEquals(3L, new IndexOfInGenerator<Integer>().evaluate(IteratorToGeneratorAdapter.adapt(list.iterator()),equalsThree));
+    }
+
+    // Attributes
     // ------------------------------------------------------------------------
-    
+
     private List<Integer> list = Arrays.asList(0,1,2,3,4,5,6,7,8,9);
     private UnaryPredicate<Integer> equalsThree = LeftBoundPredicate.bind(IsEqual.instance(),new Integer(3));
 

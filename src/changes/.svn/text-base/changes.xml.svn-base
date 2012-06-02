@@ -22,12 +22,39 @@
     <title>Apache Commons Functor Changes</title>
   </properties>
   <body>
-    <release version="1.0" date="2011-??-??" description="First release.">
-      <action dev="simonetripodi" issue="FUNCTOR-5">
-        Complete the javadoc description of Limit (Contributed by Bruno P. Kinoshita)
+    <release version="1.0" date="2012-??-??" description="First release.">
+      <action dev="simonetripodi" issue="FUNCTOR-18" due-to="Bruno P. Kinoshita">
+        Fix duplicated entries in examples page of [functor] website, and replace &lt;br/&gt; tags in aggregator.xml
       </action>
-      <action dev="simonetripodi" issue="FUNCTOR-2">
-        Improve Functor web page, removing Ant from building (Contributed by Bruno P. Kinoshita)
+      <action dev="simonetripodi" issue="FUNCTOR-17">
+        Move developers from @author tags to pom.xml
+      </action>
+      <action dev="simonetripodi" issue="FUNCTOR-16" due-to="Bruno P. Kinoshita">
+        Fix checkstyle errors
+      </action>
+      <action dev="simonetripodi" issue="FUNCTOR-15" due-to="Bruno P. Kinoshita">
+        Distribute tests from TestAlgorithms into several test classes under algorithm test package
+      </action>
+      <action dev="simonetripodi" issue="FUNCTOR-9" due-to="Bruno P. Kinoshita">
+        Make Limit and Offset Serializable
+      </action>
+      <action dev="simonetripodi" issue="FUNCTOR-8" due-to="Bruno P. Kinoshita">
+        Possible NPE in TransformedGenerator if getWrappedGenerator() is overridden to return null
+      </action>
+      <action dev="simonetripodi" issue="FUNCTOR-7" due-to="Bruno P. Kinoshita">
+        Tests for generators
+      </action>
+      <action dev="simonetripodi" issue="FUNCTOR-5" due-to="Bruno P. Kinoshita">
+        Complete the javadoc description of Limit
+      </action>
+      <action dev="simonetripodi" issue="FUNCTOR-4" due-to="Bruno P. Kinoshita">
+        Add easily accessible, user-friendly examples
+      </action>
+      <action dev="simonetripodi" issue="FUNCTOR-2" due-to="Bruno P. Kinoshita">
+        Improve Functor web page, removing Ant from building
+      </action>
+      <action dev="simonetripodi" issue="FUNCTOR-1" due-to="Liviu Tudor">
+        New components: summarize and aggregate
       </action>
     </release>
   </body>

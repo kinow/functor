@@ -29,9 +29,9 @@ import org.junit.Test;
  */
 public class TestDoWhile {
 
-	@Test
+    @Test
     public final void testObjectEquals() throws Exception {
-		Counter counter = new Counter();
+        Counter counter = new Counter();
         Object obj = new DoWhile(counter, new Limit(10));
         assertEquals("equals must be reflexive",obj,obj);
         assertEquals("hashCode must be reflexive",obj.hashCode(),obj.hashCode());
@@ -45,8 +45,8 @@ public class TestDoWhile {
             assertTrue("equals must be symmetric",! obj2.equals(obj));
         }
     }
-	
-	@Test
+
+    @Test
     public void testDoWhile() {
         for(int i=0;i<3;i++){
             Counter counter = new Counter();
@@ -54,8 +54,8 @@ public class TestDoWhile {
             assertEquals(i+1,counter.count);
         }
     }
-	
-	// Classes
+
+    // Classes
     // ------------------------------------------------------------------------
 
     static class Counter implements Procedure {
@@ -64,5 +64,5 @@ public class TestDoWhile {
         }
         public int count = 0;
     }
-	
+
 }

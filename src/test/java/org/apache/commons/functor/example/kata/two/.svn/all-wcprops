@@ -1,29 +1,29 @@
 K 25
 svn:wc:ra_dav:version-url
 V 114
-/repos/asf/!svn/ver/1187629/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/kata/two
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/kata/two
 END
 EiffelStyleLoop.java
 K 25
 svn:wc:ra_dav:version-url
 V 135
-/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/kata/two/EiffelStyleLoop.java
-END
-BaseBinaryChop.java
-K 25
-svn:wc:ra_dav:version-url
-V 134
-/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/kata/two/BaseBinaryChop.java
-END
-BinaryChop.java
-K 25
-svn:wc:ra_dav:version-url
-V 130
-/repos/asf/!svn/ver/1187629/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/kata/two/BinaryChop.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/kata/two/EiffelStyleLoop.java
 END
 TestBinaryChop.java
 K 25
 svn:wc:ra_dav:version-url
 V 134
-/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/kata/two/TestBinaryChop.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/kata/two/TestBinaryChop.java
+END
+BaseBinaryChop.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/kata/two/BaseBinaryChop.java
+END
+BinaryChop.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/kata/two/BinaryChop.java
 END

@@ -27,8 +27,7 @@ import org.apache.commons.functor.core.IsInstance;
 
 
 /**
- * @version $Revision: 1187622 $ $Date: 2011-10-21 23:22:33 -0200 (Fri, 21 Oct 2011) $
- * @author Rodney Waldhoff
+ * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
 @SuppressWarnings("unchecked")
 public class TestPredicatedMap extends TestCase {

@@ -1,13 +1,13 @@
 K 25
 svn:wc:ra_dav:version-url
 V 56
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk
+/repos/asf/!svn/ver/1345145/commons/proper/functor/trunk
 END
-NOTICE.txt
+checkstyle.xml
 K 25
 svn:wc:ra_dav:version-url
-V 67
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/NOTICE.txt
+V 71
+/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/checkstyle.xml
 END
 LICENSE.txt
 K 25
@@ -21,6 +21,24 @@ svn:wc:ra_dav:version-url
 V 72
 /repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/fb-excludes.xml
 END
+doap_functor.rdf
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/asf/!svn/ver/1185833/commons/proper/functor/trunk/doap_functor.rdf
+END
+pom.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/asf/!svn/ver/1344912/commons/proper/functor/trunk/pom.xml
+END
+NOTICE.txt
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/NOTICE.txt
+END
 RELEASE-NOTES.txt
 K 25
 svn:wc:ra_dav:version-url
@@ -32,22 +50,4 @@ K 25
 svn:wc:ra_dav:version-url
 V 84
 /repos/asf/!svn/ver/1175405/commons/proper/functor/trunk/checkstyle-suppressions.xml
-END
-pom.xml
-K 25
-svn:wc:ra_dav:version-url
-V 64
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/pom.xml
-END
-checkstyle.xml
-K 25
-svn:wc:ra_dav:version-url
-V 71
-/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/checkstyle.xml
-END
-doap_functor.rdf
-K 25
-svn:wc:ra_dav:version-url
-V 73
-/repos/asf/!svn/ver/1185833/commons/proper/functor/trunk/doap_functor.rdf
 END

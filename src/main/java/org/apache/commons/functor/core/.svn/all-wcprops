@@ -1,61 +1,79 @@
 K 25
 svn:wc:ra_dav:version-url
 V 102
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core
-END
-IsInstance.java
-K 25
-svn:wc:ra_dav:version-url
-V 118
-/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/IsInstance.java
-END
-IsNotSame.java
-K 25
-svn:wc:ra_dav:version-url
-V 117
-/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/IsNotSame.java
-END
-IsEqual.java
-K 25
-svn:wc:ra_dav:version-url
-V 115
-/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/IsEqual.java
-END
-LeftIdentity.java
-K 25
-svn:wc:ra_dav:version-url
-V 120
-/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/LeftIdentity.java
-END
-IsNull.java
-K 25
-svn:wc:ra_dav:version-url
-V 114
-/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/IsNull.java
-END
-NoOp.java
-K 25
-svn:wc:ra_dav:version-url
-V 112
-/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/NoOp.java
-END
-Limit.java
-K 25
-svn:wc:ra_dav:version-url
-V 113
-/repos/asf/!svn/ver/1188891/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/Limit.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core
 END
 IsSame.java
 K 25
 svn:wc:ra_dav:version-url
 V 114
-/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/IsSame.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/IsSame.java
+END
+IsNotNull.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/IsNotNull.java
+END
+IsNotSame.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/IsNotSame.java
 END
 IsNotEqual.java
 K 25
 svn:wc:ra_dav:version-url
 V 118
-/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/IsNotEqual.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/IsNotEqual.java
+END
+IsEqual.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/IsEqual.java
+END
+LeftIdentity.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/LeftIdentity.java
+END
+Constant.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/Constant.java
+END
+NoOp.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/NoOp.java
+END
+IsInstance.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/IsInstance.java
+END
+Identity.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/Identity.java
+END
+Limit.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/Limit.java
+END
+RightIdentity.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/RightIdentity.java
 END
 package-info.java
 K 25
@@ -67,29 +85,11 @@ Offset.java
 K 25
 svn:wc:ra_dav:version-url
 V 114
-/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/Offset.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/Offset.java
 END
-RightIdentity.java
+IsNull.java
 K 25
 svn:wc:ra_dav:version-url
-V 121
-/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/RightIdentity.java
-END
-IsNotNull.java
-K 25
-svn:wc:ra_dav:version-url
-V 117
-/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/IsNotNull.java
-END
-Constant.java
-K 25
-svn:wc:ra_dav:version-url
-V 116
-/repos/asf/!svn/ver/1187620/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/Constant.java
-END
-Identity.java
-K 25
-svn:wc:ra_dav:version-url
-V 116
-/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/Identity.java
+V 114
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/IsNull.java
 END

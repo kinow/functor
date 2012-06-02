@@ -1,7 +1,25 @@
 K 25
 svn:wc:ra_dav:version-url
 V 113
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/collection
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/collection
+END
+FilteredIterable.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/repos/asf/!svn/ver/1344786/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/collection/FilteredIterable.java
+END
+IsElementOf.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/collection/IsElementOf.java
+END
+TransformedIterator.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/collection/TransformedIterator.java
 END
 package-info.java
 K 25
@@ -9,39 +27,21 @@ svn:wc:ra_dav:version-url
 V 131
 /repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/collection/package-info.java
 END
-FilteredIterable.java
-K 25
-svn:wc:ra_dav:version-url
-V 135
-/repos/asf/!svn/ver/1188396/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/collection/FilteredIterable.java
-END
 FilteredIterator.java
 K 25
 svn:wc:ra_dav:version-url
 V 135
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/collection/FilteredIterator.java
-END
-IsElementOf.java
-K 25
-svn:wc:ra_dav:version-url
-V 130
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/collection/IsElementOf.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/collection/FilteredIterator.java
 END
 IsEmpty.java
 K 25
 svn:wc:ra_dav:version-url
 V 126
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/collection/IsEmpty.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/collection/IsEmpty.java
 END
 Size.java
 K 25
 svn:wc:ra_dav:version-url
 V 123
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/collection/Size.java
-END
-TransformedIterator.java
-K 25
-svn:wc:ra_dav:version-url
-V 138
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/collection/TransformedIterator.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/collection/Size.java
 END

@@ -21,9 +21,7 @@ import org.apache.commons.functor.generator.BaseGenerator;
  * A generator for the range <i>from</i> (inclusive) to <i>to</i> (exclusive).
  *
  * @since 1.0
- * @version $Revision: 1187616 $ $Date: 2011-10-21 23:10:48 -0200 (Fri, 21 Oct 2011) $
- * @author Jason Horman (jason@jhorman.org)
- * @author Rodney Waldhoff
+ * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
 public final class LongRange extends BaseGenerator<Long> {
     // attributes

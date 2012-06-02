@@ -37,7 +37,7 @@
 <FONT color="green">034</FONT>     */<a name="line.34"></a>
 <FONT color="green">035</FONT>    public class TestRetainMatching extends BaseFunctorTest {<a name="line.35"></a>
 <FONT color="green">036</FONT>    <a name="line.36"></a>
-<FONT color="green">037</FONT>            // Lifecycle<a name="line.37"></a>
+<FONT color="green">037</FONT>        // Lifecycle<a name="line.37"></a>
 <FONT color="green">038</FONT>        // ------------------------------------------------------------------------<a name="line.38"></a>
 <FONT color="green">039</FONT>    <a name="line.39"></a>
 <FONT color="green">040</FONT>        @Before<a name="line.40"></a>
@@ -60,19 +60,19 @@
 <FONT color="green">057</FONT>    <a name="line.57"></a>
 <FONT color="green">058</FONT>        // Tests<a name="line.58"></a>
 <FONT color="green">059</FONT>        // ------------------------------------------------------------------------<a name="line.59"></a>
-<FONT color="green">060</FONT>            <a name="line.60"></a>
-<FONT color="green">061</FONT>            @Override<a name="line.61"></a>
-<FONT color="green">062</FONT>            protected Object makeFunctor() throws Exception {<a name="line.62"></a>
-<FONT color="green">063</FONT>                    return new RetainMatching&lt;Integer&gt;();<a name="line.63"></a>
-<FONT color="green">064</FONT>            }<a name="line.64"></a>
-<FONT color="green">065</FONT>            <a name="line.65"></a>
-<FONT color="green">066</FONT>            @Test<a name="line.66"></a>
+<FONT color="green">060</FONT>    <a name="line.60"></a>
+<FONT color="green">061</FONT>        @Override<a name="line.61"></a>
+<FONT color="green">062</FONT>        protected Object makeFunctor() throws Exception {<a name="line.62"></a>
+<FONT color="green">063</FONT>            return new RetainMatching&lt;Integer&gt;();<a name="line.63"></a>
+<FONT color="green">064</FONT>        }<a name="line.64"></a>
+<FONT color="green">065</FONT>    <a name="line.65"></a>
+<FONT color="green">066</FONT>        @Test<a name="line.66"></a>
 <FONT color="green">067</FONT>        public void testRemove() {<a name="line.67"></a>
 <FONT color="green">068</FONT>            new RetainMatching&lt;Integer&gt;().run(list.iterator(),isOdd);<a name="line.68"></a>
 <FONT color="green">069</FONT>            assertEquals(odds,list);<a name="line.69"></a>
 <FONT color="green">070</FONT>        }<a name="line.70"></a>
-<FONT color="green">071</FONT>            <a name="line.71"></a>
-<FONT color="green">072</FONT>            // Attributes<a name="line.72"></a>
+<FONT color="green">071</FONT>    <a name="line.71"></a>
+<FONT color="green">072</FONT>        // Attributes<a name="line.72"></a>
 <FONT color="green">073</FONT>        // ------------------------------------------------------------------------<a name="line.73"></a>
 <FONT color="green">074</FONT>        private List&lt;Integer&gt; list = null;<a name="line.74"></a>
 <FONT color="green">075</FONT>        private List&lt;Integer&gt; odds = null;<a name="line.75"></a>
@@ -90,7 +90,7 @@
 <FONT color="green">087</FONT>                return new Integer(2*obj);<a name="line.87"></a>
 <FONT color="green">088</FONT>            }<a name="line.88"></a>
 <FONT color="green">089</FONT>        }<a name="line.89"></a>
-<FONT color="green">090</FONT>            <a name="line.90"></a>
+<FONT color="green">090</FONT>    <a name="line.90"></a>
 <FONT color="green">091</FONT>    }<a name="line.91"></a>
 
 

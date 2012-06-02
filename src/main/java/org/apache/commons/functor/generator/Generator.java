@@ -23,9 +23,7 @@ import org.apache.commons.functor.UnaryProcedure;
  * to each in a series of argument Objects.
  *
  * @param <E> the type of elements held in this generator.
- * @version $Revision: 1160786 $ $Date: 2011-08-23 13:40:12 -0300 (Tue, 23 Aug 2011) $
- * @author Jason Horman (jason@jhorman.org)
- * @author Rodney Waldhoff
+ * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
 public interface Generator<E> {
     /**
@@ -33,17 +31,12 @@ public interface Generator<E> {
      * @param proc UnaryProcedure to run
      */
     void run(UnaryProcedure<? super E> proc);
-
+    
     /**
-     * Stop the generator. Will stop the wrapped generator if one was set.
+     * TODO
+     * @return
      */
-    void stop();
-
-    /**
-     * Check if the generator is stopped.
-     * @return true if stopped
-     */
-    boolean isStopped();
+    Range<? super E> getRange();
 
     /**
      * Transforms this generator using the passed in

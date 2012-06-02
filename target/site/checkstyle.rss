@@ -8,8 +8,8 @@
     <language>en-us</language>
     <copyright>&#169;2003 - 2012 The Apache Software Foundation</copyright>
     <item>
-      <title>File: 158,
-             Errors: 4,
+      <title>File: 181,
+             Errors: 46,
              Warnings: 0,
              Infos: 0
       </title>
@@ -30,6 +30,20 @@
                           <tr>
                 <td>
                   <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.core.composite.UnaryAnd.java">org/apache/commons/functor/core/composite/UnaryAnd.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.aggregator.ArrayListBackedAggregator.java">org/apache/commons/functor/aggregator/ArrayListBackedAggregator.java</a>
                 </td>
                 <td>
                   0
@@ -85,7 +99,49 @@
               </tr>
                           <tr>
                 <td>
+                  <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.aggregator.functions.IntegerSumAggregatorBinaryFunction.java">org/apache/commons/functor/aggregator/functions/IntegerSumAggregatorBinaryFunction.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.aggregator.functions.IntegerMeanValueAggregatorFunction.java">org/apache/commons/functor/aggregator/functions/IntegerMeanValueAggregatorFunction.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.generator.GenerateWhile.java">org/apache/commons/functor/generator/GenerateWhile.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.aggregator.functions.DoubleSumAggregatorBinaryFunction.java">org/apache/commons/functor/aggregator/functions/DoubleSumAggregatorBinaryFunction.java</a>
                 </td>
                 <td>
                   0
@@ -122,7 +178,7 @@
                   0
                 </td>
                 <td>
-                  1
+                  0
                 </td>
               </tr>
                           <tr>
@@ -267,6 +323,20 @@
               </tr>
                           <tr>
                 <td>
+                  <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.aggregator.functions.DoubleMedianValueAggregatorFunction.java">org/apache/commons/functor/aggregator/functions/DoubleMedianValueAggregatorFunction.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.core.composite.Or.java">org/apache/commons/functor/core/composite/Or.java</a>
                 </td>
                 <td>
@@ -352,6 +422,20 @@
                           <tr>
                 <td>
                   <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.adapter.BinaryPredicateBinaryFunction.java">org/apache/commons/functor/adapter/BinaryPredicateBinaryFunction.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.aggregator.functions.IntegerSumAggregatorFunction.java">org/apache/commons/functor/aggregator/functions/IntegerSumAggregatorFunction.java</a>
                 </td>
                 <td>
                   0
@@ -561,6 +645,20 @@
               </tr>
                           <tr>
                 <td>
+                  <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.aggregator.functions.DoubleMaxAggregatorFunction.java">org/apache/commons/functor/aggregator/functions/DoubleMaxAggregatorFunction.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.core.algorithm.FoldRight.java">org/apache/commons/functor/core/algorithm/FoldRight.java</a>
                 </td>
                 <td>
@@ -659,6 +757,20 @@
               </tr>
                           <tr>
                 <td>
+                  <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.aggregator.package-info.java">org/apache/commons/functor/aggregator/package-info.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.core.composite.TransposedProcedure.java">org/apache/commons/functor/core/composite/TransposedProcedure.java</a>
                 </td>
                 <td>
@@ -724,7 +836,7 @@
                   0
                 </td>
                 <td>
-                  2
+                  0
                 </td>
               </tr>
                           <tr>
@@ -785,7 +897,35 @@
               </tr>
                           <tr>
                 <td>
+                  <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.aggregator.functions.IntegerMedianValueAggregatorFunction.java">org/apache/commons/functor/aggregator/functions/IntegerMedianValueAggregatorFunction.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.adapter.BinaryFunctionUnaryFunction.java">org/apache/commons/functor/adapter/BinaryFunctionUnaryFunction.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.aggregator.TimedAggregatorListener.java">org/apache/commons/functor/aggregator/TimedAggregatorListener.java</a>
                 </td>
                 <td>
                   0
@@ -967,6 +1107,34 @@
               </tr>
                           <tr>
                 <td>
+                  <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.aggregator.AbstractNoStoreAggregator.java">org/apache/commons/functor/aggregator/AbstractNoStoreAggregator.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.aggregator.AbstractTimedAggregator.java">org/apache/commons/functor/aggregator/AbstractTimedAggregator.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.adapter.BinaryPredicateUnaryPredicate.java">org/apache/commons/functor/adapter/BinaryPredicateUnaryPredicate.java</a>
                 </td>
                 <td>
@@ -1093,6 +1261,20 @@
               </tr>
                           <tr>
                 <td>
+                  <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.aggregator.functions.DoublePercentileAggregatorFunction.java">org/apache/commons/functor/aggregator/functions/DoublePercentileAggregatorFunction.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.core.composite.BinaryOr.java">org/apache/commons/functor/core/composite/BinaryOr.java</a>
                 </td>
                 <td>
@@ -1150,6 +1332,20 @@
                           <tr>
                 <td>
                   <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.generator.util.IntegerRange.java">org/apache/commons/functor/generator/util/IntegerRange.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.aggregator.Aggregator.java">org/apache/commons/functor/aggregator/Aggregator.java</a>
                 </td>
                 <td>
                   0
@@ -1248,6 +1444,20 @@
                           <tr>
                 <td>
                   <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.adapter.LeftBoundPredicate.java">org/apache/commons/functor/adapter/LeftBoundPredicate.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.aggregator.functions.IntegerMaxAggregatorBinaryFunction.java">org/apache/commons/functor/aggregator/functions/IntegerMaxAggregatorBinaryFunction.java</a>
                 </td>
                 <td>
                   0
@@ -1494,7 +1704,7 @@
                   0
                 </td>
                 <td>
-                  0
+                  24
                 </td>
               </tr>
                           <tr>
@@ -1690,7 +1900,7 @@
                   0
                 </td>
                 <td>
-                  1
+                  0
                 </td>
               </tr>
                           <tr>
@@ -1863,6 +2073,34 @@
               </tr>
                           <tr>
                 <td>
+                  <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.aggregator.functions.DoubleMeanValueAggregatorFunction.java">org/apache/commons/functor/aggregator/functions/DoubleMeanValueAggregatorFunction.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.aggregator.AbstractListBackedAggregator.java">org/apache/commons/functor/aggregator/AbstractListBackedAggregator.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.core.algorithm.PredicatedLoop.java">org/apache/commons/functor/core/algorithm/PredicatedLoop.java</a>
                 </td>
                 <td>
@@ -1961,7 +2199,49 @@
               </tr>
                           <tr>
                 <td>
+                  <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.aggregator.functions.IntegerMaxAggregatorFunction.java">org/apache/commons/functor/aggregator/functions/IntegerMaxAggregatorFunction.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.core.comparator.IsNotEquivalent.java">org/apache/commons/functor/core/comparator/IsNotEquivalent.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.aggregator.functions.package-info.java">org/apache/commons/functor/aggregator/functions/package-info.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.aggregator.functions.DoubleMaxAggregatorBinaryFunction.java">org/apache/commons/functor/aggregator/functions/DoubleMaxAggregatorBinaryFunction.java</a>
                 </td>
                 <td>
                   0
@@ -1984,12 +2264,40 @@
                   0
                 </td>
                 <td>
-                  0
+                  22
                 </td>
               </tr>
                           <tr>
                 <td>
                   <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.core.composite.ConditionalPredicate.java">org/apache/commons/functor/core/composite/ConditionalPredicate.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.aggregator.functions.DoubleSumAggregatorFunction.java">org/apache/commons/functor/aggregator/functions/DoubleSumAggregatorFunction.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.aggregator.functions.IntegerPercentileAggregatorFunction.java">org/apache/commons/functor/aggregator/functions/IntegerPercentileAggregatorFunction.java</a>
                 </td>
                 <td>
                   0
@@ -2186,6 +2494,20 @@
                           <tr>
                 <td>
                   <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.core.composite.ConditionalUnaryFunction.java">org/apache/commons/functor/core/composite/ConditionalUnaryFunction.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://commons.apache.org/functor//checkstyle.html#org.apache.commons.functor.aggregator.functions.IntegerCountAggregatorBinaryFunction.java">org/apache/commons/functor/aggregator/functions/IntegerCountAggregatorBinaryFunction.java</a>
                 </td>
                 <td>
                   0

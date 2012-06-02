@@ -25,8 +25,7 @@ import org.apache.commons.functor.BaseFunctorTest;
 import org.junit.Test;
 
 /**
- * @version $Revision: 1188380 $ $Date: 2011-10-24 19:07:48 -0200 (Mon, 24 Oct 2011) $
- * @author Rodney Waldhoff
+ * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
 public class TestConstant extends BaseFunctorTest {
 

@@ -1,15 +1,15 @@
 10
 
 dir
-1303656
+1345345
 http://svn.apache.org/repos/asf/commons/proper/functor/trunk
 http://svn.apache.org/repos/asf
 
 
 
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
+2012-06-01T12:55:30.585385Z
+1345145
+simonetripodi
 has-props
 
 
@@ -25,40 +25,6 @@ has-props
 
 
 13f79535-47bb-0310-9956-ffa450edef68
-
-NOTICE.txt
-file
-
-
-
-
-2012-03-21T04:59:29.000000Z
-7c62ef2110a94eb6ecdecb941aa4a75f
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-187
 
 LICENSE.txt
 file
@@ -94,17 +60,17 @@ has-props
 
 11358
 
-fb-excludes.xml
+NOTICE.txt
 file
 
 
 
 
 2012-03-21T04:59:29.000000Z
-5d163f7dbcbaf1cfd77c5b9dc0546883
-2011-09-15T20:38:31.723746Z
-1171263
-simonetripodi
+7c62ef2110a94eb6ecdecb941aa4a75f
+2012-01-23T21:18:10.617921Z
+1234990
+mbenson
 has-props
 
 
@@ -126,7 +92,7 @@ has-props
 
 
 
-1372
+187
 
 RELEASE-NOTES.txt
 file
@@ -162,9 +128,6 @@ has-props
 
 1570
 
-src
-dir
-
 checkstyle-suppressions.xml
 file
 
@@ -198,40 +161,6 @@ has-props
 
 
 1370
-
-pom.xml
-file
-
-
-
-
-2012-03-22T04:51:23.000000Z
-a2aabae0db13dbad95ee4e37f3fd01d5
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-11386
 
 checkstyle.xml
 file
@@ -300,4 +229,75 @@ has-props
 
 
 2411
+
+fb-excludes.xml
+file
+
+
+
+
+2012-03-21T04:59:29.000000Z
+5d163f7dbcbaf1cfd77c5b9dc0546883
+2011-09-15T20:38:31.723746Z
+1171263
+simonetripodi
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1372
+
+pom.xml
+file
+
+
+
+
+2012-06-01T00:07:31.000000Z
+4e085d3f8ef86855a486baef5b6fb501
+2012-05-31T21:07:36.760519Z
+1344912
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11799
+
+src
+dir
 

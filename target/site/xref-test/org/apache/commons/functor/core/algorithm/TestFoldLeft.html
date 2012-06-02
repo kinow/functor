@@ -41,8 +41,8 @@
 <a class="jxr_linenumber" name="31" href="#31">31</a>  <em class="jxr_javadoccomment"> * Tests {@link FoldLeft} algorithm.</em>
 <a class="jxr_linenumber" name="32" href="#32">32</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="33" href="#33">33</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../../org/apache/commons/functor/core/algorithm/TestFoldLeft.html">TestFoldLeft</a> {
-<a class="jxr_linenumber" name="34" href="#34">34</a>  	
-<a class="jxr_linenumber" name="35" href="#35">35</a>  	@Test
+<a class="jxr_linenumber" name="34" href="#34">34</a>  
+<a class="jxr_linenumber" name="35" href="#35">35</a>      @Test
 <a class="jxr_linenumber" name="36" href="#36">36</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">void</strong> testObjectEquals() <strong class="jxr_keyword">throws</strong> Exception {
 <a class="jxr_linenumber" name="37" href="#37">37</a>          Object obj = <strong class="jxr_keyword">new</strong> FoldLeft&lt;Integer&gt;(<strong class="jxr_keyword">new</strong> BinaryFunction&lt;Integer, Integer, Integer&gt;() {
 <a class="jxr_linenumber" name="38" href="#38">38</a>              <strong class="jxr_keyword">public</strong> Integer evaluate(Integer a, Integer b) {
@@ -65,8 +65,8 @@
 <a class="jxr_linenumber" name="55" href="#55">55</a>              assertTrue(<span class="jxr_string">"equals must be symmetric"</span>,! obj2.equals(obj));
 <a class="jxr_linenumber" name="56" href="#56">56</a>          }
 <a class="jxr_linenumber" name="57" href="#57">57</a>      }
-<a class="jxr_linenumber" name="58" href="#58">58</a>  	
-<a class="jxr_linenumber" name="59" href="#59">59</a>  	@Test
+<a class="jxr_linenumber" name="58" href="#58">58</a>  
+<a class="jxr_linenumber" name="59" href="#59">59</a>      @Test
 <a class="jxr_linenumber" name="60" href="#60">60</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testFoldLeft() {
 <a class="jxr_linenumber" name="61" href="#61">61</a>          FoldLeft&lt;Integer&gt; foldLeft = <strong class="jxr_keyword">new</strong> FoldLeft&lt;Integer&gt;(<strong class="jxr_keyword">new</strong> BinaryFunction&lt;Integer, Integer, Integer&gt;() {
 <a class="jxr_linenumber" name="62" href="#62">62</a>              <strong class="jxr_keyword">public</strong> Integer evaluate(Integer a, Integer b) {
@@ -76,8 +76,8 @@
 <a class="jxr_linenumber" name="66" href="#66">66</a>          assertEquals(<strong class="jxr_keyword">new</strong> Integer(sum), foldLeft.evaluate(IteratorToGeneratorAdapter.adapt(list.iterator())));
 <a class="jxr_linenumber" name="67" href="#67">67</a>          assertEquals(<strong class="jxr_keyword">new</strong> Integer(sum), foldLeft.evaluate(IteratorToGeneratorAdapter.adapt(list.iterator()), <strong class="jxr_keyword">new</strong> Integer(0)));
 <a class="jxr_linenumber" name="68" href="#68">68</a>      }
-<a class="jxr_linenumber" name="69" href="#69">69</a>  	
-<a class="jxr_linenumber" name="70" href="#70">70</a>  	<em class="jxr_comment">// Attributes</em>
+<a class="jxr_linenumber" name="69" href="#69">69</a>  
+<a class="jxr_linenumber" name="70" href="#70">70</a>      <em class="jxr_comment">// Attributes</em>
 <a class="jxr_linenumber" name="71" href="#71">71</a>      <em class="jxr_comment">// ------------------------------------------------------------------------</em>
 <a class="jxr_linenumber" name="72" href="#72">72</a>      <strong class="jxr_keyword">private</strong> List&lt;Integer&gt; list = Arrays.asList(0,1,2);
 <a class="jxr_linenumber" name="73" href="#73">73</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">int</strong> sum = 3;

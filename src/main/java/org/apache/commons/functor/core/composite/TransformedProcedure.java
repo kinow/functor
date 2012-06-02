@@ -24,8 +24,7 @@ import org.apache.commons.functor.UnaryProcedure;
 
 /**
  * A Procedure composed of a Function whose result is then run through a UnaryProcedure.
- * @version $Revision: 1180209 $ $Date: 2011-10-07 17:35:50 -0300 (Fri, 07 Oct 2011) $
- * @author Matt Benson
+ * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
 public class TransformedProcedure implements Procedure, Serializable {
     /**

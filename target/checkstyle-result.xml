@@ -11,7 +11,6 @@
 <file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/adapter/UnaryPredicateUnaryFunction.java">
 </file>
 <file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/adapter/BinaryProcedureBinaryFunction.java">
-<error line="123" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
 </file>
 <file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/adapter/FunctionUnaryFunction.java">
 </file>
@@ -110,12 +109,58 @@
 <file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/core/comparator/IsGreaterThan.java">
 </file>
 <file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/core/Offset.java">
+<error line="37" column="1" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="40" column="1" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="41" column="1" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="42" column="1" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="43" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="43" column="1" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="44" column="1" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="97" column="5" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="97" column="11" severity="error" message="&apos;if&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="98" column="5" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="99" column="5" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="100" column="5" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="100" column="11" severity="error" message="&apos;if&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="101" column="5" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="102" column="5" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="103" column="5" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="103" column="32" severity="error" message="&apos;cast&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+<error line="104" column="5" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="106" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="112" column="5" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="113" column="5" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="114" column="5" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="115" column="5" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="117" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
 </file>
 <file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/core/Constant.java">
 </file>
 <file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/core/LeftIdentity.java">
 </file>
 <file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/core/Limit.java">
+<error line="38" column="1" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="41" column="1" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="42" column="1" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="43" column="1" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="44" column="1" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="97" column="5" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="97" column="11" severity="error" message="&apos;if&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="98" column="5" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="99" column="5" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="100" column="5" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="100" column="11" severity="error" message="&apos;if&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="101" column="5" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="102" column="5" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="103" column="5" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="103" column="30" severity="error" message="&apos;cast&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+<error line="104" column="5" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="106" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="112" column="5" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="113" column="5" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="114" column="5" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="115" column="5" severity="error" message="Line contains a tab character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="117" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
 </file>
 <file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/core/composite/ConditionalBinaryProcedure.java">
 </file>
@@ -256,8 +301,6 @@
 <file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/core/collection/FilteredIterator.java">
 </file>
 <file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/core/collection/FilteredIterable.java">
-<error line="34" severity="error" message="Class FilteredIterable should be declared as final." source="com.puppycrawl.tools.checkstyle.checks.design.FinalClassCheck"/>
-<error line="88" column="27" severity="error" message="Name &apos;_predicate&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.LocalVariableNameCheck"/>
 </file>
 <file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/core/IsEqual.java">
 </file>
@@ -289,6 +332,52 @@
 </file>
 <file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/Procedure.java">
 </file>
+<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregator/Aggregator.java">
+</file>
+<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregator/package-info.java">
+</file>
+<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregator/TimedAggregatorListener.java">
+</file>
+<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregator/AbstractNoStoreAggregator.java">
+</file>
+<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregator/functions/IntegerPercentileAggregatorFunction.java">
+</file>
+<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregator/functions/DoubleMaxAggregatorBinaryFunction.java">
+</file>
+<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregator/functions/package-info.java">
+</file>
+<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregator/functions/IntegerMeanValueAggregatorFunction.java">
+</file>
+<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregator/functions/IntegerMaxAggregatorBinaryFunction.java">
+</file>
+<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregator/functions/IntegerCountAggregatorBinaryFunction.java">
+</file>
+<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregator/functions/IntegerMedianValueAggregatorFunction.java">
+</file>
+<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregator/functions/IntegerSumAggregatorFunction.java">
+</file>
+<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregator/functions/IntegerMaxAggregatorFunction.java">
+</file>
+<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregator/functions/IntegerSumAggregatorBinaryFunction.java">
+</file>
+<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregator/functions/DoubleMeanValueAggregatorFunction.java">
+</file>
+<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregator/functions/DoubleSumAggregatorFunction.java">
+</file>
+<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregator/functions/DoubleSumAggregatorBinaryFunction.java">
+</file>
+<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregator/functions/DoublePercentileAggregatorFunction.java">
+</file>
+<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregator/functions/DoubleMedianValueAggregatorFunction.java">
+</file>
+<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregator/functions/DoubleMaxAggregatorFunction.java">
+</file>
+<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregator/AbstractListBackedAggregator.java">
+</file>
+<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregator/AbstractTimedAggregator.java">
+</file>
+<file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregator/ArrayListBackedAggregator.java">
+</file>
 <file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/generator/TransformedGenerator.java">
 </file>
 <file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/generator/util/package-info.java">
@@ -318,6 +407,5 @@
 <file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/generator/IteratorToGeneratorAdapter.java">
 </file>
 <file name="/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/generator/WhileGenerate.java">
-<error line="44" column="43" severity="error" message="&apos;,&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
 </file>
 </checkstyle>

@@ -22,7 +22,7 @@ import org.apache.commons.functor.Procedure;
 /**
  * Do-while algorithm (test after).
  *
- * @version $Revision: 1170319 $ $Date: 2011-09-13 16:39:33 -0300 (Tue, 13 Sep 2011) $
+ * @version $Revision: 1344796 $ $Date: 2012-05-31 13:12:39 -0300 (Thu, 31 May 2012) $
  */
 public class DoWhile extends PredicatedLoop {
 

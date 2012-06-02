@@ -25,16 +25,12 @@ import org.apache.commons.functor.generator.util.CollectionTransformer;
  *
  * @param <E> the type of elements held in this generator.
  * @since 1.0
- * @version $Revision: 1188397 $ $Date: 2011-10-24 19:40:54 -0200 (Mon, 24 Oct 2011) $
- * @author  Jason Horman (jason@jhorman.org)
+ * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
 public abstract class BaseGenerator<E> implements Generator<E> {
 
     /** A generator can wrap another generator. */
     private final Generator<?> wrappedGenerator;
-
-    /** Set to true when the generator is {@link #stop stopped}. */
-    private boolean stopped = false;
 
     /** Create a new generator. */
     public BaseGenerator() {
@@ -57,25 +53,6 @@ public abstract class BaseGenerator<E> implements Generator<E> {
      */
     protected Generator<?> getWrappedGenerator() {
         return wrappedGenerator;
-    }
-
-    /**
-     * {@inheritDoc}
-     * Stop the generator. Will stop the wrapped generator if one was set.
-     */
-    public void stop() {
-        if (wrappedGenerator != null) {
-            wrappedGenerator.stop();
-        }
-        stopped = true;
-    }
-
-    /**
-     * {@inheritDoc}
-     * Check if the generator is stopped.
-     */
-    public boolean isStopped() {
-        return stopped;
     }
 
     /**

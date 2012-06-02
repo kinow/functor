@@ -24,8 +24,7 @@ import org.apache.commons.functor.core.Constant;
 import org.junit.Test;
 
 /**
- * @version $Revision: 1187622 $ $Date: 2011-10-21 23:22:33 -0200 (Fri, 21 Oct 2011) $
- * @author Rodney Waldhoff
+ * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
 public class TestCompositeUnaryFunction extends BaseFunctorTest {
 
@@ -71,7 +70,7 @@ public class TestCompositeUnaryFunction extends BaseFunctorTest {
     public void testEquals() throws Exception {
         CompositeUnaryFunction<Object, String> f = new CompositeUnaryFunction<Object, String>(Constant.of("x"));
         assertEquals(f,f);
-        
+
         CompositeUnaryFunction<Object, String> g = new CompositeUnaryFunction<Object, String>(Constant.of("x"));
         assertObjectsAreEqual(f,g);
 

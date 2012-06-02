@@ -28,7 +28,7 @@ import org.junit.Test;
  */
 public class TestRecursiveEvaluation {
 
-	@Test
+    @Test
     public final void testObjectEquals() throws Exception {
         Object obj = new RecursiveEvaluation(new RecFunc(0, false));
         assertEquals("equals must be reflexive",obj,obj);
@@ -43,7 +43,7 @@ public class TestRecursiveEvaluation {
             assertTrue("equals must be symmetric",! obj2.equals(obj));
         }
     }
-	
+
     @Test
     public void testRecurse() {
         assertEquals(new Integer(5), new RecursiveEvaluation(new RecFunc(0, false)).evaluate());
@@ -51,10 +51,10 @@ public class TestRecursiveEvaluation {
         // this version will return a function. since it is not the same type
         // as RecFunc recursion will end.
         @SuppressWarnings({ "unchecked", "rawtypes" })
-		Function<Object> func = (Function) new RecursiveEvaluation(new RecFunc(0, true)).evaluate();
+        Function<Object> func = (Function) new RecursiveEvaluation(new RecFunc(0, true)).evaluate();
         assertEquals(new Integer(5), func.evaluate());
     }
-    
+
     /** Recursive function for test. */
     class RecFunc implements Function<Object> {
         int times = 0; boolean returnFunc = false;
@@ -80,5 +80,5 @@ public class TestRecursiveEvaluation {
             }
         }
     }
-    
+
 }

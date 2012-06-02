@@ -32,9 +32,9 @@ import org.junit.Test;
  */
 public class TestFoldRight {
 
-	@Test
+    @Test
     public final void testObjectEquals() throws Exception {
-		Object obj = new FoldRight<Object>(new BinaryFunction<Object, Object, Object>() {
+        Object obj = new FoldRight<Object>(new BinaryFunction<Object, Object, Object>() {
             public Object evaluate(Object left, Object right) {
                 StringBuffer buf = left instanceof StringBuffer ? (StringBuffer) left : new StringBuffer().append(left);
                 return buf.append(right);
@@ -57,8 +57,8 @@ public class TestFoldRight {
             assertTrue("equals must be symmetric",! obj2.equals(obj));
         }
     }
-	
-	@Test
+
+    @Test
     public void testFoldRight() {
         FoldRight<Object> foldRight = new FoldRight<Object>(new BinaryFunction<Object, Object, Object>() {
             public Object evaluate(Object left, Object right) {
@@ -69,9 +69,9 @@ public class TestFoldRight {
         assertEquals("0123456789", foldRight.evaluate(IteratorToGeneratorAdapter.adapt(list.iterator())).toString());
         assertEquals("0123456789x", foldRight.evaluate(IteratorToGeneratorAdapter.adapt(list.iterator()), "x").toString());
     }
-    
+
     // Attributes
     // ------------------------------------------------------------------------
     private List<Object> list = Arrays.<Object>asList(0,1,2,3,4,5,6,7,8,9);
-	
+
 }

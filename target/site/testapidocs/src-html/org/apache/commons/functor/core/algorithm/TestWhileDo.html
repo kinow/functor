@@ -33,10 +33,10 @@
 <FONT color="green">030</FONT>     */<a name="line.30"></a>
 <FONT color="green">031</FONT>    public class TestWhileDo {<a name="line.31"></a>
 <FONT color="green">032</FONT>    <a name="line.32"></a>
-<FONT color="green">033</FONT>            @Test<a name="line.33"></a>
+<FONT color="green">033</FONT>        @Test<a name="line.33"></a>
 <FONT color="green">034</FONT>        public final void testObjectEquals() throws Exception {<a name="line.34"></a>
-<FONT color="green">035</FONT>                    Counter counter = new Counter();<a name="line.35"></a>
-<FONT color="green">036</FONT>                    Object obj = new WhileDo(new Offset(10), counter);<a name="line.36"></a>
+<FONT color="green">035</FONT>            Counter counter = new Counter();<a name="line.35"></a>
+<FONT color="green">036</FONT>            Object obj = new WhileDo(new Offset(10), counter);<a name="line.36"></a>
 <FONT color="green">037</FONT>            assertEquals("equals must be reflexive",obj,obj);<a name="line.37"></a>
 <FONT color="green">038</FONT>            assertEquals("hashCode must be reflexive",obj.hashCode(),obj.hashCode());<a name="line.38"></a>
 <FONT color="green">039</FONT>            assertTrue(! obj.equals(null) ); // should be able to compare to null<a name="line.39"></a>
@@ -49,8 +49,8 @@
 <FONT color="green">046</FONT>                assertTrue("equals must be symmetric",! obj2.equals(obj));<a name="line.46"></a>
 <FONT color="green">047</FONT>            }<a name="line.47"></a>
 <FONT color="green">048</FONT>        }<a name="line.48"></a>
-<FONT color="green">049</FONT>            <a name="line.49"></a>
-<FONT color="green">050</FONT>            @Test<a name="line.50"></a>
+<FONT color="green">049</FONT>    <a name="line.49"></a>
+<FONT color="green">050</FONT>        @Test<a name="line.50"></a>
 <FONT color="green">051</FONT>        public void testWhileDo() {<a name="line.51"></a>
 <FONT color="green">052</FONT>            for (int i=0;i&lt;3;i++){<a name="line.52"></a>
 <FONT color="green">053</FONT>                Counter counter = new Counter();<a name="line.53"></a>
@@ -58,8 +58,8 @@
 <FONT color="green">055</FONT>                assertEquals(i,counter.count);<a name="line.55"></a>
 <FONT color="green">056</FONT>            }<a name="line.56"></a>
 <FONT color="green">057</FONT>        }<a name="line.57"></a>
-<FONT color="green">058</FONT>            <a name="line.58"></a>
-<FONT color="green">059</FONT>            // Classes<a name="line.59"></a>
+<FONT color="green">058</FONT>    <a name="line.58"></a>
+<FONT color="green">059</FONT>        // Classes<a name="line.59"></a>
 <FONT color="green">060</FONT>        // ------------------------------------------------------------------------<a name="line.60"></a>
 <FONT color="green">061</FONT>    <a name="line.61"></a>
 <FONT color="green">062</FONT>        static class Counter implements Procedure {<a name="line.62"></a>
@@ -68,7 +68,7 @@
 <FONT color="green">065</FONT>            }<a name="line.65"></a>
 <FONT color="green">066</FONT>            public int count = 0;<a name="line.66"></a>
 <FONT color="green">067</FONT>        }<a name="line.67"></a>
-<FONT color="green">068</FONT>            <a name="line.68"></a>
+<FONT color="green">068</FONT>    <a name="line.68"></a>
 <FONT color="green">069</FONT>    }<a name="line.69"></a>
 
 

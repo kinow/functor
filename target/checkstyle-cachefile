@@ -1,4 +1,4 @@
-#Tue Apr 10 02:14:10 BRT 2012
+#Thu May 31 23:56:15 BRT 2012
 /home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/UnaryProcedure.java=1334011167000
 /home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/Function.java=1334011167000
 /home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/adapter/package-info.java=1332305945000
@@ -9,10 +9,12 @@
 /home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/package-info.java=1332305964000
 /home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/core/collection/package-info.java=1332305952000
 /home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/BinaryFunction.java=1334011167000
+/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregator/functions/package-info.java=1338510076000
 /home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/NullaryFunctor.java=1334011167000
 /home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/BinaryPredicate.java=1334011167000
 /home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/core/comparator/package-info.java=1332305962000
 /home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/generator/package-info.java=1332305948000
+/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregator/TimedAggregatorListener.java=1338510076000
 /home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/BinaryFunctor.java=1334011167000
 /home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/Procedure.java=1334011167000
 /home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/UnaryFunction.java=1334011167000
@@ -20,6 +22,8 @@
 configuration*?=A656866E656ADC7DBDB88E4DF33FE2656D163736
 /home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/generator/util/package-info.java=1332305948000
 /home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/core/algorithm/package-info.java=1332305951000
+/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregator/Aggregator.java=1338510076000
+/home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/aggregator/package-info.java=1338510076000
 /home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/BinaryProcedure.java=1334011167000
 /home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/UnaryFunctor.java=1334011167000
 /home/kinow/java/workspace/commons-functor/src/main/java/org/apache/commons/functor/core/package-info.java=1332305963000

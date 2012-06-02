@@ -1,15 +1,15 @@
 10
 
 dir
-1303656
+1345345
 http://svn.apache.org/repos/asf/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor
 http://svn.apache.org/repos/asf
 
 
 
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
 
 
 
@@ -26,19 +26,20 @@ mbenson
 
 13f79535-47bb-0310-9956-ffa450edef68
 
-UnaryFunctor.java
+BinaryFunction.java
 file
 
 
 
 
-2012-04-09T22:39:27.000000Z
-707298f214bea38ed8b2a4caa901d3fb
-2011-08-11T19:02:02.033130Z
-1156739
+2012-06-01T20:51:34.000000Z
+9244d1a85355e509b782970ea82b9e43
+2012-06-01T12:47:06.937513Z
+1345136
 simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -57,289 +58,7 @@ has-props
 
 
 
-
-1228
-
-adapter
-dir
-
-Predicate.java
-file
-
-
-
-
-2012-04-09T22:39:27.000000Z
-cf9dd2146d907c17e0cf2214d6e244ac
-2008-04-11T20:08:44.068462Z
-647290
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1350
-
-UnaryFunction.java
-file
-
-
-
-
-2012-04-09T22:39:27.000000Z
-cdfa313fd1793a9eba18ffde253d3c88
-2011-08-11T19:01:15.836732Z
-1156738
-simonetripodi
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1494
-
-BinaryPredicate.java
-file
-
-
-
-
-2012-04-09T22:39:27.000000Z
-213b7fb6c3a51f8c456c20e990b3c815
-2011-08-11T18:57:48.890873Z
-1156735
-simonetripodi
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1625
-
-generator
-dir
-
-UnaryProcedure.java
-file
-
-
-
-
-2012-04-09T22:39:27.000000Z
-c65a63c438ac0844a8d470cf23d4e61d
-2011-08-11T19:03:45.928888Z
-1156741
-simonetripodi
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1385
-
-core
-dir
-
-UnaryPredicate.java
-file
-
-
-
-
-2012-04-09T22:39:27.000000Z
-9757b3017176b42f28646c9908b710d7
-2011-08-11T19:02:40.160896Z
-1156740
-simonetripodi
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1444
-
-Functor.java
-file
-
-
-
-
-2012-03-21T04:59:24.000000Z
-2b4e8c1dacc94214d09b17e4b9177d15
-2008-04-11T20:14:50.873618Z
-647297
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2958
-
-package-info.java
-file
-
-
-
-
-2012-03-21T04:59:24.000000Z
-83de1499c18c8496c36233dc2d7caf61
-2011-08-11T18:48:56.095477Z
-1156726
-simonetripodi
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1544
-
-Function.java
-file
-
-
-
-
-2012-04-09T22:39:27.000000Z
-0a0a5fa14fc3c1d0dde3345db1ce69d8
-2011-08-11T18:59:53.820843Z
-1156737
-simonetripodi
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1376
+1618
 
 BinaryFunctor.java
 file
@@ -375,6 +94,142 @@ has-props
 
 1274
 
+BinaryPredicate.java
+file
+
+
+
+
+2012-06-01T20:51:34.000000Z
+222044c17f4e07019bd97c4fc1c60211
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1598
+
+BinaryProcedure.java
+file
+
+
+
+
+2012-06-01T20:51:34.000000Z
+d8ae436bcd49b04c990dcddf23bbfb80
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1513
+
+Function.java
+file
+
+
+
+
+2012-06-01T20:51:34.000000Z
+76fd313123a5278795c8f7beabb36d98
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1349
+
+Functor.java
+file
+
+
+
+
+2012-03-21T04:59:24.000000Z
+2b4e8c1dacc94214d09b17e4b9177d15
+2008-04-11T20:14:50.873618Z
+647297
+mbenson
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2958
+
 NullaryFunctor.java
 file
 
@@ -409,19 +264,54 @@ has-props
 
 1193
 
+Predicate.java
+file
+
+
+
+
+2012-06-01T20:51:34.000000Z
+aa7941b88b104032e87215bf7590f8c8
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1324
+
 Procedure.java
 file
 
 
 
 
-2012-04-09T22:39:27.000000Z
-fa668017c88f446361b426a90ffcf436
-2008-04-11T20:08:44.068462Z
-647290
-mbenson
+2012-06-01T20:51:34.000000Z
+bfbef10eb9ded1311a9a9738797847de
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -440,19 +330,52 @@ has-props
 
 
 
-
-1486
+1460
 
-BinaryFunction.java
+UnaryFunction.java
+file
+
+
+
+
+2012-06-01T20:51:34.000000Z
+dda3d900a4444e5234db87319ac0c1c1
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1467
+
+UnaryFunctor.java
 file
 
 
 
 
 2012-04-09T22:39:27.000000Z
-01a2f73275cb9ce8c63c6131327de3a2
-2011-08-11T18:55:42.929000Z
-1156732
+707298f214bea38ed8b2a4caa901d3fb
+2011-08-11T19:02:02.033130Z
+1156739
 simonetripodi
 has-props
 
@@ -475,18 +398,98 @@ has-props
 
 
 
-1645
+1228
 
-BinaryProcedure.java
+UnaryPredicate.java
 file
 
 
 
 
-2012-04-09T22:39:27.000000Z
-e9058a1e19fccbde158b904a8b561d4d
-2011-08-11T18:58:28.088402Z
-1156736
+2012-06-01T20:51:34.000000Z
+8b1819775d01978059f509e193ca2b39
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1417
+
+UnaryProcedure.java
+file
+
+
+
+
+2012-06-01T20:51:34.000000Z
+2efac13f65cbff7ecbb5771fda7bb652
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1358
+
+adapter
+dir
+
+aggregator
+dir
+
+core
+dir
+
+generator
+dir
+
+package-info.java
+file
+
+
+
+
+2012-03-21T04:59:24.000000Z
+83de1499c18c8496c36233dc2d7caf61
+2011-08-11T18:48:56.095477Z
+1156726
 simonetripodi
 has-props
 
@@ -509,5 +512,5 @@ has-props
 
 
 
-1540
+1544
 

@@ -30,7 +30,7 @@
 <FONT color="green">027</FONT>    /**<a name="line.27"></a>
 <FONT color="green">028</FONT>     * Adds a fluent filtering API to any {@link Iterable}.<a name="line.28"></a>
 <FONT color="green">029</FONT>     *<a name="line.29"></a>
-<FONT color="green">030</FONT>     * @version $Revision: 1188396 $ $Date: 2011-10-24 19:40:17 -0200 (Mon, 24 Oct 2011) $<a name="line.30"></a>
+<FONT color="green">030</FONT>     * @version $Revision: 1344786 $ $Date: 2012-05-31 12:55:31 -0300 (Thu, 31 May 2012) $<a name="line.30"></a>
 <FONT color="green">031</FONT>     *<a name="line.31"></a>
 <FONT color="green">032</FONT>     * @param &lt;T&gt; the Iterable generic type<a name="line.32"></a>
 <FONT color="green">033</FONT>     */<a name="line.33"></a>
@@ -79,7 +79,7 @@
 <FONT color="green">076</FONT>         * Create a new FilteredIterable.<a name="line.76"></a>
 <FONT color="green">077</FONT>         * @param iterable wrapped<a name="line.77"></a>
 <FONT color="green">078</FONT>         */<a name="line.78"></a>
-<FONT color="green">079</FONT>        private FilteredIterable(Iterable&lt;? extends T&gt; iterable) {<a name="line.79"></a>
+<FONT color="green">079</FONT>        protected FilteredIterable(Iterable&lt;? extends T&gt; iterable) {<a name="line.79"></a>
 <FONT color="green">080</FONT>            super();<a name="line.80"></a>
 <FONT color="green">081</FONT>            this.iterable = iterable;<a name="line.81"></a>
 <FONT color="green">082</FONT>        }<a name="line.82"></a>
@@ -88,11 +88,11 @@
 <FONT color="green">085</FONT>         * {@inheritDoc}<a name="line.85"></a>
 <FONT color="green">086</FONT>         */<a name="line.86"></a>
 <FONT color="green">087</FONT>        public Iterator&lt;T&gt; iterator() {<a name="line.87"></a>
-<FONT color="green">088</FONT>            UnaryPredicate&lt;T&gt; _predicate;<a name="line.88"></a>
+<FONT color="green">088</FONT>            UnaryPredicate&lt;T&gt; predicateReference;<a name="line.88"></a>
 <FONT color="green">089</FONT>            synchronized (this) {<a name="line.89"></a>
-<FONT color="green">090</FONT>                _predicate = predicate;<a name="line.90"></a>
+<FONT color="green">090</FONT>                predicateReference = predicate;<a name="line.90"></a>
 <FONT color="green">091</FONT>            }<a name="line.91"></a>
-<FONT color="green">092</FONT>            return FilteredIterator.filter(iterable.iterator(), _predicate);<a name="line.92"></a>
+<FONT color="green">092</FONT>            return FilteredIterator.filter(iterable.iterator(), predicateReference);<a name="line.92"></a>
 <FONT color="green">093</FONT>        }<a name="line.93"></a>
 <FONT color="green">094</FONT>    <a name="line.94"></a>
 <FONT color="green">095</FONT>        /**<a name="line.95"></a>

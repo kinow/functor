@@ -25,8 +25,7 @@ import org.apache.commons.functor.UnaryFunction;
  * A Function whose result is then run through a UnaryFunction.
  *
  * @param <T> the returned value type.
- * @version $Revision: 1180207 $ $Date: 2011-10-07 17:33:34 -0300 (Fri, 07 Oct 2011) $
- * @author Matt Benson
+ * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
 public class TransformedFunction<T> implements Function<T>, Serializable {
     /**

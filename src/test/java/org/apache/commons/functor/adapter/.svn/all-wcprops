@@ -1,221 +1,221 @@
 K 25
 svn:wc:ra_dav:version-url
 V 105
-/repos/asf/!svn/ver/1188407/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter
-END
-TestPredicateUnaryPredicate.java
-K 25
-svn:wc:ra_dav:version-url
-V 138
-/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestPredicateUnaryPredicate.java
-END
-TestIgnoreRightPredicate.java
-K 25
-svn:wc:ra_dav:version-url
-V 135
-/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestIgnoreRightPredicate.java
-END
-TestUnaryFunctionUnaryPredicate.java
-K 25
-svn:wc:ra_dav:version-url
-V 142
-/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestUnaryFunctionUnaryPredicate.java
-END
-TestUnaryPredicateUnaryFunction.java
-K 25
-svn:wc:ra_dav:version-url
-V 142
-/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestUnaryPredicateUnaryFunction.java
-END
-TestPredicateFunction.java
-K 25
-svn:wc:ra_dav:version-url
-V 132
-/repos/asf/!svn/ver/1188380/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestPredicateFunction.java
-END
-TestFunctionPredicate.java
-K 25
-svn:wc:ra_dav:version-url
-V 132
-/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestFunctionPredicate.java
-END
-TestIgnoreLeftProcedure.java
-K 25
-svn:wc:ra_dav:version-url
-V 134
-/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestIgnoreLeftProcedure.java
-END
-TestBinaryProcedureBinaryFunction.java
-K 25
-svn:wc:ra_dav:version-url
-V 144
-/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestBinaryProcedureBinaryFunction.java
-END
-TestFunctionUnaryFunction.java
-K 25
-svn:wc:ra_dav:version-url
-V 136
-/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestFunctionUnaryFunction.java
-END
-TestBoundFunction.java
-K 25
-svn:wc:ra_dav:version-url
-V 128
-/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestBoundFunction.java
-END
-TestBinaryFunctionBinaryPredicate.java
-K 25
-svn:wc:ra_dav:version-url
-V 144
-/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestBinaryFunctionBinaryPredicate.java
-END
-TestBoundProcedure.java
-K 25
-svn:wc:ra_dav:version-url
-V 129
-/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestBoundProcedure.java
-END
-TestBinaryProcedureUnaryProcedure.java
-K 25
-svn:wc:ra_dav:version-url
-V 144
-/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestBinaryProcedureUnaryProcedure.java
-END
-TestRightBoundPredicate.java
-K 25
-svn:wc:ra_dav:version-url
-V 134
-/repos/asf/!svn/ver/1188380/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestRightBoundPredicate.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter
 END
 TestIgnoreRightFunction.java
 K 25
 svn:wc:ra_dav:version-url
 V 134
-/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestIgnoreRightFunction.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestIgnoreRightFunction.java
 END
-TestLeftBoundFunction.java
-K 25
-svn:wc:ra_dav:version-url
-V 132
-/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestLeftBoundFunction.java
-END
-TestIgnoreRightProcedure.java
-K 25
-svn:wc:ra_dav:version-url
-V 135
-/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestIgnoreRightProcedure.java
-END
-TestUnaryFunctionUnaryProcedure.java
+TestUnaryPredicateUnaryFunction.java
 K 25
 svn:wc:ra_dav:version-url
 V 142
-/repos/asf/!svn/ver/1188407/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestUnaryFunctionUnaryProcedure.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestUnaryPredicateUnaryFunction.java
 END
-TestUnaryProcedureUnaryFunction.java
-K 25
-svn:wc:ra_dav:version-url
-V 142
-/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestUnaryProcedureUnaryFunction.java
-END
-TestProcedureFunction.java
+TestFunctionPredicate.java
 K 25
 svn:wc:ra_dav:version-url
 V 132
-/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestProcedureFunction.java
-END
-TestFunctionProcedure.java
-K 25
-svn:wc:ra_dav:version-url
-V 132
-/repos/asf/!svn/ver/1188407/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestFunctionProcedure.java
-END
-TestLeftBoundPredicate.java
-K 25
-svn:wc:ra_dav:version-url
-V 133
-/repos/asf/!svn/ver/1188376/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestLeftBoundPredicate.java
-END
-TestIgnoreLeftFunction.java
-K 25
-svn:wc:ra_dav:version-url
-V 133
-/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestIgnoreLeftFunction.java
-END
-TestFullyBoundPredicate.java
-K 25
-svn:wc:ra_dav:version-url
-V 134
-/repos/asf/!svn/ver/1188380/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestFullyBoundPredicate.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestFunctionPredicate.java
 END
 TestBinaryPredicateUnaryPredicate.java
 K 25
 svn:wc:ra_dav:version-url
 V 144
-/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestBinaryPredicateUnaryPredicate.java
-END
-TestBinaryFunctionBinaryProcedure.java
-K 25
-svn:wc:ra_dav:version-url
-V 144
-/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestBinaryFunctionBinaryProcedure.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestBinaryPredicateUnaryPredicate.java
 END
 TestRightBoundFunction.java
 K 25
 svn:wc:ra_dav:version-url
 V 133
-/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestRightBoundFunction.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestRightBoundFunction.java
 END
-TestRightBoundProcedure.java
-K 25
-svn:wc:ra_dav:version-url
-V 134
-/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestRightBoundProcedure.java
-END
-TestIgnoreLeftPredicate.java
-K 25
-svn:wc:ra_dav:version-url
-V 134
-/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestIgnoreLeftPredicate.java
-END
-TestBinaryFunctionUnaryFunction.java
-K 25
-svn:wc:ra_dav:version-url
-V 142
-/repos/asf/!svn/ver/1188385/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestBinaryFunctionUnaryFunction.java
-END
-TestProcedureUnaryProcedure.java
-K 25
-svn:wc:ra_dav:version-url
-V 138
-/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestProcedureUnaryProcedure.java
-END
-TestBinaryPredicateBinaryFunction.java
+TestBinaryFunctionBinaryPredicate.java
 K 25
 svn:wc:ra_dav:version-url
 V 144
-/repos/asf/!svn/ver/1188386/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestBinaryPredicateBinaryFunction.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestBinaryFunctionBinaryPredicate.java
 END
 TestBoundPredicate.java
 K 25
 svn:wc:ra_dav:version-url
 V 129
-/repos/asf/!svn/ver/1188380/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestBoundPredicate.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestBoundPredicate.java
 END
-TestFullyBoundFunction.java
+TestIgnoreLeftProcedure.java
 K 25
 svn:wc:ra_dav:version-url
-V 133
-/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestFullyBoundFunction.java
+V 134
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestIgnoreLeftProcedure.java
+END
+TestBinaryProcedureUnaryProcedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestBinaryProcedureUnaryProcedure.java
+END
+TestRightBoundProcedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestRightBoundProcedure.java
+END
+TestPredicateFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestPredicateFunction.java
+END
+TestFunctionUnaryFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestFunctionUnaryFunction.java
+END
+TestLeftBoundFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestLeftBoundFunction.java
+END
+TestIgnoreRightProcedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestIgnoreRightProcedure.java
+END
+TestBinaryProcedureBinaryFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestBinaryProcedureBinaryFunction.java
+END
+TestUnaryFunctionUnaryProcedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestUnaryFunctionUnaryProcedure.java
+END
+TestUnaryProcedureUnaryFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestUnaryProcedureUnaryFunction.java
 END
 TestLeftBoundProcedure.java
 K 25
 svn:wc:ra_dav:version-url
 V 133
-/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestLeftBoundProcedure.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestLeftBoundProcedure.java
+END
+TestPredicateUnaryPredicate.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestPredicateUnaryPredicate.java
 END
 TestFullyBoundProcedure.java
 K 25
 svn:wc:ra_dav:version-url
 V 134
-/repos/asf/!svn/ver/1187622/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestFullyBoundProcedure.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestFullyBoundProcedure.java
+END
+TestIgnoreLeftPredicate.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestIgnoreLeftPredicate.java
+END
+TestFunctionProcedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestFunctionProcedure.java
+END
+TestBoundProcedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestBoundProcedure.java
+END
+TestBinaryFunctionBinaryProcedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestBinaryFunctionBinaryProcedure.java
+END
+TestProcedureUnaryProcedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestProcedureUnaryProcedure.java
+END
+TestBoundFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestBoundFunction.java
+END
+TestRightBoundPredicate.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestRightBoundPredicate.java
+END
+TestIgnoreLeftFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestIgnoreLeftFunction.java
+END
+TestIgnoreRightPredicate.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestIgnoreRightPredicate.java
+END
+TestFullyBoundFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestFullyBoundFunction.java
+END
+TestUnaryFunctionUnaryPredicate.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestUnaryFunctionUnaryPredicate.java
+END
+TestBinaryPredicateBinaryFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestBinaryPredicateBinaryFunction.java
+END
+TestBinaryFunctionUnaryFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestBinaryFunctionUnaryFunction.java
+END
+TestProcedureFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestProcedureFunction.java
+END
+TestLeftBoundPredicate.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestLeftBoundPredicate.java
+END
+TestFullyBoundPredicate.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/adapter/TestFullyBoundPredicate.java
 END

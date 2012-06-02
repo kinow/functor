@@ -1,103 +1,127 @@
 K 25
 svn:wc:ra_dav:version-url
 V 112
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite
-END
-TransformedBinaryFunction.java
-K 25
-svn:wc:ra_dav:version-url
-V 143
-/repos/asf/!svn/ver/1180204/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/TransformedBinaryFunction.java
-END
-UnaryOr.java
-K 25
-svn:wc:ra_dav:version-url
-V 125
-/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/UnaryOr.java
-END
-Not.java
-K 25
-svn:wc:ra_dav:version-url
-V 121
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/Not.java
-END
-TransformedBinaryProcedure.java
-K 25
-svn:wc:ra_dav:version-url
-V 144
-/repos/asf/!svn/ver/1180194/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/TransformedBinaryProcedure.java
-END
-And.java
-K 25
-svn:wc:ra_dav:version-url
-V 121
-/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/And.java
-END
-CompositeUnaryPredicate.java
-K 25
-svn:wc:ra_dav:version-url
-V 141
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/CompositeUnaryPredicate.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite
 END
 ConditionalUnaryPredicate.java
 K 25
 svn:wc:ra_dav:version-url
 V 143
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/ConditionalUnaryPredicate.java
-END
-TransposedPredicate.java
-K 25
-svn:wc:ra_dav:version-url
-V 137
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/TransposedPredicate.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/ConditionalUnaryPredicate.java
 END
 DoWhileProcedure.java
 K 25
 svn:wc:ra_dav:version-url
 V 134
-/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/DoWhileProcedure.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/DoWhileProcedure.java
 END
 AbstractLoopProcedure.java
 K 25
 svn:wc:ra_dav:version-url
 V 139
-/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/AbstractLoopProcedure.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/AbstractLoopProcedure.java
 END
-ConditionalFunction.java
+TransposedPredicate.java
 K 25
 svn:wc:ra_dav:version-url
 V 137
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/ConditionalFunction.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/TransposedPredicate.java
 END
-ConditionalProcedure.java
+ConditionalBinaryProcedure.java
 K 25
 svn:wc:ra_dav:version-url
-V 138
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/ConditionalProcedure.java
+V 144
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/ConditionalBinaryProcedure.java
 END
-ConditionalBinaryFunction.java
+CompositeUnaryProcedure.java
 K 25
 svn:wc:ra_dav:version-url
-V 143
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/ConditionalBinaryFunction.java
-END
-UnaryNot.java
-K 25
-svn:wc:ra_dav:version-url
-V 126
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/UnaryNot.java
-END
-Or.java
-K 25
-svn:wc:ra_dav:version-url
-V 120
-/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/Or.java
+V 141
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/CompositeUnaryProcedure.java
 END
 UnaryAnd.java
 K 25
 svn:wc:ra_dav:version-url
 V 126
-/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/UnaryAnd.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/UnaryAnd.java
+END
+TransformedBinaryProcedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/TransformedBinaryProcedure.java
+END
+Composite.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/Composite.java
+END
+TransformedBinaryFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/TransformedBinaryFunction.java
+END
+UnaryNot.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/UnaryNot.java
+END
+BasePredicateList.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/BasePredicateList.java
+END
+TransposedFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/TransposedFunction.java
+END
+TransformedFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/TransformedFunction.java
+END
+BinarySequence.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/BinarySequence.java
+END
+Sequence.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/Sequence.java
+END
+ConditionalUnaryFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/ConditionalUnaryFunction.java
+END
+CompositeUnaryFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/CompositeUnaryFunction.java
+END
+BaseUnaryPredicateList.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/BaseUnaryPredicateList.java
+END
+BinaryAnd.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/BinaryAnd.java
 END
 package-info.java
 K 25
@@ -105,159 +129,135 @@ svn:wc:ra_dav:version-url
 V 130
 /repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/package-info.java
 END
-BinaryOr.java
+BinaryNot.java
 K 25
 svn:wc:ra_dav:version-url
-V 126
-/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/BinaryOr.java
-END
-CompositeUnaryFunction.java
-K 25
-svn:wc:ra_dav:version-url
-V 140
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/CompositeUnaryFunction.java
-END
-UnarySequence.java
-K 25
-svn:wc:ra_dav:version-url
-V 131
-/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/UnarySequence.java
-END
-ConditionalBinaryPredicate.java
-K 25
-svn:wc:ra_dav:version-url
-V 144
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/ConditionalBinaryPredicate.java
-END
-CompositeUnaryProcedure.java
-K 25
-svn:wc:ra_dav:version-url
-V 141
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/CompositeUnaryProcedure.java
-END
-ConditionalUnaryProcedure.java
-K 25
-svn:wc:ra_dav:version-url
-V 143
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/ConditionalUnaryProcedure.java
-END
-TransposedProcedure.java
-K 25
-svn:wc:ra_dav:version-url
-V 137
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/TransposedProcedure.java
-END
-BaseBinaryPredicateList.java
-K 25
-svn:wc:ra_dav:version-url
-V 141
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/BaseBinaryPredicateList.java
+V 127
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/BinaryNot.java
 END
 UnaryCompositeBinaryFunction.java
 K 25
 svn:wc:ra_dav:version-url
 V 146
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/UnaryCompositeBinaryFunction.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/UnaryCompositeBinaryFunction.java
+END
+UnarySequence.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/UnarySequence.java
+END
+ConditionalBinaryPredicate.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/ConditionalBinaryPredicate.java
+END
+CompositeUnaryPredicate.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/CompositeUnaryPredicate.java
+END
+ConditionalProcedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/ConditionalProcedure.java
+END
+ConditionalUnaryProcedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/ConditionalUnaryProcedure.java
+END
+TransposedProcedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/TransposedProcedure.java
 END
 TransformedProcedure.java
 K 25
 svn:wc:ra_dav:version-url
 V 138
-/repos/asf/!svn/ver/1180209/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/TransformedProcedure.java
-END
-Composite.java
-K 25
-svn:wc:ra_dav:version-url
-V 127
-/repos/asf/!svn/ver/1175833/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/Composite.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/TransformedProcedure.java
 END
 Conditional.java
 K 25
 svn:wc:ra_dav:version-url
 V 129
-/repos/asf/!svn/ver/1180156/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/Conditional.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/Conditional.java
 END
-WhileDoProcedure.java
-K 25
-svn:wc:ra_dav:version-url
-V 134
-/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/WhileDoProcedure.java
-END
-BinaryNot.java
-K 25
-svn:wc:ra_dav:version-url
-V 127
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/BinaryNot.java
-END
-BaseUnaryPredicateList.java
-K 25
-svn:wc:ra_dav:version-url
-V 140
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/BaseUnaryPredicateList.java
-END
-BinaryAnd.java
-K 25
-svn:wc:ra_dav:version-url
-V 127
-/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/BinaryAnd.java
-END
-UnaryCompositeBinaryPredicate.java
-K 25
-svn:wc:ra_dav:version-url
-V 147
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/UnaryCompositeBinaryPredicate.java
-END
-Sequence.java
+BinaryOr.java
 K 25
 svn:wc:ra_dav:version-url
 V 126
-/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/Sequence.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/BinaryOr.java
 END
-BinarySequence.java
+Or.java
 K 25
 svn:wc:ra_dav:version-url
-V 132
-/repos/asf/!svn/ver/1187618/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/BinarySequence.java
+V 120
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/Or.java
 END
-ConditionalBinaryProcedure.java
+BaseBinaryPredicateList.java
 K 25
 svn:wc:ra_dav:version-url
-V 144
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/ConditionalBinaryProcedure.java
+V 141
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/BaseBinaryPredicateList.java
+END
+ConditionalBinaryFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/ConditionalBinaryFunction.java
 END
 BinaryCompositeBinaryFunction.java
 K 25
 svn:wc:ra_dav:version-url
 V 147
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/BinaryCompositeBinaryFunction.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/BinaryCompositeBinaryFunction.java
+END
+ConditionalFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/ConditionalFunction.java
+END
+UnaryCompositeBinaryPredicate.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/UnaryCompositeBinaryPredicate.java
+END
+And.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/And.java
+END
+WhileDoProcedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/WhileDoProcedure.java
+END
+Not.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/Not.java
+END
+UnaryOr.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/UnaryOr.java
 END
 ConditionalPredicate.java
 K 25
 svn:wc:ra_dav:version-url
 V 138
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/ConditionalPredicate.java
-END
-BasePredicateList.java
-K 25
-svn:wc:ra_dav:version-url
-V 135
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/BasePredicateList.java
-END
-ConditionalUnaryFunction.java
-K 25
-svn:wc:ra_dav:version-url
-V 142
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/ConditionalUnaryFunction.java
-END
-TransposedFunction.java
-K 25
-svn:wc:ra_dav:version-url
-V 136
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/TransposedFunction.java
-END
-TransformedFunction.java
-K 25
-svn:wc:ra_dav:version-url
-V 137
-/repos/asf/!svn/ver/1180207/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/TransformedFunction.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/composite/ConditionalPredicate.java
 END

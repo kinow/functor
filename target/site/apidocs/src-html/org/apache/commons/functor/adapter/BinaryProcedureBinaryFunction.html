@@ -42,7 +42,7 @@
 <FONT color="green">039</FONT>     * @param &lt;L&gt; the left argument type.<a name="line.39"></a>
 <FONT color="green">040</FONT>     * @param &lt;R&gt; the right argument type.<a name="line.40"></a>
 <FONT color="green">041</FONT>     * @param &lt;T&gt; the returned value type.<a name="line.41"></a>
-<FONT color="green">042</FONT>     * @version $Revision: 1234990 $ $Date: 2012-01-23 19:18:10 -0200 (Mon, 23 Jan 2012) $<a name="line.42"></a>
+<FONT color="green">042</FONT>     * @version $Revision: 1344786 $ $Date: 2012-05-31 12:55:31 -0300 (Thu, 31 May 2012) $<a name="line.42"></a>
 <FONT color="green">043</FONT>     * @author Rodney Waldhoff<a name="line.43"></a>
 <FONT color="green">044</FONT>     */<a name="line.44"></a>
 <FONT color="green">045</FONT>    public final class BinaryProcedureBinaryFunction&lt;L, R, T&gt; implements BinaryFunction&lt;L, R, T&gt;, Serializable {<a name="line.45"></a>
@@ -123,11 +123,12 @@
 <FONT color="green">120</FONT>         *         {@link BinaryFunction BinaryFunction}, or &lt;code&gt;null&lt;/code&gt;<a name="line.120"></a>
 <FONT color="green">121</FONT>         *         if the given &lt;code&gt;BinaryFunction&lt;/code&gt; is &lt;code&gt;null&lt;/code&gt;<a name="line.121"></a>
 <FONT color="green">122</FONT>         */<a name="line.122"></a>
-<FONT color="green">123</FONT>        public static &lt;L, R, T&gt; BinaryProcedureBinaryFunction&lt;L, R, T&gt; adapt(BinaryProcedure&lt;? super L, ? super R&gt; procedure) {<a name="line.123"></a>
-<FONT color="green">124</FONT>            return null == procedure ? null : new BinaryProcedureBinaryFunction&lt;L, R, T&gt;(procedure);<a name="line.124"></a>
-<FONT color="green">125</FONT>        }<a name="line.125"></a>
-<FONT color="green">126</FONT>    <a name="line.126"></a>
-<FONT color="green">127</FONT>    }<a name="line.127"></a>
+<FONT color="green">123</FONT>        public static &lt;L, R, T&gt; BinaryProcedureBinaryFunction&lt;L, R, T&gt; adapt(<a name="line.123"></a>
+<FONT color="green">124</FONT>                BinaryProcedure&lt;? super L, ? super R&gt; procedure) {<a name="line.124"></a>
+<FONT color="green">125</FONT>            return null == procedure ? null : new BinaryProcedureBinaryFunction&lt;L, R, T&gt;(procedure);<a name="line.125"></a>
+<FONT color="green">126</FONT>        }<a name="line.126"></a>
+<FONT color="green">127</FONT>    <a name="line.127"></a>
+<FONT color="green">128</FONT>    }<a name="line.128"></a>
 
 
 

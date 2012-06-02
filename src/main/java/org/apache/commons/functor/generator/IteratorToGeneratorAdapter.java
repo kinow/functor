@@ -24,11 +24,9 @@ import java.util.Iterator;
  *
  * @param <E> the type of elements held in this generator.
  * @since 1.0
- * @version $Revision: 1234990 $ $Date: 2012-01-23 19:18:10 -0200 (Mon, 23 Jan 2012) $
- * @author Jason Horman (jason@jhorman.org)
- * @author Rodney Waldhoff
+ * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
-public final class IteratorToGeneratorAdapter<E> extends BaseGenerator<E> {
+public final class IteratorToGeneratorAdapter<E> extends BaseStoppableGenerator<E> {
     // instance variables
     //-----------------------------------------------------
 

@@ -22,8 +22,7 @@ import org.apache.commons.functor.UnaryPredicate;
  * Tests to true iff the input object can be converted to
  * an Integer by {@link ToInteger}.
  *
- * @version $Revision: 665786 $ $Date: 2008-06-09 14:17:39 -0300 (Mon, 09 Jun 2008) $
- * @author Rodney Waldhoff
+ * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
 public final class IsInteger implements UnaryPredicate<String> {
     public boolean test(String obj) {

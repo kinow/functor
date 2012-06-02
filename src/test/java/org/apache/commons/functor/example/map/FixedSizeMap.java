@@ -27,8 +27,7 @@ import org.apache.commons.functor.core.composite.UnaryNot;
 import org.apache.commons.functor.generator.IteratorToGeneratorAdapter;
 
 /**
- * @version $Revision: 666157 $ $Date: 2008-06-10 12:34:23 -0300 (Tue, 10 Jun 2008) $
- * @author Rodney Waldhoff
+ * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
 @SuppressWarnings("unchecked")
 public class FixedSizeMap extends FunctoredMap {

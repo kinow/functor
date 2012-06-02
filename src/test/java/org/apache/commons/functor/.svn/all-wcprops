@@ -1,17 +1,17 @@
 K 25
 svn:wc:ra_dav:version-url
 V 97
-/repos/asf/!svn/ver/1234990/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor
 END
 TestAlgorithms.java
 K 25
 svn:wc:ra_dav:version-url
 V 117
-/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/TestAlgorithms.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/TestAlgorithms.java
 END
 BaseFunctorTest.java
 K 25
 svn:wc:ra_dav:version-url
 V 118
-/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/BaseFunctorTest.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/BaseFunctorTest.java
 END

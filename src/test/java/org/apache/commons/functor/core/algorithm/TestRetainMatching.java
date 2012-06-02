@@ -34,7 +34,7 @@ import org.junit.Test;
  */
 public class TestRetainMatching extends BaseFunctorTest {
 
-	// Lifecycle
+    // Lifecycle
     // ------------------------------------------------------------------------
 
     @Before
@@ -44,7 +44,7 @@ public class TestRetainMatching extends BaseFunctorTest {
         for (int i=0;i<10;i++) {
             list.add(new Integer(i));
             if (i%2 != 0) {
-            	odds.add(new Integer(i));
+                odds.add(new Integer(i));
             }
         }
     }
@@ -57,19 +57,19 @@ public class TestRetainMatching extends BaseFunctorTest {
 
     // Tests
     // ------------------------------------------------------------------------
-	
-	@Override
-	protected Object makeFunctor() throws Exception {
-		return new RetainMatching<Integer>();
-	}
-	
-	@Test
+
+    @Override
+    protected Object makeFunctor() throws Exception {
+        return new RetainMatching<Integer>();
+    }
+
+    @Test
     public void testRemove() {
         new RetainMatching<Integer>().run(list.iterator(),isOdd);
         assertEquals(odds,list);
     }
-	
-	// Attributes
+
+    // Attributes
     // ------------------------------------------------------------------------
     private List<Integer> list = null;
     private List<Integer> odds = null;
@@ -87,5 +87,5 @@ public class TestRetainMatching extends BaseFunctorTest {
             return new Integer(2*obj);
         }
     }
-	
+
 }

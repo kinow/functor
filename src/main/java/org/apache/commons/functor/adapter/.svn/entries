@@ -1,15 +1,15 @@
 10
 
 dir
-1303656
+1345345
 http://svn.apache.org/repos/asf/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/adapter
 http://svn.apache.org/repos/asf
 
 
 
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
 
 
 
@@ -26,19 +26,20 @@ mbenson
 
 13f79535-47bb-0310-9956-ffa450edef68
 
-PredicateUnaryPredicate.java
+BinaryFunctionBinaryPredicate.java
 file
 
 
 
 
-2012-03-21T04:59:05.000000Z
-4bd6b55976bafcca5b1c06bfbcf565a7
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
+2012-06-01T20:51:33.000000Z
+a458d5532c63451da238d8b3829d7e41
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -57,22 +58,22 @@ has-props
 
 
 
-
-3633
+4975
 
-IgnoreRightPredicate.java
+BinaryFunctionBinaryProcedure.java
 file
 
 
 
 
-2012-03-21T04:59:05.000000Z
-595b765d3d09c3de8768d4b052087f92
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
+2012-06-01T20:51:33.000000Z
+dd9c85296e953663667b0bb87d50c509
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -91,22 +92,22 @@ has-props
 
 
 
-
-3780
+4499
 
-UnaryFunctionUnaryPredicate.java
+BinaryFunctionUnaryFunction.java
 file
 
 
 
 
-2012-03-21T04:59:05.000000Z
-0d42b7cca72e8f986bea18d353fe6e6b
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
+2012-06-01T20:51:33.000000Z
+c7869be9c08bc311d61e3316d7f2f824
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -125,22 +126,22 @@ has-props
 
 
 
-
-4534
+3290
 
-UnaryPredicateUnaryFunction.java
+BinaryPredicateBinaryFunction.java
 file
 
 
 
 
-2012-03-21T04:59:05.000000Z
-0ff5df86c7f6855a7b8ab2be0155dd59
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
+2012-06-01T20:51:33.000000Z
+c597730a4a5f165491cd84d6754e5318
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -159,22 +160,22 @@ has-props
 
 
 
-
-4019
+4591
 
-PredicateFunction.java
+BinaryPredicateUnaryPredicate.java
 file
 
 
 
 
-2012-03-21T04:59:05.000000Z
-2f23b3aad8eb0aafe2bd470974477a97
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
+2012-06-01T20:51:33.000000Z
+885195dbd83aa14f4ac75795fbf73459
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -193,76 +194,7 @@ has-props
 
 
 
-
-3658
-
-FunctionPredicate.java
-file
-
-
-
-
-2012-03-21T04:59:05.000000Z
-496647aec3f05500772cca6f58738c36
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3578
-
-IgnoreLeftProcedure.java
-file
-
-
-
-
-2012-03-21T04:59:05.000000Z
-929af2948d4825bdcc7b1018de9db352
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3727
+3168
 
 BinaryProcedureBinaryFunction.java
 file
@@ -270,13 +202,14 @@ file
 
 
 
-2012-03-21T04:59:05.000000Z
-b393201486f2e899c752eb53fdb370ab
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
+2012-06-01T20:51:33.000000Z
+6ac0adf4bfee19c85d7d2fba91dc0d98
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -295,22 +228,22 @@ has-props
 
 
 
-
-4596
+4582
 
-FunctionUnaryFunction.java
+BinaryProcedureUnaryProcedure.java
 file
 
 
 
 
-2012-03-21T04:59:05.000000Z
-51a44af66c96dbe214523ef8924ca219
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
+2012-06-01T20:51:33.000000Z
+e122800b5770f23850492f6b2513511e
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -329,8 +262,7 @@ has-props
 
 
 
-
-3670
+3140
 
 BoundFunction.java
 file
@@ -338,13 +270,14 @@ file
 
 
 
-2012-03-21T04:59:05.000000Z
-4e55576799faeffe21afcedb9ba83bd7
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
+2012-06-01T20:51:33.000000Z
+88547e4a6b855f7999baeec2edb4a33b
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -363,22 +296,22 @@ has-props
 
 
 
-
-4696
+4669
 
-BinaryFunctionBinaryPredicate.java
+BoundPredicate.java
 file
 
 
 
 
-2012-03-21T04:59:05.000000Z
-8a3e4e5bfa7108f6662557ff47e204ab
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
+2012-06-01T20:51:33.000000Z
+c627d8f9da685d392f7fe3c0583cbedf
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -397,8 +330,7 @@ has-props
 
 
 
-
-5002
+4620
 
 BoundProcedure.java
 file
@@ -406,13 +338,14 @@ file
 
 
 
-2012-03-21T04:59:05.000000Z
-826085f3725fd03a7ebaee282f0e014b
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
+2012-06-01T20:51:33.000000Z
+87af94d44db45ed364d311d18c2266a4
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -431,8 +364,891 @@ has-props
 
 
 
+4607
+
+FullyBoundFunction.java
+file
 
-4634
+
+
+
+2012-06-01T20:51:33.000000Z
+83f025a02a002daba7644f314f0c37c9
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4738
+
+FullyBoundPredicate.java
+file
+
+
+
+
+2012-06-01T20:51:33.000000Z
+d925969d8ca1c990cddf301bec2eb210
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4782
+
+FullyBoundProcedure.java
+file
+
+
+
+
+2012-06-01T20:51:33.000000Z
+b6c4069709145ea5c893941aee8f6131
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4618
+
+FunctionPredicate.java
+file
+
+
+
+
+2012-06-01T20:51:33.000000Z
+0047b866ea0543e26ecf95afac0c8d52
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3551
+
+FunctionProcedure.java
+file
+
+
+
+
+2012-06-01T20:51:33.000000Z
+d696516c3f5f3345862b65d2ac0f15f0
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3958
+
+FunctionUnaryFunction.java
+file
+
+
+
+
+2012-06-01T20:51:33.000000Z
+6f0393d632a728ef1550d80d96663995
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3643
+
+IgnoreLeftFunction.java
+file
+
+
+
+
+2012-06-01T20:51:33.000000Z
+2abb949c6ec0b0ff7ae4697e0f22bec5
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3836
+
+IgnoreLeftPredicate.java
+file
+
+
+
+
+2012-06-01T20:51:33.000000Z
+12185ffab313076221c17e2eeed4620c
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3722
+
+IgnoreLeftProcedure.java
+file
+
+
+
+
+2012-06-01T20:51:33.000000Z
+310da426653b8c5649218bfa81a89e4e
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3700
+
+IgnoreRightFunction.java
+file
+
+
+
+
+2012-06-01T20:51:33.000000Z
+2874dca472dd266a3ea2c4bac98977e1
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3873
+
+IgnoreRightPredicate.java
+file
+
+
+
+
+2012-06-01T20:51:33.000000Z
+40bc8472d62459d6e6e9dac32496e07f
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3753
+
+IgnoreRightProcedure.java
+file
+
+
+
+
+2012-06-01T20:51:33.000000Z
+c95358ecebde29820d5cfa23104a3e88
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3775
+
+LeftBoundFunction.java
+file
+
+
+
+
+2012-06-01T20:51:33.000000Z
+e8a28912586a17c07844576825e090cf
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4378
+
+LeftBoundPredicate.java
+file
+
+
+
+
+2012-06-01T20:51:33.000000Z
+0236f97c4f63dc9466f6f63095ebcd57
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4360
+
+LeftBoundProcedure.java
+file
+
+
+
+
+2012-06-01T20:51:33.000000Z
+491e5f359903208e44f83d33f1ba140d
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4260
+
+PredicateFunction.java
+file
+
+
+
+
+2012-06-01T20:51:33.000000Z
+e4353328ec271ae0f08e17f09e3411a0
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3631
+
+PredicateUnaryPredicate.java
+file
+
+
+
+
+2012-06-01T20:51:33.000000Z
+92b4bb02c94035899b3d9b365e9a80ae
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3606
+
+ProcedureFunction.java
+file
+
+
+
+
+2012-06-01T20:51:33.000000Z
+7dfc6f808ec216c82c6533e300d23f81
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3471
+
+ProcedureUnaryProcedure.java
+file
+
+
+
+
+2012-06-01T20:51:33.000000Z
+795989fa9456882b748759b7e4c4d018
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3582
+
+RightBoundFunction.java
+file
+
+
+
+
+2012-06-01T20:51:33.000000Z
+f04bc392c1777187b0c6232092dcac34
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4530
+
+RightBoundPredicate.java
+file
+
+
+
+
+2012-06-01T20:51:33.000000Z
+212cb7e68285d1c9099d664a894e8021
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4289
+
+RightBoundProcedure.java
+file
+
+
+
+
+2012-06-01T20:51:33.000000Z
+618241726cc28543a3136d9bfa035add
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4290
+
+UnaryFunctionUnaryPredicate.java
+file
+
+
+
+
+2012-06-01T20:51:33.000000Z
+50e2254822202504c93f82e6a391d6f8
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4507
+
+UnaryFunctionUnaryProcedure.java
+file
+
+
+
+
+2012-06-01T20:51:33.000000Z
+7f15daae758c158523619af8ba23f1c5
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4389
+
+UnaryPredicateUnaryFunction.java
+file
+
+
+
+
+2012-06-01T20:51:33.000000Z
+2a488058d679d030ad80bffa9498c3b4
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3992
+
+UnaryProcedureUnaryFunction.java
+file
+
+
+
+
+2012-06-01T20:51:33.000000Z
+aff607f75b1abaf7e07bd8e76befe57a
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3856
 
 package-info.java
 file
@@ -467,820 +1283,4 @@ has-props
 
 
 927
-
-BinaryProcedureUnaryProcedure.java
-file
-
-
-
-
-2012-03-21T04:59:05.000000Z
-8a2d2e6ae43e4cf8665ee3ca512d1548
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3163
-
-RightBoundPredicate.java
-file
-
-
-
-
-2012-03-21T04:59:05.000000Z
-180eab5e6cca24dd8fba5d5530c7d5ae
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4316
-
-IgnoreRightFunction.java
-file
-
-
-
-
-2012-03-21T04:59:05.000000Z
-3cd51731cc0e63a626f5f6541b262dd9
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3900
-
-LeftBoundFunction.java
-file
-
-
-
-
-2012-03-21T04:59:05.000000Z
-46d3e721b429df26fd21494a11bada02
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4405
-
-IgnoreRightProcedure.java
-file
-
-
-
-
-2012-03-21T04:59:05.000000Z
-930c80f8cdbeae09ae7fb93ee32a46aa
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3802
-
-UnaryProcedureUnaryFunction.java
-file
-
-
-
-
-2012-03-21T04:59:05.000000Z
-daadf6703c3a22f52603208f3b15fcf7
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3883
-
-UnaryFunctionUnaryProcedure.java
-file
-
-
-
-
-2012-03-21T04:59:05.000000Z
-13451eaca5c849f60bef67861ad4a939
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4416
-
-FunctionProcedure.java
-file
-
-
-
-
-2012-03-21T04:59:05.000000Z
-925be912a9bdf46f10aaf93af9f7ee92
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3985
-
-ProcedureFunction.java
-file
-
-
-
-
-2012-03-21T04:59:05.000000Z
-56d6f669a0d159e402b63aa2c68c5a83
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3498
-
-LeftBoundPredicate.java
-file
-
-
-
-
-2012-03-21T04:59:05.000000Z
-c904a948f89835f1495b1c99b6538b11
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4387
-
-FullyBoundPredicate.java
-file
-
-
-
-
-2012-03-21T04:59:05.000000Z
-a5578b31138f95a4228d4bc27f260cef
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4805
-
-IgnoreLeftFunction.java
-file
-
-
-
-
-2012-03-21T04:59:05.000000Z
-b7339e915fc246cc862598ccecb0ef75
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3863
-
-BinaryPredicateUnaryPredicate.java
-file
-
-
-
-
-2012-03-21T04:59:05.000000Z
-5d50865f56ea59e09b193f0046456b79
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3191
-
-BinaryFunctionBinaryProcedure.java
-file
-
-
-
-
-2012-03-21T04:59:05.000000Z
-7a95c846bb2d6d1e320ba898dd09268f
-2011-10-22T01:16:16.863350Z
-1187618
-sebb
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4526
-
-RightBoundFunction.java
-file
-
-
-
-
-2012-03-21T04:59:05.000000Z
-a1080d6e98fee48ab4b9cdfba4d3d0eb
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4557
-
-RightBoundProcedure.java
-file
-
-
-
-
-2012-03-21T04:59:05.000000Z
-5407647fde2aced806e425b3260099aa
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4317
-
-BinaryFunctionUnaryFunction.java
-file
-
-
-
-
-2012-03-21T04:59:05.000000Z
-11a79a7230fecc3c9e438e3263fc3653
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3317
-
-IgnoreLeftPredicate.java
-file
-
-
-
-
-2012-03-21T04:59:05.000000Z
-24ca8ca5425fa479126f764bf8be1f15
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3749
-
-ProcedureUnaryProcedure.java
-file
-
-
-
-
-2012-03-21T04:59:05.000000Z
-0f099f1d20dfe0c12b65136d8ac089ec
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3609
-
-BinaryPredicateBinaryFunction.java
-file
-
-
-
-
-2012-03-21T04:59:05.000000Z
-1005df3ff59ab1337aa16278cca74b77
-2011-10-22T01:16:16.863350Z
-1187618
-sebb
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4618
-
-BoundPredicate.java
-file
-
-
-
-
-2012-03-21T04:59:05.000000Z
-9b2ecbe464d58edd125791d000f027b9
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4647
-
-FullyBoundFunction.java
-file
-
-
-
-
-2012-03-21T04:59:05.000000Z
-44f593f73819562f3bb106bc8c88bc6a
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4761
-
-LeftBoundProcedure.java
-file
-
-
-
-
-2012-03-21T04:59:05.000000Z
-990f9ff0428b1435c3fe9e384fcfa90f
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4287
-
-FullyBoundProcedure.java
-file
-
-
-
-
-2012-03-21T04:59:05.000000Z
-4fb97c69f3a988900d3fd0c5992e2bc5
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4641
 

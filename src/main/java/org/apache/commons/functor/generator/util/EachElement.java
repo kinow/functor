@@ -25,8 +25,7 @@ import org.apache.commons.functor.generator.IteratorToGeneratorAdapter;
  * Generator factory for each element of a "collection".
  *
  * @since 1.0
- * @version $Revision: 1234401 $ $Date: 2012-01-21 17:14:43 -0200 (Sat, 21 Jan 2012) $
- * @author  Jason Horman (jason@jhorman.org)
+ * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
 public final class EachElement {
     /**

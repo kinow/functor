@@ -1,15 +1,15 @@
 10
 
 dir
-1303656
+1345345
 http://svn.apache.org/repos/asf/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/map
 http://svn.apache.org/repos/asf
 
 
 
-2011-10-22T01:22:33.930076Z
-1187622
-sebb
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
 
 
 
@@ -26,19 +26,20 @@ sebb
 
 13f79535-47bb-0310-9956-ffa450edef68
 
-PredicatedMap.java
+FixedSizeMap.java
 file
 
 
 
 
-2012-03-21T04:58:51.000000Z
-3ce985e692b777586b0f2e42913ad273
-2008-06-10T15:41:34.515482Z
-666163
-mbenson
+2012-06-01T20:51:45.000000Z
+ab2629a2cb5e296010fc8535dcee5d5c
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -57,42 +58,7 @@ has-props
 
 
 
-
-2563
-
-TestPredicatedMap.java
-file
-
-
-
-
-2012-03-21T04:58:51.000000Z
-cafcc9914e4c5dc740ebcbac7073b327
-2011-10-22T01:22:33.930076Z
-1187622
-sebb
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3059
+2618
 
 FunctoredMap.java
 file
@@ -100,13 +66,14 @@ file
 
 
 
-2012-03-21T04:58:51.000000Z
-37d8de145e4ee8ccd4efd198eaeae1a9
-2011-10-22T01:22:33.930076Z
-1187622
-sebb
+2012-06-01T20:51:45.000000Z
+fde3f07dd1e83b4353fa36a29e2d2722
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -125,110 +92,7 @@ has-props
 
 
 
-
-5589
-
-FixedSizeMap.java
-file
-
-
-
-
-2012-03-21T04:58:51.000000Z
-195a9bd29fb4d86f5ec04c220d18bc73
-2008-06-10T15:34:23.701448Z
-666157
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2644
-
-TestAll.java
-file
-
-
-
-
-2012-03-21T04:58:51.000000Z
-dfddd53e5024c58e03a6b30c1dad331c
-2008-04-03T20:23:16.308873Z
-644470
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1431
-
-TestFixedSizeMap.java
-file
-
-
-
-
-2012-03-21T04:58:51.000000Z
-6eecc122118e08aea574d22c4e893268
-2011-10-22T01:22:33.930076Z
-1187622
-sebb
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3873
+5562
 
 LazyMap.java
 file
@@ -236,13 +100,14 @@ file
 
 
 
-2012-03-21T04:58:51.000000Z
-1f027c865f6fee7dfb28981ea9e79293
-2008-06-10T15:34:23.701448Z
-666157
-mbenson
+2012-06-01T20:51:45.000000Z
+305fcc7ae9510d161f74f96ba09ba4e7
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -261,8 +126,109 @@ has-props
 
 
 
+1652
+
+PredicatedMap.java
+file
 
-1678
+
+
+
+2012-06-01T20:51:45.000000Z
+0a9987cb7fd7825cdfcdb6c32b661911
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2537
+
+TestAll.java
+file
+
+
+
+
+2012-06-01T20:51:45.000000Z
+00185bc9226f213f912bd15c399522b8
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1405
+
+TestFixedSizeMap.java
+file
+
+
+
+
+2012-06-01T20:51:45.000000Z
+6719da4b34e600d10326859f72f56523
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3846
 
 TestLazyMap.java
 file
@@ -270,13 +236,14 @@ file
 
 
 
-2012-03-21T04:58:51.000000Z
-a81a8215b037b903813238c3fada60ab
-2011-10-22T01:22:33.930076Z
-1187622
-sebb
+2012-06-01T20:51:45.000000Z
+6d58cc795109d675d77b802ab8ebc2d3
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -295,6 +262,39 @@ has-props
 
 
 
+3508
+
+TestPredicatedMap.java
+file
 
-3535
+
+
+
+2012-06-01T20:51:45.000000Z
+04ebf9ce4ed78fc4c28f4e8d37b5a2b1
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3032
 

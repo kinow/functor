@@ -35,7 +35,7 @@
 <a class="jxr_linenumber" name="25" href="#25">25</a>  <em class="jxr_javadoccomment"> * as long as a condition is true (test before).</em>
 <a class="jxr_linenumber" name="26" href="#26">26</a>  <em class="jxr_javadoccomment"> *</em>
 <a class="jxr_linenumber" name="27" href="#27">27</a>  <em class="jxr_javadoccomment"> * @param &lt;E&gt; the type of elements held in this generator.</em>
-<a class="jxr_linenumber" name="28" href="#28">28</a>  <em class="jxr_javadoccomment"> * @version $Revision: 1234990 $ $Date: 2012-01-23 19:18:10 -0200 (Mon, 23 Jan 2012) $</em>
+<a class="jxr_linenumber" name="28" href="#28">28</a>  <em class="jxr_javadoccomment"> * @version $Revision: 1344786 $ $Date: 2012-05-31 12:55:31 -0300 (Thu, 31 May 2012) $</em>
 <a class="jxr_linenumber" name="29" href="#29">29</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> WhileGenerate&lt;E&gt; <strong class="jxr_keyword">extends</strong> BaseGenerator&lt;E&gt; {
 <a class="jxr_linenumber" name="31" href="#31">31</a>  
@@ -51,7 +51,7 @@
 <a class="jxr_linenumber" name="41" href="#41">41</a>  <em class="jxr_javadoccomment">     */</em>
 <a class="jxr_linenumber" name="42" href="#42">42</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../../org/apache/commons/functor/generator/WhileGenerate.html">WhileGenerate</a>(UnaryPredicate&lt;? <strong class="jxr_keyword">super</strong> E&gt; test, Generator&lt;? <strong class="jxr_keyword">extends</strong> E&gt; wrapped) {
 <a class="jxr_linenumber" name="43" href="#43">43</a>          <strong class="jxr_keyword">super</strong>(Validate.notNull(wrapped, <span class="jxr_string">"Generator argument was null"</span>));
-<a class="jxr_linenumber" name="44" href="#44">44</a>          <strong class="jxr_keyword">this</strong>.test = Validate.notNull(test,<span class="jxr_string">"UnaryPredicate argument was null"</span>);
+<a class="jxr_linenumber" name="44" href="#44">44</a>          <strong class="jxr_keyword">this</strong>.test = Validate.notNull(test, <span class="jxr_string">"UnaryPredicate argument was null"</span>);
 <a class="jxr_linenumber" name="45" href="#45">45</a>      }
 <a class="jxr_linenumber" name="46" href="#46">46</a>  
 <a class="jxr_linenumber" name="47" href="#47">47</a>      <em class="jxr_javadoccomment">/**</em>

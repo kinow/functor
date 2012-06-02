@@ -26,9 +26,7 @@ import org.apache.commons.functor.BaseFunctorTest;
 import org.junit.Test;
 
 /**
- * @version $Revision: 1188373 $ $Date: 2011-10-24 18:54:57 -0200 (Mon, 24 Oct 2011) $
- * @author Jason Horman (jason@jhorman.org)
- * @author Rodney Waldhoff
+ * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
 public class TestLongRange extends BaseFunctorTest {
 

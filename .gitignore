@@ -1,0 +1,8 @@
+.project
+.classpath
+.buildpath
+.settings
+target
+target/**/*.*
+test-output
+.svn

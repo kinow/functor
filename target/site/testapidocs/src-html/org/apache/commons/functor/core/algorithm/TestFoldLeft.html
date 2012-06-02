@@ -34,8 +34,8 @@
 <FONT color="green">031</FONT>     * Tests {@link FoldLeft} algorithm.<a name="line.31"></a>
 <FONT color="green">032</FONT>     */<a name="line.32"></a>
 <FONT color="green">033</FONT>    public class TestFoldLeft {<a name="line.33"></a>
-<FONT color="green">034</FONT>            <a name="line.34"></a>
-<FONT color="green">035</FONT>            @Test<a name="line.35"></a>
+<FONT color="green">034</FONT>    <a name="line.34"></a>
+<FONT color="green">035</FONT>        @Test<a name="line.35"></a>
 <FONT color="green">036</FONT>        public final void testObjectEquals() throws Exception {<a name="line.36"></a>
 <FONT color="green">037</FONT>            Object obj = new FoldLeft&lt;Integer&gt;(new BinaryFunction&lt;Integer, Integer, Integer&gt;() {<a name="line.37"></a>
 <FONT color="green">038</FONT>                public Integer evaluate(Integer a, Integer b) {<a name="line.38"></a>
@@ -58,8 +58,8 @@
 <FONT color="green">055</FONT>                assertTrue("equals must be symmetric",! obj2.equals(obj));<a name="line.55"></a>
 <FONT color="green">056</FONT>            }<a name="line.56"></a>
 <FONT color="green">057</FONT>        }<a name="line.57"></a>
-<FONT color="green">058</FONT>            <a name="line.58"></a>
-<FONT color="green">059</FONT>            @Test<a name="line.59"></a>
+<FONT color="green">058</FONT>    <a name="line.58"></a>
+<FONT color="green">059</FONT>        @Test<a name="line.59"></a>
 <FONT color="green">060</FONT>        public void testFoldLeft() {<a name="line.60"></a>
 <FONT color="green">061</FONT>            FoldLeft&lt;Integer&gt; foldLeft = new FoldLeft&lt;Integer&gt;(new BinaryFunction&lt;Integer, Integer, Integer&gt;() {<a name="line.61"></a>
 <FONT color="green">062</FONT>                public Integer evaluate(Integer a, Integer b) {<a name="line.62"></a>
@@ -69,8 +69,8 @@
 <FONT color="green">066</FONT>            assertEquals(new Integer(sum), foldLeft.evaluate(IteratorToGeneratorAdapter.adapt(list.iterator())));<a name="line.66"></a>
 <FONT color="green">067</FONT>            assertEquals(new Integer(sum), foldLeft.evaluate(IteratorToGeneratorAdapter.adapt(list.iterator()), new Integer(0)));<a name="line.67"></a>
 <FONT color="green">068</FONT>        }<a name="line.68"></a>
-<FONT color="green">069</FONT>            <a name="line.69"></a>
-<FONT color="green">070</FONT>            // Attributes<a name="line.70"></a>
+<FONT color="green">069</FONT>    <a name="line.69"></a>
+<FONT color="green">070</FONT>        // Attributes<a name="line.70"></a>
 <FONT color="green">071</FONT>        // ------------------------------------------------------------------------<a name="line.71"></a>
 <FONT color="green">072</FONT>        private List&lt;Integer&gt; list = Arrays.asList(0,1,2);<a name="line.72"></a>
 <FONT color="green">073</FONT>        private int sum = 3;<a name="line.73"></a>

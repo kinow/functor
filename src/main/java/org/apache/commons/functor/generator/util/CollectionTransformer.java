@@ -27,8 +27,7 @@ import org.apache.commons.functor.generator.Generator;
  *
  * @param <E> the type of elements held in the adapted collection.
  * @since 1.0
- * @version $Revision: 1160793 $ $Date: 2011-08-23 13:48:32 -0300 (Tue, 23 Aug 2011) $
- * @author Jason Horman (jason@jhorman.org)
+ * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
 public class CollectionTransformer<E> implements UnaryFunction<Generator<? extends E>, Collection<? super E>> {
     /*

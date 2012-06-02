@@ -25,9 +25,9 @@ import org.apache.commons.lang3.Validate;
  * as long as a condition is true (test before).
  *
  * @param <E> the type of elements held in this generator.
- * @version $Revision: 1234990 $ $Date: 2012-01-23 19:18:10 -0200 (Mon, 23 Jan 2012) $
+ * @version $Revision: 1344786 $ $Date: 2012-05-31 12:55:31 -0300 (Thu, 31 May 2012) $
  */
-public class WhileGenerate<E> extends BaseGenerator<E> {
+public class WhileGenerate<E> extends BaseStoppableGenerator<E> {
 
     /**
      * The condition has to verified in order to execute the generation.
@@ -39,9 +39,9 @@ public class WhileGenerate<E> extends BaseGenerator<E> {
      * @param test {@link UnaryPredicate}
      * @param wrapped {@link Generator}
      */
-    public WhileGenerate(UnaryPredicate<? super E> test, Generator<? extends E> wrapped) {
+    public WhileGenerate(UnaryPredicate<? super E> test, StoppableGenerator<? extends E> wrapped) {
         super(Validate.notNull(wrapped, "Generator argument was null"));
-        this.test = Validate.notNull(test,"UnaryPredicate argument was null");
+        this.test = Validate.notNull(test, "UnaryPredicate argument was null");
     }
 
     /**
@@ -64,8 +64,8 @@ public class WhileGenerate<E> extends BaseGenerator<E> {
      */
     @SuppressWarnings("unchecked")
     @Override
-    protected Generator<? extends E> getWrappedGenerator() {
-        return (Generator<? extends E>) super.getWrappedGenerator();
+    protected StoppableGenerator<? extends E> getWrappedGenerator() {
+        return (StoppableGenerator<? extends E>) super.getWrappedGenerator();
     }
 
     /**
@@ -90,7 +90,7 @@ public class WhileGenerate<E> extends BaseGenerator<E> {
     public int hashCode() {
         int result = "WhileGenerate".hashCode();
         result <<= 2;
-        Generator<?> gen = getWrappedGenerator();
+        StoppableGenerator<?> gen = getWrappedGenerator();
         result ^= gen == null ? 0 : gen.hashCode();
         result <<= 2;
         result ^= test == null ? 0 : test.hashCode();

@@ -19,8 +19,7 @@ package org.apache.commons.functor.example.lines;
 import org.apache.commons.functor.Procedure;
 
 /**
- * @version $Revision: 644470 $ $Date: 2008-04-03 17:23:16 -0300 (Thu, 03 Apr 2008) $
- * @author Rodney Waldhoff
+ * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
 public class Count implements Procedure {
     public void run() {

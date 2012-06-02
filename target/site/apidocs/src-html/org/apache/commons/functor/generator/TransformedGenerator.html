@@ -28,7 +28,7 @@
 <FONT color="green">025</FONT>     *<a name="line.25"></a>
 <FONT color="green">026</FONT>     * @param &lt;I&gt; the type of elements held in the wrapped generator.<a name="line.26"></a>
 <FONT color="green">027</FONT>     * @param &lt;E&gt; the type of elements held in this generator.<a name="line.27"></a>
-<FONT color="green">028</FONT>     * @version $Revision: 1234990 $ $Date: 2012-01-23 19:18:10 -0200 (Mon, 23 Jan 2012) $<a name="line.28"></a>
+<FONT color="green">028</FONT>     * @version $Revision: 1344780 $ $Date: 2012-05-31 12:43:49 -0300 (Thu, 31 May 2012) $<a name="line.28"></a>
 <FONT color="green">029</FONT>     */<a name="line.29"></a>
 <FONT color="green">030</FONT>    public class TransformedGenerator&lt;I, E&gt; extends BaseGenerator&lt;E&gt; {<a name="line.30"></a>
 <FONT color="green">031</FONT>    <a name="line.31"></a>
@@ -89,12 +89,13 @@
 <FONT color="green">086</FONT>        public int hashCode() {<a name="line.86"></a>
 <FONT color="green">087</FONT>            int result = "TransformedGenerator".hashCode();<a name="line.87"></a>
 <FONT color="green">088</FONT>            result &lt;&lt;= 2;<a name="line.88"></a>
-<FONT color="green">089</FONT>            result ^= getWrappedGenerator().hashCode();<a name="line.89"></a>
-<FONT color="green">090</FONT>            result &lt;&lt;= 2;<a name="line.90"></a>
-<FONT color="green">091</FONT>            result ^= func.hashCode();<a name="line.91"></a>
-<FONT color="green">092</FONT>            return result;<a name="line.92"></a>
-<FONT color="green">093</FONT>        }<a name="line.93"></a>
-<FONT color="green">094</FONT>    }<a name="line.94"></a>
+<FONT color="green">089</FONT>            Generator&lt;?&gt; gen = getWrappedGenerator();<a name="line.89"></a>
+<FONT color="green">090</FONT>            result ^= gen == null ? 0 : gen.hashCode();<a name="line.90"></a>
+<FONT color="green">091</FONT>            result &lt;&lt;= 2;<a name="line.91"></a>
+<FONT color="green">092</FONT>            result ^= func.hashCode();<a name="line.92"></a>
+<FONT color="green">093</FONT>            return result;<a name="line.93"></a>
+<FONT color="green">094</FONT>        }<a name="line.94"></a>
+<FONT color="green">095</FONT>    }<a name="line.95"></a>
 
 
 

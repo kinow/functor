@@ -29,10 +29,10 @@ import org.junit.Test;
  */
 public class TestUntilDo {
 
-	@Test
+    @Test
     public final void testObjectEquals() throws Exception {
-		Counter counter = new Counter();
-		Object obj = new UntilDo(new Offset(10), counter);
+        Counter counter = new Counter();
+        Object obj = new UntilDo(new Offset(10), counter);
         assertEquals("equals must be reflexive",obj,obj);
         assertEquals("hashCode must be reflexive",obj.hashCode(),obj.hashCode());
         assertTrue(! obj.equals(null) ); // should be able to compare to null
@@ -45,8 +45,8 @@ public class TestUntilDo {
             assertTrue("equals must be symmetric",! obj2.equals(obj));
         }
     }
-	
-	@Test
+
+    @Test
     public void testUntilDo() {
         for (int i=0;i<3;i++){
             Counter counter = new Counter();
@@ -54,8 +54,8 @@ public class TestUntilDo {
             assertEquals(i,counter.count);
         }
     }
-	
-	// Classes
+
+    // Classes
     // ------------------------------------------------------------------------
 
     static class Counter implements Procedure {
@@ -64,5 +64,5 @@ public class TestUntilDo {
         }
         public int count = 0;
     }
-	
+
 }

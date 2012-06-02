@@ -1,14 +1,14 @@
 10
 
 dir
-1303656
+1345345
 http://svn.apache.org/repos/asf/commons/proper/functor/trunk/src/site/xdoc
 http://svn.apache.org/repos/asf
 
 
 
-2011-10-23T15:52:19.480601Z
-1187909
+2012-06-01T12:55:30.585385Z
+1345145
 simonetripodi
 
 
@@ -25,6 +25,74 @@ simonetripodi
 
 
 13f79535-47bb-0310-9956-ffa450edef68
+
+aggregator.xml
+file
+
+
+
+
+2012-06-01T20:52:33.000000Z
+d378f1cdb98480ce046edd6f4ced889c
+2012-06-01T12:55:30.585385Z
+1345145
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+17591
+
+building.xml
+file
+
+
+
+
+2012-03-21T04:59:29.000000Z
+b8c9b3ee264200750c515e8c62aabe54
+2011-10-23T15:52:19.480601Z
+1187909
+simonetripodi
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2266
 
 download_functor.xml
 file
@@ -59,6 +127,40 @@ has-props
 
 
 6935
+
+examples.xml
+file
+
+
+
+
+2012-06-01T20:52:33.000000Z
+9d32b3c095285ef9b0657544a9523ce2
+2012-06-01T12:55:30.585385Z
+1345145
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14473
 
 index.xml
 file
@@ -127,74 +229,6 @@ has-props
 
 
 5807
-
-building.xml
-file
-
-
-
-
-2012-03-21T04:59:29.000000Z
-b8c9b3ee264200750c515e8c62aabe54
-2011-10-23T15:52:19.480601Z
-1187909
-simonetripodi
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2266
-
-examples.xml
-file
-
-
-
-
-2012-03-22T04:51:23.000000Z
-b6270ce0d9c6acd452e1af3eb8ad7572
-2011-10-23T15:52:19.480601Z
-1187909
-simonetripodi
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-9719
 
 mail-lists.xml
 file

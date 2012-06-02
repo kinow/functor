@@ -1,15 +1,15 @@
 10
 
 dir
-1303656
+1345345
 http://svn.apache.org/repos/asf/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core/algorithm
 http://svn.apache.org/repos/asf
 
 
 
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
+2012-05-31T16:12:39.899454Z
+1344796
+simonetripodi
 
 
 
@@ -32,13 +32,14 @@ file
 
 
 
-2012-04-09T16:43:05.000000Z
-87883a788d89c866039a61bd8b5f55b8
-2011-09-13T19:36:50.249576Z
-1170317
+2012-06-01T00:21:16.000000Z
+8c0d306a286816b66401f189d22b7e91
+2012-05-31T16:12:39.899454Z
+1344796
 simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -57,8 +58,7 @@ has-props
 
 
 
-
-1609
+1761
 
 DoWhile.java
 file
@@ -66,13 +66,14 @@ file
 
 
 
-2012-03-21T04:59:11.000000Z
-49cf32b4fc5aed83b2260f21f81a4d39
-2011-09-13T19:39:33.543125Z
-1170319
+2012-06-01T00:21:16.000000Z
+6fb089bf2561b3a42584539314fdf59d
+2012-05-31T16:12:39.899454Z
+1344796
 simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -91,8 +92,7 @@ has-props
 
 
 
-
-1609
+1761
 
 FindWithinGenerator.java
 file
@@ -100,13 +100,14 @@ file
 
 
 
-2012-03-21T04:59:11.000000Z
-5b114ecedab2137f0d0a2f1f78396580
-2011-10-22T01:16:16.863350Z
-1187618
-sebb
+2012-06-01T00:21:16.000000Z
+e83d3665bfe3206ac0fd3219eb3333b0
+2012-05-31T16:12:39.899454Z
+1344796
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -125,8 +126,7 @@ has-props
 
 
 
-
-5023
+5184
 
 FoldLeft.java
 file
@@ -134,13 +134,14 @@ file
 
 
 
-2012-03-21T04:59:11.000000Z
-5682de2dff2a6ad088a15b80ee47d5c7
-2011-10-22T01:16:16.863350Z
-1187618
-sebb
+2012-06-01T00:21:16.000000Z
+f92840c23c88f5f7874b6293ae487f35
+2012-05-31T16:12:39.899454Z
+1344796
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -159,8 +160,7 @@ has-props
 
 
 
-
-4838
+4972
 
 FoldRight.java
 file
@@ -168,13 +168,14 @@ file
 
 
 
-2012-03-21T04:59:11.000000Z
-cd2c8922ff1fca58ba94cf019811f3d4
-2011-10-22T01:16:16.863350Z
-1187618
-sebb
+2012-06-01T00:21:16.000000Z
+6ced991cfe28f815f7c51800d42a6cbe
+2012-05-31T16:12:39.899454Z
+1344796
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -193,8 +194,7 @@ has-props
 
 
 
-
-5234
+5369
 
 GeneratorContains.java
 file
@@ -202,13 +202,14 @@ file
 
 
 
-2012-03-21T04:59:11.000000Z
-dff069eea041beaea954a5268114924f
-2011-10-22T01:16:16.863350Z
-1187618
-sebb
+2012-06-01T00:21:16.000000Z
+e5b9eaf1d91bc679f6aadbd2d9b3deeb
+2012-05-31T16:12:39.899454Z
+1344796
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -227,8 +228,7 @@ has-props
 
 
 
-
-3404
+3529
 
 InPlaceTransform.java
 file
@@ -236,13 +236,14 @@ file
 
 
 
-2012-03-21T04:59:11.000000Z
-01905f1fe16d418d2d8c7d7b7acd43ca
-2011-10-22T01:16:16.863350Z
-1187618
-sebb
+2012-06-01T00:21:16.000000Z
+e48648c69bb48f5be046af6381ca0a30
+2012-05-31T16:12:39.899454Z
+1344796
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -261,8 +262,7 @@ has-props
 
 
 
-
-2466
+2590
 
 IndexOfInGenerator.java
 file
@@ -270,13 +270,14 @@ file
 
 
 
-2012-03-21T04:59:11.000000Z
-bcb7de10134fc660dcb8ed0549eeed36
-2011-10-22T01:10:48.121629Z
-1187616
-sebb
+2012-06-01T00:21:16.000000Z
+bbcf942a1c77ec9d188bb7c913a8f51c
+2012-05-31T16:12:39.899454Z
+1344796
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -295,8 +296,7 @@ has-props
 
 
 
-
-3992
+4118
 
 PredicatedLoop.java
 file
@@ -338,13 +338,14 @@ file
 
 
 
-2012-03-21T04:59:11.000000Z
-b938223aa543a623e1918ed5f252279e
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
+2012-06-01T00:21:16.000000Z
+521ac58a541ed56dc0fabc3ad3f0cd0d
+2012-05-31T16:12:39.899454Z
+1344796
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -363,8 +364,7 @@ has-props
 
 
 
-
-3970
+4136
 
 RemoveMatching.java
 file
@@ -372,13 +372,14 @@ file
 
 
 
-2012-03-21T04:59:11.000000Z
-8cfbdea4d5a87db1920cc698b109d54b
-2011-10-22T01:16:16.863350Z
-1187618
-sebb
+2012-06-01T00:21:16.000000Z
+a44fc105f0f893a2b3dfddd14934cc28
+2012-05-31T16:12:39.899454Z
+1344796
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -397,8 +398,7 @@ has-props
 
 
 
-
-2496
+2618
 
 RetainMatching.java
 file
@@ -406,13 +406,14 @@ file
 
 
 
-2012-03-21T04:59:11.000000Z
-97b480e473e7d1cb66421d47f1f075b5
-2011-10-22T01:16:16.863350Z
-1187618
-sebb
+2012-06-01T00:21:16.000000Z
+b50830895b25e4089a4ad480b940dff5
+2012-05-31T16:12:39.899454Z
+1344796
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -431,8 +432,7 @@ has-props
 
 
 
-
-2656
+2778
 
 UntilDo.java
 file
@@ -440,13 +440,14 @@ file
 
 
 
-2012-03-21T04:59:11.000000Z
-d98a247bf27c39395423d5c8092f357a
-2011-09-07T19:33:48.626485Z
-1166329
+2012-06-01T00:21:16.000000Z
+f3ec31433d4276be329148f0fe054bb2
+2012-05-31T16:12:39.899454Z
+1344796
 simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -465,8 +466,7 @@ has-props
 
 
 
-
-1606
+1758
 
 WhileDo.java
 file
@@ -474,13 +474,14 @@ file
 
 
 
-2012-03-21T04:59:11.000000Z
-89c76e4fefd52198adae9868092888a1
-2011-09-07T19:34:39.506726Z
-1166331
+2012-06-01T00:21:16.000000Z
+3faaad471051c474b5db86d9e13d7056
+2012-05-31T16:12:39.899454Z
+1344796
 simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -499,8 +500,7 @@ has-props
 
 
 
-
-1605
+1757
 
 package-info.java
 file

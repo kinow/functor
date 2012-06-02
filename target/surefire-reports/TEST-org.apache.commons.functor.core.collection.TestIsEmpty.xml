@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.003" errors="0" skipped="0" tests="10" name="org.apache.commons.functor.core.collection.TestIsEmpty">
+<testsuite failures="0" time="0.001" errors="0" skipped="0" tests="10" name="org.apache.commons.functor.core.collection.TestIsEmpty">
   <properties>
-    <property name="jna.platform.library.path" value="/lib64"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/opt/java/jdk1.6.0_31/jre/lib/amd64"/>
     <property name="java.vm.version" value="20.6-b01"/>
@@ -36,14 +35,14 @@
     <property name="user.home" value="/home/kinow"/>
     <property name="user.timezone" value="America/Sao_Paulo"/>
     <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
-    <property name="java.specification.version" value="1.6"/>
     <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="1.6"/>
     <property name="user.name" value="kinow"/>
     <property name="java.class.path" value="/opt/java/apache-maven-3.0.4/boot/plexus-classworlds-2.4.jar"/>
     <property name="java.vm.specification.version" value="1.0"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/opt/java/jdk1.6.0_31/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean site"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean site:site"/>
     <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
     <property name="user.language" value="en"/>
     <property name="java.vm.info" value="mixed mode"/>
@@ -61,7 +60,7 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="0" classname="org.apache.commons.functor.core.collection.TestIsEmpty" name="testEquals"/>
+  <testcase time="0.001" classname="org.apache.commons.functor.core.collection.TestIsEmpty" name="testEquals"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestIsEmpty" name="testTest"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestIsEmpty" name="testTestNull"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestIsEmpty" name="testTestNonCollection"/>
@@ -69,6 +68,6 @@
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestIsEmpty" name="testTestString"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestIsEmpty" name="testTestMap"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestIsEmpty" name="testObjectEquals"/>
-  <testcase time="0.001" classname="org.apache.commons.functor.core.collection.TestIsEmpty" name="testSerializeDeserializeThenCompare"/>
+  <testcase time="0" classname="org.apache.commons.functor.core.collection.TestIsEmpty" name="testSerializeDeserializeThenCompare"/>
   <testcase time="0" classname="org.apache.commons.functor.core.collection.TestIsEmpty" name="testToStringIsOverridden"/>
 </testsuite>

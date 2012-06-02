@@ -1,15 +1,15 @@
 10
 
 dir
-1303656
+1345345
 http://svn.apache.org/repos/asf/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core
 http://svn.apache.org/repos/asf
 
 
 
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
 
 
 
@@ -26,19 +26,20 @@ mbenson
 
 13f79535-47bb-0310-9956-ffa450edef68
 
-TestIsInstance.java
+TestConstant.java
 file
 
 
 
 
-2012-03-21T04:58:40.000000Z
-852eb02e50aa7e95db6a3a431a94ad9d
-2011-10-22T01:22:33.930076Z
-1187622
-sebb
+2012-06-01T20:51:45.000000Z
+9d095327791c4860e5c230ee58425793
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -57,391 +58,7 @@ has-props
 
 
 
-
-3270
-
-TestIsNotSame.java
-file
-
-
-
-
-2012-03-21T04:58:40.000000Z
-02df72222315bb5744ba9da3e692ed3f
-2011-10-22T01:22:33.930076Z
-1187622
-sebb
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3018
-
-TestIsEqual.java
-file
-
-
-
-
-2012-03-21T04:58:40.000000Z
-6e15400003b653101db723a9f98994ac
-2011-10-22T01:22:33.930076Z
-1187622
-sebb
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3003
-
-TestLeftIdentity.java
-file
-
-
-
-
-2012-03-21T04:58:40.000000Z
-6655d9a3e1f877da60d356c08c491de7
-2011-10-24T21:07:48.039985Z
-1188380
-sebb
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3259
-
-TestIsNull.java
-file
-
-
-
-
-2012-03-21T04:58:40.000000Z
-b108531d918c713af14b4fe6e8a1a33a
-2011-10-22T01:22:33.930076Z
-1187622
-sebb
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2547
-
-collection
-dir
-
-TestNoOp.java
-file
-
-
-
-
-2012-03-21T04:58:40.000000Z
-d023d57702d879cf593bd09b5f18b5b9
-2011-10-22T01:22:33.930076Z
-1187622
-sebb
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2568
-
-TestLimit.java
-file
-
-
-
-
-2012-03-21T04:58:40.000000Z
-2f447ec5fe1ec1f701bd97bd15dfb8b1
-2011-10-22T01:22:33.930076Z
-1187622
-sebb
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2821
-
-TestIsSame.java
-file
-
-
-
-
-2012-03-21T04:58:40.000000Z
-669a169d082a95678d5f8da2605754b8
-2011-10-22T01:22:33.930076Z
-1187622
-sebb
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2986
-
-composite
-dir
-
-TestIsNotEqual.java
-file
-
-
-
-
-2012-03-21T04:58:40.000000Z
-9f419b40a18c5a41f6fddcc41a908938
-2011-10-22T01:22:33.930076Z
-1187622
-sebb
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2755
-
-TestOffset.java
-file
-
-
-
-
-2012-03-21T04:58:40.000000Z
-b2bdc4fcaed278d4f23f40a3e48811b1
-2011-10-22T01:22:33.930076Z
-1187622
-sebb
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2925
-
-comparator
-dir
-
-TestIsNotNull.java
-file
-
-
-
-
-2012-03-21T04:58:40.000000Z
-1a1783b47842770dcfdfed6eaf3ad535
-2011-10-22T01:22:33.930076Z
-1187622
-sebb
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2227
-
-TestRightIdentity.java
-file
-
-
-
-
-2012-03-21T04:58:40.000000Z
-72f8b667c8f1e2cc308ea43fc950c8b9
-2011-10-22T01:22:33.930076Z
-1187622
-sebb
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3264
+4162
 
 TestIdentity.java
 file
@@ -449,13 +66,14 @@ file
 
 
 
-2012-03-21T04:58:40.000000Z
-11190f2d139f403437c668ac5e7385d9
-2011-10-22T01:22:33.930076Z
-1187622
-sebb
+2012-06-01T20:51:45.000000Z
+3a642b8e59fab603ccebf54003712d1f
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -474,22 +92,22 @@ has-props
 
 
 
-
-3071
+3044
 
-TestConstant.java
+TestIsEqual.java
 file
 
 
 
 
-2012-03-21T04:58:40.000000Z
-a71f766e9c3dc864d80654f538d411fc
-2011-10-24T21:07:48.039985Z
-1188380
-sebb
+2012-06-01T20:51:44.000000Z
+c1a2ffd1d6032ed5a4d7807d7db5a9fc
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -508,6 +126,391 @@ has-props
 
 
 
+2976
+
+TestIsInstance.java
+file
 
-4189
+
+
+
+2012-06-01T20:51:44.000000Z
+92fa029394856e1633d1d73aeb94b0ea
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3243
+
+TestIsNotEqual.java
+file
+
+
+
+
+2012-06-01T20:51:45.000000Z
+a4bf602664e4e58a6ace52cb0cb7c890
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2728
+
+TestIsNotNull.java
+file
+
+
+
+
+2012-06-01T20:51:45.000000Z
+203dc4c746d702413f6294969ef70fa5
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2200
+
+TestIsNotSame.java
+file
+
+
+
+
+2012-06-01T20:51:44.000000Z
+00ab0dae802cad4b8e123763b74ae01d
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2995
+
+TestIsNull.java
+file
+
+
+
+
+2012-06-01T20:51:44.000000Z
+d58367a0a75533bd35c31a5975314d7e
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2520
+
+TestIsSame.java
+file
+
+
+
+
+2012-06-01T20:51:45.000000Z
+a479f9183d5f81e83fd7601020bc1d76
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2963
+
+TestLeftIdentity.java
+file
+
+
+
+
+2012-06-01T20:51:44.000000Z
+b11da0d90bc7fe89c1345efdf76236ec
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3232
+
+TestLimit.java
+file
+
+
+
+
+2012-06-01T20:51:45.000000Z
+62e8655cd3de311f1f37a54f0293c167
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2794
+
+TestNoOp.java
+file
+
+
+
+
+2012-06-01T20:51:44.000000Z
+69fed5c532f92331e60f03afeca35ad9
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2541
+
+TestOffset.java
+file
+
+
+
+
+2012-06-01T20:51:45.000000Z
+2a82f2c23245374dd156ad58ebeb4e7f
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2898
+
+TestRightIdentity.java
+file
+
+
+
+
+2012-06-01T20:51:45.000000Z
+888b75d57fc2e5cf5ab93a85ae8e12b6
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3237
+
+algorithm
+dir
+
+collection
+dir
+
+comparator
+dir
+
+composite
+dir
 

@@ -25,7 +25,7 @@ import org.apache.commons.lang3.Validate;
  *
  * @param <I> the type of elements held in the wrapped generator.
  * @param <E> the type of elements held in this generator.
- * @version $Revision: 1234990 $ $Date: 2012-01-23 19:18:10 -0200 (Mon, 23 Jan 2012) $
+ * @version $Revision: 1344780 $ $Date: 2012-05-31 12:43:49 -0300 (Thu, 31 May 2012) $
  */
 public class TransformedGenerator<I, E> extends BaseGenerator<E> {
 
@@ -86,7 +86,8 @@ public class TransformedGenerator<I, E> extends BaseGenerator<E> {
     public int hashCode() {
         int result = "TransformedGenerator".hashCode();
         result <<= 2;
-        result ^= getWrappedGenerator().hashCode();
+        Generator<?> gen = getWrappedGenerator();
+        result ^= gen == null ? 0 : gen.hashCode();
         result <<= 2;
         result ^= func.hashCode();
         return result;

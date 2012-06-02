@@ -1,15 +1,15 @@
 10
 
 dir
-1303656
+1345345
 http://svn.apache.org/repos/asf/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/generator/util
 http://svn.apache.org/repos/asf
 
 
 
-2011-10-24T20:54:57.120271Z
-1188373
-sebb
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
 
 
 
@@ -32,13 +32,14 @@ file
 
 
 
-2012-03-21T04:58:32.000000Z
-b23498319d79964f4e3bfdaa7744b8e8
-2011-10-22T01:29:14.694874Z
-1187629
-sebb
+2012-06-01T20:51:44.000000Z
+3fd84b3e1c37ab5115ad2dd78bb4e16e
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -57,8 +58,7 @@ has-props
 
 
 
-
-4895
+4851
 
 TestIntegerRange.java
 file
@@ -66,13 +66,14 @@ file
 
 
 
-2012-03-21T04:58:32.000000Z
-4e134245f773932b93878a4f20841141
-2011-10-24T20:54:57.120271Z
-1188373
-sebb
+2012-06-01T20:51:44.000000Z
+92658f6abc91d47fc0b2c293f1a149da
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -91,8 +92,7 @@ has-props
 
 
 
-
-5480
+5409
 
 TestLongRange.java
 file
@@ -100,13 +100,14 @@ file
 
 
 
-2012-03-21T04:58:32.000000Z
-f6fc7654c4c696f85ad5f8719d978cc6
-2011-10-24T20:54:57.120271Z
-1188373
-sebb
+2012-06-01T20:51:44.000000Z
+d5ff1239cc136fdfb5285ff8da901ff8
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -125,6 +126,5 @@ has-props
 
 
 
-
-5411
+5340
 

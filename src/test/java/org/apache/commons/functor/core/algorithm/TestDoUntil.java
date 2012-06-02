@@ -28,11 +28,11 @@ import org.junit.Test;
  * Tests {@link DoUntil} algorithm.
  */
 public class TestDoUntil {
-	
-	@Test
+
+    @Test
     public final void testObjectEquals() throws Exception {
-		Counter counter = new Counter();
-		Object obj = new DoUntil(counter, new Offset(10));
+        Counter counter = new Counter();
+        Object obj = new DoUntil(counter, new Offset(10));
         assertEquals("equals must be reflexive",obj,obj);
         assertEquals("hashCode must be reflexive",obj.hashCode(),obj.hashCode());
         assertTrue(! obj.equals(null) ); // should be able to compare to null
@@ -45,17 +45,17 @@ public class TestDoUntil {
             assertTrue("equals must be symmetric",! obj2.equals(obj));
         }
     }
-	
-	@Test
-	public void testDoUntil() {
-		for(int i=0;i<3;++i){
-			Counter counter = new Counter();
-			new DoUntil(counter, new Offset(i)).run();
-			assertEquals(i+1,counter.count);
-		}
-	}
-	
-	// Classes
+
+    @Test
+    public void testDoUntil() {
+        for(int i=0;i<3;++i){
+            Counter counter = new Counter();
+            new DoUntil(counter, new Offset(i)).run();
+            assertEquals(i+1,counter.count);
+        }
+    }
+
+    // Classes
     // ------------------------------------------------------------------------
 
     static class Counter implements Procedure {

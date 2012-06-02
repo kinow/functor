@@ -1,47 +1,47 @@
 K 25
 svn:wc:ra_dav:version-url
 V 115
-/repos/asf/!svn/ver/1187624/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/kata/four
-END
-TestWeather.java
-K 25
-svn:wc:ra_dav:version-url
-V 132
-/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/kata/four/TestWeather.java
-END
-ToInteger.java
-K 25
-svn:wc:ra_dav:version-url
-V 130
-/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/kata/four/ToInteger.java
-END
-Abs.java
-K 25
-svn:wc:ra_dav:version-url
-V 124
-/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/kata/four/Abs.java
-END
-DataMunger.java
-K 25
-svn:wc:ra_dav:version-url
-V 131
-/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/kata/four/DataMunger.java
-END
-NthColumn.java
-K 25
-svn:wc:ra_dav:version-url
-V 130
-/repos/asf/!svn/ver/1187624/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/kata/four/NthColumn.java
-END
-IsInteger.java
-K 25
-svn:wc:ra_dav:version-url
-V 130
-/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/kata/four/IsInteger.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/kata/four
 END
 TestSoccer.java
 K 25
 svn:wc:ra_dav:version-url
 V 131
-/repos/asf/!svn/ver/1172678/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/kata/four/TestSoccer.java
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/kata/four/TestSoccer.java
+END
+DataMunger.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/kata/four/DataMunger.java
+END
+NthColumn.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/kata/four/NthColumn.java
+END
+IsInteger.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/kata/four/IsInteger.java
+END
+ToInteger.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/kata/four/ToInteger.java
+END
+TestWeather.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/kata/four/TestWeather.java
+END
+Abs.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repos/asf/!svn/ver/1345136/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/example/kata/four/Abs.java
 END

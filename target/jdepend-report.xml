@@ -18,16 +18,24 @@
             <error>No stats available: package referenced, but not analyzed.</error>
         </Package>
 
+        <Package name="java.util.concurrent">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.util.concurrent.locks">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
         <Package name="org.apache.commons.functor">
             <Stats>
                 <TotalClasses>13</TotalClasses>
                 <ConcreteClasses>0</ConcreteClasses>
                 <AbstractClasses>13</AbstractClasses>
-                <Ca>8</Ca>
+                <Ca>10</Ca>
                 <Ce>1</Ce>
                 <A>1</A>
-                <I>0.11</I>
-                <D>0.11</D>
+                <I>0.09</I>
+                <D>0.09</D>
                 <V>1</V>
             </Stats>
 
@@ -82,6 +90,8 @@
 
             <UsedBy>
                 <Package>org.apache.commons.functor.adapter</Package>
+                <Package>org.apache.commons.functor.aggregator</Package>
+                <Package>org.apache.commons.functor.aggregator.functions</Package>
                 <Package>org.apache.commons.functor.core</Package>
                 <Package>org.apache.commons.functor.core.algorithm</Package>
                 <Package>org.apache.commons.functor.core.collection</Package>
@@ -231,6 +241,132 @@
                 <Package>org.apache.commons.functor.core.collection</Package>
                 <Package>org.apache.commons.functor.core.comparator</Package>
                 <Package>org.apache.commons.functor.core.composite</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="org.apache.commons.functor.aggregator">
+            <Stats>
+                <TotalClasses>7</TotalClasses>
+                <ConcreteClasses>2</ConcreteClasses>
+                <AbstractClasses>5</AbstractClasses>
+                <Ca>0</Ca>
+                <Ce>5</Ce>
+                <A>0.71</A>
+                <I>1</I>
+                <D>0.71</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="AbstractListBackedAggregator.java">
+                    org.apache.commons.functor.aggregator.AbstractListBackedAggregator
+                </Class>
+                <Class sourceFile="AbstractNoStoreAggregator.java">
+                    org.apache.commons.functor.aggregator.AbstractNoStoreAggregator
+                </Class>
+                <Class sourceFile="AbstractTimedAggregator.java">
+                    org.apache.commons.functor.aggregator.AbstractTimedAggregator
+                </Class>
+                <Class sourceFile="Aggregator.java">
+                    org.apache.commons.functor.aggregator.Aggregator
+                </Class>
+                <Class sourceFile="TimedAggregatorListener.java">
+                    org.apache.commons.functor.aggregator.TimedAggregatorListener
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="AbstractTimedAggregator.java">
+                    org.apache.commons.functor.aggregator.AbstractTimedAggregator$1
+                </Class>
+                <Class sourceFile="ArrayListBackedAggregator.java">
+                    org.apache.commons.functor.aggregator.ArrayListBackedAggregator
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>java.lang</Package>
+                <Package>java.util</Package>
+                <Package>java.util.concurrent</Package>
+                <Package>java.util.concurrent.locks</Package>
+                <Package>org.apache.commons.functor</Package>
+            </DependsUpon>
+
+            <UsedBy>
+            </UsedBy>
+        </Package>
+
+        <Package name="org.apache.commons.functor.aggregator.functions">
+            <Stats>
+                <TotalClasses>15</TotalClasses>
+                <ConcreteClasses>15</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>0</Ca>
+                <Ce>3</Ce>
+                <A>0</A>
+                <I>1</I>
+                <D>0</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="DoubleMaxAggregatorBinaryFunction.java">
+                    org.apache.commons.functor.aggregator.functions.DoubleMaxAggregatorBinaryFunction
+                </Class>
+                <Class sourceFile="DoubleMaxAggregatorFunction.java">
+                    org.apache.commons.functor.aggregator.functions.DoubleMaxAggregatorFunction
+                </Class>
+                <Class sourceFile="DoubleMeanValueAggregatorFunction.java">
+                    org.apache.commons.functor.aggregator.functions.DoubleMeanValueAggregatorFunction
+                </Class>
+                <Class sourceFile="DoubleMedianValueAggregatorFunction.java">
+                    org.apache.commons.functor.aggregator.functions.DoubleMedianValueAggregatorFunction
+                </Class>
+                <Class sourceFile="DoublePercentileAggregatorFunction.java">
+                    org.apache.commons.functor.aggregator.functions.DoublePercentileAggregatorFunction
+                </Class>
+                <Class sourceFile="DoubleSumAggregatorBinaryFunction.java">
+                    org.apache.commons.functor.aggregator.functions.DoubleSumAggregatorBinaryFunction
+                </Class>
+                <Class sourceFile="DoubleSumAggregatorFunction.java">
+                    org.apache.commons.functor.aggregator.functions.DoubleSumAggregatorFunction
+                </Class>
+                <Class sourceFile="IntegerCountAggregatorBinaryFunction.java">
+                    org.apache.commons.functor.aggregator.functions.IntegerCountAggregatorBinaryFunction
+                </Class>
+                <Class sourceFile="IntegerMaxAggregatorBinaryFunction.java">
+                    org.apache.commons.functor.aggregator.functions.IntegerMaxAggregatorBinaryFunction
+                </Class>
+                <Class sourceFile="IntegerMaxAggregatorFunction.java">
+                    org.apache.commons.functor.aggregator.functions.IntegerMaxAggregatorFunction
+                </Class>
+                <Class sourceFile="IntegerMeanValueAggregatorFunction.java">
+                    org.apache.commons.functor.aggregator.functions.IntegerMeanValueAggregatorFunction
+                </Class>
+                <Class sourceFile="IntegerMedianValueAggregatorFunction.java">
+                    org.apache.commons.functor.aggregator.functions.IntegerMedianValueAggregatorFunction
+                </Class>
+                <Class sourceFile="IntegerPercentileAggregatorFunction.java">
+                    org.apache.commons.functor.aggregator.functions.IntegerPercentileAggregatorFunction
+                </Class>
+                <Class sourceFile="IntegerSumAggregatorBinaryFunction.java">
+                    org.apache.commons.functor.aggregator.functions.IntegerSumAggregatorBinaryFunction
+                </Class>
+                <Class sourceFile="IntegerSumAggregatorFunction.java">
+                    org.apache.commons.functor.aggregator.functions.IntegerSumAggregatorFunction
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>java.lang</Package>
+                <Package>java.util</Package>
+                <Package>org.apache.commons.functor</Package>
+            </DependsUpon>
+
+            <UsedBy>
             </UsedBy>
         </Package>
 

@@ -35,22 +35,22 @@ import org.junit.Test;
  */
 public class TestGeneratorContains extends BaseFunctorTest {
 
-	@Override
-	protected Object makeFunctor() throws Exception {
-		return new GeneratorContains<Integer>();
-	}
-	
-	@Test
+    @Override
+    protected Object makeFunctor() throws Exception {
+        return new GeneratorContains<Integer>();
+    }
+
+    @Test
     public void testContains() {
         assertTrue(new GeneratorContains<Integer>().test(IteratorToGeneratorAdapter.adapt(list.iterator()),equalsThree));
         assertFalse(new GeneratorContains<Integer>().test(IteratorToGeneratorAdapter.adapt(list.iterator()),equalsTwentyThree));
     }
-	
-	// Attributes
+
+    // Attributes
     // ------------------------------------------------------------------------
-    
+
     private List<Integer> list = Arrays.asList(0,1,2,3,4,5,6,7,8,9);
     private UnaryPredicate<Integer> equalsThree = LeftBoundPredicate.bind(IsEqual.instance(),new Integer(3));
     private UnaryPredicate<Integer> equalsTwentyThree = LeftBoundPredicate.bind(IsEqual.instance(),new Integer(23));
-	
+
 }

@@ -38,12 +38,12 @@ import org.junit.Test;
  */
 public class TestFindWithinGenerator extends BaseFunctorTest {
 
-	@Override
-	protected Object makeFunctor() throws Exception {
-		return new FindWithinGenerator<Object>();
-	}
-	
-	@Test
+    @Override
+    protected Object makeFunctor() throws Exception {
+        return new FindWithinGenerator<Object>();
+    }
+
+    @Test
     public void testObjectEqualsWithIfNone() throws Exception {
         Object obj = new FindWithinGenerator<Object>(1);
         assertEquals("equals must be reflexive",obj,obj);
@@ -58,8 +58,8 @@ public class TestFindWithinGenerator extends BaseFunctorTest {
             assertTrue("equals must be symmetric",! obj2.equals(obj));
         }
     }
-	
-	@Test
+
+    @Test
     public void testObjectEqualsWithNullDefault() throws Exception {
         Object obj = new FindWithinGenerator<Object>(null);
         assertEquals("equals must be reflexive",obj,obj);
@@ -74,8 +74,8 @@ public class TestFindWithinGenerator extends BaseFunctorTest {
             assertTrue("equals must be symmetric",! obj2.equals(obj));
         }
     }
-	
-	@Test
+
+    @Test
     public void testDetect() {
         assertEquals(new Integer(3),new FindWithinGenerator<Integer>().evaluate(IteratorToGeneratorAdapter.adapt(numbers.iterator()),equalsThree));
         try {
@@ -91,19 +91,19 @@ public class TestFindWithinGenerator extends BaseFunctorTest {
         assertEquals(new Integer(3),new FindWithinGenerator<Integer>(new Integer(3)).evaluate(IteratorToGeneratorAdapter.adapt(numbers.iterator()),equalsThree));
         assertEquals("Xyzzy",new FindWithinGenerator<String>("Xyzzy").evaluate(IteratorToGeneratorAdapter.adapt(strings.iterator()),equalsXyZ));
     }
-    
+
     @Test
     public void testInstance() {
-    	assertNotNull("FindWithinGenerator instance must not be null", FindWithinGenerator.instance());
+        assertNotNull("FindWithinGenerator instance must not be null", FindWithinGenerator.instance());
     }
-    
+
     // Attributes
     // ------------------------------------------------------------------------
-    
+
     private List<Integer> numbers = Arrays.asList(0,1,2,3,4,5,6,7,8,9);
     private List<String> strings = Arrays.asList("Zyx", "xxyZ");
     private UnaryPredicate<Integer> equalsThree = LeftBoundPredicate.bind(IsEqual.instance(),new Integer(3));
     private UnaryPredicate<Integer> equalsTwentyThree = LeftBoundPredicate.bind(IsEqual.instance(),new Integer(23));
     private UnaryPredicate<String> equalsXyZ = LeftBoundPredicate.bind(IsEqual.instance(),"xyZ");
-    
+
 }

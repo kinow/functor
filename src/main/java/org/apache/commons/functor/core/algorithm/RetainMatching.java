@@ -27,7 +27,7 @@ import org.apache.commons.functor.core.composite.UnaryNot;
  * Retain elements in left Iterator that match right UnaryPredicate.
  *
  * @param <T> the procedure argument type
- * @version $Revision: 1187618 $ $Date: 2011-10-21 23:16:16 -0200 (Fri, 21 Oct 2011) $
+ * @version $Revision: 1344796 $ $Date: 2012-05-31 13:12:39 -0300 (Thu, 31 May 2012) $
  */
 public final class RetainMatching<T>
     implements BinaryProcedure<Iterator<? extends T>, UnaryPredicate<? super T>>, Serializable {

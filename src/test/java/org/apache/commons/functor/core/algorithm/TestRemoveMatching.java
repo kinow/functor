@@ -34,7 +34,7 @@ import org.junit.Test;
  */
 public class TestRemoveMatching extends BaseFunctorTest {
 
-	// Lifecycle
+    // Lifecycle
     // ------------------------------------------------------------------------
 
     @Before
@@ -57,19 +57,19 @@ public class TestRemoveMatching extends BaseFunctorTest {
 
     // Tests
     // ------------------------------------------------------------------------
-	
-	@Override
-	protected Object makeFunctor() throws Exception {
-		return new RemoveMatching<Integer>();
-	}
-	
-	@Test
+
+    @Override
+    protected Object makeFunctor() throws Exception {
+        return new RemoveMatching<Integer>();
+    }
+
+    @Test
     public void testRemove() {
         new RemoveMatching<Integer>().run(list.iterator(),isOdd);
         assertEquals(evens,list);
     }
-	
-	// Attributes
+
+    // Attributes
     // ------------------------------------------------------------------------
     private List<Integer> list = null;
     private List<Integer> evens = null;

@@ -41,8 +41,7 @@ import org.apache.commons.lang3.Validate;
  * </p>
  * @param <A> the argument type.
  * @param <T> the returned value type.
- * @version $Revision: 1234990 $ $Date: 2012-01-23 19:18:10 -0200 (Mon, 23 Jan 2012) $
- * @author Rodney Waldhoff
+ * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
 public final class ConditionalUnaryFunction<A, T> implements UnaryFunction<A, T>, Serializable {
     /**

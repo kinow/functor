@@ -39,8 +39,7 @@ import org.apache.commons.lang3.Validate;
  * @param <L> the left argument type.
  * @param <R> the right argument type.
  * @param <T> the returned value type.
- * @version $Revision: 1234990 $ $Date: 2012-01-23 19:18:10 -0200 (Mon, 23 Jan 2012) $
- * @author Rodney Waldhoff
+ * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
 public final class BinaryProcedureBinaryFunction<L, R, T> implements BinaryFunction<L, R, T>, Serializable {
     /**
@@ -120,7 +119,8 @@ public final class BinaryProcedureBinaryFunction<L, R, T> implements BinaryFunct
      *         {@link BinaryFunction BinaryFunction}, or <code>null</code>
      *         if the given <code>BinaryFunction</code> is <code>null</code>
      */
-    public static <L, R, T> BinaryProcedureBinaryFunction<L, R, T> adapt(BinaryProcedure<? super L, ? super R> procedure) {
+    public static <L, R, T> BinaryProcedureBinaryFunction<L, R, T> adapt(
+            BinaryProcedure<? super L, ? super R> procedure) {
         return null == procedure ? null : new BinaryProcedureBinaryFunction<L, R, T>(procedure);
     }
 

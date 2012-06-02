@@ -27,7 +27,7 @@ import org.apache.commons.lang3.Validate;
  * @param <E> the type of elements held in this generator.
  * @version $Revision: 1234990 $ $Date: 2012-01-23 19:18:10 -0200 (Mon, 23 Jan 2012) $
  */
-public class UntilGenerate<E> extends BaseGenerator<E> {
+public class UntilGenerate<E> extends BaseStoppableGenerator<E> {
 
     /**
      * The condition has to verified in order to execute the generation.
@@ -36,10 +36,10 @@ public class UntilGenerate<E> extends BaseGenerator<E> {
 
     /**
      * Create a new UntilGenerate.
-     * @param wrapped {@link Generator}
+     * @param wrapped {@link StoppableGenerator}
      * @param test {@link UnaryPredicate}
      */
-    public UntilGenerate(UnaryPredicate<? super E> test, Generator<? extends E> wrapped) {
+    public UntilGenerate(UnaryPredicate<? super E> test, StoppableGenerator<? extends E> wrapped) {
         super(Validate.notNull(wrapped, "Generator argument was null"));
         this.test = Validate.notNull(test, "UnaryPredicate argument was null");
     }
@@ -64,8 +64,8 @@ public class UntilGenerate<E> extends BaseGenerator<E> {
      */
     @SuppressWarnings("unchecked")
     @Override
-    protected Generator<? extends E> getWrappedGenerator() {
-        return (Generator<? extends E>) super.getWrappedGenerator();
+    protected StoppableGenerator<? extends E> getWrappedGenerator() {
+        return (StoppableGenerator<? extends E>) super.getWrappedGenerator();
     }
 
     /**
@@ -90,7 +90,7 @@ public class UntilGenerate<E> extends BaseGenerator<E> {
     public int hashCode() {
         int result = "UntilGenerate".hashCode();
         result <<= 2;
-        Generator<?> gen = getWrappedGenerator();
+        StoppableGenerator<?> gen = getWrappedGenerator();
         result ^= gen == null ? 0 : gen.hashCode();
         result <<= 2;
         result ^= test == null ? 0 : test.hashCode();

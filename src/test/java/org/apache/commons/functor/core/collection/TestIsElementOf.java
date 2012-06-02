@@ -28,9 +28,7 @@ import org.apache.commons.functor.core.Constant;
 import org.junit.Test;
 
 /**
- * @version $Revision: 1234990 $ $Date: 2012-01-23 19:18:10 -0200 (Mon, 23 Jan 2012) $
- * @author Rodney Waldhoff
- * @author Jason Horman
+ * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
 @SuppressWarnings("unchecked")
 public class TestIsElementOf extends BaseFunctorTest {

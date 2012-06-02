@@ -1,15 +1,15 @@
 10
 
 dir
-1303656
+1345345
 http://svn.apache.org/repos/asf/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/generator
 http://svn.apache.org/repos/asf
 
 
 
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
 
 
 
@@ -32,149 +32,14 @@ file
 
 
 
-2012-03-21T04:59:08.000000Z
-262d113f8361ead88b56f6442b3c79f3
-2011-10-24T21:40:54.216080Z
-1188397
-sebb
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3232
-
-GenerateWhile.java
-file
-
-
-
-
-2012-03-21T04:59:08.000000Z
-a873cb157775439b379e0c33d0d6a4f5
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3214
-
-WhileGenerate.java
-file
-
-
-
-
-2012-03-21T04:59:08.000000Z
-c16e3f2e2a8c665a61045ffdda474a50
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3243
-
-IteratorToGeneratorAdapter.java
-file
-
-
-
-
-2012-03-21T04:59:08.000000Z
-84dd9ecdc80f829f42f5c5661cf40602
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3173
-
-package-info.java
-file
-
-
-
-
-2012-03-21T04:59:08.000000Z
-268c42a47c88f40ae53686ad7f957830
-2011-08-11T18:48:56.095477Z
-1156726
+2012-06-01T20:51:33.000000Z
+712a63feaad85f7f733431368474b234
+2012-06-01T12:47:06.937513Z
+1345136
 simonetripodi
 has-props
 
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -193,8 +58,7 @@ has-props
 
 
 
-
-913
+3187
 
 FilteredGenerator.java
 file
@@ -264,17 +128,17 @@ has-props
 
 3219
 
-Generator.java
+GenerateWhile.java
 file
 
 
 
 
 2012-03-21T04:59:08.000000Z
-87eacfea9a6550a2eb949679d6ec5a93
-2011-08-23T16:40:12.689458Z
-1160786
-simonetripodi
+a873cb157775439b379e0c33d0d6a4f5
+2012-01-23T21:18:10.617921Z
+1234990
+mbenson
 has-props
 
 
@@ -296,7 +160,109 @@ has-props
 
 
 
-2338
+3214
+
+Generator.java
+file
+
+
+
+
+2012-06-01T20:51:33.000000Z
+83ebada7fa0b4dc2817cab32e0a165c7
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2267
+
+IteratorToGeneratorAdapter.java
+file
+
+
+
+
+2012-06-01T20:51:33.000000Z
+06c912b699a2e78acbd404cc56b681c3
+2012-06-01T12:47:06.937513Z
+1345136
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3102
+
+TransformedGenerator.java
+file
+
+
+
+
+2012-06-01T00:21:16.000000Z
+a1fa669cd0a855e92349b0eac36d562c
+2012-05-31T15:43:49.727066Z
+1344780
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3179
 
 UntilGenerate.java
 file
@@ -332,17 +298,51 @@ has-props
 
 3235
 
-TransformedGenerator.java
+WhileGenerate.java
+file
+
+
+
+
+2012-06-01T00:21:16.000000Z
+ce459895c4a7ab04a31dfca7ad0ec92c
+2012-05-31T15:55:31.454710Z
+1344786
+simonetripodi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3244
+
+package-info.java
 file
 
 
 
 
 2012-03-21T04:59:08.000000Z
-4140b5e8d0a7ad9eff0288078e9c7061
-2012-01-23T21:18:10.617921Z
-1234990
-mbenson
+268c42a47c88f40ae53686ad7f957830
+2011-08-11T18:48:56.095477Z
+1156726
+simonetripodi
 has-props
 
 
@@ -364,7 +364,7 @@ has-props
 
 
 
-3129
+913
 
 util
 dir
