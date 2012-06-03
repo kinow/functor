@@ -14,7 +14,10 @@
 
 package org.apache.commons.functor.range;
 
+import java.util.Collection;
+
 import org.apache.commons.functor.BinaryFunction;
+import org.apache.commons.functor.generator.IntegerGenerator;
 
 /**
  * A generator for a range of characters.
@@ -26,13 +29,13 @@ public final class CharacterRange implements Range<Character, Integer> {
     // attributes
     //---------------------------------------------------------------
     /**
-     * Lower limit.
+     * Left limit.
      */
-    private final Endpoint<Character> lowerLimit;
+    private final Endpoint<Character> leftEndpoint;
     /**
-     * Upper limit.
+     * Right limit.
      */
-    private final Endpoint<Character> upperLimit;
+    private final Endpoint<Character> rightEndpoint;
     /**
      * Increment step.
      */
@@ -75,12 +78,28 @@ public final class CharacterRange implements Range<Character, Integer> {
      * @param to end
      * @param step increment
      */
-    public CharacterRange(char from, BoundType lowerBoundType, char to, BoundType upperBoundType, int step) {
+    public CharacterRange(char from, BoundType leftBoundType, char to, BoundType rightBoundType, int step) {
         if (from != to && Integer.signum(step) != Integer.signum(to-from)) {
             throw new IllegalArgumentException("Will never reach " + to + " from " + from + " using step " + step);
         }
-        this.lowerLimit = new Endpoint<Character>(from, lowerBoundType);
-        this.upperLimit = new Endpoint<Character>(to, upperBoundType);;
+        this.leftEndpoint = new Endpoint<Character>(from, leftBoundType);
+        this.rightEndpoint = new Endpoint<Character>(to, rightBoundType);;
+        this.step = step;
+    }
+    
+    /**
+     * Create a new CharacterRange.
+     * 
+     * @param from start
+     * @param to end
+     * @param step increment
+     */
+    public CharacterRange(Endpoint<Character> from, Endpoint<Character> to, int step) {
+        if (from != to && Integer.signum(step) != Integer.signum(to.getValue()-from.getValue())) {
+            throw new IllegalArgumentException("Will never reach " + to + " from " + from + " using step " + step);
+        }
+        this.leftEndpoint = from;
+        this.rightEndpoint = to;
         this.step = step;
     }
 
@@ -89,15 +108,15 @@ public final class CharacterRange implements Range<Character, Integer> {
     /**
      * {@inheritDoc}
      */
-    public Endpoint<Character> getLowerLimit() {
-	return this.lowerLimit;
+    public Endpoint<Character> getLeftEndpoint() {
+	return this.leftEndpoint;
     }
     
     /**
      * {@inheritDoc}
      */
-    public Endpoint<Character> getUpperLimit() {
-	return this.upperLimit;
+    public Endpoint<Character> getRightEndpoint() {
+	return this.rightEndpoint;
     }
     
     /**
@@ -112,7 +131,7 @@ public final class CharacterRange implements Range<Character, Integer> {
      */
     @Override
     public String toString() {
-        return "CharacterRange<" + this.lowerLimit.toLeftString() + ", " + this.upperLimit.toRightString() + ", " + step + ">";
+        return "CharacterRange<" + this.leftEndpoint.toLeftString() + ", " + this.rightEndpoint.toRightString() + ", " + step + ">";
     }
 
     /**
@@ -127,7 +146,7 @@ public final class CharacterRange implements Range<Character, Integer> {
             return false;
         }
         CharacterRange that = (CharacterRange) obj;
-        return this.lowerLimit.equals(that.lowerLimit) && this.upperLimit.equals(that.upperLimit) && this.step == that.step;
+        return this.leftEndpoint.equals(that.leftEndpoint) && this.rightEndpoint.equals(that.rightEndpoint) && this.step == that.step;
     }
 
     /**
@@ -137,12 +156,92 @@ public final class CharacterRange implements Range<Character, Integer> {
     public int hashCode() {
         int hash = "CharacterRange".hashCode();
         hash <<= 2;
-        hash ^= this.lowerLimit.getValue();
+        hash ^= this.leftEndpoint.getValue();
         hash <<= 2;
-        hash ^= this.upperLimit.getValue();
+        hash ^= this.rightEndpoint.getValue();
         hash <<= 2;
         hash ^= this.step;
         return hash;
+    }
+
+    /* (non-Javadoc)
+     * @see org.apache.commons.functor.range.Range#isEmpty()
+     */
+    public boolean isEmpty() {
+	double leftValue = this.getLeftEndpoint().getValue().charValue();
+	double rightValue = this.getRightEndpoint().getValue().charValue();
+	boolean closedLeft = this.getLeftEndpoint().getBoundType() == BoundType.CLOSED;
+	boolean closedRight = this.getRightEndpoint().getBoundType() == BoundType.CLOSED;
+	if(!closedLeft && !closedRight && this.getLeftEndpoint().equals(this.getRightEndpoint())) {
+	    return Boolean.TRUE;
+	}
+	double step = this.getStep().intValue();
+	if(step > 0.0) {
+	    double firstValue = closedLeft ? leftValue : leftValue + step;
+	    return closedRight ? firstValue > rightValue : firstValue >= rightValue;
+	} else {
+	    double firstValue = closedLeft ? leftValue : leftValue + step;
+	    return closedRight ? firstValue < rightValue : firstValue <= rightValue;
+	}
+    }
+
+    /* (non-Javadoc)
+     * @see org.apache.commons.functor.range.Range#contains(java.lang.Comparable)
+     */
+    public boolean contains(Character obj) {
+	if(obj == null) {
+	    return Boolean.FALSE;
+	}
+	char leftValue = this.getLeftEndpoint().getValue().charValue();
+	char rightValue = this.getRightEndpoint().getValue().charValue();
+	boolean includeLeft = this.getLeftEndpoint().getBoundType() == BoundType.CLOSED;
+	boolean includeRight = this.getRightEndpoint().getBoundType() == BoundType.CLOSED;
+	int step = this.getStep().intValue();
+	char value = obj.charValue();
+	boolean within = Boolean.FALSE;
+	if (step > 0.0) {
+	    if (includeLeft && includeRight) {
+		within = value >= leftValue && value <= rightValue;
+	    } else if (includeLeft) {
+		within = value >= leftValue && value < rightValue;
+	    } else if (includeRight) {
+		within = value > leftValue && value <= rightValue;
+	    } else {
+		within = value > leftValue && value < rightValue;
+	    }
+	} else {
+	    if (includeLeft && includeRight) {
+		within = value >= rightValue && value <= leftValue;
+	    } else if (includeLeft) {
+		within = value > rightValue && value <= leftValue;
+	    } else if (includeRight) {
+		within = value >= rightValue && value < leftValue;
+	    } else {
+		within = value > rightValue && value < leftValue;
+	    }
+	}
+	if(!within) {
+	    return Boolean.FALSE;
+	}
+	IntegerRange integerRange = new IntegerRange(leftValue, this.getLeftEndpoint().getBoundType(), rightValue, this.getRightEndpoint().getBoundType(), step);
+	return (step == 1 || step == -1) ? Boolean.TRUE : new IntegerGenerator(integerRange).toCollection().contains(obj.charValue());
+    }
+
+    /* (non-Javadoc)
+     * @see org.apache.commons.functor.range.Range#containsAll(java.util.Collection)
+     */
+    public boolean containsAll(Collection<Character> col) {
+	if (col == null || col.size() == 0) {
+	    return Boolean.FALSE;
+	}
+	boolean r = Boolean.TRUE;
+	for (Character t : col) {
+	    if (!this.contains(t)) {
+		r = Boolean.FALSE;
+		break;
+	    }
+	}
+	return r;
     }
 
 }

@@ -52,7 +52,7 @@ public final class IntegerGenerator extends BaseGenerator<Integer> {
      * @param to end
      */
     public IntegerGenerator(int from, int to, int step) {
-        this(from, IntegerRange.DEFAULT_LOWER_BOUND_TYPE, to, IntegerRange.DEFAULT_UPPER_BOUND_TYPE, step);
+        this(from, IntegerRange.DEFAULT_LEFT_BOUND_TYPE, to, IntegerRange.DEFAULT_RIGHT_BOUND_TYPE, step);
     }
 
     /**
@@ -94,21 +94,21 @@ public final class IntegerGenerator extends BaseGenerator<Integer> {
      */
     public void run(UnaryProcedure<? super Integer> proc) {
 	final int step = this.range.getStep();
-	final boolean includeLowerLimit = this.range.getLowerLimit().getBoundType() == BoundType.CLOSED;
-	final boolean includeUpperLimit = this.range.getUpperLimit().getBoundType() == BoundType.CLOSED;
+	final boolean includeLowerLimit = this.range.getLeftEndpoint().getBoundType() == BoundType.CLOSED;
+	final boolean includeUpperLimit = this.range.getRightEndpoint().getBoundType() == BoundType.CLOSED;
         if (step < 0) {
-            final int from = includeLowerLimit ? this.range.getLowerLimit().getValue() : 
-        	(this.range.getLowerLimit().getValue() - step);
-            final int to = includeUpperLimit ? this.range.getUpperLimit().getValue() : 
-        	(this.range.getUpperLimit().getValue() + 1);
+            final int from = includeLowerLimit ? this.range.getLeftEndpoint().getValue() : 
+        	(this.range.getLeftEndpoint().getValue() - step);
+            final int to = includeUpperLimit ? this.range.getRightEndpoint().getValue() : 
+        	(this.range.getRightEndpoint().getValue() + 1);
             for (int i = from; i >= to; i += step) {
                 proc.run(Integer.valueOf(i));
             }
         } else {
-            final int from = includeLowerLimit ? this.range.getLowerLimit().getValue() : 
-        	(this.range.getLowerLimit().getValue() + step);
-            final int to = includeUpperLimit ? this.range.getUpperLimit().getValue() : 
-        	(this.range.getUpperLimit().getValue() - 1);
+            final int from = includeLowerLimit ? this.range.getLeftEndpoint().getValue() : 
+        	(this.range.getLeftEndpoint().getValue() + step);
+            final int to = includeUpperLimit ? this.range.getRightEndpoint().getValue() : 
+        	(this.range.getRightEndpoint().getValue() - 1);
             for (int i = from; i <= to; i += step) {
                 proc.run(Integer.valueOf(i));
             }

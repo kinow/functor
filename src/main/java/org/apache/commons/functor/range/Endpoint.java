@@ -15,8 +15,8 @@
 package org.apache.commons.functor.range;
 
 /**
- * Reprenset an endpoint of a range. This can be the lower endpoint or the 
- * upper endpoint. It is also called lower limit or upper limit, and can 
+ * Reprenset an endpoint of a range. This can be the left endpoint or the 
+ * upper endpoint. It is also called left limit or right limit, and can 
  * be open (exclusive, unbounded) or closed (include, bounded).
  * 
  * @since 1.0

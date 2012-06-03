@@ -52,7 +52,7 @@ public final class LongGenerator extends BaseGenerator<Long> {
      * @param to end
      */
     public LongGenerator(long from, long to, long step) {
-        this(from, LongRange.DEFAULT_LOWER_BOUND_TYPE, to, LongRange.DEFAULT_UPPER_BOUND_TYPE, step);
+        this(from, LongRange.DEFAULT_LEFT_BOUND_TYPE, to, LongRange.DEFAULT_RIGHT_BOUND_TYPE, step);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class LongGenerator extends BaseGenerator<Long> {
      */
     public void run(UnaryProcedure<? super Long> proc) {
 	final long step = this.range.getStep();
-	final boolean includeLowerLimit = this.range.getLowerLimit().getBoundType() == BoundType.CLOSED;
-	final boolean includeUpperLimit = this.range.getUpperLimit().getBoundType() == BoundType.CLOSED;
-	final long from = includeLowerLimit ? this.range.getLowerLimit().getValue() : (this.range.getLowerLimit().getValue() + step);
-	final long to = includeUpperLimit ? this.range.getUpperLimit().getValue() : (this.range.getUpperLimit().getValue() - step);
+	final boolean includeLowerLimit = this.range.getLeftEndpoint().getBoundType() == BoundType.CLOSED;
+	final boolean includeUpperLimit = this.range.getRightEndpoint().getBoundType() == BoundType.CLOSED;
+	final long from = includeLowerLimit ? this.range.getLeftEndpoint().getValue() : (this.range.getLeftEndpoint().getValue() + step);
+	final long to = includeUpperLimit ? this.range.getRightEndpoint().getValue() : (this.range.getRightEndpoint().getValue() - step);
         if (step < 0) {
             for (long i = from; i >= to; i += step) {
                 proc.run(Long.valueOf(i));

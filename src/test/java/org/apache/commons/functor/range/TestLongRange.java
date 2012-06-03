@@ -69,8 +69,8 @@ public class TestLongRange extends BaseNumericRangeTest<Long> {
     @Test
     public void testBoundaries() {
 	LongRange range = new LongRange(0L, 10L);
-	assertEquals(new Endpoint<Comparable<?>>(0L, BoundType.CLOSED), range.getLowerLimit());
-	assertEquals(new Endpoint<Comparable<?>>(10L, BoundType.OPEN), range.getUpperLimit());
+	assertEquals(new Endpoint<Comparable<?>>(0L, BoundType.CLOSED), range.getLeftEndpoint());
+	assertEquals(new Endpoint<Comparable<?>>(10L, BoundType.OPEN), range.getRightEndpoint());
     }
     
     @Test
@@ -296,6 +296,11 @@ public class TestLongRange extends BaseNumericRangeTest<Long> {
         
         LongRange range9 = new LongRange(Long.valueOf(-2), Long.valueOf(2));
         assertEquals("Invalid equals using different constructor",range,range9);
+        
+        Endpoint<Long> leftEndpoint = new Endpoint<Long>(-2L, BoundType.CLOSED);
+        Endpoint<Long> rightEndpoint = new Endpoint<Long>(2L, BoundType.OPEN);
+        LongRange range10 = new LongRange(leftEndpoint, rightEndpoint, 1L);
+        assertEquals("Invalid equals using different constructor",range,range10);
     }
     
     @Test

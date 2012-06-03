@@ -14,10 +14,12 @@
 
 package org.apache.commons.functor.range;
 
+import java.util.Collection;
+
 /**
- * Represent an interval of elements that varies from the <b>lower limit</b> 
- * to the <b>upper limit</b>. Each limit in this range is an 
- * {@link Endpoint Endpoint}. The lower and the upper limits can be 
+ * Represent an interval of elements that varies from the <b>left endpoint</b> 
+ * to the <b>right endpoint</b>. Each limit in this range is an 
+ * {@link Endpoint Endpoint}. The left and the right limits can be 
  * <b>inclusive</b> (<b>bounded</b>, <b>closed</b>) or <b>exclusive</b> 
  * (<b>unbounded</b>, <b>open</b>).
  * <p>
@@ -33,26 +35,26 @@ package org.apache.commons.functor.range;
  */
 public interface Range<T extends Comparable<?>, S extends Comparable<?>> {
     /**
-     * Default lower bound type.
+     * Default left bound type.
      */
-    public static final BoundType DEFAULT_LOWER_BOUND_TYPE = BoundType.CLOSED;
+    public static final BoundType DEFAULT_LEFT_BOUND_TYPE = BoundType.CLOSED;
     /**
-     * Default upper bound type.
+     * Default right bound type.
      */
-    public static final BoundType DEFAULT_UPPER_BOUND_TYPE = BoundType.OPEN;
+    public static final BoundType DEFAULT_RIGHT_BOUND_TYPE = BoundType.OPEN;
     /**
-     * Get the lower limit of this range.
+     * Get the left limit of this range.
      * 
      * @return Endpoint
      */
-    Endpoint<T> getLowerLimit();
+    Endpoint<T> getLeftEndpoint();
     
     /**
-     * Get the upper limit of this range.
+     * Get the right limit of this range.
      * 
      * @return Endpoint
      */
-    Endpoint<T> getUpperLimit();
+    Endpoint<T> getRightEndpoint();
     
     /**
      * Get the step between elements of this range.
@@ -61,4 +63,23 @@ public interface Range<T extends Comparable<?>, S extends Comparable<?>> {
      */
     S getStep();
     
+    /**
+     * TODO
+     * @return
+     */
+    public boolean isEmpty();
+    
+    /**
+     * TODO
+     * @param obj
+     * @return
+     */
+    public boolean contains(T obj);
+    
+    /**
+     * TODO
+     * @param col
+     * @return
+     */
+    public boolean containsAll(Collection<T> col);
 }

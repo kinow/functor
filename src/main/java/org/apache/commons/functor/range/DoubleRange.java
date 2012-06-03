@@ -26,13 +26,13 @@ public class DoubleRange extends NumericRange<Double, Double> {
     // attributes
     //---------------------------------------------------------------
     /**
-     * Lower limit.
+     * Left limit.
      */
-    private final Endpoint<Double> lowerLimit;
+    private final Endpoint<Double> leftEndpoint;
     /**
-     * Upper limit.
+     * Right limit.
      */
-    private final Endpoint<Double> upperLimit;
+    private final Endpoint<Double> rightEndpoint;
     /**
      * Increment step.
      */
@@ -85,7 +85,7 @@ public class DoubleRange extends NumericRange<Double, Double> {
      * @param to end
      */
     public DoubleRange(double from, double to, double step) {
-        this(from, DEFAULT_LOWER_BOUND_TYPE, to, DEFAULT_UPPER_BOUND_TYPE, step);
+        this(from, DEFAULT_LEFT_BOUND_TYPE, to, DEFAULT_RIGHT_BOUND_TYPE, step);
     }
 
     /**
@@ -95,12 +95,12 @@ public class DoubleRange extends NumericRange<Double, Double> {
      * @param to end
      * @param step increment
      */
-    public DoubleRange(double from, BoundType lowerBoundType, double to, BoundType upperBoundType, double step) {
+    public DoubleRange(double from, BoundType leftBoundType, double to, BoundType rightBoundType, double step) {
         if (from != to && Math.signum(step) != Math.signum(to-from)) {
             throw new IllegalArgumentException("Will never reach " + to + " from " + from + " using step " + step);
         }
-        this.lowerLimit = new Endpoint<Double>(from, lowerBoundType);
-        this.upperLimit = new Endpoint<Double>(to, upperBoundType);
+        this.leftEndpoint = new Endpoint<Double>(from, leftBoundType);
+        this.rightEndpoint = new Endpoint<Double>(to, rightBoundType);
         this.step = step;
     }
     
@@ -115,8 +115,8 @@ public class DoubleRange extends NumericRange<Double, Double> {
         if (from != to && Math.signum(step) != Math.signum(to.getValue().doubleValue()-from.getValue().doubleValue())) {
             throw new IllegalArgumentException("Will never reach " + to + " from " + from + " using step " + step);
         }
-        this.lowerLimit = from;
-        this.upperLimit = to;
+        this.leftEndpoint = from;
+        this.rightEndpoint = to;
         this.step = step;
     }
     
@@ -125,15 +125,15 @@ public class DoubleRange extends NumericRange<Double, Double> {
     /**
      * {@inheritDoc}
      */
-    public Endpoint<Double> getLowerLimit() {
-	return this.lowerLimit;
+    public Endpoint<Double> getLeftEndpoint() {
+	return this.leftEndpoint;
     }
     
     /**
      * {@inheritDoc}
      */
-    public Endpoint<Double> getUpperLimit() {
-	return this.upperLimit;
+    public Endpoint<Double> getRightEndpoint() {
+	return this.rightEndpoint;
     }
     
     /**
@@ -148,7 +148,7 @@ public class DoubleRange extends NumericRange<Double, Double> {
      */
     @Override
     public String toString() {
-	return "DoubleRange<" + this.lowerLimit.toLeftString() + ", " + this.upperLimit.toRightString() + ", " + this.step + ">";
+	return "DoubleRange<" + this.leftEndpoint.toLeftString() + ", " + this.rightEndpoint.toRightString() + ", " + this.step + ">";
     }
     
     /**
@@ -163,7 +163,7 @@ public class DoubleRange extends NumericRange<Double, Double> {
             return false;
         }
         DoubleRange that = (DoubleRange) obj;
-        return this.lowerLimit.equals(that.lowerLimit) && this.upperLimit.equals(that.upperLimit) && this.step == that.step;
+        return this.leftEndpoint.equals(that.leftEndpoint) && this.rightEndpoint.equals(that.rightEndpoint) && this.step == that.step;
     }
     
     /**
@@ -173,9 +173,9 @@ public class DoubleRange extends NumericRange<Double, Double> {
     public int hashCode() {
 	int hash = "DoubleRange".hashCode();
         hash <<= 2;
-        hash ^= this.lowerLimit.getValue().hashCode();
+        hash ^= this.leftEndpoint.getValue().hashCode();
         hash <<= 2;
-        hash ^= this.upperLimit.getValue().hashCode();
+        hash ^= this.rightEndpoint.getValue().hashCode();
         hash <<= 2;
         hash ^= Double.valueOf(this.step).hashCode();
         return hash;

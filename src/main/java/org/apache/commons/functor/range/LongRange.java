@@ -26,13 +26,13 @@ public final class LongRange extends NumericRange<Long, Long> {
     // attributes
     //---------------------------------------------------------------
     /**
-     * Lower limit.
+     * Left limit.
      */
-    private final Endpoint<Long> lowerLimit;
+    private final Endpoint<Long> leftEndpoint;
     /**
-     * Upper limit.
+     * Right limit.
      */
-    private final Endpoint<Long> upperLimit;
+    private final Endpoint<Long> rightEndpoint;
     /**
      * Increment step.
      */
@@ -86,7 +86,7 @@ public final class LongRange extends NumericRange<Long, Long> {
      * @param step increment
      */
     public LongRange(long from, long to, long step) {
-	this(from, DEFAULT_LOWER_BOUND_TYPE, to, DEFAULT_UPPER_BOUND_TYPE, step);
+	this(from, DEFAULT_LEFT_BOUND_TYPE, to, DEFAULT_RIGHT_BOUND_TYPE, step);
     }
     
     /**
@@ -96,12 +96,28 @@ public final class LongRange extends NumericRange<Long, Long> {
      * @param to end
      * @param step increment
      */
-    public LongRange(long from, BoundType lowerBoundType, long to, BoundType upperBoundType, long step) {
+    public LongRange(long from, BoundType leftBoundType, long to, BoundType rightBoundType, long step) {
         if (from != to && Long.signum(step) != Long.signum(to-from)) {
             throw new IllegalArgumentException("Will never reach " + to + " from " + from + " using step " + step);
         }
-        this.lowerLimit = new Endpoint<Long>(from, lowerBoundType);
-        this.upperLimit = new Endpoint<Long>(to, upperBoundType);;
+        this.leftEndpoint = new Endpoint<Long>(from, leftBoundType);
+        this.rightEndpoint = new Endpoint<Long>(to, rightBoundType);;
+        this.step = step;
+    }
+    
+    /**
+     * Create a new LongRange.
+     * 
+     * @param from start
+     * @param to end
+     * @param step increment
+     */
+    public LongRange(Endpoint<Long> from, Endpoint<Long> to, long step) {
+        if (from != to && Long.signum(step) != Long.signum(to.getValue()-from.getValue())) {
+            throw new IllegalArgumentException("Will never reach " + to + " from " + from + " using step " + step);
+        }
+        this.leftEndpoint = from;
+        this.rightEndpoint = to;
         this.step = step;
     }
 
@@ -111,15 +127,15 @@ public final class LongRange extends NumericRange<Long, Long> {
     /**
      * {@inheritDoc}
      */
-    public Endpoint<Long> getLowerLimit() {
-	return this.lowerLimit;
+    public Endpoint<Long> getLeftEndpoint() {
+	return this.leftEndpoint;
     }
     
     /**
      * {@inheritDoc}
      */
-    public Endpoint<Long> getUpperLimit() {
-	return this.upperLimit;
+    public Endpoint<Long> getRightEndpoint() {
+	return this.rightEndpoint;
     }
     
     /**
@@ -134,7 +150,7 @@ public final class LongRange extends NumericRange<Long, Long> {
      */
     @Override
     public String toString() {
-        return "LongRange<" + this.lowerLimit.toLeftString() + ", " + this.upperLimit.toRightString() + ", " + step + ">";
+        return "LongRange<" + this.leftEndpoint.toLeftString() + ", " + this.rightEndpoint.toRightString() + ", " + step + ">";
     }
 
     /**
@@ -149,7 +165,7 @@ public final class LongRange extends NumericRange<Long, Long> {
             return false;
         }
         LongRange that = (LongRange) obj;
-        return this.lowerLimit.equals(that.lowerLimit) && this.upperLimit.equals(that.upperLimit) && this.step == that.step;
+        return this.leftEndpoint.equals(that.leftEndpoint) && this.rightEndpoint.equals(that.rightEndpoint) && this.step == that.step;
     }
 
     /**
@@ -159,9 +175,9 @@ public final class LongRange extends NumericRange<Long, Long> {
     public int hashCode() {
         int hash = "LongRange".hashCode();
         hash <<= 2;
-        hash ^= this.lowerLimit.getValue();
+        hash ^= this.leftEndpoint.getValue();
         hash <<= 2;
-        hash ^= this.upperLimit.getValue();
+        hash ^= this.rightEndpoint.getValue();
         hash <<= 2;
         hash ^= this.step;
         return hash;

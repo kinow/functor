@@ -1,26 +1,17 @@
 /*
- * The MIT License
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * Copyright (c) <2012> <Bruno P. Kinoshita>
- * 
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- * 
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package org.apache.commons.functor.range;
 
 import java.util.Collection;
@@ -44,15 +35,14 @@ import org.apache.commons.functor.generator.DoubleGenerator;
 public abstract class NumericRange<T extends Number & Comparable<?>, S extends Number & Comparable<?>> implements Range<T, S> {
 
     /**
-     * TODO
-     * @return
+     * {@inheritDoc}
      */
     public boolean isEmpty() {
-	double leftValue = this.getLowerLimit().getValue().doubleValue();
-	double rightValue = this.getUpperLimit().getValue().doubleValue();
-	boolean closedLeft = this.getLowerLimit().getBoundType() == BoundType.CLOSED;
-	boolean closedRight = this.getUpperLimit().getBoundType() == BoundType.CLOSED;
-	if(!closedLeft && !closedRight && this.getLowerLimit().equals(this.getUpperLimit())) {
+	double leftValue = this.getLeftEndpoint().getValue().doubleValue();
+	double rightValue = this.getRightEndpoint().getValue().doubleValue();
+	boolean closedLeft = this.getLeftEndpoint().getBoundType() == BoundType.CLOSED;
+	boolean closedRight = this.getRightEndpoint().getBoundType() == BoundType.CLOSED;
+	if(!closedLeft && !closedRight && this.getLeftEndpoint().equals(this.getRightEndpoint())) {
 	    return Boolean.TRUE;
 	}
 	double step = this.getStep().doubleValue();
@@ -66,18 +56,16 @@ public abstract class NumericRange<T extends Number & Comparable<?>, S extends N
     }
     
     /**
-     * TODO
-     * @param obj
-     * @return
+     * {@inheritDoc}
      */
     public boolean contains(T obj) {
 	if(obj == null) {
 	    return Boolean.FALSE;
 	}
-	double leftValue = this.getLowerLimit().getValue().doubleValue();
-	double rightValue = this.getUpperLimit().getValue().doubleValue();
-	boolean includeLeft = this.getLowerLimit().getBoundType() == BoundType.CLOSED;
-	boolean includeRight = this.getUpperLimit().getBoundType() == BoundType.CLOSED;
+	double leftValue = this.getLeftEndpoint().getValue().doubleValue();
+	double rightValue = this.getRightEndpoint().getValue().doubleValue();
+	boolean includeLeft = this.getLeftEndpoint().getBoundType() == BoundType.CLOSED;
+	boolean includeRight = this.getRightEndpoint().getBoundType() == BoundType.CLOSED;
 	double step = this.getStep().doubleValue();
 	double value = obj.doubleValue();
 	boolean within = Boolean.FALSE;
@@ -105,14 +93,12 @@ public abstract class NumericRange<T extends Number & Comparable<?>, S extends N
 	if(!within) {
 	    return Boolean.FALSE;
 	}
-	DoubleRange doubleRange = new DoubleRange(leftValue, this.getLowerLimit().getBoundType(), rightValue, this.getUpperLimit().getBoundType(), step);
+	DoubleRange doubleRange = new DoubleRange(leftValue, this.getLeftEndpoint().getBoundType(), rightValue, this.getRightEndpoint().getBoundType(), step);
 	return (step == 1 || step == -1) ? Boolean.TRUE : new DoubleGenerator(doubleRange).toCollection().contains(Double.valueOf(obj.doubleValue()));
     }
     
     /**
-     * TODO
-     * @param col
-     * @return
+     * {@inheritDoc}
      */
     public boolean containsAll(Collection<T> col) {
 	if (col == null || col.size() == 0) {

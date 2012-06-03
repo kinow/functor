@@ -26,13 +26,13 @@ public class FloatRange extends NumericRange<Float, Float> {
     // attributes
     //---------------------------------------------------------------
     /**
-     * Lower limit.
+     * Left limit.
      */
-    private final Endpoint<Float> lowerLimit;
+    private final Endpoint<Float> leftEndpoint;
     /**
-     * Upper limit.
+     * Right limit.
      */
-    private final Endpoint<Float> upperLimit;
+    private final Endpoint<Float> rightEndpoint;
     /**
      * Increment step.
      */
@@ -85,7 +85,7 @@ public class FloatRange extends NumericRange<Float, Float> {
      * @param to end
      */
     public FloatRange(float from, float to, float step) {
-        this(from, DEFAULT_LOWER_BOUND_TYPE, to, DEFAULT_UPPER_BOUND_TYPE, step);
+        this(from, DEFAULT_LEFT_BOUND_TYPE, to, DEFAULT_RIGHT_BOUND_TYPE, step);
     }
 
     /**
@@ -95,12 +95,28 @@ public class FloatRange extends NumericRange<Float, Float> {
      * @param to end
      * @param step increment
      */
-    public FloatRange(float from, BoundType lowerBoundType, float to, BoundType upperBoundType, float step) {
+    public FloatRange(float from, BoundType leftBoundType, float to, BoundType rightBoundType, float step) {
         if (from != to && Math.signum(step) != Math.signum(to-from)) {
             throw new IllegalArgumentException("Will never reach " + to + " from " + from + " using step " + step);
         }
-        this.lowerLimit = new Endpoint<Float>(from, lowerBoundType);
-        this.upperLimit = new Endpoint<Float>(to, upperBoundType);;
+        this.leftEndpoint = new Endpoint<Float>(from, leftBoundType);
+        this.rightEndpoint = new Endpoint<Float>(to, rightBoundType);;
+        this.step = step;
+    }
+    
+    /**
+     * Create a new FloatRange.
+     * 
+     * @param from start
+     * @param to end
+     * @param step increment
+     */
+    public FloatRange(Endpoint<Float> from, Endpoint<Float> to, float step) {
+        if (from != to && Math.signum(step) != Math.signum(to.getValue().doubleValue()-from.getValue().doubleValue())) {
+            throw new IllegalArgumentException("Will never reach " + to + " from " + from + " using step " + step);
+        }
+        this.leftEndpoint = from;
+        this.rightEndpoint = to;
         this.step = step;
     }
     
@@ -109,15 +125,15 @@ public class FloatRange extends NumericRange<Float, Float> {
     /**
      * {@inheritDoc}
      */
-    public Endpoint<Float> getLowerLimit() {
-	return this.lowerLimit;
+    public Endpoint<Float> getLeftEndpoint() {
+	return this.leftEndpoint;
     }
     
     /**
      * {@inheritDoc}
      */
-    public Endpoint<Float> getUpperLimit() {
-	return this.upperLimit;
+    public Endpoint<Float> getRightEndpoint() {
+	return this.rightEndpoint;
     }
     
     /**
@@ -132,7 +148,7 @@ public class FloatRange extends NumericRange<Float, Float> {
      */
     @Override
     public String toString() {
-	return "FloatRange<" + this.lowerLimit.toLeftString() + ", " + this.upperLimit.toRightString() + ", " + this.step + ">";
+	return "FloatRange<" + this.leftEndpoint.toLeftString() + ", " + this.rightEndpoint.toRightString() + ", " + this.step + ">";
     }
     
     /**
@@ -147,7 +163,7 @@ public class FloatRange extends NumericRange<Float, Float> {
             return false;
         }
         FloatRange that = (FloatRange) obj;
-        return this.lowerLimit.equals(that.lowerLimit) && this.upperLimit.equals(that.upperLimit) && this.step == that.step;
+        return this.leftEndpoint.equals(that.leftEndpoint) && this.rightEndpoint.equals(that.rightEndpoint) && this.step == that.step;
     }
     
     /**
@@ -157,9 +173,9 @@ public class FloatRange extends NumericRange<Float, Float> {
     public int hashCode() {
 	int hash = "FloatRange".hashCode();
         hash <<= 2;
-        hash ^= this.lowerLimit.getValue().hashCode();
+        hash ^= this.leftEndpoint.getValue().hashCode();
         hash <<= 2;
-        hash ^= this.upperLimit.getValue().hashCode();
+        hash ^= this.rightEndpoint.getValue().hashCode();
         hash <<= 2;
         hash ^= Float.valueOf(this.step).hashCode();
         return hash;

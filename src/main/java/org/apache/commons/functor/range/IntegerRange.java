@@ -26,13 +26,13 @@ public class IntegerRange extends NumericRange<Integer, Integer> {
     // attributes
     //---------------------------------------------------------------
     /**
-     * Lower limit.
+     * Left limit.
      */
-    private final Endpoint<Integer> lowerLimit;
+    private final Endpoint<Integer> leftEndpoint;
     /**
-     * Upper limit.
+     * Right limit.
      */
-    private final Endpoint<Integer> upperLimit;
+    private final Endpoint<Integer> rightEndpoint;
     /**
      * Increment step.
      */
@@ -85,7 +85,7 @@ public class IntegerRange extends NumericRange<Integer, Integer> {
      * @param to end
      */
     public IntegerRange(int from, int to, int step) {
-        this(from, DEFAULT_LOWER_BOUND_TYPE, to, DEFAULT_UPPER_BOUND_TYPE, step);
+        this(from, DEFAULT_LEFT_BOUND_TYPE, to, DEFAULT_RIGHT_BOUND_TYPE, step);
     }
 
     /**
@@ -95,12 +95,28 @@ public class IntegerRange extends NumericRange<Integer, Integer> {
      * @param to end
      * @param step increment
      */
-    public IntegerRange(int from, BoundType lowerBoundType, int to, BoundType upperBoundType, int step) {
+    public IntegerRange(int from, BoundType leftBoundType, int to, BoundType rightBoundType, int step) {
         if (from != to && Integer.signum(step) != Integer.signum(to-from)) {
             throw new IllegalArgumentException("Will never reach " + to + " from " + from + " using step " + step);
         }
-        this.lowerLimit = new Endpoint<Integer>(from, lowerBoundType);
-        this.upperLimit = new Endpoint<Integer>(to, upperBoundType);;
+        this.leftEndpoint = new Endpoint<Integer>(from, leftBoundType);
+        this.rightEndpoint = new Endpoint<Integer>(to, rightBoundType);;
+        this.step = step;
+    }
+    
+    /**
+     * Create a new IntegerRange.
+     * 
+     * @param from start
+     * @param to end
+     * @param step increment
+     */
+    public IntegerRange(Endpoint<Integer> from, Endpoint<Integer> to, int step) {
+        if (from != to && Integer.signum(step) != Integer.signum(to.getValue()-from.getValue())) {
+            throw new IllegalArgumentException("Will never reach " + to + " from " + from + " using step " + step);
+        }
+        this.leftEndpoint = from;
+        this.rightEndpoint = to;
         this.step = step;
     }
     
@@ -109,15 +125,15 @@ public class IntegerRange extends NumericRange<Integer, Integer> {
     /**
      * {@inheritDoc}
      */
-    public Endpoint<Integer> getLowerLimit() {
-	return this.lowerLimit;
+    public Endpoint<Integer> getLeftEndpoint() {
+	return this.leftEndpoint;
     }
     
     /**
      * {@inheritDoc}
      */
-    public Endpoint<Integer> getUpperLimit() {
-	return this.upperLimit;
+    public Endpoint<Integer> getRightEndpoint() {
+	return this.rightEndpoint;
     }
     
     /**
@@ -132,7 +148,7 @@ public class IntegerRange extends NumericRange<Integer, Integer> {
      */
     @Override
     public String toString() {
-	return "IntegerRange<" + this.lowerLimit.toLeftString() + ", " + this.upperLimit.toRightString() + ", " + this.step + ">";
+	return "IntegerRange<" + this.leftEndpoint.toLeftString() + ", " + this.rightEndpoint.toRightString() + ", " + this.step + ">";
     }
     
     /**
@@ -147,7 +163,7 @@ public class IntegerRange extends NumericRange<Integer, Integer> {
             return false;
         }
         IntegerRange that = (IntegerRange) obj;
-        return this.lowerLimit.equals(that.lowerLimit) && this.upperLimit.equals(that.upperLimit) && this.step == that.step;
+        return this.leftEndpoint.equals(that.leftEndpoint) && this.rightEndpoint.equals(that.rightEndpoint) && this.step == that.step;
     }
     
     /**
@@ -157,9 +173,9 @@ public class IntegerRange extends NumericRange<Integer, Integer> {
     public int hashCode() {
 	int hash = "IntegerRange".hashCode();
         hash <<= 2;
-        hash ^= this.lowerLimit.getValue();
+        hash ^= this.leftEndpoint.getValue();
         hash <<= 2;
-        hash ^= this.upperLimit.getValue();
+        hash ^= this.rightEndpoint.getValue();
         hash <<= 2;
         hash ^= this.step;
         return hash;

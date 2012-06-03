@@ -52,7 +52,7 @@ public final class FloatGenerator extends BaseGenerator<Float> {
      * @param to end
      */
     public FloatGenerator(float from, float to, float step) {
-        this(from, FloatRange.DEFAULT_LOWER_BOUND_TYPE, to, FloatRange.DEFAULT_UPPER_BOUND_TYPE, step);
+        this(from, FloatRange.DEFAULT_LEFT_BOUND_TYPE, to, FloatRange.DEFAULT_RIGHT_BOUND_TYPE, step);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class FloatGenerator extends BaseGenerator<Float> {
      */
     public void run(UnaryProcedure<? super Float> proc) {
 	final float step = this.range.getStep();
-	final boolean includeLowerLimit = this.range.getLowerLimit().getBoundType() == BoundType.CLOSED;
-	final boolean includeUpperLimit = this.range.getUpperLimit().getBoundType() == BoundType.CLOSED;
-	final float from = includeLowerLimit ? this.range.getLowerLimit().getValue() : (this.range.getLowerLimit().getValue() + step);
-	final float to = includeUpperLimit ? this.range.getUpperLimit().getValue() : (this.range.getUpperLimit().getValue() - step);
+	final boolean includeLowerLimit = this.range.getLeftEndpoint().getBoundType() == BoundType.CLOSED;
+	final boolean includeUpperLimit = this.range.getRightEndpoint().getBoundType() == BoundType.CLOSED;
+	final float from = includeLowerLimit ? this.range.getLeftEndpoint().getValue() : (this.range.getLeftEndpoint().getValue() + step);
+	final float to = includeUpperLimit ? this.range.getRightEndpoint().getValue() : (this.range.getRightEndpoint().getValue() - step);
         if (step < 0) {
             for (float i = from; i >= to; i += step) {
                 proc.run(i);

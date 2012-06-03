@@ -69,8 +69,8 @@ public class TestFloatRange extends BaseNumericRangeTest<Float> {
     @Test
     public void testBoundaries() {
 	FloatRange range = new FloatRange(0.0f, 10.0f);
-	assertEquals(new Endpoint<Comparable<?>>(0.0f, BoundType.CLOSED), range.getLowerLimit());
-	assertEquals(new Endpoint<Comparable<?>>(10.0f, BoundType.OPEN), range.getUpperLimit());
+	assertEquals(new Endpoint<Comparable<?>>(0.0f, BoundType.CLOSED), range.getLeftEndpoint());
+	assertEquals(new Endpoint<Comparable<?>>(10.0f, BoundType.OPEN), range.getRightEndpoint());
     }
     
     @Test
@@ -296,6 +296,11 @@ public class TestFloatRange extends BaseNumericRangeTest<Float> {
         
         FloatRange range9 = new FloatRange(Long.valueOf(-2), Long.valueOf(2));
         assertEquals("Invalid equals using different constructor",range,range9);
+        
+        Endpoint<Float> leftEndpoint = new Endpoint<Float>(-2.0f, BoundType.CLOSED);
+        Endpoint<Float> rightEndpoint = new Endpoint<Float>(2.0f, BoundType.OPEN);
+        FloatRange range10 = new FloatRange(leftEndpoint, rightEndpoint, 1.0f);
+        assertEquals("Invalid equals using different constructor",range,range10);
     }
     
     @Test
