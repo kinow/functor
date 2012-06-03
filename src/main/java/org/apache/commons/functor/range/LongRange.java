@@ -12,40 +12,44 @@
  * limitations under the License.
  */
 
-package org.apache.commons.functor.generator.util;
+package org.apache.commons.functor.range;
 
-import org.apache.commons.functor.UnaryProcedure;
-import org.apache.commons.functor.generator.BaseGenerator;
+import org.apache.commons.functor.BinaryFunction;
 
 /**
- * A generator for the range <i>from</i> (inclusive) to <i>to</i> (exclusive).
+ * A generator for a range of longs.
  *
  * @since 1.0
  * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
-public final class LongRange extends BaseGenerator<Long> {
+public final class LongRange implements Range<Long, Long> {
     // attributes
     //---------------------------------------------------------------
-
     /**
-     * The start index.
+     * Lower limit.
      */
-    private final long from;
-
+    private final Endpoint<Long> lowerLimit;
     /**
-     * The end index.
+     * Upper limit.
      */
-    private final long to;
-
+    private final Endpoint<Long> upperLimit;
     /**
-     * The increment counter.
+     * Increment step.
      */
     private final long step;
-
+    /**
+     * Calculate default step.
+     */
+    public static final BinaryFunction<Long, Long, Long> DEFAULT_STEP = new BinaryFunction<Long, Long, Long>() {
+	public Long evaluate(Long left, Long right) {
+	    return left > right ? -1L : 1L;
+	}
+    };
     // constructors
     //---------------------------------------------------------------
     /**
      * Create a new LongRange.
+     * 
      * @param from start
      * @param to end
      */
@@ -55,6 +59,7 @@ public final class LongRange extends BaseGenerator<Long> {
 
     /**
      * Create a new LongRange.
+     * 
      * @param from start
      * @param to end
      * @param step increment
@@ -65,43 +70,63 @@ public final class LongRange extends BaseGenerator<Long> {
 
     /**
      * Create a new LongRange.
+     * 
      * @param from start
      * @param to end
      */
     public LongRange(long from, long to) {
-        this(from, to, defaultStep(from, to));
+        this(from, to, DEFAULT_STEP.evaluate(from, to).longValue());
     }
 
     /**
      * Create a new LongRange.
+     * 
      * @param from start
      * @param to end
      * @param step increment
      */
     public LongRange(long from, long to, long step) {
-        if (from != to && signOf(step) != signOf(to - from)) {
+	this(from, DEFAULT_LOWER_BOUND_TYPE, to, DEFAULT_UPPER_BOUND_TYPE, step);
+    }
+    
+    /**
+     * Create a new LongRange.
+     * 
+     * @param from start
+     * @param to end
+     * @param step increment
+     */
+    public LongRange(long from, BoundType lowerBoundType, long to, BoundType upperBoundType, long step) {
+        if (from != to && Long.signum(step) != Long.signum(to-from)) {
             throw new IllegalArgumentException("Will never reach " + to + " from " + from + " using step " + step);
         }
-        this.from = from;
-        this.to = to;
+        this.lowerLimit = new Endpoint<Long>(from, lowerBoundType);
+        this.upperLimit = new Endpoint<Long>(to, upperBoundType);;
         this.step = step;
     }
 
     // methods
     //---------------------------------------------------------------
+    
     /**
      * {@inheritDoc}
      */
-    public void run(UnaryProcedure<? super Long> proc) {
-        if (signOf(step) == -1L) {
-            for (long i = from; i > to; i += step) {
-                proc.run(Long.valueOf(i));
-            }
-        } else {
-            for (long i = from; i < to; i += step) {
-                proc.run(Long.valueOf(i));
-            }
-        }
+    public Endpoint<Long> getLowerLimit() {
+	return this.lowerLimit;
+    }
+    
+    /**
+     * {@inheritDoc}
+     */
+    public Endpoint<Long> getUpperLimit() {
+	return this.upperLimit;
+    }
+    
+    /**
+     * {@inheritDoc}
+     */
+    public Long getStep() {
+	return this.step;
     }
 
     /**
@@ -109,7 +134,7 @@ public final class LongRange extends BaseGenerator<Long> {
      */
     @Override
     public String toString() {
-        return "LongRange<" + from + "," + to + "," + step + ">";
+        return "LongRange<" + this.lowerLimit.toLeftString() + ", " + this.upperLimit.toRightString() + ", " + step + ">";
     }
 
     /**
@@ -124,7 +149,7 @@ public final class LongRange extends BaseGenerator<Long> {
             return false;
         }
         LongRange that = (LongRange) obj;
-        return this.from == that.from && this.to == that.to && this.step == that.step;
+        return this.lowerLimit.equals(that.lowerLimit) && this.upperLimit.equals(that.upperLimit) && this.step == that.step;
     }
 
     /**
@@ -134,33 +159,12 @@ public final class LongRange extends BaseGenerator<Long> {
     public int hashCode() {
         int hash = "LongRange".hashCode();
         hash <<= 2;
-        hash ^= from;
+        hash ^= this.lowerLimit.getValue();
         hash <<= 2;
-        hash ^= to;
+        hash ^= this.upperLimit.getValue();
         hash <<= 2;
-        hash ^= step;
+        hash ^= this.step;
         return hash;
-    }
-
-    // private methods
-    //---------------------------------------------------------------
-    /**
-     * Get <code>value/|value|</code> (0L when value == 0L).
-     * @param value to test
-     * @return long
-     */
-    private static long signOf(long value) {
-        return value < 0L ? -1L : value > 0L ? 1L : 0L;
-    }
-
-    /**
-     * Calculate default step to get from <code>from</code> to <code>to</code>.
-     * @param from start
-     * @param to end
-     * @return long
-     */
-    private static long defaultStep(long from, long to) {
-        return from > to ? -1L : 1L;
     }
 
 }

@@ -12,29 +12,24 @@
  * limitations under the License.
  */
 
-package org.apache.commons.functor.generator.util;
+package org.apache.commons.functor.generator;
 
 import org.apache.commons.functor.UnaryProcedure;
-import org.apache.commons.functor.generator.BaseGenerator;
-import org.apache.commons.functor.generator.BoundType;
+import org.apache.commons.functor.range.BoundType;
+import org.apache.commons.functor.range.IntegerRange;
 
 
 /**
  * A generator for the range <i>from</i> (inclusive) to <i>to</i> (exclusive).
  *
  * @since 1.0
- * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
+ * @version $Revision: $ $Date: $
  */
 public final class IntegerGenerator extends BaseGenerator<Integer> {
-    // const //TODO: check what's the standard
-    //---------------------------------------------------------------
-    
-    
     // attributes
     //---------------------------------------------------------------
-
     /**
-     * The integer range of this generator.
+     * The range of this generator.
      */
     private final IntegerRange range;
 
@@ -42,30 +37,33 @@ public final class IntegerGenerator extends BaseGenerator<Integer> {
     //---------------------------------------------------------------
     /**
      * Create a new IntegerGenerator.
+     * 
      * @param from start
      * @param to end
      */
     public IntegerGenerator(int from, int to) {
-        this(from, to, IntegerRange.defaultStep(from, to));
+        this(from, to, IntegerRange.DEFAULT_STEP.evaluate(from, to));
     }
     
     /**
      * Create a new IntegerGenerator.
+     * 
      * @param from start
      * @param to end
      */
     public IntegerGenerator(int from, int to, int step) {
-        this(from, IntegerRange.DEFAULT_LOWER_BOUND_TYPE, to, IntegerRange.DEFAULT_UPPER_BOUND_TYPE, IntegerRange.defaultStep(from, to));
+        this(from, IntegerRange.DEFAULT_LOWER_BOUND_TYPE, to, IntegerRange.DEFAULT_UPPER_BOUND_TYPE, IntegerRange.DEFAULT_STEP.evaluate(from, to));
     }
 
     /**
      * Create a new IntegerGenerator.
+     * 
      * @param from start
      * @param to end
      * @param step increment
      */
     public IntegerGenerator(int from, BoundType lowerBoundType, int to, BoundType upperBoundType, int step) {
-        if (from != to && IntegerRange.signOf(step) != IntegerRange.signOf(to - from)) {
+        if (from != to && Integer.signum(step) != Integer.signum(to - from)) {
             throw new IllegalArgumentException("Will never reach " + to + " from " + from + " using step " + step);
         }
         this.range = new IntegerRange(from, lowerBoundType, to, upperBoundType, step);
@@ -73,6 +71,7 @@ public final class IntegerGenerator extends BaseGenerator<Integer> {
     
     /**
      * Create a new IntegerGenerator.
+     * 
      * @param range
      */
     public IntegerGenerator(IntegerRange range) {
@@ -82,6 +81,8 @@ public final class IntegerGenerator extends BaseGenerator<Integer> {
     // methods
     //---------------------------------------------------------------
     /**
+     * Get the range of this generator.
+     * 
      * @return the range
      */
     public IntegerRange getRange() {
@@ -93,10 +94,10 @@ public final class IntegerGenerator extends BaseGenerator<Integer> {
      */
     public void run(UnaryProcedure<? super Integer> proc) {
 	final int step = this.range.getStep();
-	final boolean includeLowerLimit = this.range.getLowerLimitBoundType() == BoundType.OPEN;
-	final boolean includeUpperLimit = this.range.getUpperLimitBoundType() == BoundType.OPEN;
-	final int from = includeLowerLimit ? this.range.getLowerLimit() : (this.range.getLowerLimit() + step);
-	final int to = includeUpperLimit ? this.range.getUpperLimit() : (this.range.getUpperLimit() - step);
+	final boolean includeLowerLimit = this.range.getLowerLimit().getBoundType() == BoundType.CLOSED;
+	final boolean includeUpperLimit = this.range.getUpperLimit().getBoundType() == BoundType.CLOSED;
+	final int from = includeLowerLimit ? this.range.getLowerLimit().getValue() : (this.range.getLowerLimit().getValue() + step);
+	final int to = includeUpperLimit ? this.range.getUpperLimit().getValue() : (this.range.getUpperLimit().getValue() - step);
         if (step < 0) {
             for (int i = from; i >= to; i += step) {
                 proc.run(Integer.valueOf(i));

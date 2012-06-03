@@ -12,15 +12,28 @@
  * limitations under the License.
  */
 
-package org.apache.commons.functor.generator;
+package org.apache.commons.functor.range;
 
 /**
- * Determines the bound type of an interval.
+ * Determine the bound type of a range.
  * 
- * @since 
+ * @see org.apache.commons.functor.range.Range 
+ * @see org.apache.commons.functor.range.Endpoint
+ * @since 1.0
+ * @version $Revision: $ $Date: $
  */
 public enum BoundType {
-
-    OPEN, CLOSED;
+    // values
+    //---------------------------------------------------------------
+    /**
+     * Represents an <b>open</b> bound, which value <b>is not</b> included in 
+     * the range.
+     */
+    OPEN, 
+    /**
+     * Represents a <b>closed</b> bound, which value <b>is included<b/> in 
+     * the range.
+     */
+    CLOSED;
     
 }

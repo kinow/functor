@@ -24,7 +24,6 @@ import java.util.List;
 
 import org.apache.commons.functor.UnaryFunction;
 import org.apache.commons.functor.UnaryProcedure;
-import org.apache.commons.functor.generator.util.IntegerGenerator;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

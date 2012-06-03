@@ -94,29 +94,6 @@ svn:special svn:externals svn:needs-lock
 
 2889
 
-IntegerGenerator.java
-file
-
-
-
-add
-
-
-
-
-
-has-props
-has-prop-mods
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-copied
-http://svn.apache.org/repos/asf/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/generator/util/IntegerRange.java
-1345345
-
 IntegerRange.java
 file
 
@@ -153,11 +130,11 @@ svn:special svn:externals svn:needs-lock
 
 LongRange.java
 file
+1345592
 
 
-
-
-2012-06-01T20:51:33.000000Z
+delete
+2012-06-02T21:48:25.000000Z
 acb70408798f9014713bf5a1f1259cf5
 2012-06-01T12:47:06.937513Z
 1345136

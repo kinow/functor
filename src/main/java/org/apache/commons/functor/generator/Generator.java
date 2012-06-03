@@ -33,12 +33,6 @@ public interface Generator<E> {
     void run(UnaryProcedure<? super E> proc);
     
     /**
-     * TODO
-     * @return
-     */
-    Range<? super E> getRange();
-
-    /**
      * Transforms this generator using the passed in
      * transformer. An example transformer might turn the contents of the
      * generator into a {@link Collection} of elements.

@@ -22,7 +22,6 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import org.apache.commons.functor.UnaryPredicate;
-import org.apache.commons.functor.generator.util.IntegerGenerator;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

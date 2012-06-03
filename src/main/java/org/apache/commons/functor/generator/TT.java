@@ -24,8 +24,8 @@
 package org.apache.commons.functor.generator;
 
 import org.apache.commons.functor.UnaryProcedure;
-import org.apache.commons.functor.generator.util.IntegerGenerator;
-import org.apache.commons.functor.generator.util.IntegerRange;
+import org.apache.commons.functor.range.BoundType;
+import org.apache.commons.functor.range.DoubleRange;
 
 /**
  * 
@@ -35,18 +35,21 @@ import org.apache.commons.functor.generator.util.IntegerRange;
 public class TT {
 
     public static void main(String[] args) {
-	IntegerRange range = new IntegerRange(9, BoundType.OPEN, 8, BoundType.CLOSED, -1);
+	DoubleRange range = new DoubleRange(1.0d, BoundType.CLOSED, 0.0d, BoundType.OPEN, -0.1d);
+	
+	System.out.println(range);
 //	System.out.println(range.getLowerLimit());
 //	System.out.println(range.getUpperLimit());
 //	System.out.println(range.getStep());
-	final UnaryProcedure<Integer> myProc = new UnaryProcedure<Integer>() {
+	final UnaryProcedure<Double> myProc = new UnaryProcedure<Double>() {
 	    
-	    public void run(Integer obj) {
+	    public void run(Double obj) {
 		System.out.println(obj);
 	    }
 	};
-	IntegerGenerator generator = new IntegerGenerator(range);
+	DoubleGenerator generator = new DoubleGenerator(range);
 	generator.run(myProc);
+	
     }
     
 }

@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.functor.BaseFunctorTest;
+import org.apache.commons.functor.range.LongRange;
 import org.junit.Test;
 
 /**

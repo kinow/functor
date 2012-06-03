@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.functor.BaseFunctorTest;
+import org.apache.commons.functor.generator.IntegerGenerator;
 import org.junit.Test;
 
 /**
