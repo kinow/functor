@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/aggregator/functions
+END
+IntegerSumAggregatorBinaryFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/aggregator/functions/IntegerSumAggregatorBinaryFunction.java
+END
+IntegerMeanValueAggregatorFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/aggregator/functions/IntegerMeanValueAggregatorFunction.java
+END
+DoublePercentileAggregatorFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/aggregator/functions/DoublePercentileAggregatorFunction.java
+END
+IntegerSumAggregatorFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/aggregator/functions/IntegerSumAggregatorFunction.java
+END
+IntegerMedianValueAggregatorFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/aggregator/functions/IntegerMedianValueAggregatorFunction.java
+END
+IntegerMaxAggregatorBinaryFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/aggregator/functions/IntegerMaxAggregatorBinaryFunction.java
+END
+IntegerMaxAggregatorFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/aggregator/functions/IntegerMaxAggregatorFunction.java
+END
+DoubleSumAggregatorBinaryFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/aggregator/functions/DoubleSumAggregatorBinaryFunction.java
+END
+DoubleMeanValueAggregatorFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/aggregator/functions/DoubleMeanValueAggregatorFunction.java
+END
+IntegerPercentileAggregatorFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/aggregator/functions/IntegerPercentileAggregatorFunction.java
+END
+DoubleSumAggregatorFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/aggregator/functions/DoubleSumAggregatorFunction.java
+END
+DoubleMedianValueAggregatorFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/aggregator/functions/DoubleMedianValueAggregatorFunction.java
+END
+package-info.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/aggregator/functions/package-info.java
+END
+DoubleMaxAggregatorBinaryFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/aggregator/functions/DoubleMaxAggregatorBinaryFunction.java
+END
+DoubleMaxAggregatorFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/aggregator/functions/DoubleMaxAggregatorFunction.java
+END
+IntegerCountAggregatorBinaryFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/aggregator/functions/IntegerCountAggregatorBinaryFunction.java
+END

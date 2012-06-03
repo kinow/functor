@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/aggregator
+END
+AbstractListBackedAggregator.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/aggregator/AbstractListBackedAggregator.java
+END
+AbstractTimedAggregator.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/aggregator/AbstractTimedAggregator.java
+END
+Aggregator.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/aggregator/Aggregator.java
+END
+AbstractNoStoreAggregator.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/aggregator/AbstractNoStoreAggregator.java
+END
+ArrayListBackedAggregator.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/aggregator/ArrayListBackedAggregator.java
+END
+package-info.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/aggregator/package-info.java
+END
+TimedAggregatorListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/aggregator/TimedAggregatorListener.java
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/aggregator
+END
+AbstractTimedAggregatorTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/aggregator/AbstractTimedAggregatorTest.java
+END
+AbstractNoStoreAggregatorTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/aggregator/AbstractNoStoreAggregatorTest.java
+END
+ArrayListBackedAggregatorTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/aggregator/ArrayListBackedAggregatorTest.java
+END
+AbstractListBackedAggregatorTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/aggregator/AbstractListBackedAggregatorTest.java
+END

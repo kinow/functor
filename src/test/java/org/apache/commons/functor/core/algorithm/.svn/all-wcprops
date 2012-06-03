@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1344796/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/algorithm
+END
+TestGeneratorContains.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/repos/asf/!svn/ver/1344796/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/algorithm/TestGeneratorContains.java
+END
+TestFindWithinGenerator.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/repos/asf/!svn/ver/1344796/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/algorithm/TestFindWithinGenerator.java
+END
+TestRecursiveEvaluation.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/repos/asf/!svn/ver/1344796/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/algorithm/TestRecursiveEvaluation.java
+END
+TestInPlaceTransform.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repos/asf/!svn/ver/1344796/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/algorithm/TestInPlaceTransform.java
+END
+TestFoldLeft.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1344796/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/algorithm/TestFoldLeft.java
+END
+TestWhileDo.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1344796/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/algorithm/TestWhileDo.java
+END
+TestFoldRight.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repos/asf/!svn/ver/1344796/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/algorithm/TestFoldRight.java
+END
+TestIndexOfInGenerator.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/repos/asf/!svn/ver/1344796/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/algorithm/TestIndexOfInGenerator.java
+END
+TestUntilDo.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1344796/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/algorithm/TestUntilDo.java
+END
+TestDoWhile.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1344796/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/algorithm/TestDoWhile.java
+END
+TestRetainMatching.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/repos/asf/!svn/ver/1344796/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/algorithm/TestRetainMatching.java
+END
+TestRemoveMatching.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/repos/asf/!svn/ver/1344796/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/algorithm/TestRemoveMatching.java
+END
+TestDoUntil.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1344796/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/core/algorithm/TestDoUntil.java
+END

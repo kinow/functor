@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/aggregator/functions
+END
+IntMeanValueAggregatorFunctionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/aggregator/functions/IntMeanValueAggregatorFunctionTest.java
+END
+IntSumAggregatorBinaryFunctionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/aggregator/functions/IntSumAggregatorBinaryFunctionTest.java
+END
+IntSumAggregatorFunctionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/aggregator/functions/IntSumAggregatorFunctionTest.java
+END
+DoubleMeanValueAggregatorFunctionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/aggregator/functions/DoubleMeanValueAggregatorFunctionTest.java
+END
+DoubleSumAggregatorBinaryFunctionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/aggregator/functions/DoubleSumAggregatorBinaryFunctionTest.java
+END
+DoubleSumAggregatorFunctionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/aggregator/functions/DoubleSumAggregatorFunctionTest.java
+END
+IntMedianValueAggregatorFunctionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/aggregator/functions/IntMedianValueAggregatorFunctionTest.java
+END
+DoubleMedianValueAggregatorFunctionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/aggregator/functions/DoubleMedianValueAggregatorFunctionTest.java
+END
+IntMaxAggregatorBinaryFunctionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/aggregator/functions/IntMaxAggregatorBinaryFunctionTest.java
+END
+IntMaxAggregatorFunctionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/aggregator/functions/IntMaxAggregatorFunctionTest.java
+END
+DoubleMaxAggregatorBinaryFunctionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/aggregator/functions/DoubleMaxAggregatorBinaryFunctionTest.java
+END
+DoubleMaxAggregatorFunctionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/aggregator/functions/DoubleMaxAggregatorFunctionTest.java
+END
+DoublePercentileAggregatorFunctionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/aggregator/functions/DoublePercentileAggregatorFunctionTest.java
+END
+IntPercentileAggregatorFunctionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/aggregator/functions/IntPercentileAggregatorFunctionTest.java
+END
+IntCountAggregatorBinaryFunctionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/repos/asf/!svn/ver/1344757/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/aggregator/functions/IntCountAggregatorBinaryFunctionTest.java
+END
