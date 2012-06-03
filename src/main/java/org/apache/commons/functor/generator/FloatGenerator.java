@@ -52,7 +52,7 @@ public final class FloatGenerator extends BaseGenerator<Float> {
      * @param to end
      */
     public FloatGenerator(float from, float to, float step) {
-        this(from, FloatRange.DEFAULT_LOWER_BOUND_TYPE, to, FloatRange.DEFAULT_UPPER_BOUND_TYPE, FloatRange.DEFAULT_STEP.evaluate(from, to));
+        this(from, FloatRange.DEFAULT_LOWER_BOUND_TYPE, to, FloatRange.DEFAULT_UPPER_BOUND_TYPE, step);
     }
 
     /**

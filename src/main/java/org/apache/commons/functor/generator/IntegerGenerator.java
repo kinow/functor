@@ -52,7 +52,7 @@ public final class IntegerGenerator extends BaseGenerator<Integer> {
      * @param to end
      */
     public IntegerGenerator(int from, int to, int step) {
-        this(from, IntegerRange.DEFAULT_LOWER_BOUND_TYPE, to, IntegerRange.DEFAULT_UPPER_BOUND_TYPE, IntegerRange.DEFAULT_STEP.evaluate(from, to));
+        this(from, IntegerRange.DEFAULT_LOWER_BOUND_TYPE, to, IntegerRange.DEFAULT_UPPER_BOUND_TYPE, step);
     }
 
     /**

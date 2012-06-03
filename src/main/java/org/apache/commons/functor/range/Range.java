@@ -35,7 +35,7 @@ public interface Range<T extends Comparable<?>, S extends Comparable<?>> {
     /**
      * Default lower bound type.
      */
-    public static final BoundType DEFAULT_LOWER_BOUND_TYPE = BoundType.OPEN;
+    public static final BoundType DEFAULT_LOWER_BOUND_TYPE = BoundType.CLOSED;
     /**
      * Default upper bound type.
      */

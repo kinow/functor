@@ -22,7 +22,7 @@ import org.apache.commons.functor.BinaryFunction;
  * @since 1.0
  * @version $Revision: $ $Date: $
  */
-public class DoubleRange implements Range<Double, Double> {
+public class DoubleRange extends NumericRange<Double, Double> {
     // attributes
     //---------------------------------------------------------------
     /**
@@ -100,7 +100,23 @@ public class DoubleRange implements Range<Double, Double> {
             throw new IllegalArgumentException("Will never reach " + to + " from " + from + " using step " + step);
         }
         this.lowerLimit = new Endpoint<Double>(from, lowerBoundType);
-        this.upperLimit = new Endpoint<Double>(to, upperBoundType);;
+        this.upperLimit = new Endpoint<Double>(to, upperBoundType);
+        this.step = step;
+    }
+    
+    /**
+     * Create a new DoubleRange.
+     * 
+     * @param from start
+     * @param to end
+     * @param step increment
+     */
+    public DoubleRange(Endpoint<Double> from, Endpoint<Double> to, double step) {
+        if (from != to && Math.signum(step) != Math.signum(to.getValue().doubleValue()-from.getValue().doubleValue())) {
+            throw new IllegalArgumentException("Will never reach " + to + " from " + from + " using step " + step);
+        }
+        this.lowerLimit = from;
+        this.upperLimit = to;
         this.step = step;
     }
     

@@ -60,12 +60,35 @@ svn:special svn:externals svn:needs-lock
 
 4851
 
+TestIntegerGenerator.java
+file
+
+
+
+add
+
+
+
+
+
+has-props
+has-prop-mods
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+copied
+http://svn.apache.org/repos/asf/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/generator/util/TestIntegerRange.java
+1345345
+
 TestIntegerRange.java
 file
 
 
 
-
+delete
 2012-06-01T20:51:44.000000Z
 92658f6abc91d47fc0b2c293f1a149da
 2012-06-01T12:47:06.937513Z
@@ -94,12 +117,35 @@ svn:special svn:externals svn:needs-lock
 
 5409
 
+TestLongGenerator.java
+file
+
+
+
+add
+
+
+
+
+
+has-props
+has-prop-mods
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+copied
+http://svn.apache.org/repos/asf/commons/proper/functor/trunk/src/test/java/org/apache/commons/functor/generator/util/TestLongRange.java
+1345345
+
 TestLongRange.java
 file
 
 
 
-
+delete
 2012-06-01T20:51:44.000000Z
 d5ff1239cc136fdfb5285ff8da901ff8
 2012-06-01T12:47:06.937513Z

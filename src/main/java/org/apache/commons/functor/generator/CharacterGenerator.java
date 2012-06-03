@@ -52,7 +52,7 @@ public final class CharacterGenerator extends BaseGenerator<Character> {
      * @param to end
      */
     public CharacterGenerator(char from, char to, int step) {
-        this(from, CharacterRange.DEFAULT_LOWER_BOUND_TYPE, to, CharacterRange.DEFAULT_UPPER_BOUND_TYPE, CharacterRange.DEFAULT_STEP.evaluate(from, to));
+        this(from, CharacterRange.DEFAULT_LOWER_BOUND_TYPE, to, CharacterRange.DEFAULT_UPPER_BOUND_TYPE, step);
     }
 
     /**

@@ -31,7 +31,18 @@ public interface Generator<E> {
      * @param proc UnaryProcedure to run
      */
     void run(UnaryProcedure<? super E> proc);
-    
+
+    /**
+     * Stop the generator. Will stop the wrapped generator if one was set.
+     */
+    void stop();
+
+    /**
+     * Check if the generator is stopped.
+     * @return true if stopped
+     */
+    boolean isStopped();
+
     /**
      * Transforms this generator using the passed in
      * transformer. An example transformer might turn the contents of the

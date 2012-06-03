@@ -65,7 +65,7 @@ public final class CharacterRange implements Range<Character, Integer> {
      * @param step increment
      */
     public CharacterRange(char from, char to, int step) {
-	this(from, DEFAULT_LOWER_BOUND_TYPE, to, DEFAULT_UPPER_BOUND_TYPE, step);
+	this(from, BoundType.CLOSED, to, BoundType.CLOSED, step);
     }
     
     /**

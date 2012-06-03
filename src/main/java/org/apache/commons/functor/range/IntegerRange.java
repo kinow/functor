@@ -22,7 +22,7 @@ import org.apache.commons.functor.BinaryFunction;
  * @since 1.0
  * @version $Revision: $ $Date: $
  */
-public class IntegerRange implements Range<Integer, Integer> {
+public class IntegerRange extends NumericRange<Integer, Integer> {
     // attributes
     //---------------------------------------------------------------
     /**

@@ -32,6 +32,9 @@ public abstract class BaseGenerator<E> implements Generator<E> {
     /** A generator can wrap another generator. */
     private final Generator<?> wrappedGenerator;
 
+    /** Set to true when the generator is {@link #stop stopped}. */
+    private boolean stopped = false;
+
     /** Create a new generator. */
     public BaseGenerator() {
         this(null);
@@ -53,6 +56,25 @@ public abstract class BaseGenerator<E> implements Generator<E> {
      */
     protected Generator<?> getWrappedGenerator() {
         return wrappedGenerator;
+    }
+
+    /**
+     * {@inheritDoc}
+     * Stop the generator. Will stop the wrapped generator if one was set.
+     */
+    public void stop() {
+        if (wrappedGenerator != null) {
+            wrappedGenerator.stop();
+        }
+        stopped = true;
+    }
+
+    /**
+     * {@inheritDoc}
+     * Check if the generator is stopped.
+     */
+    public boolean isStopped() {
+        return stopped;
     }
 
     /**

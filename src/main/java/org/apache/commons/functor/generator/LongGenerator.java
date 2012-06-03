@@ -52,7 +52,7 @@ public final class LongGenerator extends BaseGenerator<Long> {
      * @param to end
      */
     public LongGenerator(long from, long to, long step) {
-        this(from, LongRange.DEFAULT_LOWER_BOUND_TYPE, to, LongRange.DEFAULT_UPPER_BOUND_TYPE, LongRange.DEFAULT_STEP.evaluate(from, to));
+        this(from, LongRange.DEFAULT_LOWER_BOUND_TYPE, to, LongRange.DEFAULT_UPPER_BOUND_TYPE, step);
     }
 
     /**

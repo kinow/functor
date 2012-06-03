@@ -52,7 +52,7 @@ public final class DoubleGenerator extends BaseGenerator<Double> {
      * @param to end
      */
     public DoubleGenerator(double from, double to, double step) {
-        this(from, DoubleRange.DEFAULT_LOWER_BOUND_TYPE, to, DoubleRange.DEFAULT_UPPER_BOUND_TYPE, DoubleRange.DEFAULT_STEP.evaluate(from, to));
+        this(from, DoubleRange.DEFAULT_LOWER_BOUND_TYPE, to, DoubleRange.DEFAULT_UPPER_BOUND_TYPE, step);
     }
 
     /**
@@ -96,17 +96,23 @@ public final class DoubleGenerator extends BaseGenerator<Double> {
 	final double step = this.range.getStep();
 	final boolean includeLowerLimit = this.range.getLowerLimit().getBoundType() == BoundType.CLOSED;
 	final boolean includeUpperLimit = this.range.getUpperLimit().getBoundType() == BoundType.CLOSED;
-	final double from = includeLowerLimit ? this.range.getLowerLimit().getValue() : (this.range.getLowerLimit().getValue() + step);
-	final double to = includeUpperLimit ? this.range.getUpperLimit().getValue() : (this.range.getUpperLimit().getValue() - step);
-        if (step < 0) {
-            for (double i = from; i >= to; i += step) {
-                proc.run(i);
-            }
-        } else {
-            for (double i = from; i <= to; i += step) {
-                proc.run(i);
-            }
-        }
+	if (step < 0) {
+	    final double from = includeLowerLimit ? this.range.getLowerLimit()
+		    .getValue() : (this.range.getLowerLimit().getValue() - step);
+	    final double to = includeUpperLimit ? this.range.getUpperLimit()
+		    .getValue() : (this.range.getUpperLimit().getValue() + 1);
+	    for (double i = from; i >= to; i += step) {
+		proc.run(i);
+	    }
+	} else {
+	    final double from = includeLowerLimit ? this.range.getLowerLimit().getValue()
+		    : (this.range.getLowerLimit().getValue() + step);
+	    final double to = includeUpperLimit ? this.range.getUpperLimit().getValue()
+		    : (this.range.getUpperLimit().getValue() - 1);
+	    for (double i = from; i <= to; i += step) {
+		proc.run(i);
+	    }
+	}
     }
 
     /**
