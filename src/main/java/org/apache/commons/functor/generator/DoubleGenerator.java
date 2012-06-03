@@ -97,10 +97,10 @@ public final class DoubleGenerator extends BaseGenerator<Double> {
 	final boolean includeLowerLimit = this.range.getLowerLimit().getBoundType() == BoundType.CLOSED;
 	final boolean includeUpperLimit = this.range.getUpperLimit().getBoundType() == BoundType.CLOSED;
 	if (step < 0) {
-	    final double from = includeLowerLimit ? this.range.getLowerLimit()
-		    .getValue() : (this.range.getLowerLimit().getValue() - step);
-	    final double to = includeUpperLimit ? this.range.getUpperLimit()
-		    .getValue() : (this.range.getUpperLimit().getValue() + 1);
+	    final double from = includeLowerLimit ? this.range.getLowerLimit().getValue() : 
+		(this.range.getLowerLimit().getValue() - step);
+	    final double to = includeUpperLimit ? this.range.getUpperLimit().getValue() : 
+		(this.range.getUpperLimit().getValue() + 1);
 	    for (double i = from; i >= to; i += step) {
 		proc.run(i);
 	    }

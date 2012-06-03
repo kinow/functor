@@ -17,7 +17,7 @@ package org.apache.commons.functor.range;
 import org.apache.commons.functor.BinaryFunction;
 
 /**
- * A generator for a range of integers.
+ * A range of integers.
  * 
  * @since 1.0
  * @version $Revision: $ $Date: $

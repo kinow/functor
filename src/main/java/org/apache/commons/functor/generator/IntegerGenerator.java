@@ -96,13 +96,19 @@ public final class IntegerGenerator extends BaseGenerator<Integer> {
 	final int step = this.range.getStep();
 	final boolean includeLowerLimit = this.range.getLowerLimit().getBoundType() == BoundType.CLOSED;
 	final boolean includeUpperLimit = this.range.getUpperLimit().getBoundType() == BoundType.CLOSED;
-	final int from = includeLowerLimit ? this.range.getLowerLimit().getValue() : (this.range.getLowerLimit().getValue() + step);
-	final int to = includeUpperLimit ? this.range.getUpperLimit().getValue() : (this.range.getUpperLimit().getValue() - step);
         if (step < 0) {
+            final int from = includeLowerLimit ? this.range.getLowerLimit().getValue() : 
+        	(this.range.getLowerLimit().getValue() - step);
+            final int to = includeUpperLimit ? this.range.getUpperLimit().getValue() : 
+        	(this.range.getUpperLimit().getValue() + 1);
             for (int i = from; i >= to; i += step) {
                 proc.run(Integer.valueOf(i));
             }
         } else {
+            final int from = includeLowerLimit ? this.range.getLowerLimit().getValue() : 
+        	(this.range.getLowerLimit().getValue() + step);
+            final int to = includeUpperLimit ? this.range.getUpperLimit().getValue() : 
+        	(this.range.getUpperLimit().getValue() - 1);
             for (int i = from; i <= to; i += step) {
                 proc.run(Integer.valueOf(i));
             }

@@ -23,11 +23,31 @@
  */
 package org.apache.commons.functor.range;
 
+import java.util.List;
+
+import org.apache.commons.functor.UnaryPredicate;
+
 /**
  * 
  * @author Bruno P. Kinoshita - http://www.kinoshita.eti.br
  * @since 0.1
  */
-public class TestCharacterRange {
+public class BaseNumericRangeTest<T extends Number & Comparable<?>> {
 
+    /**
+     * Helper predicate. Returns only the elements missing in a given collection.
+     */
+    protected final class IsElementNotPresent implements UnaryPredicate<T> {
+        
+	private final List<T> list;
+	
+	public IsElementNotPresent(List<T> list) {
+	    this.list = list;
+	}
+	
+        public boolean test(T obj) {
+    	    return !list.contains(obj);
+        }
+    };
+    
 }

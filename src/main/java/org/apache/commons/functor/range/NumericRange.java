@@ -43,48 +43,77 @@ import org.apache.commons.functor.generator.DoubleGenerator;
  */
 public abstract class NumericRange<T extends Number & Comparable<?>, S extends Number & Comparable<?>> implements Range<T, S> {
 
+    /**
+     * TODO
+     * @return
+     */
     public boolean isEmpty() {
-	if(this.getLowerLimit() == null || this.getUpperLimit() == null) {
-	    return Boolean.TRUE;
-	} 
-	double lowerValue = this.getLowerLimit().getValue().doubleValue();
-	double upperValue = this.getUpperLimit().getValue().doubleValue();
-	boolean includeLower = this.getLowerLimit().getBoundType() == BoundType.CLOSED;
-	boolean includeUpper = this.getUpperLimit().getBoundType() == BoundType.CLOSED;
-	if(!includeLower && ! includeUpper && this.getLowerLimit() == this.getUpperLimit()) {
+	double leftValue = this.getLowerLimit().getValue().doubleValue();
+	double rightValue = this.getUpperLimit().getValue().doubleValue();
+	boolean closedLeft = this.getLowerLimit().getBoundType() == BoundType.CLOSED;
+	boolean closedRight = this.getUpperLimit().getBoundType() == BoundType.CLOSED;
+	if(!closedLeft && !closedRight && this.getLowerLimit().equals(this.getUpperLimit())) {
 	    return Boolean.TRUE;
 	}
 	double step = this.getStep().doubleValue();
 	if(step > 0.0) {
-	    double firstValue = includeLower ? lowerValue : lowerValue + step;
-	    return includeUpper ? firstValue > upperValue : firstValue >= upperValue;
+	    double firstValue = closedLeft ? leftValue : leftValue + step;
+	    return closedRight ? firstValue > rightValue : firstValue >= rightValue;
 	} else {
-	    double firstValue = includeUpper ? upperValue : upperValue - step;
-	    return includeLower ? firstValue < lowerValue : firstValue <= lowerValue;
+	    double firstValue = closedLeft ? leftValue : leftValue + step;
+	    return closedRight ? firstValue < rightValue : firstValue <= rightValue;
 	}
     }
     
+    /**
+     * TODO
+     * @param obj
+     * @return
+     */
     public boolean contains(T obj) {
-	double lowerValue = this.getLowerLimit().getValue().doubleValue();
-	double upperValue = this.getUpperLimit().getValue().doubleValue();
-	boolean includeLower = this.getLowerLimit().getBoundType() == BoundType.CLOSED;
-	boolean includeUpper = this.getUpperLimit().getBoundType() == BoundType.CLOSED;
+	if(obj == null) {
+	    return Boolean.FALSE;
+	}
+	double leftValue = this.getLowerLimit().getValue().doubleValue();
+	double rightValue = this.getUpperLimit().getValue().doubleValue();
+	boolean includeLeft = this.getLowerLimit().getBoundType() == BoundType.CLOSED;
+	boolean includeRight = this.getUpperLimit().getBoundType() == BoundType.CLOSED;
 	double step = this.getStep().doubleValue();
 	double value = obj.doubleValue();
 	boolean within = Boolean.FALSE;
-	if(includeLower && includeUpper) {
-	    within = value >= lowerValue && value <= upperValue;
-	} else if(includeLower && !includeUpper) {
-	    within = value >= lowerValue && value < upperValue;
-	} else if(!includeLower && includeUpper) {
-	    within = value > lowerValue && value <= upperValue;
+	if (step > 0.0) {
+	    if (includeLeft && includeRight) {
+		within = value >= leftValue && value <= rightValue;
+	    } else if (includeLeft) {
+		within = value >= leftValue && value < rightValue;
+	    } else if (includeRight) {
+		within = value > leftValue && value <= rightValue;
+	    } else {
+		within = value > leftValue && value < rightValue;
+	    }
 	} else {
-	    within = value > lowerValue && value < upperValue;
+	    if (includeLeft && includeRight) {
+		within = value >= rightValue && value <= leftValue;
+	    } else if (includeLeft) {
+		within = value > rightValue && value <= leftValue;
+	    } else if (includeRight) {
+		within = value >= rightValue && value < leftValue;
+	    } else {
+		within = value > rightValue && value < leftValue;
+	    }
 	}
-	DoubleRange doubleRange = new DoubleRange(this.getLowerLimit().getValue().doubleValue(), this.getLowerLimit().getBoundType(), this.getUpperLimit().getValue().doubleValue(), this.getUpperLimit().getBoundType(), step);
-	return (step == 1 || step == -1) ? within : new DoubleGenerator(doubleRange).toCollection().contains(Double.valueOf(obj.doubleValue()));
+	if(!within) {
+	    return Boolean.FALSE;
+	}
+	DoubleRange doubleRange = new DoubleRange(leftValue, this.getLowerLimit().getBoundType(), rightValue, this.getUpperLimit().getBoundType(), step);
+	return (step == 1 || step == -1) ? Boolean.TRUE : new DoubleGenerator(doubleRange).toCollection().contains(Double.valueOf(obj.doubleValue()));
     }
     
+    /**
+     * TODO
+     * @param col
+     * @return
+     */
     public boolean containsAll(Collection<T> col) {
 	if (col == null || col.size() == 0) {
 	    return Boolean.FALSE;

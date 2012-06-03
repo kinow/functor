@@ -62,7 +62,8 @@ public class Endpoint<T extends Comparable<?>> {
      */
     @Override
     public String toString() {
-        return this.boundType == BoundType.OPEN ? "OPEN" : "CLOSED";
+        String boundType = this.boundType == BoundType.OPEN ? "OPEN" : "CLOSED";
+        return "Endpoint<"+this.value+ ", " + boundType + ">";
     }
     
     /**
