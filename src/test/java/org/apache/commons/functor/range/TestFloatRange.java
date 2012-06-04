@@ -20,13 +20,13 @@ package org.apache.commons.functor.range;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 
-import org.apache.commons.functor.core.collection.FilteredIterator;
 import org.junit.Test;
 
 /**
@@ -35,7 +35,7 @@ import org.junit.Test;
  * @since 1.0f
  * @version $Revision: $ $Date: $
  */
-public class TestFloatRange extends BaseNumericRangeTest<Float> {
+public class TestFloatRange {
 
     // A base range with all longs between -6 and 6
     private final List<Float> fullRange = Collections.unmodifiableList(Arrays.asList(-6.0f, -5.0f, -4.0f, -3.0f, -2.0f, -1.0f, 0.0f, 1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f));
@@ -77,15 +77,14 @@ public class TestFloatRange extends BaseNumericRangeTest<Float> {
     public void testClosedClosedAscendingContains() {
 	// [-5, 5], 3 = -5, -2, 1, 4
 	FloatRange range = new FloatRange(-5, BoundType.CLOSED, 5, BoundType.CLOSED, 3);
-
 	// [-5, 5], 3 = -5, -2, 1, 4
 	List<Float> arr = Arrays.asList(-5.0f, -2.0f, 1.0f, 4.0f);
 	for(Float element : arr) {
 	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
 	}
-	Iterator<Float> elementsNotPresent = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr));
-	while(elementsNotPresent.hasNext()) {
-	    Float element = elementsNotPresent.next();
+	List<Float> elementsNotPresent = new ArrayList<Float>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Float element : elementsNotPresent) {
 	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
 	}
     }
@@ -94,15 +93,14 @@ public class TestFloatRange extends BaseNumericRangeTest<Float> {
     public void testOpenClosedAscendingContains() {
 	// (-5, 5], 3 = -2, 1, 4
 	FloatRange range = new FloatRange(-5, BoundType.OPEN, 5, BoundType.CLOSED, 3);
-
 	// (-5, 5], 3 = -2, 1, 4
 	List<Float> arr = Arrays.asList(-2.0f, 1.0f, 4.0f);
 	for(Float element : arr) {
 	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
 	}
-	Iterator<Float> elementsNotPresent = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr));
-	while(elementsNotPresent.hasNext()) {
-	    Float element = elementsNotPresent.next();
+	List<Float> elementsNotPresent = new ArrayList<Float>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Float element : elementsNotPresent) {
 	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
 	}
     }
@@ -111,15 +109,14 @@ public class TestFloatRange extends BaseNumericRangeTest<Float> {
     public void testClosedOpenAscendingContains() {
 	// [-5, 5), 3 = -5, -2, 1, 4
 	FloatRange range = new FloatRange(-5, BoundType.CLOSED, 5, BoundType.OPEN, 3);
-
 	// (-5, 5], 3 = -5, -2, 1, 4
 	List<Float> arr = Arrays.asList(-5.0f, -2.0f, 1.0f, 4.0f);
 	for(Float element : arr) {
 	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
 	}
-	Iterator<Float> elementsNotPresent = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr));
-	while(elementsNotPresent.hasNext()) {
-	    Float element = elementsNotPresent.next();
+	List<Float> elementsNotPresent = new ArrayList<Float>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Float element : elementsNotPresent) {
 	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
 	}
     }
@@ -128,47 +125,46 @@ public class TestFloatRange extends BaseNumericRangeTest<Float> {
     public void testOpenOpenAscendingContains() {
 	// (-5, 5), 3 = -2, 1, 4
 	FloatRange range = new FloatRange(-5, BoundType.OPEN, 5, BoundType.OPEN, 3);
-
 	// (-5, 5), 3 = -2, 1, 4
 	List<Float> arr = Arrays.asList(-2.0f, 1.0f, 4.0f);
 	for(Float element : arr) {
 	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
 	}
-	Iterator<Float> elementsNotPresent = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr));
-	while(elementsNotPresent.hasNext()) {
-	    Float element = elementsNotPresent.next();
+	List<Float> elementsNotPresent = new ArrayList<Float>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Float element : elementsNotPresent) {
 	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
 	}
     }
     
     @Test
     public void testContainsSingleStepAscending() {
+	// (-2, 2], 1 = -1, 0, 1, 2
 	FloatRange ascendingRange = new FloatRange(-2, BoundType.OPEN, 2, BoundType.CLOSED, 1);
 	// (-2, 2], 1 = -1, 0, 1, 2
         List<Float> arr = Arrays.asList(-1.0f, 0.0f, 1.0f, 2.0f);
         for(Float element : arr) {
             assertTrue("Expected element ["+element+"] is missing in range ["+ascendingRange+"]", ascendingRange.contains(element));
         }
-        Iterator<Float> elementsNotPresent = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr));
-        while(elementsNotPresent.hasNext()) {
-            Float element = elementsNotPresent.next();
-            assertFalse("Unexpected element ["+element+"] is present in range ["+ascendingRange+"]", ascendingRange.contains(element));
-        }
+        List<Float> elementsNotPresent = new ArrayList<Float>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Float element : elementsNotPresent) {
+	    assertFalse("Unexpected element ["+element+"] is present in range ["+ascendingRange+"]", ascendingRange.contains(element));
+	}
     }
     
     @Test
     public void testClosedClosedDescendingContains() {
 	// [5, -5], -3 = 5, 2, -1, -4
 	FloatRange range = new FloatRange(5, BoundType.CLOSED, -5, BoundType.CLOSED, -3);
-
 	// [5, -5], -3 = 5, 2, -1, -4
 	List<Float> arr = Arrays.asList(5.0f, 2.0f, -1.0f, -4.0f);
 	for(Float element : arr) {
 	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
 	}
-	Iterator<Float> elementsNotPresent = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr));
-	while(elementsNotPresent.hasNext()) {
-	    Float element = elementsNotPresent.next();
+	List<Float> elementsNotPresent = new ArrayList<Float>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Float element : elementsNotPresent) {
 	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
 	}
     }
@@ -177,15 +173,14 @@ public class TestFloatRange extends BaseNumericRangeTest<Float> {
     public void testOpenClosedDescendingContains() {
 	// (5, -5], -3 = 2, -1, -4
 	FloatRange range = new FloatRange(5, BoundType.OPEN, -5, BoundType.CLOSED, -3);
-
 	// (5, -5], -3 = 2, -1, -4
 	List<Float> arr = Arrays.asList(2.0f, -1.0f, -4.0f);
 	for(Float element : arr) {
 	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
 	}
-	Iterator<Float> elementsNotPresent = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr));
-	while(elementsNotPresent.hasNext()) {
-	    Float element = elementsNotPresent.next();
+	List<Float> elementsNotPresent = new ArrayList<Float>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Float element : elementsNotPresent) {
 	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
 	}
     }
@@ -194,15 +189,14 @@ public class TestFloatRange extends BaseNumericRangeTest<Float> {
     public void testClosedOpenDescendingContains() {
 	// [5, -5), -3 = 5, 2, -1, -4
 	FloatRange range = new FloatRange(5, BoundType.CLOSED, -5, BoundType.OPEN, -3);
-
 	// [5, -5), -3 = 5, 2, -1, -4
 	List<Float> arr = Arrays.asList(5.0f, 2.0f, -1.0f, -4.0f);
 	for(Float element : arr) {
 	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
 	}
-	Iterator<Float> elementsNotPresent = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr));
-	while(elementsNotPresent.hasNext()) {
-	    Float element = elementsNotPresent.next();
+	List<Float> elementsNotPresent = new ArrayList<Float>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Float element : elementsNotPresent) {
 	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
 	}
     }
@@ -211,32 +205,32 @@ public class TestFloatRange extends BaseNumericRangeTest<Float> {
     public void testOpenOpenDescendingContains() {
 	// (5, -5), -3 = 2, -1, -4
 	FloatRange range = new FloatRange(5, BoundType.OPEN, -5, BoundType.OPEN, -3);
-
 	// (5, -5), -3 = 2, -1, -4
 	List<Float> arr = Arrays.asList(2.0f, -1.0f, -4.0f);
 	for(Float element : arr) {
 	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
 	}
-	Iterator<Float> elementsNotPresent = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr));
-	while(elementsNotPresent.hasNext()) {
-	    Float element = elementsNotPresent.next();
+	List<Float> elementsNotPresent = new ArrayList<Float>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Float element : elementsNotPresent) {
 	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
 	}
     }
     
     @Test
     public void testContainsSingleStepDescending() {
+	// [2, -2), -1 = 2, 1, 0, -1
         FloatRange descendingRange = new FloatRange(2, BoundType.CLOSED, -2, BoundType.OPEN, -1);
 	// [2, -2), -1 = 2, 1, 0, -1
-        List<Float> arr2 = Arrays.asList(2.0f, 1.0f, 0.0f, -1.0f);
-        for(Float element : arr2) {
+        List<Float> arr = Arrays.asList(2.0f, 1.0f, 0.0f, -1.0f);
+        for(Float element : arr) {
             assertTrue("Expected element ["+element+"] is missing in range ["+descendingRange+"]", descendingRange.contains(element));
         }
-        Iterator<Float> elementsNotPresent2 = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr2));
-        while(elementsNotPresent2.hasNext()) {
-            Float element = elementsNotPresent2.next();
-            assertFalse("Unexpected element ["+element+"] is present in range ["+descendingRange+"]", descendingRange.contains(element));
-        }
+        List<Float> elementsNotPresent = new ArrayList<Float>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Float element : elementsNotPresent) {
+	    assertFalse("Unexpected element ["+element+"] is present in range ["+descendingRange+"]", descendingRange.contains(element));
+	}
     }
     
     @Test
@@ -309,9 +303,38 @@ public class TestFloatRange extends BaseNumericRangeTest<Float> {
 	assertEquals("Wrong string value", "FloatRange<(-2.0, 2.0], 1.0>", range.toString());
     }
     
-    @Test(expected=IllegalArgumentException.class)
+    @Test
+    public void testConstructorUsingSameEndpoint() {
+	Endpoint<Float> uniqueEndpoint = new Endpoint<Float>(10.0f, BoundType.CLOSED);
+        try {
+            new FloatRange(uniqueEndpoint, uniqueEndpoint, 1.0f);
+	} catch(IllegalArgumentException e) {
+	    fail("Not expected to get here");
+	}
+    }
+    
+    @Test
     public void testInvalidRange() {
-	new FloatRange(10, BoundType.OPEN, -5, BoundType.CLOSED, 10);
+	try {
+	    new FloatRange(10.0f, BoundType.OPEN, -5.0f, BoundType.CLOSED, 10.0f);
+	    fail("Not expected to get here");
+	} catch(IllegalArgumentException e) {
+	    // Do nothing
+	}
+	Endpoint<Float> leftEndpoint = new Endpoint<Float>(10.0f, BoundType.CLOSED);
+        Endpoint<Float> rightEndpoint = new Endpoint<Float>(-5.0f, BoundType.OPEN);
+        try {
+            new FloatRange(leftEndpoint, rightEndpoint, 1.0f);
+	    fail("Not expected to get here");
+	} catch(IllegalArgumentException e) {
+	    // Do nothing
+	}
+    }
+    
+    @Test
+    public void testDefaultStep() {
+	assertEquals("Invalid default step", Float.valueOf(-1.0f), FloatRange.DEFAULT_STEP.evaluate(10.0f, 1.0f));
+	assertEquals("Invalid default step", Float.valueOf(1.0f), FloatRange.DEFAULT_STEP.evaluate(1.0f, 10.0f));
     }
     
 }

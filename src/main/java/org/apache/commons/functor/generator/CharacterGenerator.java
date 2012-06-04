@@ -96,13 +96,15 @@ public final class CharacterGenerator extends BaseGenerator<Character> {
 	final int step = this.range.getStep();
 	final boolean includeLowerLimit = this.range.getLeftEndpoint().getBoundType() == BoundType.CLOSED;
 	final boolean includeUpperLimit = this.range.getRightEndpoint().getBoundType() == BoundType.CLOSED;
-	final char from = (char) (includeLowerLimit ? this.range.getLeftEndpoint().getValue() : (this.range.getLeftEndpoint().getValue() + step));
-	final char to = (char) (includeUpperLimit ? this.range.getRightEndpoint().getValue() : (this.range.getRightEndpoint().getValue() - step));
         if (step < 0) {
+            final char from = (char) (includeLowerLimit ? this.range.getLeftEndpoint().getValue() : (this.range.getLeftEndpoint().getValue() - step));
+            final char to = (char) (includeUpperLimit ? this.range.getRightEndpoint().getValue() : (this.range.getRightEndpoint().getValue() + 1));
             for (char i = from; i >= to; i += step) {
                 proc.run(i);
             }
         } else {
+            final char from = (char) (includeLowerLimit ? this.range.getLeftEndpoint().getValue() : (this.range.getLeftEndpoint().getValue() + step));
+            final char to = (char) (includeUpperLimit ? this.range.getRightEndpoint().getValue() : (this.range.getRightEndpoint().getValue() - 1));
             for (char i = from; i <= to; i += step) {
                 proc.run(i);
             }

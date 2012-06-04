@@ -42,7 +42,7 @@ public class DoubleRange extends NumericRange<Double, Double> {
      */
     public static final BinaryFunction<Double, Double, Double> DEFAULT_STEP = new BinaryFunction<Double, Double, Double>() {
 	public Double evaluate(Double left, Double right) {
-	    return left > right ? -1d : 1d;
+	    return left > right ? -1.0d : 1.0d;
 	}
     };
     // constructors

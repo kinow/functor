@@ -20,7 +20,9 @@ package org.apache.commons.functor.range;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -35,8 +37,8 @@ import org.junit.Test;
  */
 public class TestCharacterRange {
 
-    // A base range with all integers between a and g
-    private final List<Character> fullRange = Collections.unmodifiableList(Arrays.asList('a', 'b', 'c', 'd', 'e', 'f', 'g'));
+    // A base range with all integers between a and h
+    private final List<Character> fullRange = Collections.unmodifiableList(Arrays.asList('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'));
     
     @Test
     public void testEmptyRanges() {
@@ -48,20 +50,20 @@ public class TestCharacterRange {
 	assertTrue("The range was expected to be empty.", empty3.isEmpty());
 	CharacterRange empty4 = new CharacterRange('a', BoundType.OPEN, 'a', BoundType.OPEN, 1);
 	assertTrue("The range was expected to be empty.", empty4.isEmpty());
-//	CharacterRange empty5 = new CharacterRange(-3, BoundType.CLOSED, -3, BoundType.OPEN, 1);
-//	assertTrue("The range was expected to be empty.", empty5.isEmpty());
-//	CharacterRange empty6 = new CharacterRange(1, BoundType.OPEN, 0, BoundType.CLOSED, -2);
-//	assertTrue("The range was expected to be empty.", empty6.isEmpty());
-//	CharacterRange notEmpty1 = new CharacterRange(-3, BoundType.CLOSED, -3, BoundType.CLOSED, 1);
-//	assertFalse("The range was not expected to be empty.", notEmpty1.isEmpty());
-//	CharacterRange notEmpty2 = new CharacterRange(-3, BoundType.OPEN, 'g', BoundType.CLOSED, 1);
-//	assertFalse("The range was not expected to be empty.", notEmpty2.isEmpty());
-//	CharacterRange notEmpty3 = new CharacterRange('a', BoundType.OPEN, 1, BoundType.CLOSED, -1);
-//	assertFalse("The range was not expected to be empty.", notEmpty3.isEmpty());
-//	CharacterRange notEmpty4 = new CharacterRange('a', BoundType.CLOSED, 1, BoundType.OPEN, -1);
-//	assertFalse("The range was not expected to be empty.", notEmpty4.isEmpty());
-//	CharacterRange notEmpty5 = new CharacterRange(1, BoundType.CLOSED, 2, BoundType.OPEN, 1);
-//	assertFalse("The range was not expected to be empty.", notEmpty5.isEmpty());
+	CharacterRange empty5 = new CharacterRange('b', BoundType.CLOSED, 'b', BoundType.OPEN, 1);
+	assertTrue("The range was expected to be empty.", empty5.isEmpty());
+	CharacterRange empty6 = new CharacterRange('d', BoundType.OPEN, 'c', BoundType.CLOSED, -2);
+	assertTrue("The range was expected to be empty.", empty6.isEmpty());
+	CharacterRange notEmpty1 = new CharacterRange('a', BoundType.CLOSED, 'a', BoundType.CLOSED, 1);
+	assertFalse("The range was not expected to be empty.", notEmpty1.isEmpty());
+	CharacterRange notEmpty2 = new CharacterRange('a', BoundType.OPEN, 'b', BoundType.CLOSED, 1);
+	assertFalse("The range was not expected to be empty.", notEmpty2.isEmpty());
+	CharacterRange notEmpty3 = new CharacterRange('b', BoundType.OPEN, 'a', BoundType.CLOSED, -1);
+	assertFalse("The range was not expected to be empty.", notEmpty3.isEmpty());
+	CharacterRange notEmpty4 = new CharacterRange('b', BoundType.CLOSED, 'a', BoundType.OPEN, -1);
+	assertFalse("The range was not expected to be empty.", notEmpty4.isEmpty());
+	CharacterRange notEmpty5 = new CharacterRange('a', BoundType.CLOSED, 'b', BoundType.OPEN, 1);
+	assertFalse("The range was not expected to be empty.", notEmpty5.isEmpty());
     }
     
     @Test
@@ -71,171 +73,165 @@ public class TestCharacterRange {
 	assertEquals(new Endpoint<Comparable<?>>('j', BoundType.CLOSED), range.getRightEndpoint());
     }
     
-//    @Test
-//    public void testClosedClosedAscendingContains() {
-//	// [-5, 5], 3 = -5, 'g', 1, 4
-//	CharacterRange range = new CharacterRange('a', BoundType.CLOSED, 'g', BoundType.CLOSED, 3);
-//
-//	// [-5, 5], 3 = -5, 'g', 1, 4
-//	List<Character> arr = Arrays.asList('a', 'g', 1, 4);
-//	for(Integer element : arr) {
-//	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
-//	}
-//	Iterator<Character> elementsNotPresent = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr));
-//	while(elementsNotPresent.hasNext()) {
-//	    Integer element = elementsNotPresent.next();
-//	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
-//	}
-//    }
-//    
-//    @Test
-//    public void testOpenClosedAscendingContains() {
-//	// (-5, 5], 3 = -2, 1, 4
-//	CharacterRange range = new CharacterRange(-5, BoundType.OPEN, 5, BoundType.CLOSED, 3);
-//
-//	// (-5, 5], 3 = -2, 1, 4
-//	List<Character> arr = Arrays.asList(-2, 1, 4);
-//	for(Integer element : arr) {
-//	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
-//	}
-//	Iterator<Character> elementsNotPresent = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr));
-//	while(elementsNotPresent.hasNext()) {
-//	    Integer element = elementsNotPresent.next();
-//	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
-//	}
-//    }
-//    
-//    @Test
-//    public void testClosedOpenAscendingContains() {
-//	// [-5, 5), 3 = -5, 'g', 1, 4
-//	CharacterRange range = new CharacterRange(-5, BoundType.CLOSED, 5, BoundType.OPEN, 3);
-//
-//	// (-5, 5], 3 = -5, 'g', 1, 4
-//	List<Character> arr = Arrays.asList(-5, 'g', 1, 4);
-//	for(Integer element : arr) {
-//	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
-//	}
-//	Iterator<Character> elementsNotPresent = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr));
-//	while(elementsNotPresent.hasNext()) {
-//	    Integer element = elementsNotPresent.next();
-//	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
-//	}
-//    }
-//    
-//    @Test
-//    public void testOpenOpenAscendingContains() {
-//	// (-5, 5), 3 = -2, 1, 4
-//	CharacterRange range = new CharacterRange(-5, BoundType.OPEN, 5, BoundType.OPEN, 3);
-//
-//	// (-5, 5), 3 = -2, 1, 4
-//	List<Character> arr = Arrays.asList(-2, 1, 4);
-//	for(Integer element : arr) {
-//	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
-//	}
-//	Iterator<Character> elementsNotPresent = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr));
-//	while(elementsNotPresent.hasNext()) {
-//	    Integer element = elementsNotPresent.next();
-//	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
-//	}
-//    }
-//    
-//    @Test
-//    public void testContainsSingleStepAscending() {
-//	CharacterRange ascendingRange = new CharacterRange(-2, BoundType.OPEN, 2, BoundType.CLOSED, 1);
-//	// (-2, 2], 1 = -1, 0, 1, 2
-//        List<Character> arr = Arrays.asList(-1, 0, 1, 2);
-//        for(Integer element : arr) {
-//            assertTrue("Expected element ["+element+"] is missing in range ["+ascendingRange+"]", ascendingRange.contains(element));
-//        }
-//        Iterator<Character> elementsNotPresent = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr));
-//        while(elementsNotPresent.hasNext()) {
-//            Integer element = elementsNotPresent.next();
-//            assertFalse("Unexpected element ["+element+"] is present in range ["+ascendingRange+"]", ascendingRange.contains(element));
-//        }
-//    }
-//    
-//    @Test
-//    public void testClosedClosedDescendingContains() {
-//	// [5, -5], -3 = 5, 2, -1, -4
-//	CharacterRange range = new CharacterRange(5, BoundType.CLOSED, -5, BoundType.CLOSED, -3);
-//
-//	// [5, -5], -3 = 5, 2, -1, -4
-//	List<Character> arr = Arrays.asList(5, 2, -1, -4);
-//	for(Integer element : arr) {
-//	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
-//	}
-//	Iterator<Character> elementsNotPresent = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr));
-//	while(elementsNotPresent.hasNext()) {
-//	    Integer element = elementsNotPresent.next();
-//	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
-//	}
-//    }
-//    
-//    @Test
-//    public void testOpenClosedDescendingContains() {
-//	// (5, -5], -3 = 2, -1, -4
-//	CharacterRange range = new CharacterRange(5, BoundType.OPEN, -5, BoundType.CLOSED, -3);
-//
-//	// (5, -5], -3 = 2, -1, -4
-//	List<Character> arr = Arrays.asList(2, -1, -4);
-//	for(Integer element : arr) {
-//	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
-//	}
-//	Iterator<Character> elementsNotPresent = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr));
-//	while(elementsNotPresent.hasNext()) {
-//	    Integer element = elementsNotPresent.next();
-//	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
-//	}
-//    }
-//    
-//    @Test
-//    public void testClosedOpenDescendingContains() {
-//	// [5, -5), -3 = 5, 2, -1, -4
-//	CharacterRange range = new CharacterRange(5, BoundType.CLOSED, -5, BoundType.OPEN, -3);
-//
-//	// [5, -5), -3 = 5, 2, -1, -4
-//	List<Character> arr = Arrays.asList(5, 2, -1, -4);
-//	for(Integer element : arr) {
-//	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
-//	}
-//	Iterator<Character> elementsNotPresent = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr));
-//	while(elementsNotPresent.hasNext()) {
-//	    Integer element = elementsNotPresent.next();
-//	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
-//	}
-//    }
-//    
-//    @Test
-//    public void testOpenOpenDescendingContains() {
-//	// (5, -5), -3 = 2, -1, -4
-//	CharacterRange range = new CharacterRange(5, BoundType.OPEN, -5, BoundType.OPEN, -3);
-//
-//	// (5, -5), -3 = 2, -1, -4
-//	List<Character> arr = Arrays.asList(2, -1, -4);
-//	for(Integer element : arr) {
-//	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
-//	}
-//	Iterator<Character> elementsNotPresent = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr));
-//	while(elementsNotPresent.hasNext()) {
-//	    Integer element = elementsNotPresent.next();
-//	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
-//	}
-//    }
-//    
-//    @Test
-//    public void testContainsSingleStepDescending() {
-//        CharacterRange descendingRange = new CharacterRange('a', BoundType.CLOSED, 'g', BoundType.OPEN, -1);
-//	// [2, -2), -1 = 2, 1, 0, -1
-//        List<Character> arr2 = Arrays.asList(2, 1, 0, -1);
-//        for(Integer element : arr2) {
-//            assertTrue("Expected element ["+element+"] is missing in range ["+descendingRange+"]", descendingRange.contains(element));
-//        }
-//        Iterator<Character> elementsNotPresent2 = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr2));
-//        while(elementsNotPresent2.hasNext()) {
-//            Integer element = elementsNotPresent2.next();
-//            assertFalse("Unexpected element ["+element+"] is present in range ["+descendingRange+"]", descendingRange.contains(element));
-//        }
-//    }
+    @Test
+    public void testClosedClosedAscendingContains() {
+	// [b, l], 3 = 'b', 'e', 'h', 'k'
+	CharacterRange range = new CharacterRange('b', BoundType.CLOSED, 'l', BoundType.CLOSED, 3);
+	// [b, l], 3 = 'b', 'e', 'h', 'k'
+	List<Character> arr = Arrays.asList('b', 'e', 'h', 'k');
+	for(Character element : arr) {
+	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
+	}
+	List<Character> elementsNotPresent = new ArrayList<Character>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Character element : elementsNotPresent) {
+	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
+	}
+    }
+    
+    @Test
+    public void testOpenClosedAscendingContains() {
+	// (b, l], 3 = 'e', 'h', 'k'
+	CharacterRange range = new CharacterRange('b', BoundType.OPEN, 'l', BoundType.CLOSED, 3);
+	// (b, l], 3 = 'e', 'h', 'k'
+	List<Character> arr = Arrays.asList('e', 'h', 'k');
+	for(Character element : arr) {
+	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
+	}
+	List<Character> elementsNotPresent = new ArrayList<Character>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Character element : elementsNotPresent) {
+	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
+	}
+    }
+    
+    @Test
+    public void testClosedOpenAscendingContains() {
+	// [b, l), 3 = 'b', 'e', 'h', 'k'
+	CharacterRange range = new CharacterRange('b', BoundType.CLOSED, 'l', BoundType.OPEN, 3);
+	// [b, l), 3 = 'b', 'e', 'h', 'k'
+	List<Character> arr = Arrays.asList('b', 'e', 'h', 'k');
+	for(Character element : arr) {
+	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
+	}
+	List<Character> elementsNotPresent = new ArrayList<Character>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Character element : elementsNotPresent) {
+	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
+	}
+    }
+    
+    @Test
+    public void testOpenOpenAscendingContains() {
+	// (b, l), 3 = 'e', 'h', 'k'
+	CharacterRange range = new CharacterRange('b', BoundType.OPEN, 'l', BoundType.OPEN, 3);
+	// (b, l), 3 = 'e', 'h', 'k'
+	List<Character> arr = Arrays.asList('e', 'h', 'k');
+	for(Character element : arr) {
+	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
+	}
+	List<Character> elementsNotPresent = new ArrayList<Character>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Character element : elementsNotPresent) {
+	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
+	}
+    }
+    
+    @Test
+    public void testContainsSingleStepAscending() {
+	// (b, l], 1 = 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l'
+	CharacterRange ascendingRange = new CharacterRange('b', BoundType.OPEN, 'l', BoundType.CLOSED, 1);
+	// (b, l], 1 = 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l'
+        List<Character> arr = Arrays.asList('c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l');
+        for(Character element : arr) {
+            assertTrue("Expected element ["+element+"] is missing in range ["+ascendingRange+"]", ascendingRange.contains(element));
+        }
+        List<Character> elementsNotPresent = new ArrayList<Character>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Character element : elementsNotPresent) {
+	    assertFalse("Unexpected element ["+element+"] is present in range ["+ascendingRange+"]", ascendingRange.contains(element));
+	}
+    }
+    
+    @Test
+    public void testClosedClosedDescendingContains() {
+	// [l, b], -3 = 'l', 'i', 'f', 'c'
+	CharacterRange range = new CharacterRange('l', BoundType.CLOSED, 'b', BoundType.CLOSED, -3);
+	// [l, b], -3 = 'l', 'i', 'f', 'c'
+	List<Character> arr = Arrays.asList('l', 'i', 'f', 'c');
+	for(Character element : arr) {
+	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
+	}
+	List<Character> elementsNotPresent = new ArrayList<Character>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Character element : elementsNotPresent) {
+	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
+	}
+    }
+    
+    @Test
+    public void testOpenClosedDescendingContains() {
+	// (l, b], -3 = 'i', 'f', 'c'
+	CharacterRange range = new CharacterRange('l', BoundType.OPEN, 'b', BoundType.CLOSED, -3);
+	// (l, b], -3 = 'i', 'f', 'c'
+	List<Character> arr = Arrays.asList('i', 'f', 'c');
+	for(Character element : arr) {
+	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
+	}
+	List<Character> elementsNotPresent = new ArrayList<Character>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Character element : elementsNotPresent) {
+	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
+	}
+    }
+    
+    @Test
+    public void testClosedOpenDescendingContains() {
+	// [l, b), -3 = 'l', 'i', 'f', 'c'
+	CharacterRange range = new CharacterRange('l', BoundType.CLOSED, 'b', BoundType.OPEN, -3);
+	// [l, b), -3 = 'l', 'i', 'f', 'c'
+	List<Character> arr = Arrays.asList('l', 'i', 'f', 'c');
+	for(Character element : arr) {
+	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
+	}
+	List<Character> elementsNotPresent = new ArrayList<Character>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Character element : elementsNotPresent) {
+	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
+	}
+    }
+    
+    @Test
+    public void testOpenOpenDescendingContains() {
+	// (l, b), -3 = 'i', 'f', 'c'
+	CharacterRange range = new CharacterRange('l', BoundType.OPEN, 'b', BoundType.OPEN, -3);
+	// (l, b), -3 = 'i', 'f', 'c'
+	List<Character> arr = Arrays.asList('i', 'f', 'c');
+	for(Character element : arr) {
+	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
+	}
+	List<Character> elementsNotPresent = new ArrayList<Character>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Character element : elementsNotPresent) {
+	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
+	}
+    }
+    
+    @Test
+    public void testContainsSingleStepDescending() {
+	// [l, b), -1 = 'l', 'k', 'j', 'i', 'h', 'g', 'f', 'e', 'd', 'c'
+        CharacterRange descendingRange = new CharacterRange('l', BoundType.CLOSED, 'b', BoundType.OPEN, -1);
+        // [l, b), -1 = 'l', 'k', 'j', 'i', 'h', 'g', 'f', 'e', 'd', 'c'
+        List<Character> arr = Arrays.asList('l', 'k', 'j', 'i', 'h', 'g', 'f', 'e', 'd', 'c');
+        for(Character element : arr) {
+            assertTrue("Expected element ["+element+"] is missing in range ["+descendingRange+"]", descendingRange.contains(element));
+        }
+        List<Character> elementsNotPresent = new ArrayList<Character>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Character element : elementsNotPresent) {
+	    assertFalse("Unexpected element ["+element+"] is present in range ["+descendingRange+"]", descendingRange.contains(element));
+	}
+    }
     
     @Test
     public void testContainsNullOrEmpty() {
@@ -301,9 +297,38 @@ public class TestCharacterRange {
 	assertEquals("Wrong string value", "CharacterRange<(a, b], 1>", range.toString());
     }
     
-    @Test(expected=IllegalArgumentException.class)
+    @Test
+    public void testConstructorUsingSameEndpoint() {
+	Endpoint<Character> uniqueEndpoint = new Endpoint<Character>('a', BoundType.CLOSED);
+        try {
+            new CharacterRange(uniqueEndpoint, uniqueEndpoint, 1);
+	} catch(IllegalArgumentException e) {
+	    fail("Not expected to get here");
+	}
+    }
+    
+    @Test
     public void testInvalidRange() {
-	new CharacterRange('z', BoundType.OPEN, 'e', BoundType.CLOSED, 10);
+	try {
+	    new CharacterRange('a', BoundType.OPEN, 'z', BoundType.CLOSED, -100);
+	    fail("Not expected to get here");
+	} catch(IllegalArgumentException e) {
+	    // Do nothing
+	}
+	Endpoint<Character> leftEndpoint = new Endpoint<Character>('a', BoundType.CLOSED);
+        Endpoint<Character> rightEndpoint = new Endpoint<Character>('z', BoundType.OPEN);
+        try {
+            new CharacterRange(leftEndpoint, rightEndpoint, -100);
+	    fail("Not expected to get here");
+	} catch(IllegalArgumentException e) {
+	    // Do nothing
+	}
+    }
+    
+    @Test
+    public void testDefaultStep() {
+	assertEquals("Invalid default step", Integer.valueOf(-1), CharacterRange.DEFAULT_STEP.evaluate('c', 'a'));
+	assertEquals("Invalid default step", Integer.valueOf(1), CharacterRange.DEFAULT_STEP.evaluate('a', 'c'));
     }
     
 }

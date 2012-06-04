@@ -20,13 +20,13 @@ package org.apache.commons.functor.range;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 
-import org.apache.commons.functor.core.collection.FilteredIterator;
 import org.junit.Test;
 
 /**
@@ -35,7 +35,7 @@ import org.junit.Test;
  * @since 1.0
  * @version $Revision: $ $Date: $
  */
-public class TestLongRange extends BaseNumericRangeTest<Long> {
+public class TestLongRange {
 
     // A base range with all longs between -6 and 6
     private final List<Long> fullRange = Collections.unmodifiableList(Arrays.asList(-6L, -5L, -4L, -3L, -2L, -1L, 0L, 1L, 2L, 3L, 4L, 5L, 6L));
@@ -77,15 +77,14 @@ public class TestLongRange extends BaseNumericRangeTest<Long> {
     public void testClosedClosedAscendingContains() {
 	// [-5, 5], 3 = -5, -2, 1, 4
 	LongRange range = new LongRange(-5, BoundType.CLOSED, 5, BoundType.CLOSED, 3);
-
 	// [-5, 5], 3 = -5, -2, 1, 4
 	List<Long> arr = Arrays.asList(-5L, -2L, 1L, 4L);
 	for(Long element : arr) {
 	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
 	}
-	Iterator<Long> elementsNotPresent = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr));
-	while(elementsNotPresent.hasNext()) {
-	    Long element = elementsNotPresent.next();
+	List<Long> elementsNotPresent = new ArrayList<Long>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Long element : elementsNotPresent) {
 	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
 	}
     }
@@ -94,15 +93,14 @@ public class TestLongRange extends BaseNumericRangeTest<Long> {
     public void testOpenClosedAscendingContains() {
 	// (-5, 5], 3 = -2, 1, 4
 	LongRange range = new LongRange(-5, BoundType.OPEN, 5, BoundType.CLOSED, 3);
-
 	// (-5, 5], 3 = -2, 1, 4
 	List<Long> arr = Arrays.asList(-2L, 1L, 4L);
 	for(Long element : arr) {
 	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
 	}
-	Iterator<Long> elementsNotPresent = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr));
-	while(elementsNotPresent.hasNext()) {
-	    Long element = elementsNotPresent.next();
+	List<Long> elementsNotPresent = new ArrayList<Long>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Long element : elementsNotPresent) {
 	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
 	}
     }
@@ -111,15 +109,14 @@ public class TestLongRange extends BaseNumericRangeTest<Long> {
     public void testClosedOpenAscendingContains() {
 	// [-5, 5), 3 = -5, -2, 1, 4
 	LongRange range = new LongRange(-5, BoundType.CLOSED, 5, BoundType.OPEN, 3);
-
 	// (-5, 5], 3 = -5, -2, 1, 4
 	List<Long> arr = Arrays.asList(-5L, -2L, 1L, 4L);
 	for(Long element : arr) {
 	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
 	}
-	Iterator<Long> elementsNotPresent = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr));
-	while(elementsNotPresent.hasNext()) {
-	    Long element = elementsNotPresent.next();
+	List<Long> elementsNotPresent = new ArrayList<Long>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Long element : elementsNotPresent) {
 	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
 	}
     }
@@ -128,47 +125,46 @@ public class TestLongRange extends BaseNumericRangeTest<Long> {
     public void testOpenOpenAscendingContains() {
 	// (-5, 5), 3 = -2, 1, 4
 	LongRange range = new LongRange(-5, BoundType.OPEN, 5, BoundType.OPEN, 3);
-
 	// (-5, 5), 3 = -2, 1, 4
 	List<Long> arr = Arrays.asList(-2L, 1L, 4L);
 	for(Long element : arr) {
 	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
 	}
-	Iterator<Long> elementsNotPresent = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr));
-	while(elementsNotPresent.hasNext()) {
-	    Long element = elementsNotPresent.next();
+	List<Long> elementsNotPresent = new ArrayList<Long>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Long element : elementsNotPresent) {
 	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
 	}
     }
     
     @Test
     public void testContainsSingleStepAscending() {
+	// (-2, 2], 1 = -1, 0, 1, 2
 	LongRange ascendingRange = new LongRange(-2, BoundType.OPEN, 2, BoundType.CLOSED, 1);
 	// (-2, 2], 1 = -1, 0, 1, 2
         List<Long> arr = Arrays.asList(-1L, 0L, 1L, 2L);
         for(Long element : arr) {
             assertTrue("Expected element ["+element+"] is missing in range ["+ascendingRange+"]", ascendingRange.contains(element));
         }
-        Iterator<Long> elementsNotPresent = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr));
-        while(elementsNotPresent.hasNext()) {
-            Long element = elementsNotPresent.next();
-            assertFalse("Unexpected element ["+element+"] is present in range ["+ascendingRange+"]", ascendingRange.contains(element));
-        }
+        List<Long> elementsNotPresent = new ArrayList<Long>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Long element : elementsNotPresent) {
+	    assertFalse("Unexpected element ["+element+"] is present in range ["+ascendingRange+"]", ascendingRange.contains(element));
+	}
     }
     
     @Test
     public void testClosedClosedDescendingContains() {
 	// [5, -5], -3 = 5, 2, -1, -4
 	LongRange range = new LongRange(5, BoundType.CLOSED, -5, BoundType.CLOSED, -3);
-
 	// [5, -5], -3 = 5, 2, -1, -4
 	List<Long> arr = Arrays.asList(5L, 2L, -1L, -4L);
 	for(Long element : arr) {
 	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
 	}
-	Iterator<Long> elementsNotPresent = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr));
-	while(elementsNotPresent.hasNext()) {
-	    Long element = elementsNotPresent.next();
+	List<Long> elementsNotPresent = new ArrayList<Long>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Long element : elementsNotPresent) {
 	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
 	}
     }
@@ -177,15 +173,14 @@ public class TestLongRange extends BaseNumericRangeTest<Long> {
     public void testOpenClosedDescendingContains() {
 	// (5, -5], -3 = 2, -1, -4
 	LongRange range = new LongRange(5, BoundType.OPEN, -5, BoundType.CLOSED, -3);
-
 	// (5, -5], -3 = 2, -1, -4
 	List<Long> arr = Arrays.asList(2L, -1L, -4L);
 	for(Long element : arr) {
 	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
 	}
-	Iterator<Long> elementsNotPresent = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr));
-	while(elementsNotPresent.hasNext()) {
-	    Long element = elementsNotPresent.next();
+	List<Long> elementsNotPresent = new ArrayList<Long>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Long element : elementsNotPresent) {
 	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
 	}
     }
@@ -194,15 +189,14 @@ public class TestLongRange extends BaseNumericRangeTest<Long> {
     public void testClosedOpenDescendingContains() {
 	// [5, -5), -3 = 5, 2, -1, -4
 	LongRange range = new LongRange(5, BoundType.CLOSED, -5, BoundType.OPEN, -3);
-
 	// [5, -5), -3 = 5, 2, -1, -4
 	List<Long> arr = Arrays.asList(5L, 2L, -1L, -4L);
 	for(Long element : arr) {
 	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
 	}
-	Iterator<Long> elementsNotPresent = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr));
-	while(elementsNotPresent.hasNext()) {
-	    Long element = elementsNotPresent.next();
+	List<Long> elementsNotPresent = new ArrayList<Long>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Long element : elementsNotPresent) {
 	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
 	}
     }
@@ -211,32 +205,32 @@ public class TestLongRange extends BaseNumericRangeTest<Long> {
     public void testOpenOpenDescendingContains() {
 	// (5, -5), -3 = 2, -1, -4
 	LongRange range = new LongRange(5, BoundType.OPEN, -5, BoundType.OPEN, -3);
-
 	// (5, -5), -3 = 2, -1, -4
 	List<Long> arr = Arrays.asList(2L, -1L, -4L);
 	for(Long element : arr) {
 	    assertTrue("Expected element ["+element+"] is missing in range ["+range+"]", range.contains(element));
 	}
-	Iterator<Long> elementsNotPresent = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr));
-	while(elementsNotPresent.hasNext()) {
-	    Long element = elementsNotPresent.next();
+	List<Long> elementsNotPresent = new ArrayList<Long>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Long element : elementsNotPresent) {
 	    assertFalse("Unexpected element ["+element+"] is present in range ["+range+"]", range.contains(element));
 	}
     }
     
     @Test
     public void testContainsSingleStepDescending() {
+	// [2, -2), -1 = 2, 1, 0, -1
         LongRange descendingRange = new LongRange(2, BoundType.CLOSED, -2, BoundType.OPEN, -1);
 	// [2, -2), -1 = 2, 1, 0, -1
-        List<Long> arr2 = Arrays.asList(2L, 1L, 0L, -1L);
-        for(Long element : arr2) {
+        List<Long> arr = Arrays.asList(2L, 1L, 0L, -1L);
+        for(Long element : arr) {
             assertTrue("Expected element ["+element+"] is missing in range ["+descendingRange+"]", descendingRange.contains(element));
         }
-        Iterator<Long> elementsNotPresent2 = FilteredIterator.filter(fullRange.iterator(), new IsElementNotPresent(arr2));
-        while(elementsNotPresent2.hasNext()) {
-            Long element = elementsNotPresent2.next();
-            assertFalse("Unexpected element ["+element+"] is present in range ["+descendingRange+"]", descendingRange.contains(element));
-        }
+        List<Long> elementsNotPresent = new ArrayList<Long>(fullRange);
+	elementsNotPresent.removeAll(arr);
+	for(Long element : elementsNotPresent) {
+	    assertFalse("Unexpected element ["+element+"] is present in range ["+descendingRange+"]", descendingRange.contains(element));
+	}
     }
     
     @Test
@@ -309,9 +303,38 @@ public class TestLongRange extends BaseNumericRangeTest<Long> {
 	assertEquals("Wrong string value", "LongRange<(-2, 2], 1>", range.toString());
     }
     
-    @Test(expected=IllegalArgumentException.class)
+    @Test
+    public void testConstructorUsingSameEndpoint() {
+	Endpoint<Long> uniqueEndpoint = new Endpoint<Long>(10L, BoundType.CLOSED);
+        try {
+            new LongRange(uniqueEndpoint, uniqueEndpoint, 1L);
+	} catch(IllegalArgumentException e) {
+	    fail("Not expected to get here");
+	}
+    }
+    
+    @Test
     public void testInvalidRange() {
-	new LongRange(10, BoundType.OPEN, -5, BoundType.CLOSED, 10);
+	try {
+	    new LongRange(10, BoundType.OPEN, -5, BoundType.CLOSED, 10);
+	    fail("Not expected to get here");
+	} catch(IllegalArgumentException e) {
+	    // Do nothing
+	}
+	Endpoint<Long> leftEndpoint = new Endpoint<Long>(10L, BoundType.CLOSED);
+        Endpoint<Long> rightEndpoint = new Endpoint<Long>(-5L, BoundType.OPEN);
+        try {
+            new LongRange(leftEndpoint, rightEndpoint, 1L);
+	    fail("Not expected to get here");
+	} catch(IllegalArgumentException e) {
+	    // Do nothing
+	}
+    }
+    
+    @Test
+    public void testDefaultStep() {
+	assertEquals("Invalid default step", Long.valueOf(-1L), LongRange.DEFAULT_STEP.evaluate(10L, 1L));
+	assertEquals("Invalid default step", Long.valueOf(1L), LongRange.DEFAULT_STEP.evaluate(1L, 10L));
     }
     
 }

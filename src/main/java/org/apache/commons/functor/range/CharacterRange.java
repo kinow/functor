@@ -17,7 +17,7 @@ package org.apache.commons.functor.range;
 import java.util.Collection;
 
 import org.apache.commons.functor.BinaryFunction;
-import org.apache.commons.functor.generator.IntegerGenerator;
+import org.apache.commons.functor.generator.CharacterGenerator;
 
 /**
  * A generator for a range of characters.
@@ -223,8 +223,8 @@ public final class CharacterRange implements Range<Character, Integer> {
 	if(!within) {
 	    return Boolean.FALSE;
 	}
-	IntegerRange integerRange = new IntegerRange(leftValue, this.getLeftEndpoint().getBoundType(), rightValue, this.getRightEndpoint().getBoundType(), step);
-	return (step == 1 || step == -1) ? Boolean.TRUE : new IntegerGenerator(integerRange).toCollection().contains(obj.charValue());
+	CharacterRange characterRange = new CharacterRange(leftValue, this.getLeftEndpoint().getBoundType(), rightValue, this.getRightEndpoint().getBoundType(), step);
+	return (step == 1 || step == -1) ? Boolean.TRUE : new CharacterGenerator(characterRange).toCollection().contains(obj.charValue());
     }
 
     /* (non-Javadoc)

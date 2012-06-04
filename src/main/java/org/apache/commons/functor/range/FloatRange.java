@@ -42,7 +42,7 @@ public class FloatRange extends NumericRange<Float, Float> {
      */
     public static final BinaryFunction<Float, Float, Float> DEFAULT_STEP = new BinaryFunction<Float, Float, Float>() {
 	public Float evaluate(Float left, Float right) {
-	    return left > right ? -1f : 1f;
+	    return left > right ? -1.0f : 1.0f;
 	}
     };
     // constructors
@@ -75,7 +75,7 @@ public class FloatRange extends NumericRange<Float, Float> {
      * @param to end
      */
     public FloatRange(float from, float to) {
-        this(from, to, DEFAULT_STEP.evaluate(from, to).intValue());
+        this(from, to, DEFAULT_STEP.evaluate(from, to).floatValue());
     }
     
     /**

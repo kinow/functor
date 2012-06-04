@@ -113,7 +113,7 @@ public final class LongRange extends NumericRange<Long, Long> {
      * @param step increment
      */
     public LongRange(Endpoint<Long> from, Endpoint<Long> to, long step) {
-        if (from != to && Long.signum(step) != Long.signum(to.getValue()-from.getValue())) {
+        if (from.equals(to) == Boolean.FALSE && Long.signum(step) != Long.signum(to.getValue()-from.getValue())) {
             throw new IllegalArgumentException("Will never reach " + to + " from " + from + " using step " + step);
         }
         this.leftEndpoint = from;
