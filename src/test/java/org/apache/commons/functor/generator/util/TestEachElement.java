@@ -18,6 +18,7 @@ package org.apache.commons.functor.generator.util;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertNotNull;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -134,6 +135,12 @@ public class TestEachElement extends BaseFunctorTest {
     public void testWithIterator() {
         Collection<?> col = EachElement.from(list.iterator()).toCollection();
         assertEquals("[0, 1, 2, 3, 4]", col.toString());
+    }
+    
+    @Test
+    public void testDefaultConstructor() {
+	EachElement eachElement = new EachElement();
+	assertNotNull(eachElement);
     }
 
 }

@@ -1,7 +1,10 @@
 /*
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
  *
  *      http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -17,16 +20,16 @@ package org.apache.commons.functor.range;
 import java.util.Collection;
 
 /**
- * Represent an interval of elements that varies from the <b>left endpoint</b> 
- * to the <b>right endpoint</b>. Each limit in this range is an 
- * {@link Endpoint Endpoint}. The left and the right limits can be 
- * <b>inclusive</b> (<b>bounded</b>, <b>closed</b>) or <b>exclusive</b> 
- * (<b>unbounded</b>, <b>open</b>).
+ * Represent an interval of elements that varies from the <b>left endpoint</b>
+ * to the <b>right endpoint</b>. Each limit in this range is an {@link Endpoint
+ * Endpoint}. The left and the right limits can be <b>inclusive</b>
+ * (<b>bounded</b>, <b>closed</b>) or <b>exclusive</b> (<b>unbounded</b>,
+ * <b>open</b>).
  * <p>
- * The difference between each element within this range is called <b>step</b>. 
- * The step can be positive or negative, displaying whether the range elements 
+ * The difference between each element within this range is called <b>step</b>.
+ * The step can be positive or negative, displaying whether the range elements
  * are ascending or descending.
- * 
+ *
  * @param <T> the type of elements held by this range.
  * @param <S> the type of the step of this range.
  * @see org.apache.commons.functor.range.Endpoint
@@ -34,52 +37,60 @@ import java.util.Collection;
  * @version $Revision: $ $Date: $
  */
 public interface Range<T extends Comparable<?>, S extends Comparable<?>> {
+
     /**
      * Default left bound type.
      */
-    public static final BoundType DEFAULT_LEFT_BOUND_TYPE = BoundType.CLOSED;
+    BoundType DEFAULT_LEFT_BOUND_TYPE = BoundType.CLOSED;
+
     /**
      * Default right bound type.
      */
-    public static final BoundType DEFAULT_RIGHT_BOUND_TYPE = BoundType.OPEN;
+    BoundType DEFAULT_RIGHT_BOUND_TYPE = BoundType.OPEN;
+
     /**
      * Get the left limit of this range.
-     * 
+     *
      * @return Endpoint
      */
     Endpoint<T> getLeftEndpoint();
-    
+
     /**
      * Get the right limit of this range.
-     * 
+     *
      * @return Endpoint
      */
     Endpoint<T> getRightEndpoint();
-    
+
     /**
      * Get the step between elements of this range.
-     * 
+     *
      * @return Number
      */
     S getStep();
-    
+
     /**
-     * TODO
-     * @return
+     * Returns <code>true</code> if this range is empty.
+     *
+     * @return <code>true</code> if this range is empty
      */
-    public boolean isEmpty();
-    
+    boolean isEmpty();
+
     /**
-     * TODO
-     * @param obj
-     * @return
+     * Returns <code>true</code> if this range contains the specified element.
+     *
+     * @param obj element whose presence is being tested in this range
+     * @return <code>true</code> if this range contains the specified element
      */
-    public boolean contains(T obj);
-    
+    boolean contains(T obj);
+
     /**
-     * TODO
-     * @param col
-     * @return
+     * Returns <code>true</code> is this range contains all of the elements in
+     * the specified collection.
+     *
+     * @param col collection to be checked for the containment in this range
+     * @return <code>true</code> if this range contains all of the elements in
+     * the specified collection
      */
-    public boolean containsAll(Collection<T> col);
+    boolean containsAll(Collection<T> col);
 }

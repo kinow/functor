@@ -1,7 +1,10 @@
 /*
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
  *
  *      http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -16,24 +19,24 @@ package org.apache.commons.functor.range;
 
 /**
  * Determine the bound type of a range.
- * 
- * @see org.apache.commons.functor.range.Range 
+ *
+ * @see org.apache.commons.functor.range.Range
  * @see org.apache.commons.functor.range.Endpoint
  * @since 1.0
  * @version $Revision: $ $Date: $
  */
 public enum BoundType {
     // values
-    //---------------------------------------------------------------
+    // ---------------------------------------------------------------
     /**
-     * Represents an <b>open</b> bound, which value <b>is not</b> included in 
+     * Represents an <b>open</b> bound, which value <b>is not</b> included in
      * the range.
      */
-    OPEN, 
+    OPEN,
     /**
-     * Represents a <b>closed</b> bound, which value <b>is included<b/> in 
-     * the range.
+     * Represents a <b>closed</b> bound, which value <b>is included</b> in the
+     * range.
      */
     CLOSED;
-    
+
 }
