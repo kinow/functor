@@ -27,8 +27,7 @@ import org.apache.commons.functor.range.FloatRange;
  * @since 1.0
  * @version $Revision: $ $Date: $
  */
-public final class FloatGenerator
-    extends BaseGenerator<Float> {
+public final class FloatGenerator extends BaseGenerator<Float> {
 
     // attributes
     // ---------------------------------------------------------------

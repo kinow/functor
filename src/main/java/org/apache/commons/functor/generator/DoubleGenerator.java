@@ -27,8 +27,7 @@ import org.apache.commons.functor.range.DoubleRange;
  * @since 1.0
  * @version $Revision: $ $Date: $
  */
-public final class DoubleGenerator
-    extends BaseGenerator<Double> {
+public final class DoubleGenerator extends BaseGenerator<Double> {
 
     // attributes
     // ---------------------------------------------------------------
