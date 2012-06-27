@@ -1,14 +1,14 @@
 10
 
 dir
-1345345
+1353774
 http://svn.apache.org/repos/asf/commons/proper/functor/trunk/src/main/java/org/apache/commons/functor/core
 http://svn.apache.org/repos/asf
 
 
 
-2012-06-01T12:47:06.937513Z
-1345136
+2012-06-10T08:06:11.142667Z
+1348547
 simonetripodi
 
 
@@ -372,10 +372,10 @@ file
 
 
 
-2012-06-01T20:51:34.000000Z
-6734390143cecad5dbbc470dfbfba606
-2012-06-01T12:47:06.937513Z
-1345136
+2012-06-25T23:14:17.000000Z
+9c606b48e479abbddd6be295a36edb60
+2012-06-10T08:06:11.142667Z
+1348547
 simonetripodi
 has-props
 
@@ -398,7 +398,7 @@ svn:special svn:externals svn:needs-lock
 
 
 
-3282
+3342
 
 NoOp.java
 file
@@ -440,10 +440,10 @@ file
 
 
 
-2012-06-01T20:51:34.000000Z
-320ebd867cbe12d966c4f2c2e98fd0d4
-2012-06-01T12:47:06.937513Z
-1345136
+2012-06-25T23:14:21.000000Z
+59c33979e772956e06d001ebd44d78cf
+2012-06-10T08:06:11.142667Z
+1348547
 simonetripodi
 has-props
 
@@ -466,7 +466,7 @@ svn:special svn:externals svn:needs-lock
 
 
 
-3298
+3358
 
 RightIdentity.java
 file

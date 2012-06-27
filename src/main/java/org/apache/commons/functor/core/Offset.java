@@ -28,17 +28,17 @@ import org.apache.commons.functor.UnaryPredicate;
  * <code>true</code> thereafter.
  *
  * @since 1.0
- * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
+ * @version $Revision: 1348547 $ $Date: 2012-06-10 05:06:11 -0300 (Sun, 10 Jun 2012) $
  */
 public final class Offset implements Predicate, UnaryPredicate<Object>, BinaryPredicate<Object, Object>, Serializable {
-	// static attributes
+    // static attributes
     // ------------------------------------------------------------------------
     /**
-	 * serialVersionUID declaration.
-	 */
-	private static final long serialVersionUID = 5800706757874735854L;
+     * serialVersionUID declaration.
+     */
+    private static final long serialVersionUID = 5800706757874735854L;
 
-	// instance variables
+    // instance variables
     //---------------------------------------------------------------
     /**
      * The number of times the predicate must return {@code false}.
@@ -91,14 +91,14 @@ public final class Offset implements Predicate, UnaryPredicate<Object>, BinaryPr
      */
     @Override
     public boolean equals(Object obj) {
-    	if(obj == this) {
-    		return true;
-    	}
-    	if(!(obj instanceof Offset)) {
-    		return false;
-    	}
-    	Offset other = (Offset)obj;
-    	return other.min == min;
+        if (obj == this) {
+            return true;
+        }
+        if (!(obj instanceof Offset)) {
+            return false;
+        }
+        Offset other = (Offset) obj;
+        return other.min == min;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class Offset implements Predicate, UnaryPredicate<Object>, BinaryPr
      */
     @Override
     public int hashCode() {
-    	int result = "Offset".hashCode();
-    	result <<= 2;
-    	result ^= min;
-    	return result;
+        int result = "Offset".hashCode();
+        result <<= 2;
+        result ^= min;
+        return result;
     }
 
     /**

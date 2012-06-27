@@ -19,6 +19,8 @@ package org.apache.commons.functor.range;
 
 import java.util.Collection;
 
+import org.apache.commons.functor.generator.Generator;
+
 /**
  * Represent an interval of elements that varies from the <b>left endpoint</b>
  * to the <b>right endpoint</b>. Each limit in this range is an {@link Endpoint
@@ -36,7 +38,7 @@ import java.util.Collection;
  * @since 1.0
  * @version $Revision: $ $Date: $
  */
-public interface Range<T extends Comparable<?>, S extends Comparable<?>> {
+public interface Range<T extends Comparable<?>> {
 
     /**
      * Default left bound type.
@@ -63,13 +65,6 @@ public interface Range<T extends Comparable<?>, S extends Comparable<?>> {
     Endpoint<T> getRightEndpoint();
 
     /**
-     * Get the step between elements of this range.
-     *
-     * @return Number
-     */
-    S getStep();
-
-    /**
      * Returns <code>true</code> if this range is empty.
      *
      * @return <code>true</code> if this range is empty
@@ -93,4 +88,6 @@ public interface Range<T extends Comparable<?>, S extends Comparable<?>> {
      * the specified collection
      */
     boolean containsAll(Collection<T> col);
+    
+    <S> Generator<T> toGenerator(S step);
 }

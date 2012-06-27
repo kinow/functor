@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 56
-/repos/asf/!svn/ver/1345145/commons/proper/functor/trunk
+/repos/asf/!svn/ver/1350823/commons/proper/functor/trunk
 END
 checkstyle.xml
 K 25
@@ -31,7 +31,7 @@ pom.xml
 K 25
 svn:wc:ra_dav:version-url
 V 64
-/repos/asf/!svn/ver/1344912/commons/proper/functor/trunk/pom.xml
+/repos/asf/!svn/ver/1350823/commons/proper/functor/trunk/pom.xml
 END
 NOTICE.txt
 K 25

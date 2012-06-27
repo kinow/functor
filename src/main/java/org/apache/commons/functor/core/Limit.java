@@ -29,16 +29,16 @@ import org.apache.commons.functor.UnaryPredicate;
  * <code>false</code> thereafter.
  *
  * @since 1.0
- * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
+ * @version $Revision: 1348547 $ $Date: 2012-06-10 05:06:11 -0300 (Sun, 10 Jun 2012) $
  */
 public final class Limit implements Predicate, UnaryPredicate<Object>, BinaryPredicate<Object, Object>, Serializable {
-	// static attributes
+    // static attributes
     // ------------------------------------------------------------------------
     /**
-	 * serialVersionUID declaration.
-	 */
-	private static final long serialVersionUID = 8974528922587619067L;
-	// instance variables
+     * serialVersionUID declaration.
+     */
+    private static final long serialVersionUID = 8974528922587619067L;
+    // instance variables
     //---------------------------------------------------------------
     /**
      * The max number of times the predicate can be invoked.
@@ -91,14 +91,14 @@ public final class Limit implements Predicate, UnaryPredicate<Object>, BinaryPre
      */
     @Override
     public boolean equals(Object obj) {
-    	if(obj == this) {
-    		return true;
-    	}
-    	if(!(obj instanceof Limit)) {
-    		return false;
-    	}
-    	Limit other = (Limit)obj;
-    	return other.max == max;
+        if (obj == this) {
+            return true;
+        }
+        if (!(obj instanceof Limit)) {
+            return false;
+        }
+        Limit other = (Limit) obj;
+        return other.max == max;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class Limit implements Predicate, UnaryPredicate<Object>, BinaryPre
      */
     @Override
     public int hashCode() {
-    	int result = "Limit".hashCode();
-    	result <<= 2;
-    	result ^= max;
-    	return result;
+        int result = "Limit".hashCode();
+        result <<= 2;
+        result ^= max;
+        return result;
     }
 
     /**

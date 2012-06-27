@@ -33,8 +33,7 @@ import java.util.Collection;
  * @since 0.1
  * @version $Revision: $ $Date: $
  */
-public abstract class NumericRange<T extends Number & Comparable<?>, S extends Number & Comparable<?>>
-    implements Range<T, S> {
+public abstract class NumericRange<T extends Number & Comparable<?>> implements Range<T> {
 
     /**
      * {@inheritDoc}
