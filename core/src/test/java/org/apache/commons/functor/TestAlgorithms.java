@@ -32,15 +32,15 @@ import org.apache.commons.functor.core.Identity;
 import org.apache.commons.functor.core.composite.UnaryNot;
 import org.apache.commons.functor.generator.FilteredGenerator;
 import org.apache.commons.functor.generator.Generator;
-import org.apache.commons.functor.generator.IteratorToGeneratorAdapter;
-import org.apache.commons.functor.generator.TransformedGenerator;
-import org.apache.commons.functor.generator.util.IntegerRange;
+import org.apache.commons.functor.generator.loop.IteratorToGeneratorAdapter;
+import org.apache.commons.functor.generator.loop.TransformedGenerator;
+import org.apache.commons.functor.generator.range.IntegerRange;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 /**
- * @version $Revision: 1363514 $ $Date: 2012-07-19 17:13:49 -0300 (Thu, 19 Jul 2012) $
+ * @version $Revision: 1439683 $ $Date: 2013-01-28 20:49:36 -0200 (Mon, 28 Jan 2013) $
  */
 public class TestAlgorithms {
 

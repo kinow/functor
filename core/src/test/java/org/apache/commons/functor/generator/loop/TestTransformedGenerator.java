@@ -11,7 +11,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.commons.functor.generator;
+package org.apache.commons.functor.generator.loop;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -22,17 +22,29 @@ import java.util.List;
 
 import org.apache.commons.functor.UnaryFunction;
 import org.apache.commons.functor.UnaryProcedure;
-import org.apache.commons.functor.generator.util.IntegerRange;
+import org.apache.commons.functor.generator.Generator;
+import org.apache.commons.functor.generator.range.IntegerRange;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 /**
  * Tests the Transformed Generator class.
- * @version $Revision: 1365330 $ $Date: 2012-07-24 19:40:04 -0300 (Tue, 24 Jul 2012) $
+ * @version $Revision: 1439683 $ $Date: 2013-01-28 20:49:36 -0200 (Mon, 28 Jan 2013) $
  */
-public class TestTransformedGenerator
-{
+public class TestTransformedGenerator {
+    // Attributes
+    // ------------------------------------------------------------------------
+    private static final Integer TWO = new Integer(2);
+
+    private Generator<Integer> wrappedGenerator = null;
+    private UnaryFunction<Integer, Integer> sumsTwo = new UnaryFunction<Integer, Integer>() {
+        public Integer evaluate( Integer obj ) {
+            return obj += TWO;
+        }
+    };
+    private TransformedGenerator<Integer, Integer> sumsTwoGenerator = null;
+
 
     @Before
     public void setUp() throws Exception {
@@ -106,17 +118,4 @@ public class TestTransformedGenerator
         assertEquals(9, doubledValues.size());
         assertEquals(expected, doubledValues);
     }
-
-    // Attributes
-    // ------------------------------------------------------------------------
-    private static final Integer TWO = new Integer(2);
-
-    private Generator<Integer> wrappedGenerator = null;
-    private UnaryFunction<Integer, Integer> sumsTwo = new UnaryFunction<Integer, Integer>() {
-        public Integer evaluate( Integer obj ) {
-            return obj += TWO;
-        }
-    };
-    private TransformedGenerator<Integer, Integer> sumsTwoGenerator = null;
-
 }

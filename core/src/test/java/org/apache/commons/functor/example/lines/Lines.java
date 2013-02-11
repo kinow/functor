@@ -26,7 +26,7 @@ import org.apache.commons.functor.UnaryProcedure;
 import org.apache.commons.functor.generator.BaseGenerator;
 
 /**
- * @version $Revision: 1363514 $ $Date: 2012-07-19 17:13:49 -0300 (Thu, 19 Jul 2012) $
+ * @version $Revision: 1439683 $ $Date: 2013-01-28 20:49:36 -0200 (Mon, 28 Jan 2013) $
  */
 public class Lines extends BaseGenerator<String> {
     public static Lines from(Reader reader) {
@@ -55,19 +55,13 @@ public class Lines extends BaseGenerator<String> {
         } catch(Exception e) {
             throw new TunneledException(e);
         } finally {
-            stop();
-        }
-    }
-
-    @Override
-    public void stop() {
-        super.stop();
-        try {
-            in.close();
-        } catch(RuntimeException e) {
-            throw e;
-        } catch(Exception e) {
-            throw new TunneledException(e);
+            try {
+                in.close();
+            } catch(RuntimeException e) {
+                throw e;
+            } catch(Exception e) {
+                throw new TunneledException(e);
+            }
         }
     }
 

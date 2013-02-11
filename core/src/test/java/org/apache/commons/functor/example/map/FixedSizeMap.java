@@ -24,10 +24,10 @@ import org.apache.commons.functor.BinaryProcedure;
 import org.apache.commons.functor.adapter.BinaryProcedureBinaryFunction;
 import org.apache.commons.functor.core.algorithm.GeneratorContains;
 import org.apache.commons.functor.core.composite.UnaryNot;
-import org.apache.commons.functor.generator.IteratorToGeneratorAdapter;
+import org.apache.commons.functor.generator.loop.IteratorToGeneratorAdapter;
 
 /**
- * @version $Revision: 1363514 $ $Date: 2012-07-19 17:13:49 -0300 (Thu, 19 Jul 2012) $
+ * @version $Revision: 1439123 $ $Date: 2013-01-27 15:32:23 -0200 (Sun, 27 Jan 2013) $
  */
 @SuppressWarnings("unchecked")
 public class FixedSizeMap<K, V> extends FunctoredMap<K, V> {

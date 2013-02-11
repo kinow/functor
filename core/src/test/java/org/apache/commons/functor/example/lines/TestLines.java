@@ -31,10 +31,10 @@ import org.apache.commons.functor.core.collection.Size;
 import org.apache.commons.functor.core.composite.UnaryAnd;
 import org.apache.commons.functor.core.composite.UnaryNot;
 import org.apache.commons.functor.generator.FilteredGenerator;
-import org.apache.commons.functor.generator.TransformedGenerator;
+import org.apache.commons.functor.generator.loop.TransformedGenerator;
 
 /**
- * @version $Revision: 1363514 $ $Date: 2012-07-19 17:13:49 -0300 (Thu, 19 Jul 2012) $
+ * @version $Revision: 1439123 $ $Date: 2013-01-27 15:32:23 -0200 (Sun, 27 Jan 2013) $
  */
 public class TestLines extends TestCase {
 

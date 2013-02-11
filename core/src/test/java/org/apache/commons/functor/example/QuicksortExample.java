@@ -33,7 +33,7 @@ import org.apache.commons.functor.core.comparator.IsGreaterThanOrEqual;
 import org.apache.commons.functor.core.comparator.IsLessThan;
 import org.apache.commons.functor.core.composite.ConditionalUnaryFunction;
 import org.apache.commons.functor.generator.FilteredGenerator;
-import org.apache.commons.functor.generator.IteratorToGeneratorAdapter;
+import org.apache.commons.functor.generator.loop.IteratorToGeneratorAdapter;
 import org.junit.Test;
 
 /*
@@ -56,7 +56,7 @@ import org.junit.Test;
  * <p>
  * See the extensive in line comments for details.
  *
- * @version $Revision: 1370919 $ $Date: 2012-08-08 16:50:46 -0300 (Wed, 08 Aug 2012) $
+ * @version $Revision: 1439123 $ $Date: 2013-01-27 15:32:23 -0200 (Sun, 27 Jan 2013) $
  */
 @SuppressWarnings("unchecked")
 public class QuicksortExample {

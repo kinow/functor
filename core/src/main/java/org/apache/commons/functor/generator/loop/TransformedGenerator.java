@@ -14,10 +14,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.commons.functor.generator;
+package org.apache.commons.functor.generator.loop;
 
 import org.apache.commons.functor.UnaryFunction;
 import org.apache.commons.functor.UnaryProcedure;
+import org.apache.commons.functor.generator.BaseGenerator;
+import org.apache.commons.functor.generator.Generator;
 import org.apache.commons.lang3.Validate;
 
 /**
@@ -25,9 +27,14 @@ import org.apache.commons.lang3.Validate;
  *
  * @param <I> the type of elements held in the wrapped generator.
  * @param <E> the type of elements held in this generator.
- * @version $Revision: 1365330 $ $Date: 2012-07-24 19:40:04 -0300 (Tue, 24 Jul 2012) $
+ * @version $Revision: 1439683 $ $Date: 2013-01-28 20:49:36 -0200 (Mon, 28 Jan 2013) $
  */
 public class TransformedGenerator<I, E> extends BaseGenerator<E> {
+
+    /**
+     * The wrapped/<em>I</em>nput generator.
+     */
+    private final Generator<? extends I> wrappedGenerator;
 
     /**
      * The UnaryFunction to apply to each element.
@@ -40,7 +47,8 @@ public class TransformedGenerator<I, E> extends BaseGenerator<E> {
      * @param func UnaryFunction to apply to each element
      */
     public TransformedGenerator(Generator<? extends I> wrapped, UnaryFunction<? super I, ? extends E> func) {
-        super(Validate.notNull(wrapped, "Generator argument was null"));
+        this.wrappedGenerator =
+        Validate.notNull(wrapped, "Generator argument was null");
         this.func = Validate.notNull(func, "UnaryFunction argument was null");
     }
 
@@ -48,20 +56,11 @@ public class TransformedGenerator<I, E> extends BaseGenerator<E> {
      * {@inheritDoc}
      */
     public void run(final UnaryProcedure<? super E> proc) {
-        getWrappedGenerator().run(new UnaryProcedure<I>() {
+        wrappedGenerator.run(new UnaryProcedure<I>() {
             public void run(I obj) {
                 proc.run(func.evaluate(obj));
             }
         });
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @SuppressWarnings("unchecked")
-    @Override
-    protected Generator<? extends I> getWrappedGenerator() {
-        return (Generator<? extends I>) super.getWrappedGenerator();
     }
 
     /**
@@ -76,7 +75,7 @@ public class TransformedGenerator<I, E> extends BaseGenerator<E> {
             return false;
         }
         TransformedGenerator<?, ?> other = (TransformedGenerator<?, ?>) obj;
-        return other.getWrappedGenerator().equals(getWrappedGenerator()) && other.func == func;
+        return other.wrappedGenerator.equals(wrappedGenerator) && other.func.equals(func);
     }
 
     /**
@@ -86,7 +85,7 @@ public class TransformedGenerator<I, E> extends BaseGenerator<E> {
     public int hashCode() {
         int result = "TransformedGenerator".hashCode();
         result <<= 2;
-        Generator<?> gen = getWrappedGenerator();
+        Generator<?> gen = wrappedGenerator;
         result ^= gen.hashCode();
         result <<= 2;
         result ^= func.hashCode();

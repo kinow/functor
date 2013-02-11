@@ -12,19 +12,20 @@
  * limitations under the License.
  */
 
-package org.apache.commons.functor.generator;
-
-import org.apache.commons.functor.UnaryProcedure;
-import org.apache.commons.lang3.Validate;
+package org.apache.commons.functor.generator.loop;
 
 import java.util.Iterator;
+
+import org.apache.commons.functor.UnaryProcedure;
+import org.apache.commons.functor.generator.BaseGenerator;
+import org.apache.commons.lang3.Validate;
 
 /**
  * Adapts an {@link Iterator} to the {@link Generator} interface.
  *
  * @param <E> the type of elements held in this generator.
  * @since 1.0
- * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
+ * @version $Revision: 1439734 $ $Date: 2013-01-29 00:23:30 -0200 (Tue, 29 Jan 2013) $
  */
 public final class IteratorToGeneratorAdapter<E> extends BaseGenerator<E> {
     // instance variables
@@ -53,9 +54,6 @@ public final class IteratorToGeneratorAdapter<E> extends BaseGenerator<E> {
     public void run(UnaryProcedure<? super E> proc) {
         while (iter.hasNext()) {
             proc.run(iter.next());
-            if (isStopped()) {
-                break;
-            }
         }
     }
 

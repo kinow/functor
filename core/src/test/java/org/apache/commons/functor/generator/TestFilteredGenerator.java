@@ -25,17 +25,26 @@ import java.util.List;
 
 import org.apache.commons.functor.UnaryPredicate;
 import org.apache.commons.functor.UnaryProcedure;
-import org.apache.commons.functor.generator.util.IntegerRange;
+import org.apache.commons.functor.generator.range.IntegerRange;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 /**
  * Tests the Filtered Generator class.
- * @version $Revision: 1365330 $ $Date: 2012-07-24 19:40:04 -0300 (Tue, 24 Jul 2012) $
+ * @version $Revision: 1439134 $ $Date: 2013-01-27 16:15:38 -0200 (Sun, 27 Jan 2013) $
  */
-public class TestFilteredGenerator
-{
+public class TestFilteredGenerator {
+    // Attributes
+    // ------------------------------------------------------------------------
+    private Generator<Integer> wrappedGenerator = null;
+    private UnaryPredicate<Integer> isEven = new UnaryPredicate<Integer>() {
+        public boolean test( Integer obj ) {
+            return obj % 2 == 0;
+        }
+    };
+    private Generator<Integer> filteredGenerator = null;
+
 
     @Before
     public void setUp() throws Exception {
@@ -107,16 +116,4 @@ public class TestFilteredGenerator
     	List<Integer> expected = Arrays.asList(2, 4, 6, 8);
     	assertEquals(expected, evenNumbers);
     }
-
-    // Attributes
-    // ------------------------------------------------------------------------
-    private Generator<Integer> wrappedGenerator = null;
-    private UnaryPredicate<Integer> isEven = new UnaryPredicate<Integer>()
-    {
-        public boolean test( Integer obj ) {
-            return obj % 2 == 0;
-        }
-    };
-    private Generator<Integer> filteredGenerator = null;
-
 }

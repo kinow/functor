@@ -26,7 +26,7 @@ import org.apache.commons.functor.Predicate;
 import org.apache.commons.functor.Procedure;
 import org.apache.commons.functor.core.algorithm.RecursiveEvaluation;
 import org.apache.commons.functor.core.algorithm.UntilDo;
-import org.apache.commons.functor.generator.util.IntegerRange;
+import org.apache.commons.functor.generator.range.IntegerRange;
 import org.junit.Test;
 
 /**
@@ -69,7 +69,7 @@ import org.junit.Test;
  * See http://pragprog.com/pragdave/Practices/Kata/KataTwo.rdoc,v
  * for more information on this Kata.
  *
- * @version $Revision: 1363514 $ $Date: 2012-07-19 17:13:49 -0300 (Thu, 19 Jul 2012) $
+ * @version $Revision: 1439123 $ $Date: 2013-01-27 15:32:23 -0200 (Sun, 27 Jan 2013) $
  */
 public class TestBinaryChop {
 

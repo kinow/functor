@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.commons.functor.generator;
+package org.apache.commons.functor.generator.loop;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -25,16 +25,30 @@ import java.util.List;
 
 import org.apache.commons.functor.UnaryPredicate;
 import org.apache.commons.functor.UnaryProcedure;
-import org.apache.commons.functor.generator.util.IntegerRange;
+import org.apache.commons.functor.generator.Generator;
+import org.apache.commons.functor.generator.loop.WhileGenerate;
+import org.apache.commons.functor.generator.range.IntegerRange;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 /**
  * Tests the While Generate class.
- * @version $Revision: 1365330 $ $Date: 2012-07-24 19:40:04 -0300 (Tue, 24 Jul 2012) $
+ * @version $Revision: 1439683 $ $Date: 2013-01-28 20:49:36 -0200 (Mon, 28 Jan 2013) $
  */
 public class TestWhileGenerate {
+
+    // Attributes
+    // ------------------------------------------------------------------------
+    private static final Integer FIVE = new Integer(5);
+
+    private Generator<Integer> wrappedGenerator = null;
+    private UnaryPredicate<Integer> isLessThanFive = new UnaryPredicate<Integer>() {
+        public boolean test( Integer obj ) {
+            return obj < FIVE;
+        }
+    };
+    private PredicatedGenerator<Integer> whileGenerate = null;
 
     @Before
     public void setUp() throws Exception {
@@ -105,16 +119,4 @@ public class TestWhileGenerate {
         List<Integer> expected = Arrays.asList(1, 2, 3, 4);
         assertEquals(expected, numbersMinorThanFive);
     }
-
-    // Attributes
-    // ------------------------------------------------------------------------
-	private static final Integer FIVE = new Integer(5);
-
-    private Generator<Integer> wrappedGenerator = null;
-    private UnaryPredicate<Integer> isLessThanFive = new UnaryPredicate<Integer>() {
-        public boolean test( Integer obj ) {
-            return obj < FIVE;
-        }
-    };
-    private Generator<Integer> whileGenerate = null;
 }

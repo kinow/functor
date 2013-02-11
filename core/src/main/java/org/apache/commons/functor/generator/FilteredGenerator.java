@@ -26,12 +26,17 @@ import org.apache.commons.lang3.Validate;
  * that are matched by a specified UnaryPredicate.
  *
  * @param <E> the type of elements held in this generator.
- * @version $Revision: 1365330 $ $Date: 2012-07-24 19:40:04 -0300 (Tue, 24 Jul 2012) $
+ * @version $Revision: 1439123 $ $Date: 2013-01-27 15:32:23 -0200 (Sun, 27 Jan 2013) $
  */
 public class FilteredGenerator<E> extends BaseGenerator<E> {
 
     /**
-     * The wrapped generator.
+     * A generator can wrap another generator.
+     * */
+    private Generator<? extends E> wrappedGenerator;
+
+    /**
+     * The predicate used to filter.
      */
     private final UnaryPredicate<? super E> pred;
 
@@ -41,7 +46,7 @@ public class FilteredGenerator<E> extends BaseGenerator<E> {
      * @param pred filtering UnaryPredicate
      */
     public FilteredGenerator(Generator<? extends E> wrapped, UnaryPredicate<? super E> pred) {
-        super(Validate.notNull(wrapped, "Generator argument was null"));
+        this.wrappedGenerator = Validate.notNull(wrapped, "Generator argument was null");
         this.pred = Validate.notNull(pred, "UnaryPredicate argument was null");
     }
 
@@ -53,12 +58,11 @@ public class FilteredGenerator<E> extends BaseGenerator<E> {
     }
 
     /**
-     * {@inheritDoc}
+     * Gets the wrapped generator.
+     * @return the wrapped Generator.
      */
-    @SuppressWarnings("unchecked")
-    @Override
     protected Generator<? extends E> getWrappedGenerator() {
-        return (Generator<? extends E>) super.getWrappedGenerator();
+        return this.wrappedGenerator;
     }
 
     /**

@@ -19,13 +19,13 @@ import java.util.Iterator;
 import java.util.Map;
 
 import org.apache.commons.functor.generator.Generator;
-import org.apache.commons.functor.generator.IteratorToGeneratorAdapter;
+import org.apache.commons.functor.generator.loop.IteratorToGeneratorAdapter;
 
 /**
  * Generator factory for each element of a "collection".
  *
  * @since 1.0
- * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
+ * @version $Revision: 1439123 $ $Date: 2013-01-27 15:32:23 -0200 (Sun, 27 Jan 2013) $
  */
 public final class EachElement {
     /**
