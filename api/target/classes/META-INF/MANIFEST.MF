@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Implementation-Title: Commons Functor API
+Implementation-Version: 1.0-SNAPSHOT
+Built-By: kinow
+Specification-Vendor: The Apache Software Foundation
+Created-By: Maven Integration for Eclipse
+X-Compile-Source-JDK: 1.5
+Implementation-Vendor: The Apache Software Foundation
+Implementation-Vendor-Id: org.apache
+Build-Jdk: 1.6.0_27
+Specification-Title: Commons Functor API
+Implementation-Build: ${scmBranch}@r${buildNumber}; ${maven.build.time
+ stamp}
+Specification-Version: 1.0-SNAPSHOT
+X-Compile-Target-JDK: 1.5
+
