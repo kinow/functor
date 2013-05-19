@@ -18,15 +18,15 @@ package org.apache.commons.functor.adapter;
 
 import java.io.Serializable;
 
-import org.apache.commons.functor.Function;
-import org.apache.commons.functor.Predicate;
+import org.apache.commons.functor.NullaryFunction;
+import org.apache.commons.functor.NullaryPredicate;
 import org.apache.commons.lang3.Validate;
 
 /**
  * Adapts a
- * {@link Predicate Predicate}
+ * {@link NullaryPredicate Predicate}
  * to the
- * {@link Function Function} interface.
+ * {@link NullaryFunction NullaryFunction} interface.
  * <p/>
  * Note that although this class implements
  * {@link Serializable}, a given instance will
@@ -35,35 +35,34 @@ import org.apache.commons.lang3.Validate;
  * an instance whose delegate is not
  * <code>Serializable</code> will result in an exception.
  *
- * @param <A> the argument type.
  * @version $Revision: 1365377 $ $Date: 2012-07-24 21:59:23 -0300 (Tue, 24 Jul 2012) $
  */
-public final class PredicateFunction<A> implements Function<A, Boolean>, Serializable {
+public final class NullaryPredicateNullaryFunction implements NullaryFunction<Boolean>, Serializable {
     /**
      * serialVersionUID declaration.
      */
-    private static final long serialVersionUID = 5660724725036398625L;
-    /** The {@link Predicate Predicate} I'm wrapping. */
-    private final Predicate<? super A> predicate;
+    private static final long serialVersionUID = -8858981355549412629L;
+    /** The {@link NullaryPredicate NullaryPredicate} I'm wrapping. */
+    private final NullaryPredicate predicate;
 
     /**
-     * Create a new PredicateFunction.
+     * Create a new NullaryPredicateNullaryFunction.
      * @param predicate to adapt
      */
-    public PredicateFunction(Predicate<? super A> predicate) {
-        this.predicate = Validate.notNull(predicate, "Predicate argument was null");
+    public NullaryPredicateNullaryFunction(NullaryPredicate predicate) {
+        this.predicate = Validate.notNull(predicate, "NullaryPredicate argument was null");
     }
 
     /**
      * {@inheritDoc}
      * Returns <code>Boolean.TRUE</code> (<code>Boolean.FALSE</code>)
-     * when the {@link Predicate#test test} method of my underlying
+     * when the {@link NullaryPredicate#test test} method of my underlying
      * predicate returns <code>true</code> (<code>false</code>).
      *
      * @return a non-<code>null</code> <code>Boolean</code> instance
      */
-    public Boolean evaluate(A obj) {
-        return Boolean.valueOf(predicate.test(obj));
+    public Boolean evaluate() {
+        return Boolean.valueOf(predicate.test());
     }
 
     /**
@@ -71,16 +70,15 @@ public final class PredicateFunction<A> implements Function<A, Boolean>, Seriali
      */
     @Override
     public boolean equals(Object that) {
-        return that == this
-                || (that instanceof PredicateFunction<?> && equals((PredicateFunction<?>) that));
+        return that == this || (that instanceof NullaryPredicateNullaryFunction && equals((NullaryPredicateNullaryFunction) that));
     }
 
     /**
-     * Learn whether another PredicateFunction is equal to this.
-     * @param that PredicateFunction to test
+     * Learn whether another NullaryPredicateNullaryFunction is equal to this.
+     * @param that NullaryPredicateNullaryFunction to test
      * @return boolean
      */
-    public boolean equals(PredicateFunction<?> that) {
+    public boolean equals(NullaryPredicateNullaryFunction that) {
         return null != that && predicate.equals(that.predicate);
     }
 
@@ -89,7 +87,7 @@ public final class PredicateFunction<A> implements Function<A, Boolean>, Seriali
      */
     @Override
     public int hashCode() {
-        int hash = "PredicateFunction".hashCode();
+        int hash = "NullaryPredicateNullaryFunction".hashCode();
         hash ^= predicate.hashCode();
         return hash;
     }
@@ -99,17 +97,16 @@ public final class PredicateFunction<A> implements Function<A, Boolean>, Seriali
      */
     @Override
     public String toString() {
-        return "PredicateFunction<" + predicate + ">";
+        return "NullaryPredicateNullaryFunction<" + predicate + ">";
     }
 
     /**
-     * Adapt a Predicate to the Function interface.
-     * @param <A> the argument type.
+     * Adapt a NullaryPredicate to the NullaryFunction interface.
      * @param predicate to adapt
-     * @return PredicateFunction
+     * @return NullaryPredicateNullaryFunction
      */
-    public static <A> PredicateFunction<A> adapt(Predicate<? super A> predicate) {
-        return null == predicate ? null : new PredicateFunction<A>(predicate);
+    public static NullaryPredicateNullaryFunction adapt(NullaryPredicate predicate) {
+        return null == predicate ? null : new NullaryPredicateNullaryFunction(predicate);
     }
 
 }

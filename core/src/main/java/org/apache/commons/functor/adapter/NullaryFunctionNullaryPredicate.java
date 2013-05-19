@@ -18,16 +18,14 @@ package org.apache.commons.functor.adapter;
 
 import java.io.Serializable;
 
-import org.apache.commons.functor.BinaryFunction;
-import org.apache.commons.functor.Function;
+import org.apache.commons.functor.NullaryFunction;
+import org.apache.commons.functor.NullaryPredicate;
 import org.apache.commons.lang3.Validate;
 
 /**
- * Adapts a
- * {@link Function Function}
- * to the
- * {@link BinaryFunction BinaryFunction} interface
- * by ignoring the first binary argument.
+ * Adapts a <code>Boolean</code>-valued
+ * {@link NullaryFunction NullaryFunction} to the
+ * {@link NullaryPredicate NullaryPredicate} interface.
  * <p/>
  * Note that although this class implements
  * {@link Serializable}, a given instance will
@@ -36,32 +34,33 @@ import org.apache.commons.lang3.Validate;
  * an instance whose delegate is not
  * <code>Serializable</code> will result in an exception.
  *
- * @param <L> the left argument type.
- * @param <R> the right argument type.
- * @param <T> the returned value type.
  * @version $Revision: 1365377 $ $Date: 2012-07-24 21:59:23 -0300 (Tue, 24 Jul 2012) $
  */
-public final class IgnoreLeftFunction<L, R, T> implements BinaryFunction<L, R, T>, Serializable {
+public final class NullaryFunctionNullaryPredicate implements NullaryPredicate, Serializable {
+
     /**
      * serialVersionUID declaration.
      */
-    private static final long serialVersionUID = 4677703245851183542L;
-    /** The {@link Function Function} I'm wrapping. */
-    private final Function<? super R, ? extends T> function;
+    private static final long serialVersionUID = 6564796937660102222L;
+    /** The {@link NullaryFunction NullaryFunction} I'm wrapping. */
+    private final NullaryFunction<Boolean> function;
 
     /**
-     * Create a new IgnoreLeftFunction.
-     * @param function Function for right argument
+     * Create a new NullaryFunctionNullaryPredicate.
+     * @param function to adapt
      */
-    public IgnoreLeftFunction(Function<? super R, ? extends T> function) {
-        this.function = Validate.notNull(function, "Function argument was null");
+    public NullaryFunctionNullaryPredicate(NullaryFunction<Boolean> function) {
+        this.function = Validate.notNull(function, "NullaryFunction argument was null");
     }
 
     /**
+     * Returns the <code>boolean</code> value of the non-<code>null</code>
+     * <code>Boolean</code> returned by the {@link NullaryFunction#evaluate evaluate}
+     * method of my underlying function.
      * {@inheritDoc}
      */
-    public T evaluate(L left, R right) {
-        return function.evaluate(right);
+    public boolean test() {
+        return function.evaluate().booleanValue();
     }
 
     /**
@@ -69,16 +68,15 @@ public final class IgnoreLeftFunction<L, R, T> implements BinaryFunction<L, R, T
      */
     @Override
     public boolean equals(Object that) {
-        return that == this || (that instanceof IgnoreLeftFunction<?, ?, ?>
-                && equals((IgnoreLeftFunction<?, ?, ?>) that));
+        return that == this || (that instanceof NullaryFunctionNullaryPredicate && equals((NullaryFunctionNullaryPredicate) that));
     }
 
     /**
-     * Learn whether another IgnoreLeftFunction is equal to this.
-     * @param that IgnoreLeftFunction to test
+     * Learn whether another NullaryFunctionNullaryPredicate is equal to this.
+     * @param that NullaryFunctionNullaryPredicate to test
      * @return boolean
      */
-    public boolean equals(IgnoreLeftFunction<?, ?, ?> that) {
+    public boolean equals(NullaryFunctionNullaryPredicate that) {
         return null != that && function.equals(that.function);
     }
 
@@ -87,7 +85,7 @@ public final class IgnoreLeftFunction<L, R, T> implements BinaryFunction<L, R, T
      */
     @Override
     public int hashCode() {
-        int hash = "IgnoreLeftFunction".hashCode();
+        int hash = "NullaryFunctionNullaryPredicate".hashCode();
         hash ^= function.hashCode();
         return hash;
     }
@@ -97,19 +95,15 @@ public final class IgnoreLeftFunction<L, R, T> implements BinaryFunction<L, R, T
      */
     @Override
     public String toString() {
-        return "IgnoreLeftFunction<" + function + ">";
+        return "NullaryFunctionNullaryPredicate<" + function + ">";
     }
 
     /**
-     * Adapt a Function to the BinaryFunction interface.
-     * @param <L> left type
-     * @param <R> right type
-     * @param <T> result type
+     * Adapt a NullaryFunction as a NullaryPredicate.
      * @param function to adapt
-     * @return IgnoreLeftFunction
+     * @return NullaryFunctionNullaryPredicate
      */
-    public static <L, R, T> IgnoreLeftFunction<L, R, T> adapt(Function<? super R, ? extends T> function) {
-        return null == function ? null : new IgnoreLeftFunction<L, R, T>(function);
+    public static NullaryFunctionNullaryPredicate adapt(NullaryFunction<Boolean> function) {
+        return null == function ? null : new NullaryFunctionNullaryPredicate(function);
     }
-
 }

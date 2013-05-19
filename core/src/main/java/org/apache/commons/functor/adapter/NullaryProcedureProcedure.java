@@ -18,16 +18,16 @@ package org.apache.commons.functor.adapter;
 
 import java.io.Serializable;
 
-import org.apache.commons.functor.BinaryPredicate;
-import org.apache.commons.functor.Predicate;
+import org.apache.commons.functor.NullaryProcedure;
+import org.apache.commons.functor.Procedure;
 import org.apache.commons.lang3.Validate;
 
 /**
  * Adapts a
- * {@link Predicate Predicate}
+ * {@link NullaryProcedure Procedure}
  * to the
- * {@link BinaryPredicate BinaryPredicate} interface
- * by ignoring the first binary argument.
+ * {@link Procedure Procedure} interface
+ * by ignoring the arguments.
  * <p/>
  * Note that although this class implements
  * {@link Serializable}, a given instance will
@@ -36,31 +36,30 @@ import org.apache.commons.lang3.Validate;
  * an instance whose delegate is not
  * <code>Serializable</code> will result in an exception.
  *
- * @param <L> the left argument type.
- * @param <R> the right argument type.
+ * @param <A> the argument type.
  * @version $Revision: 1365377 $ $Date: 2012-07-24 21:59:23 -0300 (Tue, 24 Jul 2012) $
  */
-public final class IgnoreLeftPredicate<L, R> implements BinaryPredicate<L, R>, Serializable {
+public final class NullaryProcedureProcedure<A> implements Procedure<A>, Serializable {
     /**
      * serialVersionUID declaration.
      */
-    private static final long serialVersionUID = -3200352647509255939L;
-    /** The {@link Predicate Predicate} I'm wrapping. */
-    private final Predicate<? super R> predicate;
+    private static final long serialVersionUID = 501530698794315412L;
+    /** The {@link NullaryProcedure Procedure} I'm wrapping. */
+    private final NullaryProcedure procedure;
 
     /**
-     * Create a new IgnoreLeftPredicate.
-     * @param predicate the right predicate
+     * Create a new NullaryProcedureProcedure.
+     * @param procedure to adapt
      */
-    public IgnoreLeftPredicate(Predicate<? super R> predicate) {
-        this.predicate = Validate.notNull(predicate, "Predicate argument was null");
+    public NullaryProcedureProcedure(NullaryProcedure procedure) {
+        this.procedure = Validate.notNull(procedure, "NullaryProcedure argument was null");
     }
 
     /**
      * {@inheritDoc}
      */
-    public boolean test(L left, R right) {
-        return predicate.test(right);
+    public void run(A obj) {
+        procedure.run();
     }
 
     /**
@@ -68,16 +67,17 @@ public final class IgnoreLeftPredicate<L, R> implements BinaryPredicate<L, R>, S
      */
     @Override
     public boolean equals(Object that) {
-        return that == this || (that instanceof IgnoreLeftPredicate<?, ?> && equals((IgnoreLeftPredicate<?, ?>) that));
+        return that == this || (that instanceof NullaryProcedureProcedure<?>
+                                    && equals((NullaryProcedureProcedure<?>) that));
     }
 
     /**
-     * Learn whether another IgnoreLeftPredicate is equal to this.
-     * @param that the IgnoreLeftPredicate to test
+     * Learn whether another NullaryProcedureProcedure is equal to this.
+     * @param that NullaryProcedureProcedure to test
      * @return boolean
      */
-    public boolean equals(IgnoreLeftPredicate<?, ?> that) {
-        return null != that && predicate.equals(that.predicate);
+    public boolean equals(NullaryProcedureProcedure<?> that) {
+        return null != that && procedure.equals(that.procedure);
     }
 
     /**
@@ -85,8 +85,8 @@ public final class IgnoreLeftPredicate<L, R> implements BinaryPredicate<L, R>, S
      */
     @Override
     public int hashCode() {
-        int hash = "IgnoreLeftPredicate".hashCode();
-        hash ^= predicate.hashCode();
+        int hash = "NullaryProcedureProcedure".hashCode();
+        hash ^= procedure.hashCode();
         return hash;
     }
 
@@ -95,18 +95,17 @@ public final class IgnoreLeftPredicate<L, R> implements BinaryPredicate<L, R>, S
      */
     @Override
     public String toString() {
-        return "IgnoreLeftPredicate<" + predicate + ">";
+        return "NullaryProcedureProcedure<" + procedure + ">";
     }
 
     /**
-     * Adapt a Predicate to an IgnoreLeftPredicate.
-     * @param <L> left type
-     * @param <R> right type
-     * @param predicate to adapt
-     * @return IgnoreLeftPredicate<L, R>
+     * Adapt a NullaryProcedure to the Procedure interface.
+     * @param <A> the argument type.
+     * @param procedure to adapt
+     * @return NullaryProcedureProcedure<A>
      */
-    public static <L, R> IgnoreLeftPredicate<L, R> adapt(Predicate<? super R> predicate) {
-        return null == predicate ? null : new IgnoreLeftPredicate<L, R>(predicate);
+    public static <A> NullaryProcedureProcedure<A> adapt(NullaryProcedure procedure) {
+        return null == procedure ? null : new NullaryProcedureProcedure<A>(procedure);
     }
 
 }

@@ -18,16 +18,16 @@ package org.apache.commons.functor.adapter;
 
 import java.io.Serializable;
 
-import org.apache.commons.functor.BinaryProcedure;
+import org.apache.commons.functor.NullaryProcedure;
 import org.apache.commons.functor.Procedure;
 import org.apache.commons.lang3.Validate;
 
 /**
  * Adapts a
- * {@link BinaryProcedure BinaryProcedure}
+ * {@link Procedure Procedure}
  * to the
- * {@link Procedure Procedure} interface
- * using a constant left-side argument.
+ * {@link NullaryProcedure NullaryProcedure} interface
+ * using a constant unary argument.
  * <p/>
  * Note that although this class implements
  * {@link Serializable}, a given instance will
@@ -36,38 +36,37 @@ import org.apache.commons.lang3.Validate;
  * an instance whose delegates are not
  * <code>Serializable</code> will result in an exception.
  *
- * @param <A> the argument type.
  * @version $Revision: 1365377 $ $Date: 2012-07-24 21:59:23 -0300 (Tue, 24 Jul 2012) $
  */
-public final class RightBoundProcedure<A> implements Procedure<A>, Serializable {
+public final class BoundNullaryProcedure implements NullaryProcedure, Serializable {
     /**
      * serialVersionUID declaration.
      */
-    private static final long serialVersionUID = 3267188080481758226L;
-    /** The {@link BinaryProcedure BinaryProcedure} I'm wrapping. */
-    private final BinaryProcedure<? super A, Object> procedure;
+    private static final long serialVersionUID = -6010802933400471747L;
+    /** The {@link Procedure Procedure} I'm wrapping. */
+    private final Procedure<Object> procedure;
     /** The parameter to pass to {@code procedure}. */
     private final Object param;
 
     /**
-     * Create a new RightBoundProcedure.
-     * @param <R> bound arg type
+     * Create a new BoundNullaryProcedure instance.
+     * @param <A> arg type
      * @param procedure the procedure to adapt
      * @param arg the constant argument to use
      */
     @SuppressWarnings("unchecked")
-    public <R> RightBoundProcedure(BinaryProcedure<? super A, ? super R> procedure, R arg) {
+    public <A> BoundNullaryProcedure(Procedure<? super A> procedure, A arg) {
         this.procedure =
-            (BinaryProcedure<? super A, Object>) Validate.notNull(procedure,
-                "BinaryProcedure argument was null");
+            (Procedure<Object>) Validate.notNull(procedure,
+                "Procedure argument was null");
         this.param = arg;
     }
 
     /**
      * {@inheritDoc}
      */
-    public void run(A obj) {
-        procedure.run(obj, param);
+    public void run() {
+        procedure.run(param);
     }
 
     /**
@@ -75,15 +74,15 @@ public final class RightBoundProcedure<A> implements Procedure<A>, Serializable 
      */
     @Override
     public boolean equals(Object that) {
-        return that == this || (that instanceof RightBoundProcedure<?> && equals((RightBoundProcedure<?>) that));
+        return that == this || (that instanceof BoundNullaryProcedure && equals((BoundNullaryProcedure) that));
     }
 
     /**
-     * Learn whether another RightBoundProcedure is equal to this.
-     * @param that RightBoundProcedure to test
+     * Learn whether a given BoundNullaryProcedure is equal to this.
+     * @param that the BoundNullaryProcedure to test
      * @return boolean
      */
-    public boolean equals(RightBoundProcedure<?> that) {
+    public boolean equals(BoundNullaryProcedure that) {
         return null != that
                 && procedure.equals(that.procedure)
                 && (null == param ? null == that.param : param.equals(that.param));
@@ -94,7 +93,7 @@ public final class RightBoundProcedure<A> implements Procedure<A>, Serializable 
      */
     @Override
     public int hashCode() {
-        int hash = "RightBoundProcedure".hashCode();
+        int hash = "BoundNullaryProcedure".hashCode();
         hash <<= 2;
         hash ^= procedure.hashCode();
         if (null != param) {
@@ -109,19 +108,28 @@ public final class RightBoundProcedure<A> implements Procedure<A>, Serializable 
      */
     @Override
     public String toString() {
-        return "RightBoundProcedure<" + procedure + "(?," + param + ")>";
+        return "BoundNullaryProcedure<" + procedure + "(" + param + ")>";
     }
 
     /**
-     * Get a Procedure from <code>procedure</code>.
-     * @param <L> the left argument type.
-     * @param <R> the right argument type.
-     * @param procedure to adapt
-     * @param arg right side argument
-     * @return RightBoundProcedure
+     * Adapt the given, possibly-<code>null</code>,
+     * {@link Procedure Procedure} to the
+     * {@link NullaryProcedure NullaryProcedure} interface by binding
+     * the specified <code>Object</code> as a constant
+     * argument.
+     * When the given <code>Procedure</code> is <code>null</code>,
+     * returns <code>null</code>.
+     *
+     * @param <A> arg type
+     * @param procedure the possibly-<code>null</code>
+     *        {@link Procedure Procedure} to adapt
+     * @param arg the object to bind as a constant argument
+     * @return a <code>BoundNullaryProcedure</code> wrapping the given
+     *         {@link Procedure Procedure}, or <code>null</code>
+     *         if the given <code>Procedure</code> is <code>null</code>
      */
-    public static <L, R> RightBoundProcedure<L> bind(BinaryProcedure<? super L, ? super R> procedure, R arg) {
-        return null == procedure ? null : new RightBoundProcedure<L>(procedure, arg);
+    public static <A> BoundNullaryProcedure bind(Procedure<? super A> procedure, A arg) {
+        return null == procedure ? null : new BoundNullaryProcedure(procedure, arg);
     }
 
 }

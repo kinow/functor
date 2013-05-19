@@ -18,49 +18,49 @@ package org.apache.commons.functor.adapter;
 
 import java.io.Serializable;
 
-import org.apache.commons.functor.BinaryProcedure;
-import org.apache.commons.functor.Procedure;
+import org.apache.commons.functor.NullaryFunction;
+import org.apache.commons.functor.NullaryProcedure;
 import org.apache.commons.lang3.Validate;
 
 /**
  * Adapts a
- * {@link Procedure Procedure}
+ * {@link NullaryProcedure NullaryProcedure}
  * to the
- * {@link BinaryProcedure BinaryProcedure} interface
- * by ignoring the second binary argument.
+ * {@link NullaryFunction NullaryFunction} interface
+ * by always returning <code>null</code>.
  * <p/>
  * Note that although this class implements
  * {@link Serializable}, a given instance will
  * only be truly <code>Serializable</code> if the
- * underlying functor is.  Attempts to serialize
+ * underlying nullary procedure is.  Attempts to serialize
  * an instance whose delegate is not
  * <code>Serializable</code> will result in an exception.
  *
- * @param <L> the left argument type.
- * @param <R> the right argument type.
+ * @param <T> the returned value type.
  * @version $Revision: 1365377 $ $Date: 2012-07-24 21:59:23 -0300 (Tue, 24 Jul 2012) $
  */
-public final class IgnoreRightProcedure<L, R> implements BinaryProcedure<L, R>, Serializable {
+public final class NullaryProcedureNullaryFunction<T> implements NullaryFunction<T>, Serializable {
     /**
      * serialVersionUID declaration.
      */
-    private static final long serialVersionUID = -7374293905310619206L;
-    /** The {@link Procedure Procedure} I'm wrapping. */
-    private final Procedure<? super L> procedure;
+    private static final long serialVersionUID = -655207616317672341L;
+    /** The {@link NullaryProcedure NullaryProcedure} I'm wrapping. */
+    private final NullaryProcedure procedure;
 
     /**
-     * Create a new IgnoreRightProcedure.
-     * @param procedure Procedure to adapt
+     * Create a new NullaryProcedureNullaryFunction.
+     * @param procedure to adapt
      */
-    public IgnoreRightProcedure(Procedure<? super L> procedure) {
-        this.procedure = Validate.notNull(procedure, "Procedure argument was null");
+    public NullaryProcedureNullaryFunction(NullaryProcedure procedure) {
+        this.procedure = Validate.notNull(procedure, "NullaryProcedure argument was null");
     }
 
     /**
      * {@inheritDoc}
      */
-    public void run(L left, R right) {
-        procedure.run(left);
+    public T evaluate() {
+        procedure.run();
+        return null;
     }
 
     /**
@@ -68,16 +68,15 @@ public final class IgnoreRightProcedure<L, R> implements BinaryProcedure<L, R>, 
      */
     @Override
     public boolean equals(Object that) {
-        return that == this || (that instanceof IgnoreRightProcedure<?, ?>
-                                    && equals((IgnoreRightProcedure<?, ?>) that));
+        return that == this || (that instanceof NullaryProcedureNullaryFunction<?> && equals((NullaryProcedureNullaryFunction<?>) that));
     }
 
     /**
-     * Learn whether another IgnoreRightProcedure is equal to this.
-     * @param that IgnoreRightProcedure to test
+     * Learn whether another NullaryProcedureNullaryFunction is equal to this.
+     * @param that NullaryProcedureNullaryFunction to test
      * @return boolean
      */
-    public boolean equals(IgnoreRightProcedure<?, ?> that) {
+    public boolean equals(NullaryProcedureNullaryFunction<?> that) {
         return null != that && procedure.equals(that.procedure);
     }
 
@@ -86,7 +85,7 @@ public final class IgnoreRightProcedure<L, R> implements BinaryProcedure<L, R>, 
      */
     @Override
     public int hashCode() {
-        int hash = "IgnoreRightProcedure".hashCode();
+        int hash = "NullaryProcedureNullaryFunction".hashCode();
         hash ^= procedure.hashCode();
         return hash;
     }
@@ -96,18 +95,17 @@ public final class IgnoreRightProcedure<L, R> implements BinaryProcedure<L, R>, 
      */
     @Override
     public String toString() {
-        return "IgnoreRightProcedure<" + procedure + ">";
+        return "NullaryProcedureNullaryFunction<" + procedure + ">";
     }
 
     /**
-     * Adapt a Procedure to the BinaryProcedure interface.
-     * @param <L> left type
-     * @param <R> right type
-     * @param procedure Procedure to adapt
-     * @return IgnoreRightProcedure
+     * Adapt a NullaryProcedure as a NullaryFunction.
+     * @param <T> the returned value type.
+     * @param procedure to adapt
+     * @return NullaryProcedureNullaryFunction<T>
      */
-    public static <L, R> IgnoreRightProcedure<L, R> adapt(Procedure<? super L> procedure) {
-        return null == procedure ? null : new IgnoreRightProcedure<L, R>(procedure);
+    public static <T> NullaryProcedureNullaryFunction<T> adapt(NullaryProcedure procedure) {
+        return null == procedure ? null : new NullaryProcedureNullaryFunction<T>(procedure);
     }
 
 }

@@ -18,16 +18,16 @@ package org.apache.commons.functor.adapter;
 
 import java.io.Serializable;
 
-import org.apache.commons.functor.BinaryPredicate;
+import org.apache.commons.functor.NullaryPredicate;
 import org.apache.commons.functor.Predicate;
 import org.apache.commons.lang3.Validate;
 
 /**
  * Adapts a
- * {@link BinaryPredicate BinaryPredicate}
+ * {@link Predicate Predicate}
  * to the
- * {@link Predicate Predicate} interface
- * using a constant left-side argument.
+ * {@link NullaryPredicate NullaryPredicate} interface
+ * using a constant unary argument.
  * <p/>
  * Note that although this class implements
  * {@link Serializable}, a given instance will
@@ -36,38 +36,37 @@ import org.apache.commons.lang3.Validate;
  * an instance whose delegates are not
  * <code>Serializable</code> will result in an exception.
  *
- * @param <A> the argument type.
  * @version $Revision: 1365377 $ $Date: 2012-07-24 21:59:23 -0300 (Tue, 24 Jul 2012) $
  */
-public final class RightBoundPredicate<A> implements Predicate<A>, Serializable {
+public final class BoundNullaryPredicate implements NullaryPredicate, Serializable {
     /**
      * serialVersionUID declaration.
      */
-    private static final long serialVersionUID = -1768544281714574302L;
-    /** The {@link BinaryPredicate BinaryPredicate} I'm wrapping. */
-    private final BinaryPredicate<? super A, Object> predicate;
+    private static final long serialVersionUID = -5721164265625291834L;
+    /** The {@link Predicate Predicate} I'm wrapping. */
+    private final Predicate<Object> predicate;
     /** The parameter to pass to {@code predicate}. */
     private final Object param;
 
     /**
-     * Create a new RightBoundPredicate.
-     * @param <R> bound arg type
+     * Create a new BoundNullaryPredicate instance.
+     * @param <A> input type
      * @param predicate the predicate to adapt
      * @param arg the constant argument to use
      */
     @SuppressWarnings("unchecked")
-    public <R> RightBoundPredicate(BinaryPredicate<? super A, ? super R> predicate, R arg) {
+    public <A> BoundNullaryPredicate(Predicate<? super A> predicate, A arg) {
         this.predicate =
-            (BinaryPredicate<? super A, Object>) Validate.notNull(predicate,
-                "BinaryPredicate argument was null");
+            (Predicate<Object>) Validate.notNull(predicate,
+                "UnaryNullaryPredicate argument was null");
         this.param = arg;
     }
 
     /**
      * {@inheritDoc}
      */
-    public boolean test(A obj) {
-        return predicate.test(obj, param);
+    public boolean test() {
+        return predicate.test(param);
     }
 
     /**
@@ -75,18 +74,19 @@ public final class RightBoundPredicate<A> implements Predicate<A>, Serializable 
      */
     @Override
     public boolean equals(Object that) {
-        return that == this || (that instanceof RightBoundPredicate<?> && equals((RightBoundPredicate<?>) that));
+        return that == this || (that instanceof BoundNullaryPredicate && equals((BoundNullaryPredicate) that));
     }
 
     /**
-     * Learn whether another RightBoundPredicate is equal to this.
-     * @param that RightBoundPredicate to test
+     * Learn whether another BoundNullaryPredicate is equal to this.
+     * @param that BoundNullaryPredicate to test
      * @return boolean
      */
-    public boolean equals(RightBoundPredicate<?> that) {
+    public boolean equals(BoundNullaryPredicate that) {
         return null != that
                 && predicate.equals(that.predicate)
                 && (null == param ? null == that.param : param.equals(that.param));
+
     }
 
     /**
@@ -94,7 +94,7 @@ public final class RightBoundPredicate<A> implements Predicate<A>, Serializable 
      */
     @Override
     public int hashCode() {
-        int hash = "RightBoundPredicate".hashCode();
+        int hash = "BoundNullaryPredicate".hashCode();
         hash <<= 2;
         hash ^= predicate.hashCode();
         if (null != param) {
@@ -109,19 +109,28 @@ public final class RightBoundPredicate<A> implements Predicate<A>, Serializable 
      */
     @Override
     public String toString() {
-        return "RightBoundPredicate<" + predicate + "(?," + param + ")>";
+        return "BoundNullaryPredicate<" + predicate + "(" + param + ")>";
     }
 
     /**
-     * Adapt a BinaryPredicate as a Predicate.
-     * @param <L> the left argument type.
-     * @param <R> the right argument type.
-     * @param predicate to adapt
-     * @param arg right side
-     * @return RightBoundPredicate
+     * Adapt the given, possibly-<code>null</code>,
+     * {@link Predicate Predicate} to the
+     * {@link NullaryPredicate NullaryPredicate} interface by binding
+     * the specified <code>Object</code> as a constant
+     * argument.
+     * When the given <code>Predicate</code> is <code>null</code>,
+     * returns <code>null</code>.
+     *
+     * @param <A> input type
+     * @param predicate the possibly-<code>null</code>
+     *        {@link Predicate Predicate} to adapt
+     * @param arg the object to bind as a constant argument
+     * @return a <code>BoundNullaryPredicate</code> wrapping the given
+     *         {@link Predicate Predicate}, or <code>null</code>
+     *         if the given <code>Predicate</code> is <code>null</code>
      */
-    public static <L, R> RightBoundPredicate<L> bind(BinaryPredicate<? super L, ? super R> predicate, R arg) {
-        return null == predicate ? null : new RightBoundPredicate<L>(predicate, arg);
+    public static <A> BoundNullaryPredicate bind(Predicate<? super A> predicate, A arg) {
+        return null == predicate ? null : new BoundNullaryPredicate(predicate, arg);
     }
 
 }
