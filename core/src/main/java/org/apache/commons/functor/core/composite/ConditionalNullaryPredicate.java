@@ -18,19 +18,18 @@ package org.apache.commons.functor.core.composite;
 
 import java.io.Serializable;
 
-import org.apache.commons.functor.Predicate;
-import org.apache.commons.functor.Procedure;
-import org.apache.commons.functor.core.NoOp;
+import org.apache.commons.functor.NullaryPredicate;
 import org.apache.commons.lang3.Validate;
 
 /**
- * A {@link Procedure Procedure}
+ * A {@link NullaryPredicate NullaryPredicate}
  * similiar to Java's "ternary"
  * or "conditional" operator (<code>&#x3F; &#x3A;</code>).
- * Given a {@link Predicate predicate}
- * <i>p</i> and {@link Procedure procedures}
- * <i>q</i> and <i>r</i>, {@link #run runs}
- * <code>if (p.test(x)) { q.run(x); } else { r.run(x); }</code>.
+ * Given three {@link NullaryPredicate predicates}
+ * <i>p</i>, <i>q</i>, <i>r</i>,
+ * {@link #test tests}
+ * to
+ * <code>p.test() ? q.test() : r.test()</code>.
  * <p>
  * Note that although this class implements
  * {@link Serializable}, a given instance will
@@ -39,14 +38,13 @@ import org.apache.commons.lang3.Validate;
  * an instance whose delegates are not all
  * <code>Serializable</code> will result in an exception.
  * </p>
- * @param <A> the argument type.
  * @version $Revision: 1365329 $ $Date: 2012-07-24 19:34:23 -0300 (Tue, 24 Jul 2012) $
  */
-public final class ConditionalProcedure<A> implements Procedure<A>, Serializable {
+public final class ConditionalNullaryPredicate implements NullaryPredicate, Serializable {
     /**
      * serialVersionUID declaration.
      */
-    private static final long serialVersionUID = -895833369740247391L;
+    private static final long serialVersionUID = 7333505000745854098L;
 
     /** Base hash integer used to shift hash. */
     private static final int HASH_SHIFT = 4;
@@ -55,39 +53,28 @@ public final class ConditionalProcedure<A> implements Procedure<A>, Serializable
     /**
      * the condition to be evaluated.
      */
-    private final Predicate<? super A> ifPred;
+    private final NullaryPredicate ifPred;
     /**
-     * the procedure executed if the condition is satisfied.
+     * the predicate executed if the condition is satisfied.
      */
-    private final Procedure<? super A> thenProc;
+    private final NullaryPredicate thenPred;
     /**
-     * the procedure executed if the condition is not satisfied.
+     * the predicate executed if the condition is not satisfied.
      */
-    private final Procedure<? super A> elseProc;
+    private final NullaryPredicate elsePred;
 
     // constructor
     // ------------------------------------------------------------------------
     /**
-     * Create a new ConditionalProcedure.
+     * Create a new ConditionalNullaryPredicate.
      * @param ifPred if
-     * @param thenProc then
+     * @param thenPred then
+     * @param elsePred else
      */
-    public ConditionalProcedure(Predicate<? super A> ifPred, Procedure<? super A> thenProc) {
-        this(ifPred, thenProc, NoOp.instance());
-    }
-
-    /**
-     * Create a new ConditionalProcedure.
-     * @param ifPred if
-     * @param thenProc then
-     * @param elseProc else
-     */
-    public ConditionalProcedure(Predicate<? super A> ifPred,
-            Procedure<? super A> thenProc,
-            Procedure<? super A> elseProc) {
-        this.ifPred = Validate.notNull(ifPred, "Predicate argument was null");
-        this.thenProc = Validate.notNull(thenProc, "'then' Procedure argument was null");
-        this.elseProc = Validate.notNull(elseProc, "'else' Procedure argument was null");
+    public ConditionalNullaryPredicate(NullaryPredicate ifPred, NullaryPredicate thenPred, NullaryPredicate elsePred) {
+        this.ifPred = Validate.notNull(ifPred, "'if' NullaryPredicate argument was null");
+        this.thenPred = Validate.notNull(thenPred, "'then' NullaryPredicate argument was null");
+        this.elsePred = Validate.notNull(elsePred, "'else' NullaryPredicate argument was null");
     }
 
     // predicate interface
@@ -95,12 +82,8 @@ public final class ConditionalProcedure<A> implements Procedure<A>, Serializable
     /**
      * {@inheritDoc}
      */
-    public void run(A obj) {
-        if (ifPred.test(obj)) {
-            thenProc.run(obj);
-        } else {
-            elseProc.run(obj);
-        }
+    public boolean test() {
+        return ifPred.test() ? thenPred.test() : elsePred.test();
     }
 
     /**
@@ -108,20 +91,19 @@ public final class ConditionalProcedure<A> implements Procedure<A>, Serializable
      */
     @Override
     public boolean equals(Object that) {
-        return that == this || (that instanceof ConditionalProcedure<?>
-                                    && equals((ConditionalProcedure<?>) that));
+        return that == this || (that instanceof ConditionalNullaryPredicate && equals((ConditionalNullaryPredicate) that));
     }
 
     /**
-     * Learn whether another ConditionalProcedure is equal to this.
-     * @param that ConditionalProcedure to test
+     * Learn whether another ConditionalNullaryPredicate is equal to this.
+     * @param that ConditionalNullaryPredicate to test
      * @return boolean
      */
-    public boolean equals(ConditionalProcedure<?> that) {
+    public boolean equals(ConditionalNullaryPredicate that) {
         return null != that
                 && ifPred.equals(that.ifPred)
-                && thenProc.equals(that.thenProc)
-                && elseProc.equals(that.elseProc);
+                && thenPred.equals(that.thenPred)
+                && elsePred.equals(that.elsePred);
     }
 
     /**
@@ -129,13 +111,13 @@ public final class ConditionalProcedure<A> implements Procedure<A>, Serializable
      */
     @Override
     public int hashCode() {
-        int hash = "ConditionalProcedure".hashCode();
+        int hash = "ConditionalNullaryPredicate".hashCode();
         hash <<= HASH_SHIFT;
         hash ^= ifPred.hashCode();
         hash <<= HASH_SHIFT;
-        hash ^= thenProc.hashCode();
+        hash ^= thenPred.hashCode();
         hash <<= HASH_SHIFT;
-        hash ^= elseProc.hashCode();
+        hash ^= elsePred.hashCode();
         return hash;
     }
 
@@ -144,7 +126,7 @@ public final class ConditionalProcedure<A> implements Procedure<A>, Serializable
      */
     @Override
     public String toString() {
-        return "ConditionalProcedure<" + ifPred + "?" + thenProc + ":" + elseProc + ">";
+        return "ConditionalNullaryPredicate<" + ifPred + "?" + thenPred + ":" + elsePred + ">";
     }
 
 }

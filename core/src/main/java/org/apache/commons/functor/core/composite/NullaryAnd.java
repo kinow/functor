@@ -16,7 +16,7 @@
  */
 package org.apache.commons.functor.core.composite;
 
-import org.apache.commons.functor.Predicate;
+import org.apache.commons.functor.NullaryPredicate;
 
 /**
  * {@link #test Tests} <code>true</code> iff
@@ -31,52 +31,52 @@ import org.apache.commons.functor.Predicate;
  * an instance whose delegates are not all
  * <code>Serializable</code> will result in an exception.
  * </p>
- * @param <A> the predicate argument type.
  * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
-public final class And<A> extends BasePredicateList<A> {
+public final class NullaryAnd extends BaseNullaryPredicateList {
+
+    // constructor
+    // ------------------------------------------------------------------------
 
     /**
      * serialVersionUID declaration.
      */
-    private static final long serialVersionUID = 8324861737107307302L;
+    private static final long serialVersionUID = -6053343095016685571L;
 
-    // constructor
-    // ------------------------------------------------------------------------
     /**
-     * Create a new UnaryAnd.
+     * Create a new NullaryAnd.
      */
-    public And() {
+    public NullaryAnd() {
         super();
     }
 
     /**
-     * Create a new UnaryAnd instance.
+     * Create a new NullaryAnd instance.
      *
-     * @param predicates the predicates to put in and.
+     * @param predicates the predicates to add
      */
-    public And(Iterable<Predicate<? super A>> predicates) {
+    public NullaryAnd(Iterable<NullaryPredicate> predicates) {
         super(predicates);
     }
 
     /**
-     * Create a new UnaryAnd instance.
+     * Create a new NullaryAnd instance.
      *
-     * @param predicates the predicates to put in and.
+     * @param predicates the predicates to add
      */
-    public And(Predicate<? super A>... predicates) {
+    public NullaryAnd(NullaryPredicate... predicates) {
         super(predicates);
     }
 
     // modifiers
     // ------------------------------------------------------------------------
     /**
-     * Fluently add a UnaryPredicate.
-     * @param p UnaryPredicate to add
+     * Add a Predicate.
+     * @param p Predicate to add
      * @return this
      */
-    public And<A> and(Predicate<? super A> p) {
-        super.addPredicate(p);
+    public NullaryAnd and(NullaryPredicate p) {
+        super.addNullaryPredicate(p);
         return this;
     }
 
@@ -85,9 +85,9 @@ public final class And<A> extends BasePredicateList<A> {
     /**
      * {@inheritDoc}
      */
-    public boolean test(A obj) {
-        for (Predicate<? super A> p : getPredicateList()) {
-            if (!p.test(obj)) {
+    public boolean test() {
+        for (NullaryPredicate p : getNullaryPredicateList()) {
+            if (!p.test()) {
                 return false;
             }
         }
@@ -99,16 +99,16 @@ public final class And<A> extends BasePredicateList<A> {
      */
     @Override
     public boolean equals(Object that) {
-        return that == this || (that instanceof And<?> && equals((And<?>) that));
+        return that == this || (that instanceof NullaryAnd && equals((NullaryAnd) that));
     }
 
     /**
-     * Learn whether another UnaryAnd is equal to this.
-     * @param that UnaryAnd to test
+     * Learn whether a given And is equal to this.
+     * @param that the And to test
      * @return boolean
      */
-    public boolean equals(And<?> that) {
-        return getPredicateListEquals(that);
+    public boolean equals(NullaryAnd that) {
+        return getNullaryPredicateListEquals(that);
     }
 
     /**
@@ -116,7 +116,7 @@ public final class And<A> extends BasePredicateList<A> {
      */
     @Override
     public int hashCode() {
-        return "UnaryAnd".hashCode() ^ getPredicateListHashCode();
+        return "And".hashCode() ^ getNullaryPredicateListHashCode();
     }
 
     /**
@@ -124,7 +124,7 @@ public final class And<A> extends BasePredicateList<A> {
      */
     @Override
     public String toString() {
-        return "UnaryAnd<" + getPredicateListToString() + ">";
+        return "And<" + getNullaryPredicateListToString() + ">";
     }
 
 }

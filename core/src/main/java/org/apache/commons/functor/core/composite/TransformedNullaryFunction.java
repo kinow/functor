@@ -18,38 +18,36 @@ package org.apache.commons.functor.core.composite;
 
 import java.io.Serializable;
 
-import org.apache.commons.functor.BinaryFunction;
+import org.apache.commons.functor.NullaryFunction;
 import org.apache.commons.functor.Function;
 import org.apache.commons.lang3.Validate;
 
 /**
- * A BinaryFunction whose result is then run through a Function.
+ * A NullaryFunction whose result is then run through a Function.
  *
- * @param <L> the left argument type.
- * @param <R> the right argument type.
  * @param <T> the returned value type.
  * @version $Revision: 1365329 $ $Date: 2012-07-24 19:34:23 -0300 (Tue, 24 Jul 2012) $
  */
-public class TransformedBinaryFunction<L, R, T> implements BinaryFunction<L, R, T>, Serializable {
+public class TransformedNullaryFunction<T> implements NullaryFunction<T>, Serializable {
     /**
      * serialVersionUID declaration.
      */
-    private static final long serialVersionUID = 3312781645741807814L;
+    private static final long serialVersionUID = 1201423110871342081L;
 
     /**
      * Type-remembering helper.
      *
-     * @param <X> the following function left argument.
+     * @param <X> the adapted function argument type
      */
-    private static final class Helper<X, L, R, T> implements BinaryFunction<L, R, T>, Serializable {
+    private static final class Helper<X, T> implements NullaryFunction<T>, Serializable {
         /**
          * serialVersionUID declaration.
          */
-        private static final long serialVersionUID = 8141488776884860650L;
+        private static final long serialVersionUID = -7177784125292465809L;
         /**
          * The preceding function.
          */
-        private BinaryFunction<? super L, ? super R, ? extends X> preceding;
+        private NullaryFunction<? extends X> preceding;
         /**
          * The following function.
          */
@@ -57,44 +55,43 @@ public class TransformedBinaryFunction<L, R, T> implements BinaryFunction<L, R, 
 
         /**
          * Create a new Helper.
-         * @param preceding BinaryFunction
+         * @param preceding NullaryFunction
          * @param following Function
          */
-        private Helper(BinaryFunction<? super L, ? super R, ? extends X> preceding,
-                Function<? super X, ? extends T> following) {
-            this.preceding = Validate.notNull(preceding, "BinaryFunction argument was null");
+        private Helper(NullaryFunction<? extends X> preceding, Function<? super X, ? extends T> following) {
+            this.preceding = Validate.notNull(preceding, "NullaryFunction argument was null");
             this.following = Validate.notNull(following, "Function argument was null");
         }
 
         /**
          * {@inheritDoc}
          */
-        public T evaluate(L left, R right) {
-            return following.evaluate(preceding.evaluate(left, right));
+        public T evaluate() {
+            return following.evaluate(preceding.evaluate());
         }
     }
 
     /**
      * The adapted helper.
      */
-    private final Helper<?, L, R, T> helper;
+    private final Helper<?, T> helper;
 
     /**
-     * Create a new TransformedBinaryFunction.
-     * @param <X> the following function left argument.
-     * @param preceding BinaryFunction
+     * Create a new TransformedNullaryFunction.
+     * @param <X> the preceding function argument type.
+     * @param preceding NullaryFunction
      * @param following Function
      */
-    public <X> TransformedBinaryFunction(BinaryFunction<? super L, ? super R, ? extends X> preceding,
+    public <X> TransformedNullaryFunction(NullaryFunction<? extends X> preceding,
             Function<? super X, ? extends T> following) {
-        this.helper = new Helper<X, L, R, T>(preceding, following);
+        this.helper = new Helper<X, T>(preceding, following);
     }
 
     /**
      * {@inheritDoc}
      */
-    public final T evaluate(L left, R right) {
-        return helper.evaluate(left, right);
+    public final T evaluate() {
+        return helper.evaluate();
     }
 
     /**
@@ -102,16 +99,15 @@ public class TransformedBinaryFunction<L, R, T> implements BinaryFunction<L, R, 
      */
     @Override
     public final boolean equals(Object obj) {
-        return obj == this || obj instanceof TransformedBinaryFunction<?, ?, ?>
-                && equals((TransformedBinaryFunction<?, ?, ?>) obj);
+        return obj == this || obj instanceof TransformedNullaryFunction<?> && equals((TransformedNullaryFunction<?>) obj);
     }
 
     /**
-     * Learn whether another TransformedBinaryFunction is equal to <code>this</code>.
+     * Learn whether another TransformedNullaryFunction is equal to <code>this</code>.
      * @param that instance to test
      * @return whether equal
      */
-    public final boolean equals(TransformedBinaryFunction<?, ?, ?> that) {
+    public final boolean equals(TransformedNullaryFunction<?> that) {
         return that != null && that.helper.preceding.equals(this.helper.preceding)
                 && that.helper.following.equals(this.helper.following);
     }
@@ -121,7 +117,7 @@ public class TransformedBinaryFunction<L, R, T> implements BinaryFunction<L, R, 
      */
     @Override
     public int hashCode() {
-        int result = "TransformedBinaryFunction".hashCode();
+        int result = "TransformedNullaryFunction".hashCode();
         result <<= 2;
         result |= helper.following.hashCode();
         result <<= 2;
@@ -134,6 +130,6 @@ public class TransformedBinaryFunction<L, R, T> implements BinaryFunction<L, R, 
      */
     @Override
     public String toString() {
-        return "TransformedBinaryFunction<" + helper.preceding + "; " + helper.following + ">";
+        return "TransformedNullaryFunction<" + helper.preceding + "; " + helper.following + ">";
     }
 }

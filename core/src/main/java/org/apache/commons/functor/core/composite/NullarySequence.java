@@ -21,12 +21,12 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import org.apache.commons.functor.Procedure;
+import org.apache.commons.functor.NullaryProcedure;
 
 /**
- * A {@link Procedure Procedure}
- * that {@link Procedure#run runs} an ordered
- * sequence of {@link Procedure Procedures}.
+ * A {@link NullaryProcedure NullaryProcedure}
+ * that {@link NullaryProcedure#run runs} an ordered
+ * sequence of {@link NullaryProcedure NullaryProcedures}.
  * When the sequence is empty, this procedure is does
  * nothing.
  * <p>
@@ -37,54 +37,53 @@ import org.apache.commons.functor.Procedure;
  * an instance whose delegates are not all
  * <code>Serializable</code> will result in an exception.
  * </p>
- * @param <A> the argument type.
- * @version $Revision: 1363382 $ $Date: 2012-07-19 12:23:19 -0300 (Thu, 19 Jul 2012) $
+ * @version $Revision: 1365329 $ $Date: 2012-07-24 19:34:23 -0300 (Tue, 24 Jul 2012) $
  */
-public class Sequence<A> implements Procedure<A>, Serializable {
+public class NullarySequence implements NullaryProcedure, Serializable {
 
     /**
      * serialVersionUID declaration.
      */
-    private static final long serialVersionUID = 9194268249717820246L;
+    private static final long serialVersionUID = 8041703589149547883L;
     // attributes
     // ------------------------------------------------------------------------
     /**
-     * The data structure to store the procedure sequence.
+     * The data structure where storing procedures sequence.
      */
-    private final List<Procedure<? super A>> list = new ArrayList<Procedure<? super A>>();
+    private List<NullaryProcedure> list = new ArrayList<NullaryProcedure>();
 
     // constructor
     // ------------------------------------------------------------------------
     /**
-     * Create a new Sequence.
+     * Create a new NullarySequence.
      */
-    public Sequence() {
+    public NullarySequence() {
         super();
     }
 
     /**
-     * Create a new Sequence instance.
+     * Create a new NullarySequence instance.
      *
      * @param procedures to run sequentially
      */
-    public Sequence(Procedure<? super A>... procedures) {
+    public NullarySequence(NullaryProcedure... procedures) {
         this();
         if (procedures != null) {
-            for (Procedure<? super A> p : procedures) {
+            for (NullaryProcedure p : procedures) {
                 then(p);
             }
         }
     }
 
     /**
-     * Create a new Sequence instance.
+     * Create a new NullarySequence instance.
      *
      * @param procedures to run sequentially
      */
-    public Sequence(Iterable<Procedure<? super A>> procedures) {
+    public NullarySequence(Iterable<NullaryProcedure> procedures) {
         this();
         if (procedures != null) {
-            for (Procedure<? super A> p : procedures) {
+            for (NullaryProcedure p : procedures) {
                 then(p);
             }
         }
@@ -93,11 +92,11 @@ public class Sequence<A> implements Procedure<A>, Serializable {
     // modifiers
     // ------------------------------------------------------------------------
     /**
-     * Fluently add a Procedure to the sequence.
-     * @param p Procedure to add
+     * Fluently add a NullaryProcedure.
+     * @param p NullaryProcedure to add
      * @return this
      */
-    public Sequence<A> then(Procedure<? super A> p) {
+    public final NullarySequence then(NullaryProcedure p) {
         if (p != null) {
             list.add(p);
         }
@@ -109,9 +108,9 @@ public class Sequence<A> implements Procedure<A>, Serializable {
     /**
      * {@inheritDoc}
      */
-    public void run(A obj) {
-        for (Iterator<Procedure<? super A>> iter = list.iterator(); iter.hasNext();) {
-            iter.next().run(obj);
+    public final void run() {
+        for (Iterator<NullaryProcedure> iter = list.iterator(); iter.hasNext();) {
+            iter.next().run();
         }
     }
 
@@ -119,16 +118,16 @@ public class Sequence<A> implements Procedure<A>, Serializable {
      * {@inheritDoc}
      */
     @Override
-    public boolean equals(Object that) {
-        return that == this || (that instanceof Sequence<?> && equals((Sequence<?>) that));
+    public final boolean equals(Object that) {
+        return that == this || (that instanceof NullarySequence && equals((NullarySequence) that));
     }
 
     /**
-     * Learn whether another Sequence is equal to this.
-     * @param that Sequence to test
+     * Learn whether a given NullarySequence is equal to this.
+     * @param that NullarySequence to test
      * @return boolean
      */
-    public boolean equals(Sequence<?> that) {
+    public boolean equals(NullarySequence that) {
         // by construction, list is never null
         return null != that && list.equals(that.list);
     }
@@ -139,7 +138,7 @@ public class Sequence<A> implements Procedure<A>, Serializable {
     @Override
     public int hashCode() {
         // by construction, list is never null
-        return "Sequence".hashCode() ^ list.hashCode();
+        return "NullarySequence".hashCode() ^ list.hashCode();
     }
 
     /**
@@ -147,7 +146,7 @@ public class Sequence<A> implements Procedure<A>, Serializable {
      */
     @Override
     public String toString() {
-        return "Sequence<" + list + ">";
+        return "NullarySequence<" + list + ">";
     }
 
 }

@@ -18,7 +18,7 @@ package org.apache.commons.functor.core.composite;
 
 import java.io.Serializable;
 
-import org.apache.commons.functor.Predicate;
+import org.apache.commons.functor.NullaryPredicate;
 import org.apache.commons.lang3.Validate;
 
 /**
@@ -32,29 +32,29 @@ import org.apache.commons.lang3.Validate;
  * an instance whose delegate is not
  * <code>Serializable</code> will result in an exception.
  * </p>
- * @param <A> the argument type.
  * @version $Revision: 1365329 $ $Date: 2012-07-24 19:34:23 -0300 (Tue, 24 Jul 2012) $
  */
-public final class Not<A> implements Predicate<A>, Serializable {
+public final class NullaryNot implements NullaryPredicate, Serializable {
+
     /**
      * serialVersionUID declaration.
      */
-    private static final long serialVersionUID = -97785102566566058L;
+    private static final long serialVersionUID = 8268713706856765874L;
     // attributes
     // ------------------------------------------------------------------------
     /**
-     * The adapted predicate.
+     * The adapted predicate has to be negated.
      */
-    private final Predicate<? super A> predicate;
+    private final NullaryPredicate predicate;
 
     // constructor
     // ------------------------------------------------------------------------
     /**
-     * Create a new Not.
-     * @param predicate Predicate to negate
+     * Create a new NullaryNot.
+     * @param predicate NullaryPredicate to negate
      */
-    public Not(Predicate<? super A> predicate) {
-        this.predicate = Validate.notNull(predicate, "Predicate argument was null");
+    public NullaryNot(NullaryPredicate predicate) {
+        this.predicate = Validate.notNull(predicate, "NullaryPredicate argument was null");
     }
 
     // predicate interface
@@ -62,8 +62,8 @@ public final class Not<A> implements Predicate<A>, Serializable {
     /**
      * {@inheritDoc}
      */
-    public boolean test(A obj) {
-        return !(predicate.test(obj));
+    public boolean test() {
+        return !(predicate.test());
     }
 
     /**
@@ -71,15 +71,15 @@ public final class Not<A> implements Predicate<A>, Serializable {
      */
     @Override
     public boolean equals(Object that) {
-        return that == this || (that instanceof Not<?> && equals((Not<?>) that));
+        return that == this || (that instanceof NullaryNot && equals((NullaryNot) that));
     }
 
     /**
-     * Learn whether another Not is equal to this.
-     * @param that Not to test
+     * Learn whether another NullaryNot is equal to this.
+     * @param that the NullaryNot to test
      * @return boolean
      */
-    public boolean equals(Not<?> that) {
+    public boolean equals(NullaryNot that) {
         return null != that && predicate.equals(that.predicate);
     }
 
@@ -104,13 +104,11 @@ public final class Not<A> implements Predicate<A>, Serializable {
     // static
     // ------------------------------------------------------------------------
     /**
-     * Invert a Predicate.
-     * @param <A> the argument type.
-     * @param pred Predicate to invert
-     * @return Predicate<A>
+     * Get a NullaryNot instance for <code>that</code>.
+     * @param that Predicate to negate
+     * @return NullaryNot
      */
-    public static <A> Predicate<A> not(Predicate<? super A> pred) {
-        return null == pred ? null : new Not<A>(pred);
+    public static NullaryPredicate not(NullaryPredicate that) {
+        return null == that ? null : new NullaryNot(that);
     }
-
 }

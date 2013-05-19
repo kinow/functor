@@ -20,11 +20,11 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.functor.Predicate;
+import org.apache.commons.functor.NullaryPredicate;
 
 /**
- * Abstract base class for {@link Predicate Predicates}
- * composed of a list of {@link Predicate Predicates}.
+ * Abstract base class for {@link NullaryPredicate NullaryPredicates}
+ * composed of a list of {@link NullaryPredicate NullaryPredicates}.
  * <p>
  * Note that although this class implements
  * {@link Serializable}, a given instance will
@@ -33,55 +33,53 @@ import org.apache.commons.functor.Predicate;
  * an instance whose delegates are not all
  * <code>Serializable</code> will result in an exception.
  * </p>
- * @param <A> the predicate argument type.
  * @version $Revision: 1365329 $ $Date: 2012-07-24 19:34:23 -0300 (Tue, 24 Jul 2012) $
  */
-abstract class BasePredicateList<A> implements Predicate<A>, Serializable {
-
+abstract class BaseNullaryPredicateList implements NullaryPredicate, Serializable {
     /**
      * serialVersionUID declaration.
      */
-    private static final long serialVersionUID = 1467575113401282954L;
+    private static final long serialVersionUID = 7860902316994888181L;
     // attributes
     // ------------------------------------------------------------------------
     /**
      * A list where storing the adapted predicates.
      */
-    private final List<Predicate<? super A>> list = new ArrayList<Predicate<? super A>>();
+    private final List<NullaryPredicate> list = new ArrayList<NullaryPredicate>();
 
     // constructor
     // ------------------------------------------------------------------------
     /**
-     * Create a new BasePredicateList.
+     * Create a new BaseNullaryPredicateList instance.
      */
-    protected BasePredicateList() {
+    protected BaseNullaryPredicateList() {
         super();
     }
 
     /**
-     * Create a new BasePredicateList instance.
+     * Create a new BaseNullaryPredicateList instance.
      *
      * @param predicates to add
      */
-    protected BasePredicateList(Predicate<? super A>... predicates) {
+    protected BaseNullaryPredicateList(NullaryPredicate... predicates) {
         this();
         if (predicates != null) {
-            for (Predicate<? super A> p : predicates) {
-                addPredicate(p);
+            for (NullaryPredicate p : predicates) {
+                addNullaryPredicate(p);
             }
         }
     }
 
     /**
-     * Create a new BasePredicateList instance.
+     * Create a new BaseNullaryPredicateList instance.
      *
      * @param predicates to add
      */
-    protected BasePredicateList(Iterable<Predicate<? super A>> predicates) {
+    protected BaseNullaryPredicateList(Iterable<NullaryPredicate> predicates) {
         this();
         if (predicates != null) {
-            for (Predicate<? super A> p : predicates) {
-                addPredicate(p);
+            for (NullaryPredicate p : predicates) {
+                addNullaryPredicate(p);
             }
         }
     }
@@ -109,10 +107,10 @@ abstract class BasePredicateList<A> implements Predicate<A>, Serializable {
     // modifiers
     // ------------------------------------------------------------------------
     /**
-     * Add a Predicate to the list.
-     * @param p Predicate to add
+     * Add a NullaryPredicate to the list.
+     * @param p NullaryPredicate to add
      */
-    protected void addPredicate(Predicate<? super A> p) {
+    protected void addNullaryPredicate(NullaryPredicate p) {
         if (p != null) {
             list.add(p);
         }
@@ -122,35 +120,35 @@ abstract class BasePredicateList<A> implements Predicate<A>, Serializable {
     // ------------------------------------------------------------------------
 
     /**
-     * Get the "live" list of contained {@link Predicate}s.
-     * @return List
+     * Get the "live" list of {@link NullaryPredicate}s.
+     * @return List<NullaryPredicate>
      */
-    protected List<Predicate<? super A>> getPredicateList() {
+    protected List<NullaryPredicate> getNullaryPredicateList() {
         return list;
     }
 
     /**
-     * Learn whether another BasePredicateList has content equal to this.
-     * @param that the BasePredicateList to test
+     * Learn whether the list of another BaseNullaryPredicateList is equal to my list.
+     * @param that BaseNullaryPredicateList to test
      * @return boolean
      */
-    protected boolean getPredicateListEquals(BasePredicateList<?> that) {
+    protected boolean getNullaryPredicateListEquals(BaseNullaryPredicateList that) {
         return (null != that && this.list.equals(that.list));
     }
 
     /**
-     * Get a hashCode for the list.
+     * Get a hashCode for my list.
      * @return int
      */
-    protected int getPredicateListHashCode() {
+    protected int getNullaryPredicateListHashCode() {
         return list.hashCode();
     }
 
     /**
-     * Get a toString for the list.
+     * Get a toString for my list.
      * @return String
      */
-    protected String getPredicateListToString() {
+    protected String getNullaryPredicateListToString() {
         return String.valueOf(list);
     }
 

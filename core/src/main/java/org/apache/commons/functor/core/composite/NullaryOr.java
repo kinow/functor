@@ -16,13 +16,13 @@
  */
 package org.apache.commons.functor.core.composite;
 
-import org.apache.commons.functor.Predicate;
+import org.apache.commons.functor.NullaryPredicate;
 
 /**
  * {@link #test Tests} <code>true</code> iff
- * none of its children test <code>false</code>.
- * Note that by this definition, the "and" of
- * an empty collection of predicates tests <code>true</code>.
+ * at least one of its children test <code>true</code>.
+ * Note that by this definition, the "or" of
+ * an empty collection of predicates tests <code>false</code>.
  * <p>
  * Note that although this class implements
  * {@link java.io.Serializable Serializable}, a given instance will
@@ -31,52 +31,49 @@ import org.apache.commons.functor.Predicate;
  * an instance whose delegates are not all
  * <code>Serializable</code> will result in an exception.
  * </p>
- * @param <A> the predicate argument type.
  * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
-public final class And<A> extends BasePredicateList<A> {
+public final class NullaryOr extends BaseNullaryPredicateList {
 
     /**
      * serialVersionUID declaration.
      */
-    private static final long serialVersionUID = 8324861737107307302L;
+    private static final long serialVersionUID = -1636233158061690073L;
 
     // constructor
     // ------------------------------------------------------------------------
     /**
-     * Create a new UnaryAnd.
+     * Create a new NullaryOr.
      */
-    public And() {
+    public NullaryOr() {
         super();
     }
 
     /**
-     * Create a new UnaryAnd instance.
+     * Create a new NullaryOr instance.
      *
-     * @param predicates the predicates to put in and.
+     * @param predicates predicates have to be put in nullary or condition.
      */
-    public And(Iterable<Predicate<? super A>> predicates) {
+    public NullaryOr(Iterable<NullaryPredicate> predicates) {
         super(predicates);
     }
 
     /**
-     * Create a new UnaryAnd instance.
+     * Create a new NullaryOr instance.
      *
-     * @param predicates the predicates to put in and.
+     * @param predicates predicates have to be put in nullary or condition.
      */
-    public And(Predicate<? super A>... predicates) {
+    public NullaryOr(NullaryPredicate... predicates) {
         super(predicates);
     }
 
-    // modifiers
-    // ------------------------------------------------------------------------
     /**
-     * Fluently add a UnaryPredicate.
-     * @param p UnaryPredicate to add
+     * Fluently add a NullaryPredicate.
+     * @param p NullaryPredicate to add
      * @return this
      */
-    public And<A> and(Predicate<? super A> p) {
-        super.addPredicate(p);
+    public NullaryOr or(NullaryPredicate p) {
+        super.addNullaryPredicate(p);
         return this;
     }
 
@@ -85,13 +82,13 @@ public final class And<A> extends BasePredicateList<A> {
     /**
      * {@inheritDoc}
      */
-    public boolean test(A obj) {
-        for (Predicate<? super A> p : getPredicateList()) {
-            if (!p.test(obj)) {
-                return false;
+    public boolean test() {
+        for (NullaryPredicate p : getNullaryPredicateList()) {
+            if (p.test()) {
+                return true;
             }
         }
-        return true;
+        return false;
     }
 
     /**
@@ -99,16 +96,16 @@ public final class And<A> extends BasePredicateList<A> {
      */
     @Override
     public boolean equals(Object that) {
-        return that == this || (that instanceof And<?> && equals((And<?>) that));
+        return that == this || (that instanceof NullaryOr && equals((NullaryOr) that));
     }
 
     /**
-     * Learn whether another UnaryAnd is equal to this.
-     * @param that UnaryAnd to test
+     * Learn whether another NullaryOr is equal to this.
+     * @param that NullaryOr to test
      * @return boolean
      */
-    public boolean equals(And<?> that) {
-        return getPredicateListEquals(that);
+    public boolean equals(NullaryOr that) {
+        return getNullaryPredicateListEquals(that);
     }
 
     /**
@@ -116,7 +113,7 @@ public final class And<A> extends BasePredicateList<A> {
      */
     @Override
     public int hashCode() {
-        return "UnaryAnd".hashCode() ^ getPredicateListHashCode();
+        return "NullaryOr".hashCode() ^ getNullaryPredicateListHashCode();
     }
 
     /**
@@ -124,7 +121,7 @@ public final class And<A> extends BasePredicateList<A> {
      */
     @Override
     public String toString() {
-        return "UnaryAnd<" + getPredicateListToString() + ">";
+        return "NullaryOr<" + getNullaryPredicateListToString() + ">";
     }
 
 }

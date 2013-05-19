@@ -18,16 +18,16 @@ package org.apache.commons.functor.core.composite;
 
 import java.io.Serializable;
 
-import org.apache.commons.functor.Function;
+import org.apache.commons.functor.NullaryFunction;
+import org.apache.commons.functor.NullaryProcedure;
 import org.apache.commons.functor.Procedure;
-import org.apache.commons.functor.UnaryProcedure;
 import org.apache.commons.lang3.Validate;
 
 /**
- * A Procedure composed of a Function whose result is then run through a UnaryProcedure.
+ * A NullaryProcedure composed of a NullaryFunction whose result is then run through a Procedure.
  * @version $Revision: 1365329 $ $Date: 2012-07-24 19:34:23 -0300 (Tue, 24 Jul 2012) $
  */
-public class TransformedProcedure implements Procedure, Serializable {
+public class TransformedProcedure implements NullaryProcedure, Serializable {
     /**
      * serialVersionUID declaration.
      */
@@ -40,7 +40,7 @@ public class TransformedProcedure implements Procedure, Serializable {
      * Type-remembering helper.
      * @param <X> the adapted function argument type.
      */
-    private static final class Helper<X> implements Procedure, Serializable {
+    private static final class Helper<X> implements NullaryProcedure, Serializable {
         /**
          * serialVersionUID declaration.
          */
@@ -48,20 +48,20 @@ public class TransformedProcedure implements Procedure, Serializable {
         /**
          * The adapted function.
          */
-        private Function<? extends X> function;
+        private NullaryFunction<? extends X> function;
         /**
          * The adapted procedure.
          */
-        private UnaryProcedure<? super X> procedure;
+        private Procedure<? super X> procedure;
 
         /**
          * Create a new Helper.
-         * @param function Function
-         * @param procedure UnaryFunction
+         * @param function NullaryFunction
+         * @param procedure Procedure
          */
-        private Helper(Function<? extends X> function, UnaryProcedure<? super X> procedure) {
-            this.function = Validate.notNull(function, "Function argument must not be null");
-            this.procedure = Validate.notNull(procedure, "UnaryProcedure argument must not be null");
+        private Helper(NullaryFunction<? extends X> function, Procedure<? super X> procedure) {
+            this.function = Validate.notNull(function, "NullaryFunction argument must not be null");
+            this.procedure = Validate.notNull(procedure, "Procedure argument must not be null");
         }
 
         /**
@@ -80,10 +80,10 @@ public class TransformedProcedure implements Procedure, Serializable {
     /**
      * Create a new TransformedProcedure.
      * @param <X> the adapted function argument type.
-     * @param function Function
-     * @param procedure UnaryProcedure
+     * @param function NullaryFunction
+     * @param procedure Procedure
      */
-    public <X> TransformedProcedure(Function<? extends X> function, UnaryProcedure<? super X> procedure) {
+    public <X> TransformedProcedure(NullaryFunction<? extends X> function, Procedure<? super X> procedure) {
         this.helper = new Helper<X>(function, procedure);
     }
 
