@@ -16,9 +16,9 @@
  */
 package org.apache.commons.functor.generator;
 
-import org.apache.commons.functor.UnaryPredicate;
-import org.apache.commons.functor.UnaryProcedure;
-import org.apache.commons.functor.core.composite.ConditionalUnaryProcedure;
+import org.apache.commons.functor.Predicate;
+import org.apache.commons.functor.Procedure;
+import org.apache.commons.functor.core.composite.ConditionalProcedure;
 import org.apache.commons.lang3.Validate;
 
 /**
@@ -33,14 +33,14 @@ public class FilteredGenerator<E> extends BaseGenerator<E> {
     /**
      * The wrapped generator.
      */
-    private final UnaryPredicate<? super E> pred;
+    private final Predicate<? super E> pred;
 
     /**
      * Create a new FilteredGenerator.
      * @param wrapped Generator to wrap
      * @param pred filtering UnaryPredicate
      */
-    public FilteredGenerator(Generator<? extends E> wrapped, UnaryPredicate<? super E> pred) {
+    public FilteredGenerator(Generator<? extends E> wrapped, Predicate<? super E> pred) {
         super(Validate.notNull(wrapped, "Generator argument was null"));
         this.pred = Validate.notNull(pred, "UnaryPredicate argument was null");
     }
@@ -48,8 +48,8 @@ public class FilteredGenerator<E> extends BaseGenerator<E> {
     /**
      * {@inheritDoc}
      */
-    public void run(UnaryProcedure<? super E> proc) {
-        getWrappedGenerator().run(new ConditionalUnaryProcedure<E>(pred, proc));
+    public void run(Procedure<? super E> proc) {
+        getWrappedGenerator().run(new ConditionalProcedure<E>(pred, proc));
     }
 
     /**
