@@ -18,8 +18,8 @@ package org.apache.commons.functor.core;
 
 import java.io.Serializable;
 
-import org.apache.commons.functor.UnaryFunction;
-import org.apache.commons.functor.UnaryPredicate;
+import org.apache.commons.functor.Function;
+import org.apache.commons.functor.Predicate;
 
 /**
  * {@link #evaluate Evaluates} to its input argument.
@@ -33,7 +33,7 @@ import org.apache.commons.functor.UnaryPredicate;
  * @param <T> the returned value type.
  * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
-public final class Identity<T> implements UnaryFunction<T, T>, UnaryPredicate<T>, Serializable {
+public final class Identity<T> implements Function<T, T>, Predicate<T>, Serializable {
     // static attributes
     // ------------------------------------------------------------------------
     /**

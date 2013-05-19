@@ -20,8 +20,8 @@ package org.apache.commons.functor.core;
 import java.io.Serializable;
 
 import org.apache.commons.functor.BinaryPredicate;
+import org.apache.commons.functor.NullaryPredicate;
 import org.apache.commons.functor.Predicate;
-import org.apache.commons.functor.UnaryPredicate;
 
 /**
  * A predicate that returns <code>true</code>
@@ -31,7 +31,7 @@ import org.apache.commons.functor.UnaryPredicate;
  * @since 1.0
  * @version $Revision: 1482663 $ $Date: 2013-05-14 23:34:45 -0300 (Tue, 14 May 2013) $
  */
-public final class Limit implements Predicate, UnaryPredicate<Object>, BinaryPredicate<Object, Object>, Serializable {
+public final class Limit implements NullaryPredicate, Predicate<Object>, BinaryPredicate<Object, Object>, Serializable {
     // static attributes
     // ------------------------------------------------------------------------
     /**
