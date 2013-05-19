@@ -22,7 +22,7 @@ import java.util.Map;
 
 import org.apache.commons.functor.BinaryPredicate;
 import org.apache.commons.functor.BinaryProcedure;
-import org.apache.commons.functor.UnaryPredicate;
+import org.apache.commons.functor.Predicate;
 import org.apache.commons.functor.adapter.BinaryProcedureBinaryFunction;
 import org.apache.commons.functor.core.composite.ConditionalBinaryFunction;
 
@@ -30,7 +30,7 @@ import org.apache.commons.functor.core.composite.ConditionalBinaryFunction;
  * @version $Revision: 1363514 $ $Date: 2012-07-19 17:13:49 -0300 (Thu, 19 Jul 2012) $
  */
 public class PredicatedMap<K, V> extends FunctoredMap<K, V> {
-    public PredicatedMap(Map<K, V> map, final UnaryPredicate<K> keyPredicate, final UnaryPredicate<V> valuePredicate) {
+    public PredicatedMap(Map<K, V> map, final Predicate<K> keyPredicate, final Predicate<V> valuePredicate) {
         super(map);
         setOnPut(new ConditionalBinaryFunction<Map<K,V>, Object[], V>(
             new BinaryPredicate<Map<K, V>, Object[]>() {

@@ -22,8 +22,8 @@ import static org.junit.Assert.assertTrue;
 import java.io.Serializable;
 
 import org.apache.commons.functor.BaseFunctorTest;
-import org.apache.commons.functor.Function;
-import org.apache.commons.functor.UnaryProcedure;
+import org.apache.commons.functor.NullaryFunction;
+import org.apache.commons.functor.Procedure;
 import org.junit.Test;
 
 /**
@@ -32,7 +32,7 @@ import org.junit.Test;
  */
 public class TestTransformedProcedure extends BaseFunctorTest{
 
-    private static class One implements Function<Integer>, Serializable {
+    private static class One implements NullaryFunction<Integer>, Serializable {
         private static final long serialVersionUID = 7385852113529459456L;
         public Integer evaluate() {
             return new Integer(1);
@@ -47,7 +47,7 @@ public class TestTransformedProcedure extends BaseFunctorTest{
         }
     };
 
-    private static class AggregatorProcedure implements UnaryProcedure<Integer>, Serializable {
+    private static class AggregatorProcedure implements Procedure<Integer>, Serializable {
         private static final long serialVersionUID = -2744193737701268327L;
         private int total = 0;
         public void run(Integer obj) {
@@ -71,33 +71,33 @@ public class TestTransformedProcedure extends BaseFunctorTest{
 
     @Override
     protected Object makeFunctor() throws Exception {
-        return new TransformedProcedure(one, aggregator);
+        return new TransformedNullaryProcedure(one, aggregator);
     }
 
     @Test
     public void testRun() {
-        TransformedProcedure p = new TransformedProcedure(one, aggregator);
+        TransformedNullaryProcedure p = new TransformedNullaryProcedure(one, aggregator);
         p.run();
         assertEquals(1,aggregator.getTotal());
     }
 
     @Test
     public void testEquals() {
-        TransformedProcedure t = new TransformedProcedure(one, aggregator);
-        Function<Integer> f = new Function<Integer>() {
+        TransformedNullaryProcedure t = new TransformedNullaryProcedure(one, aggregator);
+        NullaryFunction<Integer> f = new NullaryFunction<Integer>() {
             public Integer evaluate() {
                 return new Integer(2);
             }
         };
-        UnaryProcedure<Integer> p = new UnaryProcedure<Integer>() {
+        Procedure<Integer> p = new Procedure<Integer>() {
             public void run(Integer obj) {
                 // Do nothing
             }
         };
         assertEquals(t,t);
-        assertObjectsAreEqual(t,new TransformedProcedure(one, aggregator));
-        assertObjectsAreNotEqual(t,new TransformedProcedure(f, aggregator));
-        assertObjectsAreNotEqual(t,new TransformedProcedure(one, p));
+        assertObjectsAreEqual(t,new TransformedNullaryProcedure(one, aggregator));
+        assertObjectsAreNotEqual(t,new TransformedNullaryProcedure(f, aggregator));
+        assertObjectsAreNotEqual(t,new TransformedNullaryProcedure(one, p));
         assertTrue(!t.equals(null));
     }
 }

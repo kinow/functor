@@ -18,12 +18,12 @@ package org.apache.commons.functor.example.lines;
 
 import java.util.StringTokenizer;
 
-import org.apache.commons.functor.UnaryFunction;
+import org.apache.commons.functor.Function;
 
 /**
  * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
-public class WordCount implements UnaryFunction<String, Integer> {
+public class WordCount implements Function<String, Integer> {
     public Integer evaluate(String obj) {
         return new StringTokenizer(obj).countTokens();
     }

@@ -19,13 +19,13 @@ package org.apache.commons.functor.example.map;
 import java.util.Map;
 
 import org.apache.commons.functor.BinaryFunction;
-import org.apache.commons.functor.UnaryFunction;
+import org.apache.commons.functor.Function;
 
 /**
  * @version $Revision: 1363514 $ $Date: 2012-07-19 17:13:49 -0300 (Thu, 19 Jul 2012) $
  */
 public class LazyMap<K, V> extends FunctoredMap<K, V> {
-    public LazyMap(Map<K, V> map, final UnaryFunction<K, V> factory) {
+    public LazyMap(Map<K, V> map, final Function<K, V> factory) {
         super(map);
         setOnGet(new BinaryFunction<Map<K,V>, K, V>() {
             public V evaluate(Map<K, V> map, K key) {

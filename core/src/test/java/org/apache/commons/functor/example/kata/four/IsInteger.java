@@ -16,7 +16,7 @@
  */
 package org.apache.commons.functor.example.kata.four;
 
-import org.apache.commons.functor.UnaryPredicate;
+import org.apache.commons.functor.Predicate;
 
 /**
  * Tests to true iff the input object can be converted to
@@ -24,7 +24,7 @@ import org.apache.commons.functor.UnaryPredicate;
  *
  * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
-public final class IsInteger implements UnaryPredicate<String> {
+public final class IsInteger implements Predicate<String> {
     public boolean test(String obj) {
         try {
             ToInteger.instance().evaluate(obj);

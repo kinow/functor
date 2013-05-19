@@ -16,7 +16,7 @@
  */
 package org.apache.commons.functor.example.kata.four;
 
-import org.apache.commons.functor.UnaryFunction;
+import org.apache.commons.functor.Function;
 
 /**
  * Evaluates to the absolute Integer value of the Number-valued
@@ -24,7 +24,7 @@ import org.apache.commons.functor.UnaryFunction;
  *
  * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
-public final class Abs implements UnaryFunction<Number, Integer> {
+public final class Abs implements Function<Number, Integer> {
 
     public Integer evaluate(Number num) {
         return new Integer(Math.abs(num.intValue()));

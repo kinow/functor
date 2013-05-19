@@ -16,7 +16,7 @@
  */
 package org.apache.commons.functor.example.kata.four;
 
-import org.apache.commons.functor.UnaryFunction;
+import org.apache.commons.functor.Function;
 
 /**
  * Converts a String value to an Integer, throwing
@@ -27,7 +27,7 @@ import org.apache.commons.functor.UnaryFunction;
  *
  * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
-public final class ToInteger implements UnaryFunction<String, Integer> {
+public final class ToInteger implements Function<String, Integer> {
 
     public Integer evaluate(String str) {
         StringBuffer buf = new StringBuffer();

@@ -23,9 +23,9 @@ import java.util.LinkedList;
 import java.util.List;
 
 import org.apache.commons.functor.BaseFunctorTest;
-import org.apache.commons.functor.Predicate;
-import org.apache.commons.functor.Procedure;
-import org.apache.commons.functor.adapter.BoundPredicate;
+import org.apache.commons.functor.NullaryPredicate;
+import org.apache.commons.functor.NullaryProcedure;
+import org.apache.commons.functor.adapter.BoundNullaryPredicate;
 import org.apache.commons.functor.core.Constant;
 import org.apache.commons.functor.core.NoOp;
 import org.apache.commons.functor.core.collection.IsEmpty;
@@ -41,12 +41,12 @@ public class TestWhileDoProcedure extends BaseFunctorTest {
 
     @Override
     protected Object makeFunctor() {
-        return new WhileDoProcedure(Constant.FALSE, NoOp.INSTANCE);
+        return new WhileDoNullaryProcedure(Constant.FALSE, NoOp.INSTANCE);
     }
 
     // Tests
     // ------------------------------------------------------------------------
-    public class ListRemoveFirstProcedure implements Procedure {
+    public class ListRemoveFirstProcedure implements NullaryProcedure {
         protected List<Object> list;
 
 
@@ -75,9 +75,9 @@ public class TestWhileDoProcedure extends BaseFunctorTest {
     public void testLoopWithAction() throws Exception {
         List<Object> list=getList();
 
-        Procedure action=new ListRemoveFirstProcedure(list);
-        Predicate condition=new Not(new BoundPredicate(new IsEmpty<List<Object>>(), list));
-        Procedure procedure=new WhileDoProcedure(condition, action);
+        NullaryProcedure action=new ListRemoveFirstProcedure(list);
+        NullaryPredicate condition=new NullaryNot(new BoundNullaryPredicate(new IsEmpty<List<Object>>(), list));
+        NullaryProcedure procedure=new WhileDoNullaryProcedure(condition, action);
 
         assertTrue("The condition should be true before running the loop", condition.test());
         assertFalse("The list should not be empty then", list.isEmpty());
@@ -87,14 +87,14 @@ public class TestWhileDoProcedure extends BaseFunctorTest {
 
         list=getList();
         action=new ListRemoveFirstProcedure(list);
-        condition=new Predicate() {
+        condition=new NullaryPredicate() {
                       private int count=2;
 
                       public boolean test() {
                           return count-- > 0;
                       }
                   };
-        procedure=new WhileDoProcedure(condition, action);
+        procedure=new WhileDoNullaryProcedure(condition, action);
         procedure.run();
         assertFalse("The list should not contain \"a\" anymore", list.contains("a"));
         assertFalse("The list should not contain \"b\" anymore", list.contains("b"));
@@ -105,8 +105,8 @@ public class TestWhileDoProcedure extends BaseFunctorTest {
     @Test
     public void testLoopForNothing() {
         List<Object> list=getList();
-        Procedure action=new ListRemoveFirstProcedure(list);
-        Procedure procedure=new WhileDoProcedure(Constant.FALSE, action);
+        NullaryProcedure action=new ListRemoveFirstProcedure(list);
+        NullaryProcedure procedure=new WhileDoNullaryProcedure(Constant.FALSE, action);
         assertTrue("The list should contain 4 elements before runnning the loop", list.size()==4);
         procedure.run();
         assertTrue("The list should contain 4 elements after runnning the loop", list.size()==4);
