@@ -20,8 +20,8 @@ import java.io.Serializable;
 import java.util.NoSuchElementException;
 
 import org.apache.commons.functor.BinaryFunction;
-import org.apache.commons.functor.UnaryPredicate;
-import org.apache.commons.functor.UnaryProcedure;
+import org.apache.commons.functor.Predicate;
+import org.apache.commons.functor.Procedure;
 import org.apache.commons.functor.generator.Generator;
 
 /**
@@ -31,7 +31,7 @@ import org.apache.commons.functor.generator.Generator;
  * @version $Revision: 1344796 $ $Date: 2012-05-31 13:12:39 -0300 (Thu, 31 May 2012) $
  */
 public final class FindWithinGenerator<E>
-    implements BinaryFunction<Generator<? extends E>, UnaryPredicate<? super E>, E>, Serializable {
+    implements BinaryFunction<Generator<? extends E>, Predicate<? super E>, E>, Serializable {
 
     /**
      * Basic instance.
@@ -48,7 +48,7 @@ public final class FindWithinGenerator<E>
      *
      * @param <T> the argument type.
      */
-    private static class FindProcedure<T> implements UnaryProcedure<T> {
+    private static class FindProcedure<T> implements Procedure<T> {
         /**
          * The object found, if any.
          */
@@ -60,13 +60,13 @@ public final class FindWithinGenerator<E>
         /**
          * The adapted predicate.
          */
-        private UnaryPredicate<? super T> pred;
+        private Predicate<? super T> pred;
 
         /**
          * Create a new FindProcedure.
          * @param pred the adapted predicate.
          */
-        public FindProcedure(UnaryPredicate<? super T> pred) {
+        public FindProcedure(Predicate<? super T> pred) {
             this.pred = pred;
         }
 
@@ -82,7 +82,7 @@ public final class FindWithinGenerator<E>
     }
 
     /**
-     * Flag to mark the {@link FindWithinGenerator#evaluate(Generator, UnaryPredicate)} method must return a user
+     * Flag to mark the {@link FindWithinGenerator#evaluate(Generator, Predicate)} method must return a user
      * defined object when the adapted procedure does not find any object.
      */
     private final boolean useIfNone;
@@ -115,7 +115,7 @@ public final class FindWithinGenerator<E>
      * @param left Generator
      * @param right UnaryPredicate
      */
-    public E evaluate(Generator<? extends E> left, UnaryPredicate<? super E> right) {
+    public E evaluate(Generator<? extends E> left, Predicate<? super E> right) {
         FindProcedure<E> findProcedure = new FindProcedure<E>(right);
         left.run(findProcedure);
         if (!findProcedure.wasFound) {
