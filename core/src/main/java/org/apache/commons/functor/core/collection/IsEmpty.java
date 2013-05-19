@@ -21,14 +21,14 @@ import java.lang.reflect.Array;
 import java.util.Collection;
 import java.util.Map;
 
-import org.apache.commons.functor.UnaryPredicate;
+import org.apache.commons.functor.Predicate;
 import org.apache.commons.lang3.Validate;
 
 /**
  * @param <A> the predicate argument type.
  * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
-public final class IsEmpty<A> implements UnaryPredicate<A>, Serializable {
+public final class IsEmpty<A> implements Predicate<A>, Serializable {
 
     // class variables
     // ------------------------------------------------------------------------
