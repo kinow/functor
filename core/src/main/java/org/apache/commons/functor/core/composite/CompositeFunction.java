@@ -122,9 +122,9 @@ public class CompositeFunction<A, T> implements Function<A, T>, Serializable {
         public int hashCode() {
             int result = "CompositeFunction$Helper".hashCode();
             result <<= 2;
-            result |= following.hashCode();
+            result ^= following.hashCode();
             result <<= 2;
-            result |= preceding.hashCode();
+            result ^= preceding.hashCode();
             return result;
         }
 

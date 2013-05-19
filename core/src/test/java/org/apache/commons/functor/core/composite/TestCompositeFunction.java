@@ -78,6 +78,10 @@ public class TestCompositeFunction extends BaseFunctorTest {
 
         for (int i=0;i<3;i++) {
             f = f.of(Constant.of("y")).of(Constant.of("z"));
+            System.out.println(f);
+            System.out.println(f.hashCode());
+            System.out.println(g);
+            System.out.println(g.hashCode());
             assertObjectsAreNotEqual(f,g);
             g = g.of(Constant.of("y")).of(Constant.of("z"));
             assertObjectsAreEqual(f,g);

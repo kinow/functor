@@ -29,7 +29,7 @@ import org.junit.Test;
 /**
  * @version $Revision: 1365377 $ $Date: 2012-07-24 21:59:23 -0300 (Tue, 24 Jul 2012) $
  */
-public class TestUnaryPredicateFunction extends BaseFunctorTest {
+public class TestPredicateFunction extends BaseFunctorTest {
 
     // Functor Testing Framework
     // ------------------------------------------------------------------------
