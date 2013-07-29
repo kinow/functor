@@ -92,25 +92,25 @@ public final class Conditional {
     }
 
     /**
-     * Create a guarded UnaryProcedure.
+     * Create a guarded Procedure.
      *
      * @param <A> the predicates argument type.
      * @param q if
      * @param r then
-     * @return UnaryProcedure<A>
+     * @return Procedure<A>
      */
     public static <A> Procedure<A> procedure(Predicate<? super A> q, Procedure<? super A> r) {
         return new ConditionalProcedure<A>(q, r);
     }
 
     /**
-     * Create a conditional UnaryProcedure.
+     * Create a conditional Procedure.
      *
      * @param <A> the predicates argument type.
      * @param q if
      * @param r then
      * @param s else
-     * @return UnaryProcedure<A>
+     * @return Procedure<A>
      */
     public static <A> Procedure<A> procedure(Predicate<? super A> q, Procedure<? super A> r,
             Procedure<? super A> s) {

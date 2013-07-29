@@ -44,14 +44,14 @@ public final class And<A> extends BasePredicateList<A> {
     // constructor
     // ------------------------------------------------------------------------
     /**
-     * Create a new UnaryAnd.
+     * Create a new And.
      */
     public And() {
         super();
     }
 
     /**
-     * Create a new UnaryAnd instance.
+     * Create a new And instance.
      *
      * @param predicates the predicates to put in and.
      */
@@ -60,7 +60,7 @@ public final class And<A> extends BasePredicateList<A> {
     }
 
     /**
-     * Create a new UnaryAnd instance.
+     * Create a new And instance.
      *
      * @param predicates the predicates to put in and.
      */
@@ -71,8 +71,8 @@ public final class And<A> extends BasePredicateList<A> {
     // modifiers
     // ------------------------------------------------------------------------
     /**
-     * Fluently add a UnaryPredicate.
-     * @param p UnaryPredicate to add
+     * Fluently add a Predicate.
+     * @param p Predicate to add
      * @return this
      */
     public And<A> and(Predicate<? super A> p) {
@@ -103,8 +103,8 @@ public final class And<A> extends BasePredicateList<A> {
     }
 
     /**
-     * Learn whether another UnaryAnd is equal to this.
-     * @param that UnaryAnd to test
+     * Learn whether another And is equal to this.
+     * @param that And to test
      * @return boolean
      */
     public boolean equals(And<?> that) {
@@ -116,7 +116,7 @@ public final class And<A> extends BasePredicateList<A> {
      */
     @Override
     public int hashCode() {
-        return "UnaryAnd".hashCode() ^ getPredicateListHashCode();
+        return "And".hashCode() ^ getPredicateListHashCode();
     }
 
     /**
@@ -124,7 +124,7 @@ public final class And<A> extends BasePredicateList<A> {
      */
     @Override
     public String toString() {
-        return "UnaryAnd<" + getPredicateListToString() + ">";
+        return "And<" + getPredicateListToString() + ">";
     }
 
 }
