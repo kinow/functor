@@ -180,14 +180,14 @@ public class TestBaseGenerator {
     private List<Integer> listWithDuplicates = null;
     @SuppressWarnings("unused")
     private int sum = 0;
-//    private UnaryPredicate equalsThree = LeftBoundPredicate.bind(IsEqual.instance(),new Integer(3));
-//    private UnaryPredicate equalsTwentyThree = LeftBoundPredicate.bind(IsEqual.instance(),new Integer(23));
-//    private UnaryPredicate isEven = new UnaryPredicate() {
+//    private Predicate equalsThree = LeftBoundPredicate.bind(IsEqual.instance(),new Integer(3));
+//    private Predicate equalsTwentyThree = LeftBoundPredicate.bind(IsEqual.instance(),new Integer(23));
+//    private Predicate isEven = new Predicate() {
 //        public boolean test(Object obj) {
 //            return ((Number) obj).intValue() % 2 == 0;
 //        }
 //    };
-//    private UnaryPredicate isOdd = new UnaryPredicate() {
+//    private Predicate isOdd = new Predicate() {
 //        public boolean test(Object obj) {
 //            return ((Number) obj).intValue() % 2 != 0;
 //        }

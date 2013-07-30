@@ -116,7 +116,7 @@ public final class BoundNullaryFunction<T> implements NullaryFunction<T>, Serial
     /**
      * Adapt the given, possibly-<code>null</code>,
      * {@link Function Function} to the
-     * {@link Function Function} interface by binding
+     * {@link NullaryFunction NullaryFunction} interface by binding
      * the specified <code>Object</code> as a constant
      * argument.
      * When the given <code>Function</code> is <code>null</code>,

@@ -27,10 +27,10 @@ import org.apache.commons.functor.Procedure;
 import org.junit.Test;
 
 /**
- * Tests for TransformedProcedure.
+ * Tests for TransformedNullaryProcedure.
  * @version $Revision: $ $Date: $
  */
-public class TestTransformedProcedure extends BaseFunctorTest{
+public class TestTransformedNullaryProcedure extends BaseFunctorTest{
 
     private static class One implements NullaryFunction<Integer>, Serializable {
         private static final long serialVersionUID = 7385852113529459456L;

@@ -25,7 +25,7 @@ import org.apache.commons.functor.Procedure;
 import org.apache.commons.functor.generator.Generator;
 
 /**
- * Return the first Object in a {@link Generator} matching a {@link UnaryPredicate}.
+ * Return the first Object in a {@link Generator} matching a {@link Predicate}.
  *
  * @param <E> the arguments type.
  * @version $Revision: 1344796 $ $Date: 2012-05-31 13:12:39 -0300 (Thu, 31 May 2012) $
@@ -113,7 +113,7 @@ public final class FindWithinGenerator<E>
     /**
      * {@inheritDoc}
      * @param left Generator
-     * @param right UnaryPredicate
+     * @param right Predicate
      */
     public E evaluate(Generator<? extends E> left, Predicate<? super E> right) {
         FindProcedure<E> findProcedure = new FindProcedure<E>(right);

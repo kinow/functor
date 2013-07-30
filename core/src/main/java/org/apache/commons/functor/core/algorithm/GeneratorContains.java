@@ -75,7 +75,7 @@ public final class GeneratorContains<T> implements BinaryPredicate<Generator<? e
     /**
      * {@inheritDoc}
      * @param left Generator
-     * @param right UnaryPredicate
+     * @param right Predicate
      */
     public boolean test(Generator<? extends T> left, Predicate<? super T> right) {
         ContainsProcedure<T> findProcedure = new ContainsProcedure<T>(right);

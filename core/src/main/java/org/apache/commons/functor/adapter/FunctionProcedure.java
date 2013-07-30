@@ -75,8 +75,8 @@ public final class FunctionProcedure<A> implements Procedure<A>, Serializable {
     }
 
     /**
-     * Learn whether a specified FunctionUnaryPredicate is equal to this.
-     * @param that the FunctionUnaryPredicate to test
+     * Learn whether a specified FunctionPredicate is equal to this.
+     * @param that the FunctionPredicate to test
      * @return boolean
      */
     public boolean equals(FunctionProcedure<?> that) {

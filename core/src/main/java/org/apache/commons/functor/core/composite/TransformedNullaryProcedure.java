@@ -78,7 +78,7 @@ public class TransformedNullaryProcedure implements NullaryProcedure, Serializab
     private final Helper<?> helper;
 
     /**
-     * Create a new TransformedProcedure.
+     * Create a new TransformedNullaryProcedure.
      * @param <X> the adapted function argument type.
      * @param function NullaryFunction
      * @param procedure Procedure
@@ -104,7 +104,7 @@ public class TransformedNullaryProcedure implements NullaryProcedure, Serializab
     }
 
     /**
-     * Learn whether another TransformedProcedure is equal to <code>this</code>.
+     * Learn whether another TransformedNullaryProcedure is equal to <code>this</code>.
      * @param that instance to test
      * @return whether equal
      */
@@ -118,7 +118,7 @@ public class TransformedNullaryProcedure implements NullaryProcedure, Serializab
      */
     @Override
     public int hashCode() {
-        int result = "TransformedProcedure".hashCode();
+        int result = "TransformedNullaryProcedure".hashCode();
         result <<= HASH_SHIFT;
         result |= helper.procedure.hashCode();
         result <<= HASH_SHIFT;
@@ -131,6 +131,6 @@ public class TransformedNullaryProcedure implements NullaryProcedure, Serializab
      */
     @Override
     public String toString() {
-        return "TransformedProcedure<" + helper.function + "; " + helper.procedure + ">";
+        return "TransformedNullaryProcedure<" + helper.function + "; " + helper.procedure + ">";
     }
 }

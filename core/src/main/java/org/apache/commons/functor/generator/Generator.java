@@ -19,7 +19,7 @@ import org.apache.commons.functor.Function;
 import org.apache.commons.functor.Procedure;
 
 /**
- * The Generator interface defines a number of useful actions applying UnaryFunctors
+ * The Generator interface defines a number of useful actions applying Procedures
  * to each in a series of argument Objects.
  *
  * @param <E> the type of elements held in this generator.

@@ -84,7 +84,7 @@ public final class BinaryPredicatePredicate<A> implements Predicate<A> {
     }
 
     /**
-     * Adapt a BinaryFunction as a UnaryFunction.
+     * Adapt a BinaryPredicate as a Predicate.
      * @param <A> the argument type.
      * @param predicate BinaryPredicate to adapt
      * @return Predicate<A>

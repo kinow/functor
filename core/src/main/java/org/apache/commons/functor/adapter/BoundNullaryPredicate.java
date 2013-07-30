@@ -58,7 +58,7 @@ public final class BoundNullaryPredicate implements NullaryPredicate, Serializab
     public <A> BoundNullaryPredicate(Predicate<? super A> predicate, A arg) {
         this.predicate =
             (Predicate<Object>) Validate.notNull(predicate,
-                "UnaryNullaryPredicate argument was null");
+                "Predicate argument was null");
         this.param = arg;
     }
 

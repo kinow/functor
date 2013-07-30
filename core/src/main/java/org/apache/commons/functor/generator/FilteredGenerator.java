@@ -23,7 +23,7 @@ import org.apache.commons.lang3.Validate;
 
 /**
  * Generator that filters another Generator by only passing through those elements
- * that are matched by a specified UnaryPredicate.
+ * that are matched by a specified Predicate.
  *
  * @param <E> the type of elements held in this generator.
  * @version $Revision: 1365330 $ $Date: 2012-07-24 19:40:04 -0300 (Tue, 24 Jul 2012) $
@@ -38,11 +38,11 @@ public class FilteredGenerator<E> extends BaseGenerator<E> {
     /**
      * Create a new FilteredGenerator.
      * @param wrapped Generator to wrap
-     * @param pred filtering UnaryPredicate
+     * @param pred filtering Predicate
      */
     public FilteredGenerator(Generator<? extends E> wrapped, Predicate<? super E> pred) {
         super(Validate.notNull(wrapped, "Generator argument was null"));
-        this.pred = Validate.notNull(pred, "UnaryPredicate argument was null");
+        this.pred = Validate.notNull(pred, "Predicate argument was null");
     }
 
     /**

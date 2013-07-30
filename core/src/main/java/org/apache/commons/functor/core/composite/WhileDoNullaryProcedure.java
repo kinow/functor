@@ -63,6 +63,6 @@ public class WhileDoNullaryProcedure extends AbstractLoopNullaryProcedure {
      */
     @Override
     public String toString() {
-        return "WhileDo<while(" + getCondition() + ") do(" + getAction() + ")>";
+        return "WhileDoNullaryProcedure<while(" + getCondition() + ") do(" + getAction() + ")>";
     }
 }

@@ -58,7 +58,7 @@ public class TransformedBinaryProcedure<L, R> implements BinaryProcedure<L, R>, 
         /**
          * Create a new Helper.
          * @param function BinaryFunction
-         * @param procedure UnaryFunction
+         * @param procedure Function
          */
         private Helper(BinaryFunction<? super L, ? super R, ? extends X> function,
                 Procedure<? super X> procedure) {

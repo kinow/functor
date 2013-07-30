@@ -69,7 +69,7 @@ public class TestMin extends BaseFunctorTest {
 
     @Test
     public void testFunctionMin() {
-        Function<Integer, Integer> unaryMin = Min.instance(ONE);
-        assertEquals(ZERO,unaryMin.evaluate(ZERO));
+        Function<Integer, Integer> min = Min.instance(ONE);
+        assertEquals(ZERO,min.evaluate(ZERO));
     }
 }

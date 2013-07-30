@@ -44,7 +44,7 @@ public class RecursiveEvaluation implements NullaryFunction<Object>, Serializabl
     /**
      * Create a new RecursiveEvaluation. Recursion will continue while the
      * returned value is of the same runtime class as <code>function</code>.
-     * @param function initial, potentially recursive Function
+     * @param function initial, potentially recursive NullaryFunction
      */
     public RecursiveEvaluation(NullaryFunction<?> function) {
         this(function, getClass(function));
@@ -56,7 +56,7 @@ public class RecursiveEvaluation implements NullaryFunction<Object>, Serializabl
      * @param functionType as long as result is an instance, keep processing.
      */
     public RecursiveEvaluation(NullaryFunction<?> function, Class<?> functionType) {
-        Validate.notNull(function, "Function argument was null");
+        Validate.notNull(function, "NullaryFunction argument was null");
         if (!NullaryFunction.class.isAssignableFrom(functionType)) {
             throw new IllegalArgumentException(NullaryFunction.class + " is not assignable from " + functionType);
         }

@@ -27,7 +27,7 @@ import org.apache.commons.functor.Function;
 import org.junit.Test;
 
 /**
- * Tests for TransformedFunction.
+ * Tests for TransformedNullaryFunction.
  * @version $Revision: $ $Date: $
  */
 public class TestTransformedNullaryFunction extends BaseFunctorTest {

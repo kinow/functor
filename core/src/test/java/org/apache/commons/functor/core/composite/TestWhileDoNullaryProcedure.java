@@ -34,14 +34,14 @@ import org.junit.Test;
 /**
  * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
  */
-public class TestDoWhileProcedure extends BaseFunctorTest {
+public class TestWhileDoNullaryProcedure extends BaseFunctorTest {
 
     // Functor Testing Framework
     // ------------------------------------------------------------------------
 
     @Override
     protected Object makeFunctor() {
-        return new DoWhileNullaryProcedure(NoOp.INSTANCE, Constant.FALSE);
+        return new WhileDoNullaryProcedure(Constant.FALSE, NoOp.INSTANCE);
     }
 
     // Tests
@@ -62,7 +62,7 @@ public class TestDoWhileProcedure extends BaseFunctorTest {
 
 
     private List<Object> getList() {
-        List<Object> list = new LinkedList<Object>();
+        List<Object> list=new LinkedList<Object>();
         list.add("a");
         list.add("b");
         list.add("c");
@@ -77,7 +77,7 @@ public class TestDoWhileProcedure extends BaseFunctorTest {
 
         NullaryProcedure action=new ListRemoveFirstProcedure(list);
         NullaryPredicate condition=new NullaryNot(new BoundNullaryPredicate(new IsEmpty<List<Object>>(), list));
-        NullaryProcedure procedure=new DoWhileNullaryProcedure(action, condition);
+        NullaryProcedure procedure=new WhileDoNullaryProcedure(condition, action);
 
         assertTrue("The condition should be true before running the loop", condition.test());
         assertFalse("The list should not be empty then", list.isEmpty());
@@ -94,11 +94,11 @@ public class TestDoWhileProcedure extends BaseFunctorTest {
                           return count-- > 0;
                       }
                   };
-        procedure=new DoWhileNullaryProcedure(action, condition);
+        procedure=new WhileDoNullaryProcedure(condition, action);
         procedure.run();
         assertFalse("The list should not contain \"a\" anymore", list.contains("a"));
         assertFalse("The list should not contain \"b\" anymore", list.contains("b"));
-        assertFalse("The list should not contain \"c\" anymore", list.contains("c"));
+        assertTrue("The list should still contain \"c\"", list.contains("c"));
         assertTrue("The list should still contain \"d\"", list.contains("d"));
     }
 
@@ -106,9 +106,10 @@ public class TestDoWhileProcedure extends BaseFunctorTest {
     public void testLoopForNothing() {
         List<Object> list=getList();
         NullaryProcedure action=new ListRemoveFirstProcedure(list);
-        NullaryProcedure procedure=new DoWhileNullaryProcedure(action, Constant.FALSE);
+        NullaryProcedure procedure=new WhileDoNullaryProcedure(Constant.FALSE, action);
         assertTrue("The list should contain 4 elements before runnning the loop", list.size()==4);
         procedure.run();
-        assertTrue("The list should contain 3 elements after runnning the loop", list.size()==3);
+        assertTrue("The list should contain 4 elements after runnning the loop", list.size()==4);
     }
 }
+

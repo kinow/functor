@@ -49,7 +49,7 @@ public abstract class AbstractLoopNullaryProcedure implements NullaryProcedure, 
     private final NullaryProcedure action;
 
     /**
-     * Create a new AbstractLoopProcedure.
+     * Create a new AbstractLoopNullaryProcedure.
      * @param condition while true, repeat
      * @param action loop body
      */
@@ -79,7 +79,7 @@ public abstract class AbstractLoopNullaryProcedure implements NullaryProcedure, 
      */
     @Override
     public int hashCode() {
-        return hashCode("AbstractLoopProcedure".hashCode());
+        return hashCode("AbstractLoopNullaryProcedure".hashCode());
     }
 
     /**

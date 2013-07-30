@@ -47,12 +47,12 @@ public class TestCompositeProcedure extends BaseFunctorTest {
     }
 
     @Test(expected=NullPointerException.class)
-    public void testNullUnaryProcedureNotAllowed() throws Exception {
+    public void testNulProcedureNotAllowed() throws Exception {
         new CompositeProcedure<Object>(null);
     }
 
     @Test(expected=NullPointerException.class)
-    public void testNullUnaryProcedureNotAllowed2() throws Exception {
+    public void testNullProcedureNotAllowed2() throws Exception {
         new CompositeProcedure<Object>(NoOp.instance()).of(null);
     }
 

@@ -26,9 +26,9 @@ import org.apache.commons.functor.core.NoOp;
  * Supports an Eiffel style loop construct.
  * <pre>
  * new EiffelStyleLoop()
- *   .from(new NullaryNullaryProcedure() { public void run() {} }) // init code
+ *   .from(new NullaryProcedure() { public void run() {} }) // init code
  *   .invariant(new NullaryPredicate() { public boolean test() {} }) // invariants
- *   .variant(new NullaryNullaryProcedure() { public Object evaluate() {} }) // diminishing comparable value
+ *   .variant(new NullaryProcedure() { public Object evaluate() {} }) // diminishing comparable value
  *   // or
  *   // .variant(new NullaryPredicate() { public boolean test() {} }) // more invariants
  *   .until(new NullaryPredicate() { public boolean test() {} }) // terminating condition

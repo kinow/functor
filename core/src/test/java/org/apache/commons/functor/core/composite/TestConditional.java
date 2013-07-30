@@ -42,16 +42,19 @@ public class TestConditional {
     }
 
     @Test
-    public void testUnaryMethods() {
+    public void testNullaryMethods() {
         assertNotNull(Conditional.procedure(new NullaryNot(Constant.TRUE),new NullarySequence()));
         assertNotNull(Conditional.procedure(new NullaryNot(Constant.TRUE),new NullarySequence(),new NullarySequence()));
-        assertNotNull(Conditional.procedure(IsNull.instance(),NoOp.instance()));
-        assertNotNull(Conditional.procedure(IsNull.instance(),NoOp.instance(),NoOp.instance()));
-        assertNotNull(Conditional.procedure(new IsEqual<Object, Object>(),NoOp.INSTANCE));
-        assertNotNull(Conditional.function(IsNull.instance(),Identity.instance(),Identity.instance()));
         assertNotNull(Conditional.function(new NullaryNot(Constant.TRUE),Constant.FALSE,Constant.FALSE));
         assertNotNull(Conditional.predicate((NullaryPredicate)Constant.truePredicate(),Constant.truePredicate(),Constant.truePredicate()));
-        assertNotNull(Conditional.predicate(IsNull.instance(),Constant.truePredicate(),Constant.truePredicate()));
+    }
+
+    @Test
+    public void testUnaryMethods() {
+    	assertNotNull(Conditional.procedure(IsNull.instance(),NoOp.instance()));
+    	assertNotNull(Conditional.procedure(IsNull.instance(),NoOp.instance(),NoOp.instance()));
+    	assertNotNull(Conditional.function(IsNull.instance(),Identity.instance(),Identity.instance()));
+    	assertNotNull(Conditional.predicate(IsNull.instance(),Constant.truePredicate(),Constant.truePredicate()));
     }
 
     @Test
@@ -59,5 +62,6 @@ public class TestConditional {
         assertNotNull(Conditional.procedure(IsGreaterThan.instance(),NoOp.instance(),NoOp.instance()));
         assertNotNull(Conditional.function(IsGreaterThan.instance(),Max.instance(),Max.instance()));
         assertNotNull(Conditional.predicate(IsGreaterThan.instance(),Constant.truePredicate(),Constant.truePredicate()));
+        assertNotNull(Conditional.procedure(new IsEqual<Object, Object>(),NoOp.INSTANCE));
     }
 }

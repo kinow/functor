@@ -69,7 +69,7 @@ public class TestMax extends BaseFunctorTest {
 
     @Test
     public void testFunctionMin() {
-        Function<Integer, Integer> unaryMax = Max.instance(ONE);
-        assertEquals(ONE,unaryMax.evaluate(ZERO));
+        Function<Integer, Integer> max = Max.instance(ONE);
+        assertEquals(ONE,max.evaluate(ZERO));
     }
 }
