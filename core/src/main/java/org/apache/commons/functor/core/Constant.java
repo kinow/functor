@@ -39,7 +39,7 @@ import org.apache.commons.functor.Predicate;
  * <code>Serializable</code> will result in an exception.
  * </p>
  * @param <T> the returned value type.
- * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
+ * @version $Revision: 1508677 $ $Date: 2013-07-30 19:48:02 -0300 (Tue, 30 Jul 2013) $
  */
 public final class Constant<T> implements NullaryFunction<T>, Function<Object, T>, BinaryFunction<Object, Object, T>,
         NullaryPredicate, Predicate<Object>, BinaryPredicate<Object, Object>, Serializable {

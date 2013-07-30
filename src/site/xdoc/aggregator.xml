@@ -241,7 +241,6 @@ public class AggregatorTesting implements TimedAggregatorListener&lt;Double&gt; 
         this.agg = aggregator;
     }
 
-    @Override
     public void onTimer(AbstractTimedAggregator&lt;Double&gt; aggregator, Double evaluation) {
         double aggregated = aggregator.evaluate();
         /* log the value etc. */

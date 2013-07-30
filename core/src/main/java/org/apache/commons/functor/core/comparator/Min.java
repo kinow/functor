@@ -29,7 +29,7 @@ import org.apache.commons.lang3.Validate;
  * {@link BinaryFunction} interface.
  *
  * @param <T> the binary function arguments and return types.
- * @version $Revision: 1364676 $ $Date: 2012-07-23 12:21:25 -0300 (Mon, 23 Jul 2012) $
+ * @version $Revision: 1508677 $ $Date: 2013-07-30 19:48:02 -0300 (Tue, 30 Jul 2013) $
  */
 public final class Min<T> implements BinaryFunction<T, T, T>, Serializable {
 

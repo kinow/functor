@@ -56,7 +56,7 @@ import org.junit.Test;
  * <p>
  * See the extensive in line comments for details.
  *
- * @version $Revision: 1370919 $ $Date: 2012-08-08 16:50:46 -0300 (Wed, 08 Aug 2012) $
+ * @version $Revision: 1508677 $ $Date: 2013-07-30 19:48:02 -0300 (Tue, 30 Jul 2013) $
  */
 @SuppressWarnings("unchecked")
 public class QuicksortExample {

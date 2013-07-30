@@ -28,7 +28,7 @@ import org.apache.commons.functor.Predicate;
  * <code>true</code> thereafter.
  *
  * @since 1.0
- * @version $Revision: 1348547 $ $Date: 2012-06-10 05:06:11 -0300 (Sun, 10 Jun 2012) $
+ * @version $Revision: 1508677 $ $Date: 2013-07-30 19:48:02 -0300 (Tue, 30 Jul 2013) $
  */
 public final class Offset implements NullaryPredicate, Predicate<Object>,
         BinaryPredicate<Object, Object>, Serializable {

@@ -27,7 +27,7 @@ import org.apache.commons.functor.core.composite.And;
 /**
  * Adds a fluent filtering API to any {@link Iterable}.
  *
- * @version $Revision: 1344786 $ $Date: 2012-05-31 12:55:31 -0300 (Thu, 31 May 2012) $
+ * @version $Revision: 1508677 $ $Date: 2013-07-30 19:48:02 -0300 (Tue, 30 Jul 2013) $
  *
  * @param <T> the Iterable generic type
  */

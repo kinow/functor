@@ -27,7 +27,7 @@ import org.apache.commons.functor.Predicate;
 import org.junit.Test;
 
 /**
- * @version $Revision: 1482663 $ $Date: 2013-05-14 23:34:45 -0300 (Tue, 14 May 2013) $
+ * @version $Revision: 1508677 $ $Date: 2013-07-30 19:48:02 -0300 (Tue, 30 Jul 2013) $
  */
 public class TestLimit extends BaseFunctorTest {
 

@@ -27,7 +27,7 @@ import org.apache.commons.functor.generator.Generator;
  * Return the index of the first Object in a {@link Generator} matching a {@link Predicate}, or -1 if not found.
  *
  * @param <T> the procedure argument types
- * @version $Revision: 1344796 $ $Date: 2012-05-31 13:12:39 -0300 (Thu, 31 May 2012) $
+ * @version $Revision: 1508677 $ $Date: 2013-07-30 19:48:02 -0300 (Tue, 30 Jul 2013) $
  */
 public final class IndexOfInGenerator<T>
     implements BinaryFunction<Generator<? extends T>, Predicate<? super T>, Number>, Serializable {

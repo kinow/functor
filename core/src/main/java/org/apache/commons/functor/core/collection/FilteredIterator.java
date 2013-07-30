@@ -27,7 +27,7 @@ import org.apache.commons.lang3.Validate;
  * that are matched by a specified Predicate.
  *
  * @param <T> the {@link Iterator} generic type
- * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
+ * @version $Revision: 1508677 $ $Date: 2013-07-30 19:48:02 -0300 (Tue, 30 Jul 2013) $
  */
 public final class FilteredIterator<T> implements Iterator<T> {
     // attributes

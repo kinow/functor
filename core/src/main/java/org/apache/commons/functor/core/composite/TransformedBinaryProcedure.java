@@ -28,7 +28,7 @@ import org.apache.commons.lang3.Validate;
  *
  * @param <L> the left argument type.
  * @param <R> the right argument type.
- * @version $Revision: 1365329 $ $Date: 2012-07-24 19:34:23 -0300 (Tue, 24 Jul 2012) $
+ * @version $Revision: 1508677 $ $Date: 2013-07-30 19:48:02 -0300 (Tue, 30 Jul 2013) $
  */
 public class TransformedBinaryProcedure<L, R> implements BinaryProcedure<L, R>, Serializable {
     /**

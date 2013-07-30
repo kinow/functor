@@ -47,7 +47,7 @@ import org.junit.Test;
  * See http://pragprog.com/pragdave/Practices/Kata/KataOne.rdoc,v
  * for more information on this Kata.
  *
- * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
+ * @version $Revision: 1508677 $ $Date: 2013-07-30 19:48:02 -0300 (Tue, 30 Jul 2013) $
  */
 public class SupermarketPricingExample {
 

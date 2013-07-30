@@ -25,7 +25,7 @@ import org.apache.commons.lang3.Validate;
  * a condition has been satisfied (test after).
  *
  * @param <E> the type of elements held in this generator.
- * @version $Revision: 1365330 $ $Date: 2012-07-24 19:40:04 -0300 (Tue, 24 Jul 2012) $
+ * @version $Revision: 1508677 $ $Date: 2013-07-30 19:48:02 -0300 (Tue, 30 Jul 2013) $
  */
 public class GenerateUntil<E> extends BaseGenerator<E> {
 

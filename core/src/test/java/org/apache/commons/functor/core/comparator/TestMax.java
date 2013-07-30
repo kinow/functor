@@ -26,7 +26,7 @@ import org.apache.commons.functor.Function;
 import org.junit.Test;
 
 /**
- * @version $Revision: 1364704 $ $Date: 2012-07-23 13:40:49 -0300 (Mon, 23 Jul 2012) $
+ * @version $Revision: 1508677 $ $Date: 2013-07-30 19:48:02 -0300 (Tue, 30 Jul 2013) $
  */
 public class TestMax extends BaseFunctorTest {
 

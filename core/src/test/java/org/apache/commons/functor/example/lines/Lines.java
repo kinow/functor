@@ -26,7 +26,7 @@ import org.apache.commons.functor.Procedure;
 import org.apache.commons.functor.generator.BaseGenerator;
 
 /**
- * @version $Revision: 1363514 $ $Date: 2012-07-19 17:13:49 -0300 (Thu, 19 Jul 2012) $
+ * @version $Revision: 1508677 $ $Date: 2013-07-30 19:48:02 -0300 (Tue, 30 Jul 2013) $
  */
 public class Lines extends BaseGenerator<String> {
     public static Lines from(Reader reader) {

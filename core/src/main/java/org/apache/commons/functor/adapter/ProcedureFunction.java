@@ -38,7 +38,7 @@ import org.apache.commons.lang3.Validate;
  *
  * @param <A> the argument type.
  * @param <T> the returned value type.
- * @version $Revision: 1365377 $ $Date: 2012-07-24 21:59:23 -0300 (Tue, 24 Jul 2012) $
+ * @version $Revision: 1508677 $ $Date: 2013-07-30 19:48:02 -0300 (Tue, 30 Jul 2013) $
  */
 public final class ProcedureFunction<A, T> implements Function<A, T>, Serializable {
     /**

@@ -24,7 +24,7 @@ import java.util.Iterator;
  *
  * @param <E> the type of elements held in this generator.
  * @since 1.0
- * @version $Revision: 1345136 $ $Date: 2012-06-01 09:47:06 -0300 (Fri, 01 Jun 2012) $
+ * @version $Revision: 1508677 $ $Date: 2013-07-30 19:48:02 -0300 (Tue, 30 Jul 2013) $
  */
 public final class IteratorToGeneratorAdapter<E> extends BaseGenerator<E> {
     // instance variables
