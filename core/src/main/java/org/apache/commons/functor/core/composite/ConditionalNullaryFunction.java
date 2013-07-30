@@ -73,7 +73,8 @@ public final class ConditionalNullaryFunction<T> implements NullaryFunction<T>, 
      * @param thenFunc then
      * @param elseFunc else
      */
-    public ConditionalNullaryFunction(NullaryPredicate ifPred, NullaryFunction<? extends T> thenFunc, NullaryFunction<? extends T> elseFunc) {
+    public ConditionalNullaryFunction(NullaryPredicate ifPred, NullaryFunction<? extends T> thenFunc,
+            NullaryFunction<? extends T> elseFunc) {
         this.ifPred = Validate.notNull(ifPred, "NullaryPredicate argument was null");
         this.thenFunc = Validate.notNull(thenFunc, "'then' NullaryFunction argument was null");
         this.elseFunc = Validate.notNull(elseFunc, "'else' NullaryFunction argument was null");
@@ -97,7 +98,8 @@ public final class ConditionalNullaryFunction<T> implements NullaryFunction<T>, 
      */
     @Override
     public boolean equals(Object that) {
-        return that == this || (that instanceof ConditionalNullaryFunction<?> && equals((ConditionalNullaryFunction<?>) that));
+        return that == this || (that instanceof ConditionalNullaryFunction<?>
+                && equals((ConditionalNullaryFunction<?>) that));
     }
 
     /**

@@ -30,7 +30,8 @@ import org.apache.commons.functor.Predicate;
  * @since 1.0
  * @version $Revision: 1348547 $ $Date: 2012-06-10 05:06:11 -0300 (Sun, 10 Jun 2012) $
  */
-public final class Offset implements NullaryPredicate, Predicate<Object>, BinaryPredicate<Object, Object>, Serializable {
+public final class Offset implements NullaryPredicate, Predicate<Object>,
+        BinaryPredicate<Object, Object>, Serializable {
     // static attributes
     // ------------------------------------------------------------------------
     /**

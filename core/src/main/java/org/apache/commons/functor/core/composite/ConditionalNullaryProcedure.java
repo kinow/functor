@@ -106,7 +106,8 @@ public final class ConditionalNullaryProcedure implements NullaryProcedure, Seri
      */
     @Override
     public boolean equals(Object that) {
-        return that == this || (that instanceof ConditionalNullaryProcedure && equals((ConditionalNullaryProcedure) that));
+        return that == this || (that instanceof ConditionalNullaryProcedure
+                && equals((ConditionalNullaryProcedure) that));
     }
 
     /**

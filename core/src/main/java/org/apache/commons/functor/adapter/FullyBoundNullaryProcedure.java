@@ -79,7 +79,8 @@ public final class FullyBoundNullaryProcedure implements NullaryProcedure, Seria
      */
     @Override
     public boolean equals(Object that) {
-        return that == this || (that instanceof FullyBoundNullaryProcedure && equals((FullyBoundNullaryProcedure) that));
+        return that == this || (that instanceof FullyBoundNullaryProcedure
+                && equals((FullyBoundNullaryProcedure) that));
     }
 
     /**
@@ -129,7 +130,8 @@ public final class FullyBoundNullaryProcedure implements NullaryProcedure, Seria
      * @param right right side argument
      * @return FullyBoundNullaryProcedure
      */
-    public static <L, R> FullyBoundNullaryProcedure bind(BinaryProcedure<? super L, ? super R> procedure, L left, R right) {
+    public static <L, R> FullyBoundNullaryProcedure bind(
+            BinaryProcedure<? super L, ? super R> procedure, L left, R right) {
         return null == procedure ? null : new FullyBoundNullaryProcedure(procedure, left, right);
     }
 

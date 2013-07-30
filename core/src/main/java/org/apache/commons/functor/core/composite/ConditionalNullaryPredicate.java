@@ -91,7 +91,8 @@ public final class ConditionalNullaryPredicate implements NullaryPredicate, Seri
      */
     @Override
     public boolean equals(Object that) {
-        return that == this || (that instanceof ConditionalNullaryPredicate && equals((ConditionalNullaryPredicate) that));
+        return that == this || (that instanceof ConditionalNullaryPredicate
+                && equals((ConditionalNullaryPredicate) that));
     }
 
     /**

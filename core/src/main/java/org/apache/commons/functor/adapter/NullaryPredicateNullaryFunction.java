@@ -70,7 +70,8 @@ public final class NullaryPredicateNullaryFunction implements NullaryFunction<Bo
      */
     @Override
     public boolean equals(Object that) {
-        return that == this || (that instanceof NullaryPredicateNullaryFunction && equals((NullaryPredicateNullaryFunction) that));
+        return that == this || (that instanceof NullaryPredicateNullaryFunction
+                && equals((NullaryPredicateNullaryFunction) that));
     }
 
     /**

@@ -80,7 +80,8 @@ public final class FullyBoundNullaryPredicate implements NullaryPredicate, Seria
      */
     @Override
     public boolean equals(Object that) {
-        return that == this || (that instanceof FullyBoundNullaryPredicate && equals((FullyBoundNullaryPredicate) that));
+        return that == this || (that instanceof FullyBoundNullaryPredicate
+                && equals((FullyBoundNullaryPredicate) that));
     }
 
     /**

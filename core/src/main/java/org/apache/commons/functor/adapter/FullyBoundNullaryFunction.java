@@ -60,7 +60,9 @@ public final class FullyBoundNullaryFunction<T> implements NullaryFunction<T>, S
      * @param right the right side argument to use
      */
     @SuppressWarnings("unchecked")
-    public <L, R> FullyBoundNullaryFunction(BinaryFunction<? super L, ? super R, ? extends T> function, L left, R right) {
+    public <L, R> FullyBoundNullaryFunction(
+            BinaryFunction<? super L, ? super R, ? extends T> function,
+            L left, R right) {
         this.function =
             (BinaryFunction<Object, Object, T>) Validate.notNull(function,
                 "BinaryFunction argument was null");
@@ -80,7 +82,8 @@ public final class FullyBoundNullaryFunction<T> implements NullaryFunction<T>, S
      */
     @Override
     public boolean equals(Object that) {
-        return that == this || (that instanceof FullyBoundNullaryFunction<?> && equals((FullyBoundNullaryFunction<?>) that));
+        return that == this || (that instanceof FullyBoundNullaryFunction<?>
+                && equals((FullyBoundNullaryFunction<?>) that));
     }
 
     /**

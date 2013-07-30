@@ -68,7 +68,8 @@ public final class NullaryFunctionNullaryProcedure implements NullaryProcedure, 
      */
     @Override
     public boolean equals(Object that) {
-        return that == this || (that instanceof NullaryFunctionNullaryProcedure && equals((NullaryFunctionNullaryProcedure) that));
+        return that == this || (that instanceof NullaryFunctionNullaryProcedure
+                && equals((NullaryFunctionNullaryProcedure) that));
     }
 
     /**

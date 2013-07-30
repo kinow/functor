@@ -76,7 +76,8 @@ public final class Conditional {
      * @param s else
      * @return NullaryFunction<T>
      */
-    public static <T> NullaryFunction<T> function(NullaryPredicate q, NullaryFunction<? extends T> r, NullaryFunction<? extends T> s) {
+    public static <T> NullaryFunction<T> function(NullaryPredicate q,
+            NullaryFunction<? extends T> r, NullaryFunction<? extends T> s) {
         return new ConditionalNullaryFunction<T>(q, r, s);
     }
 

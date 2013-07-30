@@ -99,7 +99,8 @@ public class TransformedNullaryFunction<T> implements NullaryFunction<T>, Serial
      */
     @Override
     public final boolean equals(Object obj) {
-        return obj == this || obj instanceof TransformedNullaryFunction<?> && equals((TransformedNullaryFunction<?>) obj);
+        return obj == this || obj instanceof TransformedNullaryFunction<?>
+                && equals((TransformedNullaryFunction<?>) obj);
     }
 
     /**
