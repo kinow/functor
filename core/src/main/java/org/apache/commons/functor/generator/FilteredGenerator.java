@@ -31,7 +31,12 @@ import org.apache.commons.lang3.Validate;
 public class FilteredGenerator<E> extends BaseGenerator<E> {
 
     /**
-     * The wrapped generator.
+     * A generator can wrap another generator.
+     * */
+    private Generator<? extends E> wrappedGenerator;
+
+    /**
+     * The predicate used to filter.
      */
     private final Predicate<? super E> pred;
 
@@ -41,7 +46,7 @@ public class FilteredGenerator<E> extends BaseGenerator<E> {
      * @param pred filtering Predicate
      */
     public FilteredGenerator(Generator<? extends E> wrapped, Predicate<? super E> pred) {
-        super(Validate.notNull(wrapped, "Generator argument was null"));
+        this.wrappedGenerator = Validate.notNull(wrapped, "Generator argument was null");
         this.pred = Validate.notNull(pred, "Predicate argument was null");
     }
 
@@ -55,10 +60,8 @@ public class FilteredGenerator<E> extends BaseGenerator<E> {
     /**
      * {@inheritDoc}
      */
-    @SuppressWarnings("unchecked")
-    @Override
     protected Generator<? extends E> getWrappedGenerator() {
-        return (Generator<? extends E>) super.getWrappedGenerator();
+        return this.wrappedGenerator;
     }
 
     /**

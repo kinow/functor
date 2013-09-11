@@ -14,10 +14,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.commons.functor.generator;
+package org.apache.commons.functor.generator.loop;
 
 import org.apache.commons.functor.Predicate;
 import org.apache.commons.functor.Procedure;
+import org.apache.commons.functor.generator.Generator;
 import org.apache.commons.lang3.Validate;
 
 /**
@@ -27,7 +28,7 @@ import org.apache.commons.lang3.Validate;
  * @param <E> the type of elements held in this generator.
  * @version $Revision: 1508677 $ $Date: 2013-07-30 19:48:02 -0300 (Tue, 30 Jul 2013) $
  */
-public class UntilGenerate<E> extends BaseGenerator<E> {
+public class UntilGenerate<E> extends LoopGenerator<E> {
 
     /**
      * The condition has to verified in order to execute the generation.
@@ -51,21 +52,12 @@ public class UntilGenerate<E> extends BaseGenerator<E> {
         getWrappedGenerator().run(new Procedure<E>() {
             public void run(E obj) {
                 if (test.test(obj)) {
-                    getWrappedGenerator().stop();
+                    UntilGenerate.this.stop();
                 } else {
                     proc.run(obj);
                 }
             }
         });
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @SuppressWarnings("unchecked")
-    @Override
-    protected Generator<? extends E> getWrappedGenerator() {
-        return (Generator<? extends E>) super.getWrappedGenerator();
     }
 
     /**
