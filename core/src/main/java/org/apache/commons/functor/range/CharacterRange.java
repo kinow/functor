@@ -160,7 +160,6 @@ public final class CharacterRange implements Range<Character, Integer> {
             this.currentValue = (char) (this.leftEndpoint.getValue() + this.step);
         }
     }
-
     // range methods
     // ---------------------------------------------------------------
     /**

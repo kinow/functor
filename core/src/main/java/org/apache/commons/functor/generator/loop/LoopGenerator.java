@@ -57,7 +57,6 @@ public abstract class LoopGenerator<E> extends BaseGenerator<E> {
     }
 
     /**
-     * {@inheritDoc}
      * Stop the generator. Will stop the wrapped generator if one was set.
      */
     public void stop() {
@@ -68,8 +67,9 @@ public abstract class LoopGenerator<E> extends BaseGenerator<E> {
     }
 
     /**
-     * {@inheritDoc}
      * Check if the generator is stopped.
+     * @return <code>true</code> if the generator is stopped, <code>false</code>
+     * otherwise
      */
     public boolean isStopped() {
         return stopped;

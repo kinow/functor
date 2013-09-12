@@ -33,7 +33,7 @@ import java.util.Iterator;
  *
  * @param <T> the type of elements held by this range.
  * @param <S> the type of the step of this range.
- * @see org.apache.commons.functor.generator.range.Endpoint
+ * @see org.apache.commons.functor.range.Endpoint
  * @since 1.0
  * @version $Revision$ $Date$
  */

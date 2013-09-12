@@ -23,11 +23,11 @@ import java.util.Collection;
  * <b>Number</b> and <b>Comparable</b>.
  *
  * @param <T> the type of numbers and step that are both a number and comparable
- * @see org.apache.commons.functor.generator.range.IntegerRange
- * @see org.apache.commons.functor.generator.range.LongRange
- * @see org.apache.commons.functor.generator.range.FloatRange
- * @see org.apache.commons.functor.generator.range.DoubleRange
- * @see org.apache.commons.functor.generator.range.CharacterRange
+ * @see org.apache.commons.functor.range.IntegerRange
+ * @see org.apache.commons.functor.range.LongRange
+ * @see org.apache.commons.functor.range.FloatRange
+ * @see org.apache.commons.functor.range.DoubleRange
+ * @see org.apache.commons.functor.range.CharacterRange
  * @since 0.1
  * @version $Revision$ $Date$
  */

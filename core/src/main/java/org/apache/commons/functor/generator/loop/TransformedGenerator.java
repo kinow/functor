@@ -40,6 +40,10 @@ public class TransformedGenerator<I, E> extends LoopGenerator<E> {
      * @param wrapped Generator to transform
      * @param func Function to apply to each element
      */
+    // Even though we are passing a Generator<? extends I> to super, and using
+    // it in TransformedGenerator#run, what gets actually passed to the Procedure
+    // is a <? extends E>, returned by func.
+    @SuppressWarnings("unchecked")
     public TransformedGenerator(Generator<? extends I> wrapped, Function<? super I, ? extends E> func) {
         super((Generator<? extends E>) Validate.notNull(wrapped, "Generator argument was null"));
         this.func = Validate.notNull(func, "Function argument was null");
@@ -48,6 +52,8 @@ public class TransformedGenerator<I, E> extends LoopGenerator<E> {
     /**
      * {@inheritDoc}
      */
+    // See comment above in the public constructor
+    @SuppressWarnings("unchecked")
     public void run(final Procedure<? super E> proc) {
         ((Generator<? extends I>) getWrappedGenerator()).run(new Procedure<I>() {
             public void run(I obj) {

@@ -58,7 +58,8 @@ public class FilteredGenerator<E> extends BaseGenerator<E> {
     }
 
     /**
-     * {@inheritDoc}
+     * Get the generator that is being wrapped.
+     * @return Generator
      */
     protected Generator<? extends E> getWrappedGenerator() {
         return this.wrappedGenerator;

@@ -19,8 +19,8 @@ package org.apache.commons.functor.range;
 /**
  * Determine the bound type of a range.
  *
- * @see org.apache.commons.functor.generator.range.Range
- * @see org.apache.commons.functor.generator.range.Endpoint
+ * @see org.apache.commons.functor.range.Range
+ * @see org.apache.commons.functor.range.Endpoint
  * @since 1.0
  * @version $Revision$ $Date$
  */

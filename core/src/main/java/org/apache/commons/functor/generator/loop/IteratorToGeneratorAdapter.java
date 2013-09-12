@@ -20,7 +20,7 @@ import org.apache.commons.functor.Procedure;
 import org.apache.commons.lang3.Validate;
 
 /**
- * Adapts an {@link Iterator} to the {@link Generator} interface.
+ * Adapts an {@link Iterator} to the {@link LoopGenerator} interface.
  *
  * @param <E> the type of elements held in this generator.
  * @since 1.0
